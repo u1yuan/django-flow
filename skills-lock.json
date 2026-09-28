@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "skills": {
+    "citation-management": {
+      "source": "K-Dense-AI/scientific-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/citation-management/SKILL.md",
+      "computedHash": "0c2aac095756aca614071de10b98c5cd2808120beca754ba48c9e236ca090094"
+    },
+    "experimental-design": {
+      "source": "K-Dense-AI/scientific-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/experimental-design/SKILL.md",
+      "computedHash": "3ea3532d44037229d7262fa29ca43a7f1cb2e8a92a45837eb2f03344ea4f80a5"
+    },
+    "exploratory-data-analysis": {
+      "source": "K-Dense-AI/scientific-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/exploratory-data-analysis/SKILL.md",
+      "computedHash": "c769995110abe8dab3042fd02591060eaac6c1977df45b7cf299db8c2ff06876"
+    },
+    "literature-review": {
+      "source": "affaan-m/ECC",
+      "sourceType": "github",
+      "skillPath": "skills/scientific-thinking-literature-review/SKILL.md",
+      "computedHash": "66644aafa3f87ecd3c10d552081cbf1a47e39213c0dd91520f894c430c4833cc"
+    },
+    "scientific-visualization": {
+      "source": "K-Dense-AI/scientific-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/scientific-visualization/SKILL.md",
+      "computedHash": "62742601cd9b87ac37604b76c86d318f656b40fb0825ebc61cc19abe3b26a0e7"
+    },
+    "scientific-writing": {
+      "source": "K-Dense-AI/scientific-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/scientific-writing/SKILL.md",
+      "computedHash": "0fd9d68cb198075da8cfc33c80bca52df6a47bb3c377da2102e2cbc09ce2766f"
+    },
+    "statistical-analysis": {
+      "source": "K-Dense-AI/scientific-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/statistical-analysis/SKILL.md",
+      "computedHash": "8607e69dd81a18f82bd5347de06bcd64dd2c70832a3371f0e6867c8aa9c23532"
+    }
+  }
+}

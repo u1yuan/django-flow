@@ -1,0 +1,7 @@
+{
+  "skill_name": "evidence-research",
+  "evals": [
+    {"id": 0, "prompt": "Audit two claims in the diesel literature log using only the local log. Return an evidence ledger and identify which citations still need source-level verification.", "expected_output": "Claims remain unverified when only the local log is available.", "files": ["litReview/LITERATURE_LOG.md"], "assertions": ["Records source identifiers or URLs", "Does not mark log summaries as verified source passages", "Names a concrete verification gap"]},
+    {"id": 1, "prompt": "Screen the hydroponic proposal's bibliography for sources relevant to sensor reliability; a cited DOI may be wrong. Return status and next verification actions without browsing.", "expected_output": "An unverified citation is flagged, not repaired by invention.", "files": ["litReview/docs/TS31_Django_FeasibilityStudy_TargetTitles (1).md"], "assertions": ["Separates leads from verified claims", "Does not invent citation metadata", "Reports reproducible screening scope"]}
+  ]
+}

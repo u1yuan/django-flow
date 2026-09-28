@@ -1,0 +1,7 @@
+{
+  "skill_name": "research-coordination",
+  "evals": [
+    {"id": 0, "prompt": "Assess the feasibility of the hydroponic zone analytics proposal in the repository using local documents only. Return a bounded task brief, evidence, limitations, and QA status; determine whether analyzable data are present.", "expected_output": "A topic-specific assessment with no invented observed data and an explicit QA disposition.", "files": ["litReview/docs/TS31_Django_FeasibilityStudy_TargetTitles (1).md"], "assertions": ["Uses the six required brief fields", "Distinguishes proposal from observed data", "States evidence, limitations, and QA status"]},
+    {"id": 1, "prompt": "Assess the diesel genset anomaly proposal using the literature log and feasibility document. Assign only independent bounded work and return an evidence-bounded synthesis with QA status.", "expected_output": "A diesel-topic result without treating a literature log as source verification or claiming analysis without operational data.", "files": ["litReview/LITERATURE_LOG.md", "litReview/docs/TS31_Django_FeasibilityStudy_TargetTitles (1).md"], "assertions": ["Uses the six required brief fields", "Does not claim an empirical anomaly result", "Reports QA status and unresolved findings"]}
+  ]
+}
