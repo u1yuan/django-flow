@@ -1,6 +1,6 @@
-# Pre-score — psychology, urban, and meteorology
+# Pre-score — four fields
 
-Scored 6 October 2026 from the title cards and the gap files in this folder. Astronomy title cards were still being written, so that field is not scored here.
+Scored 6 October 2026 from the title cards and the gap files in this folder. Astronomy was added after `title-cards-astronomy.md` was written. The point rules did not change.
 
 This is a 30-point screen. Feasibility is not included. No model was fit, and no dataset was counted. A high score does not mean a title is approved.
 
@@ -27,6 +27,10 @@ This is a 30-point screen. Feasibility is not included. No model was fit, and no
 | Meteorology | 1. Transferred heat-index alerts | 6 | 9 | 9 | 24 | Pass, 11 words, random forest | Predictive analytics | Pass | Yes |
 | Meteorology | 3. Sensor-hour anomaly flags | 5 | 8 | 9 | 22 | Pass, 11 words, isolation forest | Anomaly detection | Pass | Yes, with a data condition |
 | Meteorology | 2. Pre-landfall rapid intensification | 4 | 8 | 9 | 21 | Pass, 10 words, gradient boosting | Predictive analytics | Pass | Yes |
+| Astronomy | 1. Sparse-site zenith brightness | 5 | 7 | 9 | 21 | Pass, 11 words, gradient boosting | Predictive analytics | Pass | Yes |
+| Astronomy | 4. Blue-weighted brightness below VIIRS | 5 | 7 | 9 | 21 | Pass, 11 words, random forest | Predictive analytics | Pass | Yes |
+| Astronomy | 2. Sparse-site brightness trends | 5 | 6 | 8 | 19 | Pass, 13 words, hierarchical linear models | Statistical modeling | Pass | Yes |
+| Astronomy | 3. Equatorial observatory disturbance flags | 3 | 5 | 8 | 16 | Pass, 11 words, isolation forest | Anomaly detection | Pass | No |
 
 ## What was kept
 
@@ -36,6 +40,8 @@ Urban keeps cards 2 and 1. Card 2 still needs a population-denominator file; the
 
 Meteorology keeps all three, in the order above. Card 3 advances only if the data search finds a manual file download. The opened OpenAQ page describes an API with a key, not a bulk file. Card 2 may use IBTrACS. The SHIPS pages did not open, so they are not the lead.
 
+Astronomy keeps cards 1, 4, and 2. Those are the top three scores. Cards 1 and 4 tie at 21; card 1 is listed first because the title names a municipality. Card 2 uses the same Globe at Night file as card 1, so one failed download can stop more than one card. Card 3 does not advance. It is fourth. Its nearest studies stayed preprints, the quoted limitations are not the flag it proposes, no GNSS error file is named, and OMNIWeb did not open.
+
 ## Why the points landed where they did
 
 Psychology card 1 has three opened full texts and a Liao limitation on transferable benefit, plus Allohibi’s future-work sentence that names belonging. The education office is generic, PISA 2022 Philippine rows were not confirmed, and the OECD page returned HTTP 403. Card 2’s Low limitation asks for research across many US states after a Utah-only model, which is adjacent to a country holdout. The opened TIMSS 2019 page does not name bullying items. Card 3’s Chen and Man studies are abstract-only, and Allohibi’s measurement-invariance limit is about mathematics anxiety, not a bullying classifier.
@@ -44,6 +50,12 @@ Urban card 2 has an opened Philippine facility-point file on HDX. Namadi’s lim
 
 Meteorology card 1 is the strongest design in this pass: a warning desk, a second-city holdout, and a false-alert rate against that city’s climatology, tied to the cross-city check Han and Randall place outside their analysis. Random forest is the draft title’s technique, not a name in the gap statement. Philippine stations are not named, and non-U.S. GSOD is noncommercial. Card 3’s García review names data quality as a gap and does not report the transfer score. The quality-flag column was not named on the OpenAQ page. Card 2’s pre-landfall window is not in the opened IBTrACS page, the SHIPS pages did not open, and Kim’s year label conflicts between OpenAlex 2024 and an HTML banner reading Volume 10 - 2023.
 
-## Not scored
+## Astronomy points
 
-Astronomy. `title-cards-astronomy.md` was not in the folder when this file was written.
+Card 1 has a named municipality, an opened Globe at Night CSV link for 2025 (13,421 observations on that page), and opened full texts for Barentine, Linares, Buhler, and Shah. The innovation says the held-out prediction is separate from restating Barentine’s VIIRS blue-light sentence, so that quote is not a limitation the gap answers. No baseline predictor is named. Philippine rows were not on the opened page. The Scopus preview did not list the journals, and IEEE Xplore returned Error 418.
+
+Card 4 uses the same two leads. Linares’s opened methods section treats Illumina’s blue-light compensation as a model input, and the card asks for a ground-report prediction error at rural pixels below the VIIRS threshold. No office is named, and no baseline predictor is named.
+
+Card 2’s Bará record is abstract-only. The abstract requires control of atmospheric variability for changes near 1 percent per year, and the card calls its sparse-series estimate a different product from repeating that control. No office is named.
+
+Card 3’s Guastavino, He, and Koontaweepunya records remained preprints. The Guastavino sentence is about solar-plasma travel time, and the card says its flag is distinct from that correction. INTERMAGNET’s download page did open. The coincidence score still needs a GNSS error file, which is not named. A flag is not scored as a cause of a positioning failure or a grid fault.
