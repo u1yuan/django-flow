@@ -1,0 +1,138 @@
+﻿{
+  "meta": {
+    "count": 12,
+    "db_response_time_ms": 23,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "x_query": {
+      "oql": "works where abstract has (fault)\n  and title has (hydroponic)\n  and date >= (2018-01-01)\n  and retracted is (false)\n  and language is (en)\n  and date <= (2026-09-28)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "abstract.search",
+            "value": "fault",
+            "operator": "has"
+          },
+          {
+            "column_id": "display_name.search",
+            "value": "hydroponic",
+            "operator": "has"
+          },
+          {
+            "column_id": "from_publication_date",
+            "value": "2018-01-01"
+          },
+          {
+            "column_id": "is_retracted",
+            "value": false
+          },
+          {
+            "column_id": "language",
+            "value": "en"
+          },
+          {
+            "column_id": "to_publication_date",
+            "value": "2026-09-28"
+          }
+        ]
+      },
+      "url": "/works?filter=abstract.search:fault,display_name.search:hydroponic,from_publication_date:2018-01-01,is_retracted:false,language:en,to_publication_date:2026-09-28&per_page=10&page=1"
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W4210357512",
+      "display_name": "Reliable IoT-Based Monitoring and Control of Hydroponic Systems",
+      "publication_year": 2022,
+      "doi": "https://doi.org/10.3390/technologies10010026",
+      "cited_by_count": 84,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4410391213",
+      "display_name": "Machine learning-based fault detection and diagnosis of electrical conductivity and pH sensors in hydroponic systems",
+      "publication_year": 2025,
+      "doi": "https://doi.org/10.1016/j.compag.2025.110544",
+      "cited_by_count": 21,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2998332032",
+      "display_name": "Automation and Robotics Used in Hydroponic System",
+      "publication_year": 2020,
+      "doi": "https://doi.org/10.5772/intechopen.90438",
+      "cited_by_count": 20,
+      "type": "book-chapter",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4413216304",
+      "display_name": "IoT-based monitoring and control for optimized plant growth in smart greenhouses using soil and hydroponic systems",
+      "publication_year": 2025,
+      "doi": "https://doi.org/10.1016/j.iot.2025.101710",
+      "cited_by_count": 13,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4402298111",
+      "display_name": "Automated Drift Compensation System for Electrical Conductivity and pH Probes in Hydroponic Systems",
+      "publication_year": 2024,
+      "doi": "https://doi.org/10.13031/ja.15603",
+      "cited_by_count": 4,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W7151283608",
+      "display_name": "Toward sustainable hydroponic farming: An AI-driven IoT framework for virtual pH sensing and sensor lifespan extension",
+      "publication_year": 2026,
+      "doi": "https://doi.org/10.1016/j.aej.2026.04.011",
+      "cited_by_count": 1,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W3094591905",
+      "display_name": "Smart Artificial Intelligent-Based Controller for Hydroponic: New Technique for Soilless Plantation",
+      "publication_year": 2020,
+      "doi": "https://doi.org/10.1007/978-981-15-7106-0_22",
+      "cited_by_count": 1,
+      "type": "book-chapter",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W7165748698",
+      "display_name": "Development and Experimental Validation of an IoT-Based Fuzzy Logic Control System with Fault Diagnosis for Hydroponic Greenhouses",
+      "publication_year": 2026,
+      "doi": "https://doi.org/10.21608/jesaun.2026.481407.2203",
+      "cited_by_count": 0,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W7125641651",
+      "display_name": "Automated Irrigation System for Hydroponic Greenhouses in Warm and Humid Climates: A Case Study in Manab\u00ed, Ecuador",
+      "publication_year": 2026,
+      "doi": "https://doi.org/10.5281/zenodo.18364903",
+      "cited_by_count": 0,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W7125641988",
+      "display_name": "Automated Irrigation System for Hydroponic Greenhouses in Warm and Humid Climates: A Case Study in Manab\u00ed, Ecuador",
+      "publication_year": 2026,
+      "doi": "https://doi.org/10.5281/zenodo.18364902",
+      "cited_by_count": 0,
+      "type": "article",
+      "language": "en"
+    }
+  ],
+  "group_by": []
+}

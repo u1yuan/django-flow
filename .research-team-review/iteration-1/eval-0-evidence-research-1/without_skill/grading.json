@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Records source identifiers or URLs",
+      "passed": true,
+      "evidence": "Looked for an identifier, DOI, URL, or source-item reference."
+    },
+    {
+      "text": "Does not mark log summaries as verified source passages",
+      "passed": false,
+      "evidence": "Checked for explicit unverified status and absence of a claim that the log itself verifies the source."
+    },
+    {
+      "text": "Names a concrete verification gap",
+      "passed": true,
+      "evidence": "Looked for a specific next verification action."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 1,
+    "total": 3,
+    "pass_rate": 0.6666666666666666
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "eval_id": 8,
+  "eval_name": "research-coordination-1",
+  "prompt": "Assess the feasibility of the hydroponic zone analytics proposal in the repository using local documents only. Return a bounded task brief, evidence, limitations, and QA status; determine whether analyzable data are present.",
+  "assertions": [
+    "Uses the six required brief fields",
+    "Distinguishes proposal from observed data",
+    "States evidence, limitations, and QA status"
+  ]
+}

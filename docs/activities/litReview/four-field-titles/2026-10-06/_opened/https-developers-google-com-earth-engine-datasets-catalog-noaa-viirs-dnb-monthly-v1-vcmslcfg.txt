@@ -1,0 +1,246 @@
+
+ VIIRS Stray Light Corrected Nighttime Day/Night Band Composites Version 1  |  Earth Engine Data Catalog  |  Google for Developers
+ Skip to main content
+ Earth Engine Data Catalog
+ /
+ English
+ Deutsch
+ Español
+ Español – América Latina
+ Français
+ Indonesia
+ Italiano
+ Polski
+ Português – Brasil
+ Tiếng Việt
+ Türkçe
+ Русский
+ עברית
+ العربيّة
+ فارسی
+ हिंदी
+ বাংলা
+ ภาษาไทย
+ 中文 – 简体
+ 中文 – 繁體
+ 日本語
+ 한국어
+ Sign in
+ Home
+ Categories
+ All Datasets
+ All Tags
+ Landsat
+ MODIS
+ Sentinel
+ Publisher
+ Community
+ API Docs
+ Dataset Status
+ Changelog
+ Earth Engine Data Catalog
+ Home
+ Categories
+ All Datasets
+ All Tags
+ Landsat
+ MODIS
+ Sentinel
+ Publisher
+ Community
+ API Docs
+ Dataset Status
+ Changelog
+ Home
+ Earth Engine Data Catalog
+ All Datasets
+ Send feedback
+ VIIRS Stray Light Corrected Nighttime Day/Night Band Composites Version 1
+ Stay organized with collections
+ Save and categorize content based on your preferences.
+ Page Summary
+ outlined_flag
+ The NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG dataset provides monthly average radiance composite images using nighttime data from the VIIRS Day/Night Band (DNB).
+ The data is available from 2014-01-01 to 2025-03-01 and is updated monthly.
+ Due to factors like cloud cover and solar illumination, some areas may not have good data coverage in certain months, and the 'cf_cvg' band should be used to identify areas with low observation numbers.
+ Version 1 of this product has been corrected for stray light to extend visible areas and improve dynamic range, but it does not filter out temporary lights or separate lights from background values.
+ The dataset includes bands for average DNB radiance (avg_rad) and cloud-free coverages (cf_cvg), with a pixel size of 463.83 meters.
+ Dataset Availability
+ 2014-01-01T00:00:00Z–2026-08-01T00:00:00Z
+ Dataset Producer
+ Earth Observation Group, Payne Institute for Public Policy, Colorado School of Mines
+ Earth Engine Snippet
+ ee.ImageCollection("NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG")
+ open_in_new
+ Cadence
+1 Month
+ Tags
+ dnb
+ eog
+ lights
+ monthly
+ nighttime
+ noaa
+ population
+ viirs
+ visible
+ stray-light
+ Description
+ Monthly average radiance composite images using nighttime data from the
+Visible Infrared Imaging Radiometer Suite (VIIRS) Day/Night Band (DNB).
+As these data are composited monthly, there are many areas of the globe
+where it is impossible to get good quality data coverage for that month.
+This can be due to cloud cover, especially in the tropical regions, or due
+to solar illumination, as happens toward the poles in their respective
+summer months. Therefore it is recommended that users of these data utilize
+the 'cf_cvg' band and not assume a value of zero in the average radiance
+image means that no lights were observed.
+Cloud cover is determined using the VIIRS Cloud
+Mask product (VCM). In addition, data near the edges of the swath are not
+included in the composites (aggregation zones 29-32). Version 1 has NOT
+been filtered to screen out lights from aurora, fires, boats, and other
+temporal lights. This separation is under development and will be included
+in a later version of this time series. Also in development is a method to
+separate lights from background (non-light) values.
+This product is an alternative configuration of the VIIRS DNB using a
+procedure to correct for stray light. The correction procedure extends
+visible areas closer to the poles and improves dynamic range. It should be
+noted some artifacts are introduced due to the procedure used in twilight
+regions; see
+reference paper
+for more details. This product excludes data
+impacted by cloud cover.
+Bands
+Bands
+Pixel size: 463.83 meters (all bands)
+Name
+Units
+Min
+Max
+Pixel Size
+Description
+avg_rad
+nanoWatts/sr/cm^2
+ -1.5*
+ 193565*
+ 463.83 meters
+Average DNB radiance values.
+cf_cvg
+ 0*
+ 84*
+ 463.83 meters
+Cloud-free coverages; the total number of observations that
+went into each pixel. This band can be used to identify areas with low
+numbers of observations where the quality is reduced.
+ * estimated min or max value
+ Terms of Use
+ Terms of Use
+ Colorado School of Mines data, information, and products,
+regardless of the method of delivery,
+are not subject to copyright and carry no restrictions on their subsequent
+use by the public. Once obtained, they may be put to any lawful use. The
+forgoing data is in the public domain and is being provided without
+restriction on use and distribution.
+ Explore with Earth Engine
+Important: 
+ Earth Engine is a platform for petabyte-scale scientific analysis and visualization of
+ geospatial datasets, both for public benefit and for business and government users.
+ Earth Engine is free to use for research, education, and nonprofit use. To get started, please
+ register for Earth Engine access.
+ Code Editor (JavaScript)
+var dataset = ee.ImageCollection('NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG')
+ .filter(ee.Filter.date('2017-05-01', '2017-05-31'));
+var nighttime = dataset.select('avg_rad');
+var nighttimeVis = {min: 0.0, max: 60.0};
+Map.setCenter(-77.1056, 38.8904, 8);
+Map.addLayer(nighttime, nighttimeVis, 'Nighttime');
+ Python setup
+ See the 
+ Python Environment page for information on the Python API and using
+ geemap for interactive development.
+import ee
+import geemap.core as geemap
+ Colab (Python)
+dataset = ee.ImageCollection('NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG').filter(
+ ee.Filter.date('2017-05-01', '2017-05-31')
+)
+nighttime = dataset.select('avg_rad')
+nighttime_vis = {'min': 0.0, 'max': 60.0}
+m = geemap.Map()
+m.set_center(-77.1056, 38.8904, 8)
+m.add_layer(nighttime, nighttime_vis, 'Nighttime')
+m
+ Open in Code Editor
+ VIIRS Stray Light Corrected Nighttime Day/Night Band Composites Version 1
+Monthly average radiance composite images using nighttime data from the Visible Infrared Imaging Radiometer Suite (VIIRS) Day/Night Band (DNB). As these data are composited monthly, there are many areas of the globe where it is impossible to get good quality data coverage for that month. This can be due to …
+ NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG,
+ dnb,eog,lights,monthly,nighttime,noaa,population,viirs,visible
+ 2014-01-01T00:00:00Z/2026-08-01T00:00:00Z
+ -65 -180 75 180
+ Google Earth Engine
+ https://developers.google.com/earth-engine/datasets
+ Need to tell us more?
+ [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],[],[],["The dataset provides monthly average radiance composite images from the VIIRS Day/Night Band (DNB), spanning January 1, 2014, to October 1, 2024. It utilizes nighttime data corrected for stray light and excludes cloud-covered areas. Users are advised to check the 'cf_cvg' band for data quality due to potential cloud cover or solar illumination issues. The data, provided by the Colorado School of Mines, is available without usage restrictions and can be accessed via Earth Engine using the provided snippet and code. The images contain the average DNB radiance values and cloud-free coverage.\n"]]
+ GitHub
+ Earth Engine on GitHub
+ Medium
+ Follow our blog on Medium
+ GIS Stack Exchange
+ Ask questions using the google-earth-engine tag
+ Twitter
+ Follow @googleearth on Twitter
+ Videos
+ Earth Engine on YouTube
+ Engage
+ Google Developer Program
+ Google Developer Groups
+ Google Developer Experts
+ Accelerators
+ Google Cloud & NVIDIA
+ Connect
+ Blog
+ Bluesky
+ Instagram
+ LinkedIn
+ X (Twitter)
+ YouTube
+ Build
+ Android
+ Chrome
+ Firebase
+ Google AI Studio
+ Google Antigravity
+ Google Cloud
+ Google Play
+ View all
+ Android
+ Chrome
+ Firebase
+ Google Cloud Platform
+ Google AI
+ All products
+ Terms
+ Privacy
+ Manage cookies
+ English
+ Deutsch
+ Español
+ Español – América Latina
+ Français
+ Indonesia
+ Italiano
+ Polski
+ Português – Brasil
+ Tiếng Việt
+ Türkçe
+ Русский
+ עברית
+ العربيّة
+ فارسی
+ हिंदी
+ বাংলা
+ ภาษาไทย
+ 中文 – 简体
+ 中文 – 繁體
+ 日本語
+ 한국어

@@ -1,0 +1,133 @@
+﻿{
+  "meta": {
+    "count": 1087,
+    "db_response_time_ms": 184,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "x_query": {
+      "oql": "works where date >= (2018-01-01)\n  and full text has (hydroponic yield prediction IoT sensors)\n  and retracted is (false)\n  and language is (en)\n  and date <= (2026-09-28)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "from_publication_date",
+            "value": "2018-01-01"
+          },
+          {
+            "column_id": "fulltext.search",
+            "value": "hydroponic yield prediction IoT sensors",
+            "operator": "has"
+          },
+          {
+            "column_id": "is_retracted",
+            "value": false
+          },
+          {
+            "column_id": "language",
+            "value": "en"
+          },
+          {
+            "column_id": "to_publication_date",
+            "value": "2026-09-28"
+          }
+        ]
+      },
+      "url": "/works?filter=from_publication_date:2018-01-01,fulltext.search:hydroponic yield prediction IoT sensors,is_retracted:false,language:en,to_publication_date:2026-09-28&per_page=10&page=1"
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W2964535757",
+      "display_name": "Internet-of-Things (IoT)-Based Smart Agriculture: Toward Making the Fields Talk",
+      "publication_year": 2019,
+      "doi": "https://doi.org/10.1109/access.2019.2932609",
+      "cited_by_count": 1299,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2981854649",
+      "display_name": "A Survey on the Role of IoT in Agriculture for the Implementation of Smart Farming",
+      "publication_year": 2019,
+      "doi": "https://doi.org/10.1109/access.2019.2949703",
+      "cited_by_count": 896,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4307117576",
+      "display_name": "Smart Farming: Internet of Things (IoT)-Based Sustainable Agriculture",
+      "publication_year": 2022,
+      "doi": "https://doi.org/10.3390/agriculture12101745",
+      "cited_by_count": 760,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4387533377",
+      "display_name": "A systematic review of industrial wastewater management: Evaluating challenges and enablers",
+      "publication_year": 2023,
+      "doi": "https://doi.org/10.1016/j.jenvman.2023.119230",
+      "cited_by_count": 605,
+      "type": "review",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2786392687",
+      "display_name": "Advances in greenhouse automation and controlled environment agriculture: A transition to plant factories and urban agriculture",
+      "publication_year": 2018,
+      "doi": "https://doi.org/10.25165/j.ijabe.20181101.3210",
+      "cited_by_count": 531,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4213430843",
+      "display_name": "The digitization of agricultural industry \u2013 a systematic literature review on agriculture 4.0",
+      "publication_year": 2022,
+      "doi": "https://doi.org/10.1016/j.atech.2022.100042",
+      "cited_by_count": 524,
+      "type": "review",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W3158419202",
+      "display_name": "Current Progress and Future Prospects of Agriculture Technology: Gateway to Sustainable Agriculture",
+      "publication_year": 2021,
+      "doi": "https://doi.org/10.3390/su13094883",
+      "cited_by_count": 515,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W3176680278",
+      "display_name": "Nanotechnology and artificial intelligence to enable sustainable and precision agriculture",
+      "publication_year": 2021,
+      "doi": "https://doi.org/10.1038/s41477-021-00946-6",
+      "cited_by_count": 474,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W3045788690",
+      "display_name": "A Systematic Review of IoT Solutions for Smart Farming",
+      "publication_year": 2020,
+      "doi": "https://doi.org/10.3390/s20154231",
+      "cited_by_count": 402,
+      "type": "review",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4400652616",
+      "display_name": "A Review of Precision Irrigation Water-Saving Technology under Changing Climate for Enhancing Water Use Efficiency, Crop Yield, and Environmental Footprints",
+      "publication_year": 2024,
+      "doi": "https://doi.org/10.3390/agriculture14071141",
+      "cited_by_count": 388,
+      "type": "article",
+      "language": "en"
+    }
+  ],
+  "group_by": []
+}

@@ -1,0 +1,66 @@
+
+Philippines - Global School-Based Student Health Survey 2019
+ NCD Microdata Repository
+ An Online Microdata Catalog
+ Home
+ Microdata Catalog
+ Citations
+ Login 
+ Login
+ Home /
+ Central Data Catalog /
+ GSHS /
+ PHL_2019_GSHS_V01
+ Global School-Based Student Health Survey 2019
+ Philippines, 2019
+ Get Microdata 
+ Reference ID 
+ PHL_2019_GSHS_v01 
+ Producer(s) 
+ Department of Health 
+ Collections 
+ Global School-based Student Health Survey
+ Metadata 
+ DDI/XML
+ JSON
+ Created on 
+ Dec 14, 2023
+ Last modified 
+ Dec 14, 2023
+ Page views 
+ 159410
+ Downloads 
+ 5948
+ Study Description
+ Data Dictionary
+ Downloads
+ Get Microdata 
+ Data files
+ PHL2019
+ PHL2019 (Luzon)
+ PHL2019(Mindanao)
+ PHL2019(Visayas)
+Data Dictionary
+ Data file
+ Cases
+ Variables
+ PHL2019
+ National dataset
+ 10175
+ 104
+ PHL2019 (Luzon)
+ Luzon dataset
+ 3520
+ 104
+ PHL2019 (Mindanao)
+ Mindanao dataset
+ 3506
+ 104
+ PHL2019 (Visayas)
+ Visayas dataset
+ 3149
+ 104
+ Back to Catalog
+ NCD Microdata Repository 
+ ©
+ NCD Microdata Repository, All Rights Reserved.

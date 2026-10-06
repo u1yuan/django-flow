@@ -1,0 +1,212 @@
+[
+  {
+    "url": "https://extranet.who.int/ncdsmicrodata/index.php/catalog/944",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 200,
+    "final_url": "https://extranet.who.int/ncdsmicrodata/index.php/catalog/944",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 45434,
+    "saved_as": "https-extranet-who-int-ncdsmicrodata-index-php-catalog-944.html",
+    "error": null
+  },
+  {
+    "url": "https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/study-description",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 200,
+    "final_url": "https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/study-description",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 45452,
+    "saved_as": "https-extranet-who-int-ncdsmicrodata-index-php-catalog-944-study-description.html",
+    "error": null
+  },
+  {
+    "url": "https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/data-dictionary",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 200,
+    "final_url": "https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/data-dictionary",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 28221,
+    "saved_as": "https-extranet-who-int-ncdsmicrodata-index-php-catalog-944-data-dictionary.html",
+    "error": null
+  },
+  {
+    "url": "https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/related-materials",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 200,
+    "final_url": "https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/related-materials",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 62540,
+    "saved_as": "https-extranet-who-int-ncdsmicrodata-index-php-catalog-944-related-materials.html",
+    "error": null
+  },
+  {
+    "url": "https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/get-microdata",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 200,
+    "final_url": "https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/get-microdata",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 22948,
+    "saved_as": "https-extranet-who-int-ncdsmicrodata-index-php-catalog-944-get-microdata.html",
+    "error": null
+  },
+  {
+    "url": "https://www.oecd.org/en/data/datasets/pisa-2022-database.html",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 403,
+    "final_url": null,
+    "content_type": null,
+    "bytes": 5800,
+    "saved_as": "https-www-oecd-org-en-data-datasets-pisa-2022-database-html.error.txt",
+    "error": "HTTPError 403: Forbidden"
+  },
+  {
+    "url": "https://eogdata.mines.edu/products/vnl/",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 200,
+    "final_url": "https://eogdata.mines.edu/products/vnl/",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 53967,
+    "saved_as": "https-eogdata-mines-edu-products-vnl.html",
+    "error": null
+  },
+  {
+    "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso/roni/archives/?month=06&type=strengths&year=2026",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 200,
+    "final_url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso/roni/archives/?month=06&type=strengths&year=2026",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 30399,
+    "saved_as": "https-www-cpc-ncep-noaa-gov-products-analysis-monitoring-enso-roni-archives-month-06-type-strengths-year-2026.html",
+    "error": null
+  },
+  {
+    "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso/roni/",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 200,
+    "final_url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso/roni/",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 97820,
+    "saved_as": "https-www-cpc-ncep-noaa-gov-products-analysis-monitoring-enso-roni.html",
+    "error": null
+  },
+  {
+    "url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 200,
+    "final_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 127851,
+    "saved_as": "https-developers-google-com-earth-engine-datasets-catalog-copernicus-s2-sr-harmonized.html",
+    "error": null
+  },
+  {
+    "url": "https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 200,
+    "final_url": "https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 124566,
+    "saved_as": "https-developers-google-com-earth-engine-datasets-catalog-landsat-lc08-c02-t1-l2.html",
+    "error": null
+  },
+  {
+    "url": "https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1_L2",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 200,
+    "final_url": "https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1_L2",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 125106,
+    "saved_as": "https-developers-google-com-earth-engine-datasets-catalog-landsat-lc09-c02-t1-l2.html",
+    "error": null
+  },
+  {
+    "url": "https://developers.google.com/earth-engine/datasets/catalog/NOAA_VIIRS_DNB_MONTHLY_V1_VCMSLCFG",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 200,
+    "final_url": "https://developers.google.com/earth-engine/datasets/catalog/NOAA_VIIRS_DNB_MONTHLY_V1_VCMSLCFG",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 99835,
+    "saved_as": "https-developers-google-com-earth-engine-datasets-catalog-noaa-viirs-dnb-monthly-v1-vcmslcfg.html",
+    "error": null
+  },
+  {
+    "url": "https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 200,
+    "final_url": "https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 48943,
+    "saved_as": "https-www-ncei-noaa-gov-products-land-based-station-integrated-surface-database.html",
+    "error": null
+  },
+  {
+    "url": "https://www.ncei.noaa.gov/products/land-based-station/global-summary-of-the-day",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 503,
+    "final_url": null,
+    "content_type": null,
+    "bytes": 280,
+    "saved_as": "https-www-ncei-noaa-gov-products-land-based-station-global-summary-of-the-day.error.txt",
+    "error": "HTTPError 503: Service Unavailable"
+  },
+  {
+    "url": "https://www.ncei.noaa.gov/support/access-data-service-api-user-documentation",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 200,
+    "final_url": "https://www.ncei.noaa.gov/support/access-data-service-api-user-documentation",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 41537,
+    "saved_as": "https-www-ncei-noaa-gov-support-access-data-service-api-user-documentation.html",
+    "error": null
+  },
+  {
+    "url": "https://psa.gov.ph/classification/psgc",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 403,
+    "final_url": null,
+    "content_type": null,
+    "bytes": 5692,
+    "saved_as": "https-psa-gov-ph-classification-psgc.error.txt",
+    "error": "HTTPError 403: Forbidden"
+  },
+  {
+    "url": "https://www.globeatnight.org/",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 200,
+    "final_url": "https://globeatnight.org/",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 37752,
+    "saved_as": "https-www-globeatnight-org.html",
+    "error": null
+  },
+  {
+    "url": "https://www.protectedplanet.net/en/legal",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 200,
+    "final_url": "https://www.protectedplanet.net/en/legal",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 30103,
+    "saved_as": "https-www-protectedplanet-net-en-legal.html",
+    "error": null
+  },
+  {
+    "url": "https://bmb.gov.ph/",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 403,
+    "final_url": null,
+    "content_type": null,
+    "bytes": 5618,
+    "saved_as": "https-bmb-gov-ph.error.txt",
+    "error": "HTTPError 403: Forbidden"
+  },
+  {
+    "url": "https://www.bmb.gov.ph/",
+    "fetched_at_utc": "2026-10-06T05:06:18Z",
+    "status": 403,
+    "final_url": null,
+    "content_type": null,
+    "bytes": 5644,
+    "saved_as": "https-www-bmb-gov-ph.error.txt",
+    "error": "HTTPError 403: Forbidden"
+  }
+]

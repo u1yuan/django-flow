@@ -1,0 +1,133 @@
+﻿{
+  "meta": {
+    "count": 826,
+    "db_response_time_ms": 242,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "x_query": {
+      "oql": "works where date >= (2018-01-01)\n  and full text has (greenhouse nutrient solution outlier detection multivariate)\n  and retracted is (false)\n  and language is (en)\n  and date <= (2026-09-28)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "from_publication_date",
+            "value": "2018-01-01"
+          },
+          {
+            "column_id": "fulltext.search",
+            "value": "greenhouse nutrient solution outlier detection multivariate",
+            "operator": "has"
+          },
+          {
+            "column_id": "is_retracted",
+            "value": false
+          },
+          {
+            "column_id": "language",
+            "value": "en"
+          },
+          {
+            "column_id": "to_publication_date",
+            "value": "2026-09-28"
+          }
+        ]
+      },
+      "url": "/works?filter=from_publication_date:2018-01-01,fulltext.search:greenhouse nutrient solution outlier detection multivariate,is_retracted:false,language:en,to_publication_date:2026-09-28&per_page=10&page=1"
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W3003667836",
+      "display_name": "Digital Twin: Values, Challenges and Enablers From a Modeling Perspective",
+      "publication_year": 2020,
+      "doi": "https://doi.org/10.1109/access.2020.2970143",
+      "cited_by_count": 1890,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W3120697286",
+      "display_name": "Machine Learning Applications for Precision Agriculture: A Comprehensive Review",
+      "publication_year": 2020,
+      "doi": "https://doi.org/10.1109/access.2020.3048415",
+      "cited_by_count": 1101,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2971653617",
+      "display_name": "Remote sensing of the terrestrial carbon cycle: A review of advances over 50 years",
+      "publication_year": 2019,
+      "doi": "https://doi.org/10.1016/j.rse.2019.111383",
+      "cited_by_count": 661,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4310251770",
+      "display_name": "Grazing and ecosystem service delivery in global drylands",
+      "publication_year": 2022,
+      "doi": "https://doi.org/10.1126/science.abq4062",
+      "cited_by_count": 428,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2801780305",
+      "display_name": "Copper distribution in European topsoils: An assessment based on LUCAS soil survey",
+      "publication_year": 2018,
+      "doi": "https://doi.org/10.1016/j.scitotenv.2018.04.268",
+      "cited_by_count": 421,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W3196508596",
+      "display_name": "Ecological memory of recurrent drought modifies soil processes via changes in soil microbial community",
+      "publication_year": 2021,
+      "doi": "https://doi.org/10.1038/s41467-021-25675-4",
+      "cited_by_count": 390,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W3087408166",
+      "display_name": "Recent Applications of Landsat 8/OLI and Sentinel-2/MSI for Land Use and Land Cover Mapping: A Systematic Review",
+      "publication_year": 2020,
+      "doi": "https://doi.org/10.3390/rs12183062",
+      "cited_by_count": 380,
+      "type": "review",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2970337832",
+      "display_name": "Soil indigenous microbiome and plant genotypes cooperatively modify soybean rhizosphere microbiome assembly",
+      "publication_year": 2019,
+      "doi": "https://doi.org/10.1186/s12866-019-1572-x",
+      "cited_by_count": 352,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4383751021",
+      "display_name": "A Comprehensive Survey on TinyML",
+      "publication_year": 2023,
+      "doi": "https://doi.org/10.1109/access.2023.3294111",
+      "cited_by_count": 345,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4285097082",
+      "display_name": "Digital Twins in Agriculture: A State-of-the-art review",
+      "publication_year": 2022,
+      "doi": "https://doi.org/10.1016/j.atech.2022.100094",
+      "cited_by_count": 312,
+      "type": "article",
+      "language": "en"
+    }
+  ],
+  "group_by": []
+}

@@ -1,0 +1,10 @@
+{
+  "eval_id": 9,
+  "eval_name": "research-coordination-2",
+  "prompt": "Assess the diesel genset anomaly proposal using the literature log and feasibility document. Assign only independent bounded work and return an evidence-bounded synthesis with QA status.",
+  "assertions": [
+    "Uses the six required brief fields",
+    "Does not claim an empirical anomaly result",
+    "Reports QA status and unresolved findings"
+  ]
+}

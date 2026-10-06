@@ -1,0 +1,126 @@
+
+ Global Hourly - Integrated Surface Database (ISD) | National Centers for Environmental Information (NCEI)
+ Skip to main content
+ An official website of the United States government
+ Here's how you know
+ Here's how you know
+ The .gov means it’s official.
+ Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re on a federal government site.
+ The site is secure.
+ The https:// ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.
+ MENU
+ Home
+ Products
+ Search/Filter
+ Services
+ Access
+ Archive
+ Data Certification
+ Maps
+ Monitoring
+ Online Store
+ Regional
+ State of the Services
+ World Data System
+ Resources
+ Alerts
+ Change Notices
+ Education
+ Metadata
+ Quick Links
+ News
+ BAMS
+ Publications
+ Contact
+ About
+ Locations
+ Our Impact
+ Enter Search Term(s):
+ Search
+ NCEI is currently moving its data and applications to the cloud. This upgrade may result in temporary data access delays. Please see our cloud migration overview and frequently asked questions for more information and resources. Check the NCEI Alerts page for impacted products and datasets. Current Impact: Intermittent degraded order fulfillment services. 
+ Home
+ Products
+ Global Hourly - Integrated Surface Database (ISD)
+ Global Hourly - Integrated Surface Database (ISD)
+ The Integrated Surface Database (ISD) is a global database that consists of hourly and synoptic surface observations compiled from numerous sources into a single common ASCII format and common data model. ISD integrates data from more than 100 original data sources, including numerous data formats that were key-entered from paper forms during the 1950s–1970s time frame. ISD includes numerous parameters such as wind speed and direction, wind gust, temperature, dew point, cloud data, sea level pressure, altimeter setting, station pressure, present weather, visibility, precipitation amounts for various time periods, snow depth, and various other elements as observed by each station.
+ Data Access
+ About
+ References
+Products
+These data products are derived from the raw ISD database which includes numerous parameters such as wind speed and direction, wind gust, temperature, dew point, cloud data, sea level pressure, altimeter setting, station pressure, present weather, visibility, precipitation amounts for various time periods, snow depth, and various other elements as observed by each station.
+Global Hourly
+The NCEI Data Access app provides access to global hourly and synoptic observations compiled from numerous sources into a single common ASCII format and common data model. Data from more than 20,000 stations are available.
+Launch Data Access
+Global Summary of the Day
+Summaries consist of a dozen daily averages computed from ISD data. Daily weather elements include mean values of temperature, dew point temperature, sea level pressure, station pressure, visibility, and wind speed plus maximum and minimum temperature, maximum sustained wind speed and maximum gust, precipitation amount, snow depth, and weather indicators. 
+CSV Data
+ Access Methods
+ HTTPS Access
+Download ASCII versions of the ISD and derived data from our WAF area. We recommend this type of access for large volumes of data.
+ISD/Global Hourly
+Global Summary of the Day
+Local Climatological Data
+ISDLite*
+* ISDLite is a derived product that makes it easier to work with for general research and scientific purposes. It is a subset of the full ISD containing eight common surface parameters in a fixed-width format free of duplicate values, sub-hourly data, and complicated flags.
+Search Tools
+ISD data are currently available through  Climate Data Online (CDO) and Data Access. These search and discovery tools are recommended for subsetted orders and smaller volumes of data. Not all derived products are available in these systems.
+ISD/Global Hourly
+Global Summary of the Day
+Local Climatological Data
+Map Tool
+The map viewer tools provide access to ISD and derived datasets through GIS capabilities. Not all derived products are available through the map viewers.
+ISD/Global Hourly
+Global Summary of the Day
+Local Climatological Data
+Web Services API
+These publicly accessible web services allow users to have programmatic access to NCEI data and use custom and standard implementations such as Open Geospatial Consortium GIS Web Services (Web Map Service, Web Feature Service, Web Coverage Service) and OPeNDAP. Not all derived products are available through web services.
+API Documentation
+CDO Web Services
+Access Data Service API
+Access Search Service API
+Access Management API
+Access Order Service API
+ Background
+NCEI (formerly the National Climatic Data Center) started developing ISD in 1998 with assistance from partners in the U.S. Air Force and Navy, as well external funding from several sources. The database incorporates data from over 35,000 stations around the world, with some that include having, and includes observations data from as far back as 1901. The number of stations with data in ISD increased substantially in the 1940s and again in the early 1970s. There are currently more than 14,000 active ISD stations that are updated daily in the database. The total uncompressed data volume is around 600 gigabytes; however, it continues to grow as more data are added.
+Quality Control
+ISD Version 1 was released in 2001, and Version 2 (additional quality control applied) in 2003. Automated quality control software has improved incrementally since 2003. The input sources  used in ISD were previously processed through automated and manual QC until additional QC software was developed and applied to the entire ISD archive. This includes algorithms checking for proper data format for each field, extreme values and limits, consistency between parameters, and continuity between observations (e.g., for temperature). For more detailed information regarding the QC process, see The Quality Control of the Integrated Surface Hourly Database.
+Coverage
+ISD is a global database, though the best spatial coverage is evident in North America, Europe, Australia, and parts of Asia. Coverage in the Northern Hemisphere is better than the Southern Hemisphere, and the overall period of record is currently 1901 to present. Some stations have more than 50 years of continuous reporting during the latter half of that time period. However, many stations have "breaks" in the period of record (e.g., 40 years of data may be spread over a 70-year period).
+Efforts are well underway to integrate additional data sources into ISD, which will provide for more U.S. data prior to 1950 and some data prior to 1900. Plans are also in place to gradually integrate datasets provided by various countries to increase data coverage and periods of record for some areas.
+Related Publications
+Smith, A., N. Lott, and R. Vose, 2011: The Integrated Surface Database: Recent Developments and Partnerships. Bulletin of the American Meteorological Society, 92, 704–708, doi:10.1175/2011BAMS3015.1.
+Lott, J.N., R.S. Vose, S.A. Del Greco, T.R. Ross, S. Worley, and J.L. Comeaux, 2008: The integrated surface database: Partnerships and progress. 24th Conference on Interactive Information Processing Systems for Meteorology, Oceanography, and Hydrology (IIPS), New Orleans, LA, American Meteorological Society, Paper 131387. [Available online at https://ams.confex.com/ams/88Annual/webprogram/Paper131387.html.]
+Lott, J.N., 2004: The quality control of the integrated surface hourly database. 14th Conference on Applied Climatology, Seattle, WA, American Meteorological Society, Paper 71929. [Available online at https://ams.confex.com/ams/84Annual/webprogram/Paper71929.html.]
+Del Greco, S.A., J.N. Lott, S.K. Hawkins, R. Baldwin, D.D. Anders, R. Ray, D. Dellinger, P. Jones, and F. Smith, 2006: Surface data integration at NOAA's National Climatic Data Center: Data format, processing, QC, and product generation. 22nd International Conference on Interactive Information Processing Systems for Meteorology, Oceanography, and Hydrology (IIPS), Atlanta, GA, American Meteorological Society, Paper 100500. [Available online at https://ams.confex.com/ams/Annual2006/webprogram/Paper100500.html.]
+Lott, J.N., R. Baldwin, and D.D. Anders, 2006: Recent advances in in-situ data access, summarization, and visualization at NOAA's National Climatic Data Center. 22nd International Conference on Interactive Information Processing Systems for Meteorology, Oceanography, and Hydrology (IIPS), Atlanta, GA, American Meteorological Society, Paper 100684. [Available online at https://ams.confex.com/ams/Annual2006/webprogram/Paper100684.html.]
+Lott, J.N., and R. Baldwin, 2002: The FCC integrated surface hourly database, a new resource of global climate data. 13th Symposium on Global Change and Climate Variations, Orlando, FL, American Meteorological Society, Paper 27792. [Available online at https://ams.confex.com/ams/annual2002/webprogram/Paper27792.html.]
+Baldwin, R., S. Ansari, N. Lott, and G. Reid, 2007: Accessing geographic information services and visualization products at NOAA's National Climatic Data Center. 22nd International Conference on Interactive Information Processing Systems for Meteorology, Oceanography, and Hydrology (IIPS), San Antonio, TX, American Meteorological Society, Paper 116734. [Available online at https://ams.confex.com/ams/87ANNUAL/webprogram/Paper116734.html.]
+Del Greco, S.A., J.N. Lott, R. Ray, D. Dellinger, F. Smith, and P. Jones, 2007: Surface data processing and integration at NOAA's National Climatic Data Center. 23rd Conference on Interactive Information Processing Systems for Meteorology, Oceanography, and Hydrology (IIPS), San Antonio, TX, American Meteorological Society, Paper 116367. [Available online at https://ams.confex.com/ams/87ANNUAL/webprogram/Paper116367.html.]
+ Related News
+ May 20, 2026
+ Rhode Island Receives New 24-Hour State Snowfall Record
+ Read More
+ April 30, 2026
+ New Texas Hailstone Record Confirmed by NOAA and Partners
+ Read More
+ January 7, 2026
+ New Jersey Seasonal Snowfall Record Discovered 30 Years Later
+ Read More
+ Return to top
+ Follow Us
+ @NOAANCEI
+ @NOAAData
+ @NOAANCEI
+ News Feed
+ Contact Us
+ Email by topic
+ Phone: (828) 271-4800
+ Sitemap
+ Privacy Policy
+ Freedom of Information Act
+ Information Quality
+ Accessibility
+ Disclaimer
+ Department of Commerce
+ NOAA
+ NESDIS

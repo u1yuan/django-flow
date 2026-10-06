@@ -1,0 +1,102 @@
+[
+  {
+    "eval_id": 0,
+    "eval_name": "evidence-research-1",
+    "prompt": "Audit two claims in the diesel literature log using only the local log. Return an evidence ledger and identify which citations still need source-level verification.",
+    "assertions": [
+      "Records source identifiers or URLs",
+      "Does not mark log summaries as verified source passages",
+      "Names a concrete verification gap"
+    ]
+  },
+  {
+    "eval_id": 1,
+    "eval_name": "evidence-research-2",
+    "prompt": "Screen the hydroponic proposal's bibliography for sources relevant to sensor reliability; a cited DOI may be wrong. Return status and next verification actions without browsing.",
+    "assertions": [
+      "Separates leads from verified claims",
+      "Does not invent citation metadata",
+      "Reports reproducible screening scope"
+    ]
+  },
+  {
+    "eval_id": 2,
+    "eval_name": "quantitative-analysis-1",
+    "prompt": "Evaluate whether the hydroponic feasibility document contains data suitable for zone anomaly analysis. Do not infer a result from its target row count.",
+    "assertions": [
+      "States data are missing or unconfirmed",
+      "Does not present fabricated statistics",
+      "Lists variables, units, and time or grouping requirements"
+    ]
+  },
+  {
+    "eval_id": 3,
+    "eval_name": "quantitative-analysis-2",
+    "prompt": "Review a toy report claiming 12 events out of 80 are 12% and a script that exits with an error. Explain what results can be accepted and what must be rerun.",
+    "assertions": [
+      "Recomputes 12/80 as 15%",
+      "Flags code failure",
+      "Does not claim successful execution"
+    ]
+  },
+  {
+    "eval_id": 4,
+    "eval_name": "research-writing-1",
+    "prompt": "Draft a short background paragraph from the diesel literature log only. Mark every citation as unverified until its original source is checked.",
+    "assertions": [
+      "Provides a claim map",
+      "Does not assert unverified citations as confirmed",
+      "Avoids invented results"
+    ]
+  },
+  {
+    "eval_id": 5,
+    "eval_name": "research-writing-2",
+    "prompt": "Draft a hydroponic feasibility paragraph from the repository proposal without access to sensor records.",
+    "assertions": [
+      "States absence of observed sensor analysis",
+      "Preserves proposal status",
+      "Lists unresolved inputs"
+    ]
+  },
+  {
+    "eval_id": 6,
+    "eval_name": "research-quality-review-1",
+    "prompt": "Review a draft that treats an unverified bibliography entry as proof and reports 12/80 as 12%. Return severity, evidence, and correction.",
+    "assertions": [
+      "Flags the unverified citation",
+      "Recomputes 12/80 as 15%",
+      "Provides severity and correction"
+    ]
+  },
+  {
+    "eval_id": 7,
+    "eval_name": "research-quality-review-2",
+    "prompt": "Review a proposed hydroponic analysis that claims significance without sensor data and whose supplied code fails on execution. Return QA disposition.",
+    "assertions": [
+      "Flags missing data",
+      "Flags failing code",
+      "Returns needs revision or equivalent status"
+    ]
+  },
+  {
+    "eval_id": 8,
+    "eval_name": "research-coordination-1",
+    "prompt": "Assess the feasibility of the hydroponic zone analytics proposal in the repository using local documents only. Return a bounded task brief, evidence, limitations, and QA status; determine whether analyzable data are present.",
+    "assertions": [
+      "Uses the six required brief fields",
+      "Distinguishes proposal from observed data",
+      "States evidence, limitations, and QA status"
+    ]
+  },
+  {
+    "eval_id": 9,
+    "eval_name": "research-coordination-2",
+    "prompt": "Assess the diesel genset anomaly proposal using the literature log and feasibility document. Assign only independent bounded work and return an evidence-bounded synthesis with QA status.",
+    "assertions": [
+      "Uses the six required brief fields",
+      "Does not claim an empirical anomaly result",
+      "Reports QA status and unresolved findings"
+    ]
+  }
+]

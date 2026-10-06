@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Uses the six required brief fields",
+      "passed": false,
+      "evidence": "Checked for topic/question, output, inputs, constraints, acceptance criteria, and data-handling restrictions."
+    },
+    {
+      "text": "Distinguishes proposal from observed data",
+      "passed": true,
+      "evidence": "Looked for explicit distinction between proposal targets and observations."
+    },
+    {
+      "text": "States evidence, limitations, and QA status",
+      "passed": false,
+      "evidence": "Looked for evidence, limitations, and a QA disposition."
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 2,
+    "total": 3,
+    "pass_rate": 0.3333333333333333
+  }
+}

@@ -1,0 +1,6963 @@
+{
+  "meta": {
+    "count": 75,
+    "db_response_time_ms": 190,
+    "page": 2,
+    "per_page": 10,
+    "groups_count": null,
+    "x_query": {
+      "oql": "works where institution country is (PH)\n  and date >= (2018-01-01)\n  and retracted is (false)\n  and language is (en)\n  and title/abstract has (hydroponic)\n  and date <= (2026-09-29)\n  and abstract has (IoT or anomaly or forecast or nutrient or pH or sensor)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "authorships.institutions.country_code",
+            "value": "PH"
+          },
+          {
+            "column_id": "from_publication_date",
+            "value": "2018-01-01"
+          },
+          {
+            "column_id": "is_retracted",
+            "value": false
+          },
+          {
+            "column_id": "language",
+            "value": "en"
+          },
+          {
+            "column_id": "title_and_abstract.search",
+            "value": "hydroponic",
+            "operator": "has"
+          },
+          {
+            "column_id": "to_publication_date",
+            "value": "2026-09-29"
+          },
+          {
+            "join": "or",
+            "filters": [
+              {
+                "column_id": "abstract.search",
+                "value": "IoT",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "anomaly",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "forecast",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "nutrient",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "pH",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "sensor",
+                "operator": "has"
+              }
+            ]
+          }
+        ]
+      },
+      "url": "/works?filter=authorships.institutions.country_code:PH,from_publication_date:2018-01-01,is_retracted:false,language:en,title_and_abstract.search:hydroponic,to_publication_date:2026-09-29,abstract.search:IoT|anomaly|forecast|nutrient|pH|sensor&per_page=10&page=2"
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W4367664052",
+      "display_name": "Smart Hydroponic System with Hybrid Switching Mechanism, LED Illumination, and IOT using Zigbee Technology",
+      "publication_year": 2022,
+      "publication_date": "2022-12-01",
+      "cited_by_count": 6,
+      "doi": "https://doi.org/10.1109/hnicem57413.2022.10109353",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5020556378",
+            "display_name": "P.E Bugayong",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I137967721",
+              "display_name": "Map\u00faa University",
+              "ror": "https://ror.org/040rd2b57",
+              "country_code": "PH",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I137967721"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "P.E Bugayong",
+          "raw_affiliation_strings": [
+            "Map&#x00FA;a University Muralla St.,EECE Department,Manila"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Map&#x00FA;a University Muralla St.,EECE Department,Manila",
+              "institution_ids": [
+                "https://openalex.org/I137967721"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5047512881",
+            "display_name": "J.V Casalla",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I137967721",
+              "display_name": "Map\u00faa University",
+              "ror": "https://ror.org/040rd2b57",
+              "country_code": "PH",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I137967721"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "J.V Casalla",
+          "raw_affiliation_strings": [
+            "Map&#x00FA;a University Muralla St.,EECE Department,Manila"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Map&#x00FA;a University Muralla St.,EECE Department,Manila",
+              "institution_ids": [
+                "https://openalex.org/I137967721"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5009619506",
+            "display_name": "J.B. Lopez",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I137967721",
+              "display_name": "Map\u00faa University",
+              "ror": "https://ror.org/040rd2b57",
+              "country_code": "PH",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I137967721"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "J.B. Lopez",
+          "raw_affiliation_strings": [
+            "Map&#x00FA;a University Muralla St.,EECE Department,Manila"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Map&#x00FA;a University Muralla St.,EECE Department,Manila",
+              "institution_ids": [
+                "https://openalex.org/I137967721"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5022608947",
+            "display_name": "Michael C. Pacis",
+            "orcid": "https://orcid.org/0000-0001-8568-6045",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-8568-6045"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I137967721",
+              "display_name": "Map\u00faa University",
+              "ror": "https://ror.org/040rd2b57",
+              "country_code": "PH",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I137967721"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "M.C. Pacis",
+          "raw_affiliation_strings": [
+            "Map&#x00FA;a University Muralla St.,EECE Department,Manila"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Map&#x00FA;a University Muralla St.,EECE Department,Manila",
+              "institution_ids": [
+                "https://openalex.org/I137967721"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Traditional": [
+          0
+        ],
+        "Farming": [
+          1
+        ],
+        "has": [
+          2,
+          27
+        ],
+        "enabled": [
+          3
+        ],
+        "human": [
+          4
+        ],
+        "beings": [
+          5
+        ],
+        "to": [
+          6,
+          56,
+          119,
+          149
+        ],
+        "produce": [
+          7
+        ],
+        "huge": [
+          8
+        ],
+        "quantities": [
+          9
+        ],
+        "of": [
+          10,
+          36,
+          73,
+          104,
+          112
+        ],
+        "food": [
+          11
+        ],
+        "but": [
+          12,
+          45,
+          143
+        ],
+        "as": [
+          13
+        ],
+        "the": [
+          14,
+          25,
+          70,
+          106,
+          110,
+          115,
+          121,
+          125,
+          150
+        ],
+        "population": [
+          15
+        ],
+        "develops": [
+          16
+        ],
+        "and": [
+          17,
+          24,
+          49,
+          84,
+          92
+        ],
+        "grows,": [
+          18
+        ],
+        "arable": [
+          19
+        ],
+        "land": [
+          20
+        ],
+        "is": [
+          21,
+          33,
+          55
+        ],
+        "less": [
+          22,
+          145
+        ],
+        "available,": [
+          23
+        ],
+        "demand": [
+          26
+        ],
+        "not": [
+          28
+        ],
+        "been": [
+          29
+        ],
+        "properly": [
+          30
+        ],
+        "met.": [
+          31
+        ],
+        "Hydroponics": [
+          32
+        ],
+        "a": [
+          34,
+          74,
+          79,
+          93,
+          97
+        ],
+        "type": [
+          35
+        ],
+        "growth": [
+          37,
+          50
+        ],
+        "method": [
+          38
+        ],
+        "for": [
+          39,
+          62
+        ],
+        "crops": [
+          40
+        ],
+        "that": [
+          41
+        ],
+        "uses": [
+          42
+        ],
+        "no": [
+          43
+        ],
+        "soil": [
+          44
+        ],
+        "instead": [
+          46
+        ],
+        "nutrient": [
+          47
+        ],
+        "solutions": [
+          48
+        ],
+        "medium.": [
+          51
+        ],
+        "This": [
+          52
+        ],
+        "study\u2019s": [
+          53
+        ],
+        "purpose": [
+          54
+        ],
+        "design": [
+          57
+        ],
+        "an": [
+          58,
+          90,
+          128
+        ],
+        "automated": [
+          59
+        ],
+        "hydroponics": [
+          60
+        ],
+        "system": [
+          61
+        ],
+        "growing": [
+          63
+        ],
+        "Green": [
+          64
+        ],
+        "Ice": [
+          65
+        ],
+        "Lettuce.": [
+          66
+        ],
+        "The": [
+          67,
+          131
+        ],
+        "researchers": [
+          68,
+          122
+        ],
+        "designed": [
+          69
+        ],
+        "control": [
+          71
+        ],
+        "parameters": [
+          72
+        ],
+        "hydroponic": [
+          75,
+          107
+        ],
+        "system,": [
+          76
+        ],
+        "built": [
+          77
+        ],
+        "on": [
+          78,
+          127
+        ],
+        "prototype": [
+          80
+        ],
+        "with": [
+          81
+        ],
+        "LED": [
+          82
+        ],
+        "Illumination": [
+          83
+        ],
+        "Hybrid": [
+          85
+        ],
+        "(Direct": [
+          86
+        ],
+        "DC": [
+          87
+        ],
+        "supply": [
+          88
+        ],
+        "from": [
+          89
+        ],
+        "adapter,": [
+          91
+        ],
+        "battery": [
+          94
+        ],
+        "charged": [
+          95
+        ],
+        "by": [
+          96
+        ],
+        "solar": [
+          98
+        ],
+        "panel)": [
+          99
+        ],
+        "power": [
+          100
+        ],
+        "switching": [
+          101
+        ],
+        "mechanism,": [
+          102
+        ],
+        "capable": [
+          103
+        ],
+        "monitoring": [
+          105
+        ],
+        "parameter": [
+          108
+        ],
+        "via": [
+          109
+        ],
+        "Internet": [
+          111
+        ],
+        "Things": [
+          113
+        ],
+        "using": [
+          114
+        ],
+        "Zigbee": [
+          116
+        ],
+        "Technology.": [
+          117
+        ],
+        "Added": [
+          118
+        ],
+        "that,": [
+          120
+        ],
+        "also": [
+          123
+        ],
+        "grew": [
+          124
+        ],
+        "crop": [
+          126
+        ],
+        "uncontrolled": [
+          129
+        ],
+        "environment.": [
+          130
+        ],
+        "Hydroponic": [
+          132
+        ],
+        "Farm": [
+          133
+        ],
+        "yield": [
+          134
+        ],
+        "17.2%": [
+          135
+        ],
+        "more": [
+          136
+        ],
+        "leaves,": [
+          137
+        ],
+        "29.85%": [
+          138
+        ],
+        "taller": [
+          139
+        ],
+        "height": [
+          140
+        ],
+        "14.55%": [
+          141
+        ],
+        "heavier,": [
+          142
+        ],
+        "8.57%": [
+          144
+        ],
+        "stem": [
+          146
+        ],
+        "diameter": [
+          147
+        ],
+        "compared": [
+          148
+        ],
+        "Natural": [
+          151
+        ],
+        "farm.": [
+          152
+        ]
+      },
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "type": "conference-paper",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4405499575",
+      "display_name": "Comparison of the nutrient composition of sludge under aerobic and anaerobic mineralization from African catfish, Clarias gariepinus (Actinopterygii: Siluriformes: Clariidae), reared in an intensive recirculating aquaculture system",
+      "publication_year": 2024,
+      "publication_date": "2024-12-17",
+      "cited_by_count": 4,
+      "doi": "https://doi.org/10.3897/aiep.54.131982",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5114564272",
+            "display_name": "Rizza Mae T. Guyapale",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I203187632",
+              "display_name": "University of the Philippines Visayas",
+              "ror": "https://ror.org/00800dw77",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I103911934",
+                "https://openalex.org/I203187632"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Rizza Mae Guyapale",
+          "raw_affiliation_strings": [
+            "Institute of Aquaculture , College of Fisheries and Ocean Sciences , University of the Philippines Visayas , Miagao , Iloilo , Philippines",
+            "Institute of Aquaculture, College of Fisheries and Ocean Sciences, University of the Philippines Visayas, Miagao, Iloilo, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Institute of Aquaculture , College of Fisheries and Ocean Sciences , University of the Philippines Visayas , Miagao , Iloilo , Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203187632"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Institute of Aquaculture, College of Fisheries and Ocean Sciences, University of the Philippines Visayas, Miagao, Iloilo, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203187632"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5008150853",
+            "display_name": "Cleresa S. Dionela",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I203187632",
+              "display_name": "University of the Philippines Visayas",
+              "ror": "https://ror.org/00800dw77",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I103911934",
+                "https://openalex.org/I203187632"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Cleresa Dionela",
+          "raw_affiliation_strings": [
+            "Institute of Aquaculture , College of Fisheries and Ocean Sciences , University of the Philippines Visayas , Miagao , Iloilo , Philippines",
+            "Institute of Aquaculture, College of Fisheries and Ocean Sciences, University of the Philippines Visayas, Miagao, Iloilo, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Institute of Aquaculture , College of Fisheries and Ocean Sciences , University of the Philippines Visayas , Miagao , Iloilo , Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203187632"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Institute of Aquaculture, College of Fisheries and Ocean Sciences, University of the Philippines Visayas, Miagao, Iloilo, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203187632"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5010581000",
+            "display_name": "Fredson Hervias Huervana",
+            "orcid": "https://orcid.org/0000-0002-1182-2865",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-1182-2865"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I203187632",
+              "display_name": "University of the Philippines Visayas",
+              "ror": "https://ror.org/00800dw77",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I103911934",
+                "https://openalex.org/I203187632"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Fredson Huervana",
+          "raw_affiliation_strings": [
+            "Institute of Aquaculture , College of Fisheries and Ocean Sciences , University of the Philippines Visayas , Miagao , Iloilo , Philippines",
+            "Institute of Aquaculture, College of Fisheries and Ocean Sciences, University of the Philippines Visayas, Miagao, Iloilo, Philippines"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-1182-2865",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Institute of Aquaculture , College of Fisheries and Ocean Sciences , University of the Philippines Visayas , Miagao , Iloilo , Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203187632"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Institute of Aquaculture, College of Fisheries and Ocean Sciences, University of the Philippines Visayas, Miagao, Iloilo, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203187632"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "One": [
+          0
+        ],
+        "of": [
+          1,
+          16,
+          25,
+          76,
+          122,
+          170,
+          188
+        ],
+        "the": [
+          2,
+          13,
+          154,
+          166,
+          176,
+          186,
+          189,
+          201,
+          207
+        ],
+        "major": [
+          3
+        ],
+        "challenges": [
+          4
+        ],
+        "in": [
+          5,
+          35,
+          107,
+          119,
+          192,
+          197
+        ],
+        "an": [
+          6,
+          36
+        ],
+        "intensive": [
+          7
+        ],
+        "recirculating": [
+          8
+        ],
+        "aquaculture": [
+          9
+        ],
+        "system": [
+          10,
+          38,
+          43
+        ],
+        "(RAS)": [
+          11
+        ],
+        "is": [
+          12
+        ],
+        "sustainable": [
+          14
+        ],
+        "management": [
+          15
+        ],
+        "fish": [
+          17
+        ],
+        "sludge.": [
+          18,
+          77,
+          160
+        ],
+        "The": [
+          19,
+          105
+        ],
+        "sludge": [
+          20,
+          81,
+          217
+        ],
+        "contains": [
+          21
+        ],
+        "a": [
+          22,
+          73,
+          112,
+          193
+        ],
+        "significant": [
+          23,
+          114
+        ],
+        "amount": [
+          24,
+          75
+        ],
+        "nutrients": [
+          26,
+          213
+        ],
+        "that": [
+          27
+        ],
+        "can": [
+          28,
+          63
+        ],
+        "be": [
+          29,
+          55,
+          64,
+          219
+        ],
+        "utilized": [
+          30
+        ],
+        "by": [
+          31,
+          165
+        ],
+        "hydroponically": [
+          32,
+          225
+        ],
+        "grown": [
+          33,
+          226
+        ],
+        "crops": [
+          34
+        ],
+        "integrated": [
+          37
+        ],
+        "called": [
+          39
+        ],
+        "aquaponics.": [
+          40
+        ],
+        "While": [
+          41
+        ],
+        "this": [
+          42,
+          79
+        ],
+        "has": [
+          44
+        ],
+        "promising": [
+          45
+        ],
+        "results,": [
+          46
+        ],
+        "techniques": [
+          47
+        ],
+        "to": [
+          48,
+          54,
+          88,
+          184,
+          210,
+          218
+        ],
+        "maximize": [
+          49
+        ],
+        "nutrient": [
+          50,
+          103,
+          167,
+          195
+        ],
+        "recovery": [
+          51,
+          168,
+          196
+        ],
+        "still": [
+          52
+        ],
+        "need": [
+          53
+        ],
+        "developed.": [
+          56
+        ],
+        "African": [
+          57,
+          83,
+          215
+        ],
+        "catfish,": [
+          58
+        ],
+        "Clarias": [
+          59
+        ],
+        "gariepinus": [
+          60
+        ],
+        "(Burchell,": [
+          61
+        ],
+        "1822),": [
+          62
+        ],
+        "stocked": [
+          65
+        ],
+        "at": [
+          66
+        ],
+        "very": [
+          67
+        ],
+        "high": [
+          68
+        ],
+        "densities,": [
+          69
+        ],
+        "therefore": [
+          70
+        ],
+        "it": [
+          71
+        ],
+        "produces": [
+          72
+        ],
+        "substantial": [
+          74
+        ],
+        "In": [
+          78
+        ],
+        "study,": [
+          80
+        ],
+        "from": [
+          82,
+          214
+        ],
+        "catfish": [
+          84,
+          216
+        ],
+        "RAS": [
+          85
+        ],
+        "was": [
+          86,
+          162
+        ],
+        "subjected": [
+          87
+        ],
+        "different": [
+          89
+        ],
+        "mineralization": [
+          90,
+          110,
+          156,
+          203
+        ],
+        "treatments": [
+          91
+        ],
+        "(T1:": [
+          92
+        ],
+        "anaerobic,": [
+          93
+        ],
+        "T2:": [
+          94
+        ],
+        "aerobic,": [
+          95
+        ],
+        "and": [
+          96,
+          144,
+          158,
+          172,
+          179
+        ],
+        "T3:": [
+          97
+        ],
+        "aerobic": [
+          98
+        ],
+        "with": [
+          99
+        ],
+        "carbon": [
+          100
+        ],
+        "addition)": [
+          101
+        ],
+        "for": [
+          102,
+          224
+        ],
+        "recovery.": [
+          104
+        ],
+        "supernatant": [
+          106
+        ],
+        "T3": [
+          108,
+          205
+        ],
+        "after": [
+          109,
+          150
+        ],
+        "had": [
+          111,
+          206
+        ],
+        "statistically": [
+          113
+        ],
+        "difference": [
+          115
+        ],
+        "(P": [
+          116
+        ],
+        ">": [
+          117
+        ],
+        "0.05)": [
+          118
+        ],
+        "their": [
+          120
+        ],
+        "concentrations": [
+          121
+        ],
+        "N": [
+          123
+        ],
+        "(2700": [
+          124
+        ],
+        "mg": [
+          125,
+          130,
+          135,
+          141,
+          147
+        ],
+        "\u2219": [
+          126,
+          131,
+          136,
+          142,
+          148
+        ],
+        "L\u20131),": [
+          127,
+          132,
+          137,
+          143
+        ],
+        "P": [
+          128
+        ],
+        "(100": [
+          129
+        ],
+        "K": [
+          133
+        ],
+        "(720": [
+          134
+        ],
+        "Ca": [
+          138
+        ],
+        "(12": [
+          139
+        ],
+        "115.6": [
+          140
+        ],
+        "Mg": [
+          145
+        ],
+        "(3391.9": [
+          146
+        ],
+        "L\u20131)": [
+          149
+        ],
+        "15": [
+          151
+        ],
+        "days,": [
+          152
+        ],
+        "among": [
+          153,
+          200
+        ],
+        "other": [
+          155
+        ],
+        "methods": [
+          157
+        ],
+        "untreated": [
+          159
+        ],
+        "It": [
+          161
+        ],
+        "then": [
+          163
+        ],
+        "followed": [
+          164
+        ],
+        "performance": [
+          169
+        ],
+        "T2": [
+          171
+        ],
+        "lastly,": [
+          173
+        ],
+        "T1.": [
+          174
+        ],
+        "Moreover,": [
+          175
+        ],
+        "low": [
+          177
+        ],
+        "pH": [
+          178
+        ],
+        "warm": [
+          180
+        ],
+        "temperature": [
+          181
+        ],
+        "were": [
+          182
+        ],
+        "observed": [
+          183
+        ],
+        "improve": [
+          185
+        ],
+        "solubilization": [
+          187
+        ],
+        "nutrients,": [
+          190
+        ],
+        "resulting": [
+          191
+        ],
+        "higher": [
+          194
+        ],
+        "T3.": [
+          198
+        ],
+        "Hence,": [
+          199
+        ],
+        "three": [
+          202
+        ],
+        "treatments,": [
+          204
+        ],
+        "most": [
+          208
+        ],
+        "potential": [
+          209
+        ],
+        "recover": [
+          211
+        ],
+        "maximum": [
+          212
+        ],
+        "used": [
+          220
+        ],
+        "as": [
+          221
+        ],
+        "organic": [
+          222
+        ],
+        "fertilizer": [
+          223
+        ],
+        "crops.": [
+          227
+        ]
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://aiep.pensoft.net/article/131982/download/pdf/",
+        "any_repository_has_fulltext": true
+      },
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4367057971",
+      "display_name": "Growing Conditions and System Productivity in a Closed-Loop Aquaponic System Under Varying Stocking Density",
+      "publication_year": 2023,
+      "publication_date": "2023-04-26",
+      "cited_by_count": 4,
+      "doi": "https://doi.org/10.12911/22998993/162210",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5057431667",
+            "display_name": "Jeannie-Rose Fabula",
+            "orcid": "https://orcid.org/0000-0003-2527-7711",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-2527-7711"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I203854029",
+              "display_name": "Central Luzon State University",
+              "ror": "https://ror.org/02qf7df19",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I203854029"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Jeannie-Rose Fabula",
+          "raw_affiliation_strings": [
+            "Crops and Resources Research and Development Center , Central Luzon State University , Nueva Ecija , Philippines",
+            "Crops and Resources Research and Development Center, Central Luzon State University, Nueva Ecija, Philippines"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-2527-7711",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Crops and Resources Research and Development Center , Central Luzon State University , Nueva Ecija , Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203854029"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Crops and Resources Research and Development Center, Central Luzon State University, Nueva Ecija, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203854029"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5031018475",
+            "display_name": "Helen F. Gavino",
+            "orcid": "https://orcid.org/0000-0001-8004-2961",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-8004-2961"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I203854029",
+              "display_name": "Central Luzon State University",
+              "ror": "https://ror.org/02qf7df19",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I203854029"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Helen Gavino",
+          "raw_affiliation_strings": [
+            "Department of Agricultural and Biosystems Engineering , Central Luzon State University , Nueva Ecija , Philippines",
+            "Department of Agricultural and Biosystems Engineering, Central Luzon State University, Nueva Ecija, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Agricultural and Biosystems Engineering , Central Luzon State University , Nueva Ecija , Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203854029"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Agricultural and Biosystems Engineering, Central Luzon State University, Nueva Ecija, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203854029"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5053183978",
+            "display_name": "Chito F. Sace",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I203854029",
+              "display_name": "Central Luzon State University",
+              "ror": "https://ror.org/02qf7df19",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I203854029"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Chito Sace",
+          "raw_affiliation_strings": [
+            "Department of Agricultural and Biosystems Engineering , Central Luzon State University , Nueva Ecija , Philippines",
+            "Department of Agricultural and Biosystems Engineering, Central Luzon State University, Nueva Ecija, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Agricultural and Biosystems Engineering , Central Luzon State University , Nueva Ecija , Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203854029"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Agricultural and Biosystems Engineering, Central Luzon State University, Nueva Ecija, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203854029"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5076194028",
+            "display_name": "Marvin Cinense",
+            "orcid": "https://orcid.org/0000-0001-9464-690X",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-9464-690X"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I203854029",
+              "display_name": "Central Luzon State University",
+              "ror": "https://ror.org/02qf7df19",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I203854029"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Marvin Cinense",
+          "raw_affiliation_strings": [
+            "Department of Agricultural and Biosystems Engineering , Central Luzon State University , Nueva Ecija , Philippines",
+            "Department of Agricultural and Biosystems Engineering, Central Luzon State University, Nueva Ecija, Philippines"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-9464-690X",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Agricultural and Biosystems Engineering , Central Luzon State University , Nueva Ecija , Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203854029"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Agricultural and Biosystems Engineering, Central Luzon State University, Nueva Ecija, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203854029"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5008558400",
+            "display_name": "Emmanuel V. Sicat",
+            "orcid": "https://orcid.org/0000-0003-4266-5812",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-4266-5812"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I203854029",
+              "display_name": "Central Luzon State University",
+              "ror": "https://ror.org/02qf7df19",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I203854029"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Emmanuel Sicat",
+          "raw_affiliation_strings": [
+            "Department of Agricultural and Biosystems Engineering , Central Luzon State University , Nueva Ecija , Philippines",
+            "Department of Agricultural and Biosystems Engineering, Central Luzon State University, Nueva Ecija, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Agricultural and Biosystems Engineering , Central Luzon State University , Nueva Ecija , Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203854029"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Agricultural and Biosystems Engineering, Central Luzon State University, Nueva Ecija, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203854029"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5016966055",
+            "display_name": "Jose S. Abucay",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I203854029",
+              "display_name": "Central Luzon State University",
+              "ror": "https://ror.org/02qf7df19",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I203854029"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jose Abucay",
+          "raw_affiliation_strings": [
+            "College of Fisheries , Central Luzon State University , Nueva Ecija , Philippines",
+            "College of Fisheries, Central Luzon State University, Nueva Ecija, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Fisheries , Central Luzon State University , Nueva Ecija , Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203854029"
+              ]
+            },
+            {
+              "raw_affiliation_string": "College of Fisheries, Central Luzon State University, Nueva Ecija, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I203854029"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Aquaponics": [
+          0
+        ],
+        "is": [
+          1
+        ],
+        "an": [
+          2,
+          145
+        ],
+        "integrated": [
+          3
+        ],
+        "form": [
+          4
+        ],
+        "of": [
+          5,
+          20,
+          33,
+          80,
+          101,
+          109,
+          205,
+          214,
+          220,
+          235,
+          252
+        ],
+        "a": [
+          6,
+          12,
+          70,
+          201
+        ],
+        "multi-commodity": [
+          7
+        ],
+        "production": [
+          8,
+          79
+        ],
+        "system": [
+          9,
+          15,
+          103,
+          167
+        ],
+        "that": [
+          10,
+          62,
+          143
+        ],
+        "combines": [
+          11
+        ],
+        "recirculating": [
+          13
+        ],
+        "aquaculture": [
+          14
+        ],
+        "with": [
+          16,
+          144
+        ],
+        "the": [
+          17,
+          23,
+          30,
+          38,
+          54,
+          58,
+          78,
+          93,
+          102,
+          158,
+          160,
+          166,
+          210,
+          215,
+          236,
+          240,
+          248
+        ],
+        "hydroponic": [
+          18
+        ],
+        "cultivation": [
+          19
+        ],
+        "crops": [
+          21
+        ],
+        "using": [
+          22,
+          28
+        ],
+        "same": [
+          24
+        ],
+        "water": [
+          25,
+          72,
+          97,
+          162,
+          169,
+          203
+        ],
+        "via": [
+          26
+        ],
+        "recirculation": [
+          27,
+          73
+        ],
+        "pumps.However,": [
+          29
+        ],
+        "ideal": [
+          31
+        ],
+        "density": [
+          32,
+          219
+        ],
+        "cultured": [
+          34,
+          237
+        ],
+        "aquatic": [
+          35,
+          238
+        ],
+        "species": [
+          36
+        ],
+        "and": [
+          37,
+          87,
+          99,
+          116,
+          123,
+          135,
+          149,
+          155,
+          200,
+          224,
+          232,
+          250,
+          254
+        ],
+        "suitable": [
+          39
+        ],
+        "fish/plants/fish": [
+          40
+        ],
+        "feed": [
+          41
+        ],
+        "combinations": [
+          42
+        ],
+        "applicable": [
+          43
+        ],
+        "under": [
+          44
+        ],
+        "aquaponics": [
+          45
+        ],
+        "must": [
+          46
+        ],
+        "be": [
+          47
+        ],
+        "established": [
+          48,
+          76
+        ],
+        "to": [
+          49,
+          91,
+          105,
+          185,
+          191
+        ],
+        "determine": [
+          50
+        ],
+        "its": [
+          51,
+          65
+        ],
+        "impact": [
+          52
+        ],
+        "on": [
+          53,
+          247
+        ],
+        "system's": [
+          55
+        ],
+        "performance,": [
+          56
+        ],
+        "including": [
+          57
+        ],
+        "local": [
+          59
+        ],
+        "growing": [
+          60,
+          95
+        ],
+        "conditions": [
+          61,
+          164,
+          213
+        ],
+        "could": [
+          63
+        ],
+        "affect": [
+          64
+        ],
+        "productivity.Eighteen": [
+          66
+        ],
+        "aquaponic": [
+          67
+        ],
+        "systems": [
+          68
+        ],
+        "following": [
+          69
+        ],
+        "closed-loop": [
+          71
+        ],
+        "method": [
+          74
+        ],
+        "were": [
+          75,
+          208
+        ],
+        "for": [
+          77
+        ],
+        "red": [
+          81
+        ],
+        "tilapia,": [
+          82
+        ],
+        "giant": [
+          83
+        ],
+        "river": [
+          84
+        ],
+        "prawns,": [
+          85
+        ],
+        "lettuce,": [
+          86
+        ],
+        "duckweed.The": [
+          88
+        ],
+        "study": [
+          89
+        ],
+        "aimed": [
+          90
+        ],
+        "establish": [
+          92
+        ],
+        "ambient": [
+          94,
+          146
+        ],
+        "condition,": [
+          96
+        ],
+        "quality,": [
+          98
+        ],
+        "productivity": [
+          100
+        ],
+        "subjected": [
+          104
+        ],
+        "different": [
+          106,
+          216
+        ],
+        "stocking": [
+          107,
+          218,
+          241
+        ],
+        "densities": [
+          108,
+          242
+        ],
+        "fish": [
+          110
+        ],
+        "(RT": [
+          111
+        ],
+        "24": [
+          112,
+          221
+        ],
+        "-24": [
+          113
+        ],
+        "fish/m": [
+          114,
+          120,
+          222
+        ],
+        "3,": [
+          115
+        ],
+        "RT": [
+          117
+        ],
+        "48": [
+          118
+        ],
+        "-48": [
+          119
+        ],
+        "3": [
+          121,
+          223
+        ],
+        ")": [
+          122
+        ],
+        "prawn": [
+          124
+        ],
+        "(P": [
+          125
+        ],
+        "0": [
+          126
+        ],
+        "-zero": [
+          127
+        ],
+        "prawn,": [
+          128
+        ],
+        "P": [
+          129,
+          136
+        ],
+        "12": [
+          130,
+          225
+        ],
+        "-12": [
+          131
+        ],
+        "prawns/m": [
+          132,
+          139,
+          226
+        ],
+        "2": [
+          133,
+          140,
+          227
+        ],
+        ",": [
+          134
+        ],
+        "25": [
+          137
+        ],
+        "-25": [
+          138
+        ],
+        ".Results": [
+          141
+        ],
+        "show": [
+          142
+        ],
+        "air": [
+          147
+        ],
+        "temperature": [
+          148,
+          170
+        ],
+        "humidity": [
+          150
+        ],
+        "ranging": [
+          151
+        ],
+        "from": [
+          152
+        ],
+        "30-35": [
+          153
+        ],
+        "\u00b0C": [
+          154
+        ],
+        "52-71%": [
+          156
+        ],
+        "during": [
+          157
+        ],
+        "production,": [
+          159
+        ],
+        "obtained": [
+          161
+        ],
+        "quality": [
+          163
+        ],
+        "in": [
+          165,
+          229
+        ],
+        "were:": [
+          168
+        ],
+        "27-30": [
+          171
+        ],
+        "\u00b0C;": [
+          172
+        ],
+        "dissolved": [
+          173,
+          195
+        ],
+        "oxygen": [
+          174
+        ],
+        "(DO)": [
+          175
+        ],
+        "2.8-3.3": [
+          176
+        ],
+        "mg/L;": [
+          177,
+          193,
+          199
+        ],
+        "pH": [
+          178
+        ],
+        "-8.3;": [
+          179
+        ],
+        "total": [
+          180,
+          194
+        ],
+        "ammonia": [
+          181
+        ],
+        "nitrogen": [
+          182
+        ],
+        "(TAN)": [
+          183
+        ],
+        "close": [
+          184
+        ],
+        "0,": [
+          186
+        ],
+        "Nitrite": [
+          187
+        ],
+        "-0;": [
+          188
+        ],
+        "Nitrate": [
+          189
+        ],
+        "-40": [
+          190
+        ],
+        "160": [
+          192
+        ],
+        "solids": [
+          196
+        ],
+        "(TDS)": [
+          197
+        ],
+        "-580": [
+          198
+        ],
+        "daily": [
+          202
+        ],
+        "loss": [
+          204
+        ],
+        "1.47%": [
+          206
+        ],
+        "which": [
+          207
+        ],
+        "within": [
+          209
+        ],
+        "tolerable": [
+          211
+        ],
+        "growth": [
+          212,
+          231,
+          249
+        ],
+        "species.The": [
+          217
+        ],
+        "resulted": [
+          228
+        ],
+        "better": [
+          230
+        ],
+        "yield": [
+          233,
+          251
+        ],
+        "performance": [
+          234
+        ],
+        "species.However,": [
+          239
+        ],
+        "had": [
+          243
+        ],
+        "no": [
+          244
+        ],
+        "significant": [
+          245
+        ],
+        "effect": [
+          246
+        ],
+        "lettuce": [
+          253
+        ],
+        "duckweed.": [
+          255
+        ]
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "http://www.jeeng.net/pdf-162210-89206?filename=Growing Conditions and.pdf",
+        "any_repository_has_fulltext": false
+      },
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4304734124",
+      "display_name": "Lettuce (Lactuca sativa L. var. Rincon) Production Using Organic Nutrient Solution under Hydroponics System",
+      "publication_year": 2022,
+      "publication_date": "2022-10-12",
+      "cited_by_count": 4,
+      "doi": "https://doi.org/10.54536/ajaset.v6i3.705",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5005170789",
+            "display_name": "Erecson Sipin Solis",
+            "orcid": "https://orcid.org/0000-0003-2903-7758",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-2903-7758"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405279427",
+              "display_name": "Camiguin Polytechnic State College",
+              "ror": "https://ror.org/01ezypw96",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405279427"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Erecson Sipin Solis",
+          "raw_affiliation_strings": [
+            "Institute of Agriculture, Camiguin Polytechnic State College-Catarman Campus, Tangaro, Catarman 9104, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Institute of Agriculture, Camiguin Polytechnic State College-Catarman Campus, Tangaro, Catarman 9104, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405279427"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5046819803",
+            "display_name": "Jac Magaret",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405279427",
+              "display_name": "Camiguin Polytechnic State College",
+              "ror": "https://ror.org/01ezypw96",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405279427"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jac Magaret",
+          "raw_affiliation_strings": [
+            "Institute of Agriculture, Camiguin Polytechnic State College-Catarman Campus, Tangaro, Catarman 9104, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Institute of Agriculture, Camiguin Polytechnic State College-Catarman Campus, Tangaro, Catarman 9104, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405279427"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Lettuce": [
+          0
+        ],
+        "is": [
+          1,
+          34
+        ],
+        "one": [
+          2
+        ],
+        "of": [
+          3,
+          108,
+          138,
+          166,
+          212
+        ],
+        "the": [
+          4,
+          27,
+          51,
+          106,
+          139,
+          241,
+          246
+        ],
+        "most": [
+          5
+        ],
+        "widely": [
+          6
+        ],
+        "hydroponically": [
+          7
+        ],
+        "grown": [
+          8
+        ],
+        "crops": [
+          9
+        ],
+        "and": [
+          10,
+          19,
+          39,
+          150,
+          174,
+          178,
+          180,
+          198,
+          218,
+          225,
+          230,
+          236,
+          253
+        ],
+        "studies": [
+          11
+        ],
+        "showed": [
+          12,
+          141,
+          154
+        ],
+        "that": [
+          13,
+          142
+        ],
+        "lettuce": [
+          14,
+          83
+        ],
+        "has": [
+          15,
+          42
+        ],
+        "a": [
+          16,
+          23,
+          88,
+          98,
+          102,
+          129
+        ],
+        "high": [
+          17
+        ],
+        "yield": [
+          18
+        ],
+        "good": [
+          20
+        ],
+        "quality": [
+          21,
+          176,
+          214
+        ],
+        "under": [
+          22
+        ],
+        "soilless": [
+          24
+        ],
+        "production.": [
+          25
+        ],
+        "However,": [
+          26,
+          183
+        ],
+        "nutrient": [
+          28,
+          68,
+          145,
+          186,
+          193,
+          200
+        ],
+        "solution": [
+          29,
+          194,
+          201
+        ],
+        "used": [
+          30
+        ],
+        "in": [
+          31,
+          47,
+          74,
+          81,
+          97,
+          164,
+          210
+        ],
+        "hydroponic": [
+          32,
+          82
+        ],
+        "systems": [
+          33
+        ],
+        "based": [
+          35
+        ],
+        "on": [
+          36,
+          192,
+          255
+        ],
+        "chemical": [
+          37
+        ],
+        "fertilizers": [
+          38,
+          79
+        ],
+        "recently,": [
+          40
+        ],
+        "there": [
+          41
+        ],
+        "been": [
+          43
+        ],
+        "an": [
+          44
+        ],
+        "increased": [
+          45
+        ],
+        "interest": [
+          46
+        ],
+        "organic": [
+          48,
+          54,
+          67,
+          144,
+          185
+        ],
+        "hydroponics": [
+          49
+        ],
+        "as": [
+          50,
+          87
+        ],
+        "market": [
+          52
+        ],
+        "for": [
+          53,
+          222
+        ],
+        "food": [
+          55
+        ],
+        "continues": [
+          56
+        ],
+        "to": [
+          57,
+          63,
+          76,
+          124,
+          157
+        ],
+        "grow.": [
+          58
+        ],
+        "The": [
+          59,
+          91
+        ],
+        "study": [
+          60,
+          140
+        ],
+        "was": [
+          61,
+          94,
+          206
+        ],
+        "conducted": [
+          62
+        ],
+        "evaluate": [
+          64
+        ],
+        "commercially": [
+          65
+        ],
+        "available": [
+          66
+        ],
+        "solutions": [
+          69,
+          187
+        ],
+        "(Vermitea,": [
+          70
+        ],
+        "BioVoltin,": [
+          71
+        ],
+        "Ramils,": [
+          72
+        ],
+        "Healthynest)": [
+          73
+        ],
+        "comparison": [
+          75
+        ],
+        "conventional": [
+          77,
+          158
+        ],
+        "inorganic": [
+          78,
+          159
+        ],
+        "(Snap)": [
+          80,
+          163
+        ],
+        "production": [
+          84
+        ],
+        "with": [
+          85,
+          101,
+          134
+        ],
+        "water": [
+          86
+        ],
+        "negative": [
+          89
+        ],
+        "control.": [
+          90
+        ],
+        "crop": [
+          92
+        ],
+        "experiment": [
+          93
+        ],
+        "carried": [
+          95
+        ],
+        "out": [
+          96
+        ],
+        "plastic": [
+          99
+        ],
+        "polyhouse": [
+          100
+        ],
+        "mesh": [
+          103
+        ],
+        "net": [
+          104,
+          248,
+          250
+        ],
+        "at": [
+          105
+        ],
+        "Institute": [
+          107
+        ],
+        "Agriculture,": [
+          109
+        ],
+        "Camiguin": [
+          110
+        ],
+        "Polytechnic": [
+          111
+        ],
+        "State": [
+          112
+        ],
+        "College": [
+          113
+        ],
+        "\u2013": [
+          114
+        ],
+        "Catarman": [
+          115
+        ],
+        "Campus,": [
+          116
+        ],
+        "Tangaro,": [
+          117
+        ],
+        "Catarman,": [
+          118
+        ],
+        "Camiguin,": [
+          119
+        ],
+        "from": [
+          120
+        ],
+        "November": [
+          121
+        ],
+        "1,": [
+          122
+        ],
+        "2021,": [
+          123,
+          127
+        ],
+        "December": [
+          125
+        ],
+        "15,": [
+          126
+        ],
+        "using": [
+          128
+        ],
+        "Randomized": [
+          130
+        ],
+        "Complete": [
+          131
+        ],
+        "Blocked": [
+          132
+        ],
+        "Design": [
+          133
+        ],
+        "three": [
+          135
+        ],
+        "replications.": [
+          136
+        ],
+        "Results": [
+          137
+        ],
+        "among": [
+          143
+        ],
+        "solutions,": [
+          146
+        ],
+        "Treatment": [
+          147,
+          151,
+          161,
+          203,
+          233,
+          237
+        ],
+        "5": [
+          148,
+          204,
+          234
+        ],
+        "(Ramils)": [
+          149,
+          205,
+          235
+        ],
+        "7": [
+          152,
+          238
+        ],
+        "(Healthynest,),": [
+          153
+        ],
+        "comparable": [
+          155
+        ],
+        "results": [
+          156
+        ],
+        "fertilizer,": [
+          160
+        ],
+        "1": [
+          162
+        ],
+        "terms": [
+          165,
+          211
+        ],
+        "horticultural": [
+          167
+        ],
+        "characteristics,": [
+          168
+        ],
+        "root": [
+          169
+        ],
+        "development,": [
+          170
+        ],
+        "survival": [
+          171
+        ],
+        "rate,": [
+          172
+        ],
+        "yield,": [
+          173,
+          243
+        ],
+        "sensory": [
+          175,
+          213
+        ],
+        "attributes": [
+          177
+        ],
+        "cost": [
+          179
+        ],
+        "return": [
+          181,
+          254
+        ],
+        "analysis.": [
+          182
+        ],
+        "different": [
+          184
+        ],
+        "exhibited": [
+          188
+        ],
+        "no": [
+          189
+        ],
+        "significant": [
+          190
+        ],
+        "effects": [
+          191
+        ],
+        "consumption": [
+          195
+        ],
+        "per": [
+          196
+        ],
+        "plant": [
+          197
+        ],
+        "total": [
+          199
+        ],
+        "consumption.": [
+          202
+        ],
+        "considered": [
+          207
+        ],
+        "best": [
+          208
+        ],
+        "overall": [
+          209,
+          216,
+          219
+        ],
+        "attributes,": [
+          215
+        ],
+        "acceptability": [
+          217
+        ],
+        "marketability": [
+          220
+        ],
+        "except": [
+          221
+        ],
+        "color,": [
+          223
+        ],
+        "succulence,": [
+          224
+        ],
+        "bitterness,": [
+          226
+        ],
+        "followed": [
+          227
+        ],
+        "by": [
+          228
+        ],
+        "T1": [
+          229
+        ],
+        "T7.": [
+          231
+        ],
+        "Also,": [
+          232
+        ],
+        "(Healthynest)": [
+          239
+        ],
+        "have": [
+          240
+        ],
+        "highest": [
+          242,
+          247
+        ],
+        "hence": [
+          244
+        ],
+        "generating": [
+          245
+        ],
+        "returns,": [
+          249
+        ],
+        "profit": [
+          251
+        ],
+        "margin,": [
+          252
+        ],
+        "investment.": [
+          256
+        ]
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "diamond",
+        "oa_url": "https://journals.e-palli.com/home/index.php/ajaset/article/download/705/344",
+        "any_repository_has_fulltext": true
+      },
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4226514444",
+      "display_name": "Innovating Green Wall: A Sustainable Way of Enhancing the Vertical Planting System",
+      "publication_year": 2021,
+      "publication_date": "2021-11-28",
+      "cited_by_count": 4,
+      "doi": "https://doi.org/10.1109/hnicem54116.2021.9731929",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5051026217",
+            "display_name": "Daniel Matheous R Dungca",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Daniel Matheous R Dungca",
+          "raw_affiliation_strings": [
+            "College of Computing and Engineering Pamantasan ng Cabuyao,City of Cabuyao,Philippines",
+            "College of Computing and Engineering Pamantasan ng Cabuyao, City of Cabuyao, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Computing and Engineering Pamantasan ng Cabuyao,City of Cabuyao,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "College of Computing and Engineering Pamantasan ng Cabuyao, City of Cabuyao, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5082265115",
+            "display_name": "Mark Dave M. Larioza",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Mark Dave M. Larioza",
+          "raw_affiliation_strings": [
+            "College of Computing and Engineering Pamantasan ng Cabuyao,City of Cabuyao,Philippines",
+            "College of Computing and Engineering Pamantasan ng Cabuyao, City of Cabuyao, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Computing and Engineering Pamantasan ng Cabuyao,City of Cabuyao,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "College of Computing and Engineering Pamantasan ng Cabuyao, City of Cabuyao, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5049855959",
+            "display_name": "Paul Michael M. Mondonedo",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Paul Michael M. Mondonedo",
+          "raw_affiliation_strings": [
+            "College of Computing and Engineering Pamantasan ng Cabuyao,City of Cabuyao,Philippines",
+            "College of Computing and Engineering Pamantasan ng Cabuyao, City of Cabuyao, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Computing and Engineering Pamantasan ng Cabuyao,City of Cabuyao,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "College of Computing and Engineering Pamantasan ng Cabuyao, City of Cabuyao, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5014052647",
+            "display_name": "Hannah Faye A. Orence",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Hannah Faye A. Orence",
+          "raw_affiliation_strings": [
+            "College of Computing and Engineering Pamantasan ng Cabuyao,City of Cabuyao,Philippines",
+            "College of Computing and Engineering Pamantasan ng Cabuyao, City of Cabuyao, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Computing and Engineering Pamantasan ng Cabuyao,City of Cabuyao,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "College of Computing and Engineering Pamantasan ng Cabuyao, City of Cabuyao, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5027415320",
+            "display_name": "Anna-Liza F. Sigue",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Anna-Liza F. Sigue",
+          "raw_affiliation_strings": [
+            "College of Computing and Engineering Pamantasan ng Cabuyao,City of Cabuyao,Philippines",
+            "College of Computing and Engineering Pamantasan ng Cabuyao, City of Cabuyao, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Computing and Engineering Pamantasan ng Cabuyao,City of Cabuyao,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "College of Computing and Engineering Pamantasan ng Cabuyao, City of Cabuyao, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5023090354",
+            "display_name": "Oliver A. Medina",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Oliver A. Medina",
+          "raw_affiliation_strings": [
+            "College of Computing and Engineering Pamantasan ng Cabuyao,City of Cabuyao,Philippines",
+            "College of Computing and Engineering Pamantasan ng Cabuyao, City of Cabuyao, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Computing and Engineering Pamantasan ng Cabuyao,City of Cabuyao,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "College of Computing and Engineering Pamantasan ng Cabuyao, City of Cabuyao, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5048709640",
+            "display_name": "Aldrin J. Soriano",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Aldrin J. Soriano",
+          "raw_affiliation_strings": [
+            "College of Computing and Engineering Pamantasan ng Cabuyao,City of Cabuyao,Philippines",
+            "College of Computing and Engineering Pamantasan ng Cabuyao, City of Cabuyao, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Computing and Engineering Pamantasan ng Cabuyao,City of Cabuyao,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "College of Computing and Engineering Pamantasan ng Cabuyao, City of Cabuyao, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5083346897",
+            "display_name": "Ericson A. Mandayo",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ericson A. Mandayo",
+          "raw_affiliation_strings": [
+            "College of Computing and Engineering Pamantasan ng Cabuyao,City of Cabuyao,Philippines",
+            "College of Computing and Engineering Pamantasan ng Cabuyao, City of Cabuyao, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Computing and Engineering Pamantasan ng Cabuyao,City of Cabuyao,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "College of Computing and Engineering Pamantasan ng Cabuyao, City of Cabuyao, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Farming": [
+          0
+        ],
+        "has": [
+          1
+        ],
+        "been": [
+          2,
+          76
+        ],
+        "beneficial": [
+          3
+        ],
+        "until": [
+          4
+        ],
+        "today": [
+          5,
+          78
+        ],
+        "due": [
+          6,
+          50
+        ],
+        "to": [
+          7,
+          10,
+          20,
+          41,
+          51,
+          81,
+          95,
+          154,
+          180
+        ],
+        "its": [
+          8
+        ],
+        "contribution": [
+          9
+        ],
+        "the": [
+          11,
+          39,
+          56,
+          83,
+          91,
+          98,
+          105,
+          123,
+          126,
+          130,
+          134,
+          156,
+          164,
+          169,
+          178,
+          181,
+          185,
+          191,
+          194,
+          200,
+          206,
+          211,
+          233,
+          238
+        ],
+        "agriculture": [
+          12
+        ],
+        "of": [
+          13,
+          32,
+          72,
+          87,
+          116,
+          133,
+          163,
+          198,
+          237
+        ],
+        "plants,": [
+          14,
+          201
+        ],
+        "and": [
+          15,
+          36,
+          85,
+          100,
+          128,
+          139,
+          147,
+          166,
+          171,
+          174,
+          184,
+          204,
+          209,
+          226,
+          235
+        ],
+        "vegetables": [
+          16
+        ],
+        "which": [
+          17,
+          112,
+          120,
+          136
+        ],
+        "are": [
+          18,
+          152,
+          220,
+          227
+        ],
+        "essential": [
+          19
+        ],
+        "human": [
+          21
+        ],
+        "life.": [
+          22
+        ],
+        "The": [
+          23
+        ],
+        "problem": [
+          24
+        ],
+        "is": [
+          25,
+          67,
+          113,
+          137
+        ],
+        "that": [
+          26,
+          231
+        ],
+        "traditional": [
+          27,
+          224
+        ],
+        "farming": [
+          28,
+          73,
+          225
+        ],
+        "requires": [
+          29
+        ],
+        "a": [
+          30,
+          59,
+          63,
+          114,
+          160,
+          216
+        ],
+        "lot": [
+          31
+        ],
+        "time,": [
+          33
+        ],
+        "energy,": [
+          34
+        ],
+        "space,": [
+          35
+        ],
+        "manpower": [
+          37,
+          86
+        ],
+        "for": [
+          38
+        ],
+        "plants": [
+          40,
+          47,
+          74
+        ],
+        "grow.": [
+          42
+        ],
+        "In": [
+          43
+        ],
+        "addition,": [
+          44
+        ],
+        "abnormalities": [
+          45
+        ],
+        "in": [
+          46,
+          58,
+          88,
+          102,
+          177,
+          196
+        ],
+        "can": [
+          48,
+          121
+        ],
+        "occur": [
+          49
+        ],
+        "water": [
+          52,
+          138,
+          172
+        ],
+        "consumption,": [
+          53
+        ],
+        "pest": [
+          54
+        ],
+        "controls,": [
+          55
+        ],
+        "season": [
+          57
+        ],
+        "year,": [
+          60
+        ],
+        "etc.": [
+          61
+        ],
+        "As": [
+          62
+        ],
+        "result,": [
+          64
+        ],
+        "vertical": [
+          65,
+          117,
+          239
+        ],
+        "planting": [
+          66,
+          89,
+          118,
+          240
+        ],
+        "introduced.": [
+          68
+        ],
+        "These": [
+          69,
+          150,
+          219
+        ],
+        "modern": [
+          70
+        ],
+        "methods": [
+          71
+        ],
+        "have": [
+          75
+        ],
+        "widespread": [
+          77
+        ],
+        "not": [
+          79
+        ],
+        "only": [
+          80
+        ],
+        "reduce": [
+          82,
+          97
+        ],
+        "space": [
+          84
+        ],
+        "but": [
+          90
+        ],
+        "innovation": [
+          92
+        ],
+        "it": [
+          93,
+          189,
+          214
+        ],
+        "makes": [
+          94
+        ],
+        "also": [
+          96
+        ],
+        "time": [
+          99
+        ],
+        "energy": [
+          101
+        ],
+        "farming.": [
+          103
+        ],
+        "Hence,": [
+          104
+        ],
+        "researchers": [
+          106
+        ],
+        "created": [
+          107
+        ],
+        "an": [
+          108
+        ],
+        "Indoor": [
+          109
+        ],
+        "Hydroponic": [
+          110
+        ],
+        "system,": [
+          111,
+          119
+        ],
+        "type": [
+          115
+        ],
+        "monitor": [
+          122
+        ],
+        "conditions": [
+          124
+        ],
+        "around": [
+          125,
+          168
+        ],
+        "plant": [
+          127,
+          135,
+          212
+        ],
+        "schedule": [
+          129,
+          193
+        ],
+        "basic": [
+          131
+        ],
+        "needs": [
+          132
+        ],
+        "sunlight": [
+          140
+        ],
+        "using": [
+          141
+        ],
+        "related": [
+          142
+        ],
+        "possible": [
+          143
+        ],
+        "sensors,": [
+          144
+        ],
+        "Arduino": [
+          145
+        ],
+        "Mega": [
+          146
+        ],
+        "Android": [
+          148,
+          186
+        ],
+        "Application.": [
+          149
+        ],
+        "components": [
+          151
+        ],
+        "instrumental": [
+          153
+        ],
+        "managing": [
+          155
+        ],
+        "project": [
+          157
+        ],
+        "by": [
+          158,
+          229
+        ],
+        "providing": [
+          159
+        ],
+        "real-time": [
+          161
+        ],
+        "update": [
+          162
+        ],
+        "temperature": [
+          165
+        ],
+        "humidity": [
+          167
+        ],
+        "area": [
+          170
+        ],
+        "level": [
+          173,
+          176
+        ],
+        "pH": [
+          175
+        ],
+        "reservoir": [
+          179
+        ],
+        "system": [
+          182,
+          195
+        ],
+        "itself": [
+          183
+        ],
+        "App.": [
+          187
+        ],
+        "Also,": [
+          188
+        ],
+        "helps": [
+          190
+        ],
+        "user": [
+          192
+        ],
+        "terms": [
+          197
+        ],
+        "irrigating": [
+          199
+        ],
+        "turning": [
+          202
+        ],
+        "on": [
+          203
+        ],
+        "off": [
+          205
+        ],
+        "grow": [
+          207
+        ],
+        "light,": [
+          208
+        ],
+        "trimming": [
+          210
+        ],
+        "once": [
+          213
+        ],
+        "reached": [
+          215
+        ],
+        "certain": [
+          217
+        ],
+        "height.": [
+          218
+        ],
+        "proven": [
+          221
+        ],
+        "effective": [
+          222
+        ],
+        "than": [
+          223
+        ],
+        "supported": [
+          228
+        ],
+        "data": [
+          230
+        ],
+        "states": [
+          232
+        ],
+        "efficiency": [
+          234
+        ],
+        "betterment": [
+          236
+        ],
+        "system.": [
+          241
+        ]
+      },
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "type": "conference-paper",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W3164693633",
+      "display_name": "Bioaccumulation of Lead by Pepper Elder (Peperomia pellucida (L.) Kunth) in a Lead-Contaminated Hydroponic System",
+      "publication_year": 2021,
+      "publication_date": "2021-05-25",
+      "cited_by_count": 4,
+      "doi": "https://doi.org/10.32526/ennrj/19/2021010",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5071988843",
+            "display_name": "Jessica O. Tablang",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I389346",
+              "display_name": "Isabela State University",
+              "ror": "https://ror.org/03c336h16",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I389346"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jessica O. Tablang",
+          "raw_affiliation_strings": [
+            "College of Arts and Sciences, Isabela State University-Echague, 3309 Isabela, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Arts and Sciences, Isabela State University-Echague, 3309 Isabela, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I389346"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5113946781",
+            "display_name": "Florenda B. Temanel",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I389346",
+              "display_name": "Isabela State University",
+              "ror": "https://ror.org/03c336h16",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I389346"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Florenda B. Temanel",
+          "raw_affiliation_strings": [
+            "College of Arts and Sciences, Isabela State University-Echague, 3309 Isabela, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Arts and Sciences, Isabela State University-Echague, 3309 Isabela, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I389346"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5009876972",
+            "display_name": "Ron Patrick Cuagdan Campos",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I389346",
+              "display_name": "Isabela State University",
+              "ror": "https://ror.org/03c336h16",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I389346"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ron Patrick C. Campos",
+          "raw_affiliation_strings": [
+            "College of Arts and Sciences, Isabela State University-Echague, 3309 Isabela, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Arts and Sciences, Isabela State University-Echague, 3309 Isabela, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I389346"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5046546969",
+            "display_name": "Helen C. Ramos",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I389346",
+              "display_name": "Isabela State University",
+              "ror": "https://ror.org/03c336h16",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I389346"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Helen C. Ramos",
+          "raw_affiliation_strings": [
+            "College of Arts and Sciences, Isabela State University-Echague, 3309 Isabela, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Arts and Sciences, Isabela State University-Echague, 3309 Isabela, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I389346"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Lead": [
+          0
+        ],
+        "(Pb)": [
+          1
+        ],
+        "has": [
+          2
+        ],
+        "become": [
+          3
+        ],
+        "one": [
+          4
+        ],
+        "of": [
+          5,
+          45,
+          58,
+          71,
+          82,
+          99,
+          137,
+          153,
+          165,
+          214,
+          224
+        ],
+        "the": [
+          6,
+          42,
+          52,
+          59,
+          127,
+          151,
+          156,
+          163,
+          166,
+          169,
+          193,
+          205,
+          215,
+          231
+        ],
+        "most": [
+          7
+        ],
+        "common": [
+          8
+        ],
+        "heavy": [
+          9,
+          242
+        ],
+        "metal": [
+          10,
+          167
+        ],
+        "contaminants,": [
+          11
+        ],
+        "demanding": [
+          12
+        ],
+        "research": [
+          13
+        ],
+        "on": [
+          14,
+          112
+        ],
+        "economical": [
+          15
+        ],
+        "remediation": [
+          16
+        ],
+        "approaches": [
+          17
+        ],
+        "with": [
+          18,
+          68,
+          93,
+          150
+        ],
+        "minimal": [
+          19
+        ],
+        "ecological": [
+          20
+        ],
+        "impacts.": [
+          21
+        ],
+        "Pepper": [
+          22
+        ],
+        "elder": [
+          23
+        ],
+        "(Peperomia": [
+          24
+        ],
+        "pellucida)": [
+          25
+        ],
+        "is": [
+          26,
+          195
+        ],
+        "a": [
+          27,
+          33,
+          209
+        ],
+        "fast-growing": [
+          28
+        ],
+        "plant": [
+          29,
+          194,
+          206
+        ],
+        "that": [
+          30,
+          192,
+          204,
+          218,
+          230,
+          248
+        ],
+        "can": [
+          31,
+          207
+        ],
+        "be": [
+          32,
+          208,
+          234
+        ],
+        "candidate": [
+          34
+        ],
+        "for": [
+          35,
+          73,
+          198,
+          237
+        ],
+        "bioaccumulation": [
+          36,
+          44,
+          252
+        ],
+        "and": [
+          37,
+          55,
+          80,
+          108,
+          177,
+          186
+        ],
+        "phytoremediation.": [
+          38
+        ],
+        "In": [
+          39
+        ],
+        "this": [
+          40
+        ],
+        "study,": [
+          41
+        ],
+        "lead": [
+          43,
+          101,
+          154,
+          225
+        ],
+        "P.": [
+          46,
+          138,
+          219
+        ],
+        "pellucida": [
+          47,
+          139,
+          220
+        ],
+        "was": [
+          48,
+          140
+        ],
+        "assessed": [
+          49
+        ],
+        "by": [
+          50,
+          244
+        ],
+        "determining": [
+          51
+        ],
+        "growth": [
+          53
+        ],
+        "response": [
+          54
+        ],
+        "absorptive": [
+          56,
+          78
+        ],
+        "capacity": [
+          57,
+          79,
+          239
+        ],
+        "plant.": [
+          60
+        ],
+        "Plants": [
+          61
+        ],
+        "were": [
+          62,
+          89,
+          110,
+          145,
+          182
+        ],
+        "grown": [
+          63,
+          84
+        ],
+        "in": [
+          64,
+          85,
+          91,
+          130,
+          155,
+          168
+        ],
+        "hydroponic": [
+          65
+        ],
+        "solution": [
+          66,
+          88
+        ],
+        "spiked": [
+          67
+        ],
+        "500": [
+          69
+        ],
+        "mg/L": [
+          70
+        ],
+        "Pb": [
+          72
+        ],
+        "28": [
+          74,
+          97
+        ],
+        "days.": [
+          75
+        ],
+        "Growth": [
+          76
+        ],
+        "response,": [
+          77
+        ],
+        "tolerance": [
+          81,
+          134
+        ],
+        "plants": [
+          83,
+          117,
+          144,
+          232
+        ],
+        "contaminated": [
+          86
+        ],
+        "nutrient": [
+          87
+        ],
+        "determined": [
+          90
+        ],
+        "comparison": [
+          92
+        ],
+        "control": [
+          94,
+          116
+        ],
+        "plants.": [
+          95,
+          114,
+          132
+        ],
+        "After": [
+          96
+        ],
+        "days": [
+          98
+        ],
+        "exposure,": [
+          100
+        ],
+        "phytotoxicity": [
+          102
+        ],
+        "symptoms": [
+          103
+        ],
+        "such": [
+          104
+        ],
+        "as": [
+          105
+        ],
+        "wilting,": [
+          106
+        ],
+        "chlorosis": [
+          107
+        ],
+        "necrosis": [
+          109
+        ],
+        "observed": [
+          111
+        ],
+        "some": [
+          113
+        ],
+        "The": [
+          115,
+          133,
+          143,
+          212
+        ],
+        "recorded": [
+          118,
+          183
+        ],
+        "3.08": [
+          119
+        ],
+        "g": [
+          120,
+          129
+        ],
+        "total": [
+          121
+        ],
+        "dry": [
+          122
+        ],
+        "weight": [
+          123
+        ],
+        "(DW)": [
+          124
+        ],
+        "compared": [
+          125
+        ],
+        "to": [
+          126,
+          147,
+          240
+        ],
+        "1.35": [
+          128
+        ],
+        "Pb-contaminated": [
+          131
+        ],
+        "index": [
+          135
+        ],
+        "(TI)": [
+          136
+        ],
+        "at": [
+          141,
+          184
+        ],
+        "43.40%.": [
+          142
+        ],
+        "able": [
+          146
+        ],
+        "absorb": [
+          148,
+          241
+        ],
+        "lead,": [
+          149
+        ],
+        "concentration": [
+          152,
+          164
+        ],
+        "roots": [
+          157
+        ],
+        "(158.6": [
+          158
+        ],
+        "\u00b5g/g)": [
+          159
+        ],
+        "being": [
+          160
+        ],
+        "greater": [
+          161
+        ],
+        "than": [
+          162
+        ],
+        "shoots": [
+          170
+        ],
+        "(43.2": [
+          171
+        ],
+        "\u00b5g/g).": [
+          172
+        ],
+        "Meanwhile,": [
+          173
+        ],
+        "bioconcentration": [
+          174
+        ],
+        "factor": [
+          175,
+          179
+        ],
+        "(BCF)": [
+          176
+        ],
+        "translocation": [
+          178
+        ],
+        "(TF)": [
+          180
+        ],
+        "values": [
+          181
+        ],
+        "0.40": [
+          185
+        ],
+        "0.27,": [
+          187
+        ],
+        "respectively.": [
+          188
+        ],
+        "BCF": [
+          189
+        ],
+        "criterion": [
+          190
+        ],
+        "indicates": [
+          191
+        ],
+        "not": [
+          196
+        ],
+        "suitable": [
+          197
+        ],
+        "phytoextraction,": [
+          199
+        ],
+        "but": [
+          200
+        ],
+        "TF": [
+          201
+        ],
+        "value": [
+          202
+        ],
+        "shows": [
+          203
+        ],
+        "potential": [
+          210
+        ],
+        "excluder.": [
+          211
+        ],
+        "findings": [
+          213
+        ],
+        "study": [
+          216
+        ],
+        "show": [
+          217
+        ],
+        "accumulated": [
+          221
+        ],
+        "considerable": [
+          222
+        ],
+        "amount": [
+          223
+        ],
+        "within": [
+          226
+        ],
+        "its": [
+          227,
+          251
+        ],
+        "tissues,": [
+          228
+        ],
+        "indicating": [
+          229
+        ],
+        "may": [
+          233,
+          249
+        ],
+        "further": [
+          235
+        ],
+        "exploited": [
+          236
+        ],
+        "their": [
+          238
+        ],
+        "metals": [
+          243
+        ],
+        "tweaking": [
+          245
+        ],
+        "several": [
+          246
+        ],
+        "factors": [
+          247
+        ],
+        "affect": [
+          250
+        ],
+        "ability.": [
+          253
+        ]
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "diamond",
+        "oa_url": "https://ph02.tci-thaijo.org/index.php/ennrj/article/download/243026/165589",
+        "any_repository_has_fulltext": true
+      },
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W3042333439",
+      "display_name": "Acquired salinity tolerance in rice: Plant growth dataset",
+      "publication_year": 2020,
+      "publication_date": "2020-07-15",
+      "cited_by_count": 4,
+      "doi": "https://doi.org/10.1016/j.dib.2020.106023",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5069775216",
+            "display_name": "Karthika Sriskantharajah",
+            "orcid": "https://orcid.org/0000-0002-9750-906X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I113306721",
+              "display_name": "Hiroshima University",
+              "ror": "https://ror.org/03t78wx29",
+              "country_code": "JP",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I113306721"
+              ]
+            }
+          ],
+          "countries": [
+            "JP"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Karthika Sriskantharajah",
+          "raw_affiliation_strings": [
+            "Graduate School of Biosphere Science, Hiroshima University, Higashi-Hiroshima, 739-8528, Japan"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Graduate School of Biosphere Science, Hiroshima University, Higashi-Hiroshima, 739-8528, Japan",
+              "institution_ids": [
+                "https://openalex.org/I113306721"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5041731004",
+            "display_name": "Shota Osumi",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I113306721",
+              "display_name": "Hiroshima University",
+              "ror": "https://ror.org/03t78wx29",
+              "country_code": "JP",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I113306721"
+              ]
+            }
+          ],
+          "countries": [
+            "JP"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Shota Osumi",
+          "raw_affiliation_strings": [
+            "Graduate School of Biosphere Science, Hiroshima University, Higashi-Hiroshima, 739-8528, Japan"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Graduate School of Biosphere Science, Hiroshima University, Higashi-Hiroshima, 739-8528, Japan",
+              "institution_ids": [
+                "https://openalex.org/I113306721"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5018688326",
+            "display_name": "Sumana Chuamnakthong",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I113306721",
+              "display_name": "Hiroshima University",
+              "ror": "https://ror.org/03t78wx29",
+              "country_code": "JP",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I113306721"
+              ]
+            }
+          ],
+          "countries": [
+            "JP"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Sumana Chuamnakthong",
+          "raw_affiliation_strings": [
+            "Graduate School of Biosphere Science, Hiroshima University, Higashi-Hiroshima, 739-8528, Japan"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Graduate School of Biosphere Science, Hiroshima University, Higashi-Hiroshima, 739-8528, Japan",
+              "institution_ids": [
+                "https://openalex.org/I113306721"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5040454981",
+            "display_name": "Mami Nampei",
+            "orcid": "https://orcid.org/0000-0001-7685-6997"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I113306721",
+              "display_name": "Hiroshima University",
+              "ror": "https://ror.org/03t78wx29",
+              "country_code": "JP",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I113306721"
+              ]
+            }
+          ],
+          "countries": [
+            "JP"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Mami Nampei",
+          "raw_affiliation_strings": [
+            "Graduate School of Integrated Sciences for Life, Hiroshima University, Higashi-Hiroshima, 739-8528, Japan"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Graduate School of Integrated Sciences for Life, Hiroshima University, Higashi-Hiroshima, 739-8528, Japan",
+              "institution_ids": [
+                "https://openalex.org/I113306721"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5091142230",
+            "display_name": "Junrey C. Amas",
+            "orcid": "https://orcid.org/0000-0002-2179-5557"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I177877127",
+              "display_name": "The University of Western Australia",
+              "ror": "https://ror.org/047272k79",
+              "country_code": "AU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I177877127"
+              ]
+            }
+          ],
+          "countries": [
+            "AU"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Junrey C. Amas",
+          "raw_affiliation_strings": [
+            "School of Biological Sciences, University of Western Australia, 35 Stirling Hwy, Crawley, WA 6009, Australia"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Biological Sciences, University of Western Australia, 35 Stirling Hwy, Crawley, WA 6009, Australia",
+              "institution_ids": [
+                "https://openalex.org/I177877127"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5049163872",
+            "display_name": "Glenn B. Gregorio",
+            "orcid": "https://orcid.org/0000-0002-7512-9058"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I120108168",
+              "display_name": "University of the Philippines Los Ba\u00f1os",
+              "ror": "https://ror.org/030s54078",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I103911934",
+                "https://openalex.org/I120108168"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I162210093",
+              "display_name": "International Rice Research Institute",
+              "ror": "https://ror.org/0593p4448",
+              "country_code": "PH",
+              "type": "nonprofit",
+              "lineage": [
+                "https://openalex.org/I1286583668",
+                "https://openalex.org/I162210093"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Glenn B. Gregorio",
+          "raw_affiliation_strings": [
+            "Institute of Crop Science, College of Agriculture and Food Science, University of the Philippines Los Ba\u00f1os, College, Laguna, Philippines",
+            "International Rice Research Institute, DAPO Box 7777, Metro Manila, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Institute of Crop Science, College of Agriculture and Food Science, University of the Philippines Los Ba\u00f1os, College, Laguna, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I120108168"
+              ]
+            },
+            {
+              "raw_affiliation_string": "International Rice Research Institute, DAPO Box 7777, Metro Manila, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I162210093"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5086315582",
+            "display_name": "Akihiro Ueda",
+            "orcid": "https://orcid.org/0000-0002-2836-5779"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I113306721",
+              "display_name": "Hiroshima University",
+              "ror": "https://ror.org/03t78wx29",
+              "country_code": "JP",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I113306721"
+              ]
+            }
+          ],
+          "countries": [
+            "JP"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Akihiro Ueda",
+          "raw_affiliation_strings": [
+            "Graduate School of Biosphere Science, Hiroshima University, Higashi-Hiroshima, 739-8528, Japan",
+            "Graduate School of Integrated Sciences for Life, Hiroshima University, Higashi-Hiroshima, 739-8528, Japan"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-2836-5779",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Graduate School of Biosphere Science, Hiroshima University, Higashi-Hiroshima, 739-8528, Japan",
+              "institution_ids": [
+                "https://openalex.org/I113306721"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Graduate School of Integrated Sciences for Life, Hiroshima University, Higashi-Hiroshima, 739-8528, Japan",
+              "institution_ids": [
+                "https://openalex.org/I113306721"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "This": [
+          0,
+          83
+        ],
+        "article": [
+          1
+        ],
+        "describes": [
+          2
+        ],
+        "the": [
+          3,
+          49,
+          52,
+          76,
+          98,
+          101
+        ],
+        "growth": [
+          4
+        ],
+        "of": [
+          5,
+          51,
+          57
+        ],
+        "18": [
+          6
+        ],
+        "acclimatized": [
+          7
+        ],
+        "and": [
+          8,
+          38,
+          64,
+          68,
+          75,
+          95
+        ],
+        "11": [
+          9
+        ],
+        "non-acclimatized": [
+          10
+        ],
+        "rice": [
+          11
+        ],
+        "varieties": [
+          12
+        ],
+        "grown": [
+          13,
+          28
+        ],
+        "in": [
+          14,
+          19,
+          89,
+          105
+        ],
+        "a": [
+          15,
+          20
+        ],
+        "hydroponic": [
+          16
+        ],
+        "nutrient": [
+          17
+        ],
+        "solution": [
+          18
+        ],
+        "glasshouse.": [
+          21
+        ],
+        "Four": [
+          22
+        ],
+        "plants": [
+          23
+        ],
+        "from": [
+          24
+        ],
+        "each": [
+          25,
+          73
+        ],
+        "variety": [
+          26
+        ],
+        "were": [
+          27,
+          70
+        ],
+        "under": [
+          29
+        ],
+        "control": [
+          30,
+          35
+        ],
+        "conditions,": [
+          31
+        ],
+        "salinity": [
+          32,
+          39,
+          53,
+          102
+        ],
+        "stress": [
+          33,
+          40
+        ],
+        "following": [
+          34,
+          41
+        ],
+        "conditions": [
+          36
+        ],
+        "(salinity),": [
+          37
+        ],
+        "acclimation": [
+          42,
+          103
+        ],
+        "(salinity/acclimation)": [
+          43
+        ],
+        "conditions.": [
+          44
+        ],
+        "Sampling": [
+          45
+        ],
+        "was": [
+          46,
+          78
+        ],
+        "performed": [
+          47
+        ],
+        "at": [
+          48
+        ],
+        "end": [
+          50
+        ],
+        "treatment": [
+          54
+        ],
+        "(36": [
+          55
+        ],
+        "days": [
+          56
+        ],
+        "growth).": [
+          58
+        ],
+        "Growth": [
+          59
+        ],
+        "traits": [
+          60
+        ],
+        "such": [
+          61
+        ],
+        "as": [
+          62
+        ],
+        "shoot": [
+          63
+        ],
+        "root": [
+          65
+        ],
+        "biomass": [
+          66
+        ],
+        "accumulation": [
+          67
+        ],
+        "lengths": [
+          69
+        ],
+        "measured": [
+          71
+        ],
+        "for": [
+          72
+        ],
+        "variety,": [
+          74
+        ],
+        "average": [
+          77
+        ],
+        "calculated": [
+          79
+        ],
+        "using": [
+          80
+        ],
+        "four": [
+          81
+        ],
+        "replicates.": [
+          82
+        ],
+        "dataset": [
+          84
+        ],
+        "may": [
+          85
+        ],
+        "aid": [
+          86
+        ],
+        "interested": [
+          87
+        ],
+        "researchers": [
+          88
+        ],
+        "making": [
+          90
+        ],
+        "comparisons": [
+          91
+        ],
+        "with": [
+          92
+        ],
+        "their": [
+          93
+        ],
+        "data": [
+          94
+        ],
+        "further": [
+          96
+        ],
+        "advance": [
+          97
+        ],
+        "research": [
+          99
+        ],
+        "on": [
+          100
+        ],
+        "process": [
+          104
+        ],
+        "rice.": [
+          106
+        ]
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://www.sciencedirect.com/science/article/pii/S2352340920309173/pdf",
+        "any_repository_has_fulltext": true
+      },
+      "type": "data-paper",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2953999077",
+      "display_name": "Optimized Nursery for Indoor Onion Nourishment (ONION)",
+      "publication_year": 2019,
+      "publication_date": "2019-06-25",
+      "cited_by_count": 4,
+      "doi": "https://doi.org/10.30534/ijatcse/2019/38832019",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5088547760",
+            "display_name": "Lolit Villanueva",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I215989355",
+              "display_name": "Xavier University",
+              "ror": "https://ror.org/04byt9g09",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I215989355"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Lolit Villanueva",
+          "raw_affiliation_strings": [
+            "ECE Department , Xavier University , Philippines ,",
+            "ECE Department, Xavier University, Philippines,"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "ECE Department , Xavier University , Philippines ,",
+              "institution_ids": [
+                "https://openalex.org/I215989355"
+              ]
+            },
+            {
+              "raw_affiliation_string": "ECE Department, Xavier University, Philippines,",
+              "institution_ids": [
+                "https://openalex.org/I215989355"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "An": [
+          0
+        ],
+        "Optimized": [
+          1
+        ],
+        "Nursery": [
+          2
+        ],
+        "for": [
+          3,
+          28
+        ],
+        "Indoor": [
+          4
+        ],
+        "Onion": [
+          5
+        ],
+        "Nourishment": [
+          6
+        ],
+        "(ONION)": [
+          7
+        ],
+        "was": [
+          8,
+          120,
+          168
+        ],
+        "designed": [
+          9
+        ],
+        "as": [
+          10
+        ],
+        "an": [
+          11
+        ],
+        "automated": [
+          12
+        ],
+        "smart": [
+          13
+        ],
+        "hydroponic": [
+          14
+        ],
+        "greenhouse": [
+          15,
+          105
+        ],
+        "that": [
+          16,
+          93
+        ],
+        "is": [
+          17,
+          177
+        ],
+        "capable": [
+          18
+        ],
+        "of": [
+          19,
+          35,
+          43,
+          54,
+          71,
+          186
+        ],
+        "monitoring,": [
+          20
+        ],
+        "assisting": [
+          21
+        ],
+        "and": [
+          22,
+          38,
+          45,
+          80,
+          90,
+          101,
+          111,
+          164,
+          174,
+          181
+        ],
+        "controlling": [
+          23
+        ],
+        "optimal": [
+          24,
+          89
+        ],
+        "safe": [
+          25,
+          91,
+          141
+        ],
+        "environment": [
+          26,
+          92
+        ],
+        "parameters": [
+          27,
+          107,
+          137
+        ],
+        "culturing": [
+          29
+        ],
+        "white": [
+          30,
+          72,
+          187
+        ],
+        "inions.It": [
+          31
+        ],
+        "addresses": [
+          32
+        ],
+        "the": [
+          33,
+          55,
+          69,
+          95,
+          112,
+          132,
+          135,
+          145,
+          151,
+          154,
+          166
+        ],
+        "problem": [
+          34
+        ],
+        "infestation,": [
+          36
+        ],
+        "direct": [
+          37
+        ],
+        "inevitable": [
+          39
+        ],
+        "climate": [
+          40
+        ],
+        "change,": [
+          41
+        ],
+        "lack": [
+          42
+        ],
+        "assistance": [
+          44
+        ],
+        "human": [
+          46
+        ],
+        "error": [
+          47
+        ],
+        "which": [
+          48,
+          64,
+          176
+        ],
+        "are": [
+          49,
+          65,
+          85,
+          108,
+          115
+        ],
+        "known": [
+          50
+        ],
+        "to": [
+          51,
+          68,
+          87,
+          123,
+          125,
+          127,
+          131,
+          170
+        ],
+        "be": [
+          52,
+          148,
+          171
+        ],
+        "causes": [
+          53
+        ],
+        "low": [
+          56
+        ],
+        "production": [
+          57
+        ],
+        "yields.The": [
+          58
+        ],
+        "system": [
+          59,
+          97,
+          126,
+          167
+        ],
+        "considers": [
+          60
+        ],
+        "four": [
+          61,
+          136
+        ],
+        "important": [
+          62
+        ],
+        "parameters,": [
+          63
+        ],
+        "very": [
+          66,
+          172
+        ],
+        "essential": [
+          67
+        ],
+        "growth": [
+          70,
+          184
+        ],
+        "onions,": [
+          73
+        ],
+        "namely": [
+          74
+        ],
+        "pH": [
+          75
+        ],
+        "level,": [
+          76
+        ],
+        "ambient": [
+          77
+        ],
+        "temperature,": [
+          78
+        ],
+        "humidity": [
+          79
+        ],
+        "internal": [
+          81
+        ],
+        "light": [
+          82
+        ],
+        "intensity.Microcontroller-based": [
+          83
+        ],
+        "actuators": [
+          84,
+          146
+        ],
+        "used": [
+          86
+        ],
+        "maintain": [
+          88
+        ],
+        "triggers": [
+          94
+        ],
+        "cooling": [
+          96
+        ],
+        "(fan),": [
+          98
+        ],
+        "solenoid": [
+          99
+        ],
+        "valves,": [
+          100
+        ],
+        "LED": [
+          102
+        ],
+        "strips": [
+          103
+        ],
+        "(light).The": [
+          104
+        ],
+        "environmental": [
+          106
+        ],
+        "continuously": [
+          109
+        ],
+        "monitored": [
+          110
+        ],
+        "sensor": [
+          113
+        ],
+        "data": [
+          114
+        ],
+        "logged": [
+          116
+        ],
+        "online.A": [
+          117
+        ],
+        "GSM": [
+          118
+        ],
+        "module": [
+          119
+        ],
+        "also": [
+          121
+        ],
+        "added": [
+          122
+        ],
+        "enable": [
+          124
+        ],
+        "send": [
+          128
+        ],
+        "SMS": [
+          129,
+          160
+        ],
+        "messages": [
+          130
+        ],
+        "user": [
+          133,
+          152
+        ],
+        "whenever": [
+          134
+        ],
+        "deviate": [
+          138
+        ],
+        "from": [
+          139
+        ],
+        "their": [
+          140
+        ],
+        "values.During": [
+          142
+        ],
+        "critical": [
+          143
+        ],
+        "states,": [
+          144
+        ],
+        "can": [
+          147
+        ],
+        "controlled": [
+          149
+        ],
+        "by": [
+          150
+        ],
+        "through": [
+          153
+        ],
+        "online": [
+          155
+        ],
+        "monitoring": [
+          156
+        ],
+        "program": [
+          157
+        ],
+        "or": [
+          158
+        ],
+        "thru": [
+          159
+        ],
+        "control": [
+          161
+        ],
+        "messages.During": [
+          162
+        ],
+        "experimentation": [
+          163
+        ],
+        "testing,": [
+          165
+        ],
+        "proven": [
+          169
+        ],
+        "efficient": [
+          173
+        ],
+        "functional": [
+          175
+        ],
+        "ideal": [
+          178
+        ],
+        "in": [
+          179
+        ],
+        "optimizing": [
+          180
+        ],
+        "maintaining": [
+          182
+        ],
+        "high": [
+          183
+        ],
+        "rate": [
+          185
+        ],
+        "onions.": [
+          188
+        ]
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "bronze",
+        "oa_url": "https://doi.org/10.30534/ijatcse/2019/38832019",
+        "any_repository_has_fulltext": false
+      },
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4399308249",
+      "display_name": "Thingspeak Based Monitoring IoT System for Hydroponics System",
+      "publication_year": 2024,
+      "publication_date": "2024-03-15",
+      "cited_by_count": 3,
+      "doi": "https://doi.org/10.1109/icict62343.2024.00074",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5031033805",
+            "display_name": "Lovina Siechrist T. Agbayani",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I137967721",
+              "display_name": "Map\u00faa University",
+              "ror": "https://ror.org/040rd2b57",
+              "country_code": "PH",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I137967721"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Lovina Siechrist T. Agbayani",
+          "raw_affiliation_strings": [
+            "Map&#x00FA;a University,School of Graduate Studies,Manila,Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Map&#x00FA;a University,School of Graduate Studies,Manila,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I137967721"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5052855813",
+            "display_name": "Jocelyn F. Villaverde",
+            "orcid": "https://orcid.org/0000-0002-7961-8983",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-7961-8983"
+            ]
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Jocelyn Flores Villaverde",
+          "raw_affiliation_strings": [
+            "School of Electrical, Electronics and Computer Engineering,Manila,Philippines",
+            "School of Electrical, Electronics and Computer Engineering, Manila, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Electrical, Electronics and Computer Engineering,Manila,Philippines",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "School of Electrical, Electronics and Computer Engineering, Manila, Philippines",
+              "institution_ids": []
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Hydroponics": [
+          0
+        ],
+        "requires": [
+          1
+        ],
+        "constant": [
+          2
+        ],
+        "monitoring": [
+          3,
+          45
+        ],
+        "and": [
+          4,
+          53,
+          74,
+          89,
+          111,
+          121
+        ],
+        "analysis": [
+          5
+        ],
+        "of": [
+          6,
+          17,
+          20,
+          51,
+          79,
+          94,
+          105,
+          115,
+          147,
+          153
+        ],
+        "parameters,": [
+          7
+        ],
+        "which": [
+          8
+        ],
+        "is": [
+          9,
+          27,
+          62
+        ],
+        "difficult": [
+          10
+        ],
+        "to": [
+          11,
+          37,
+          64,
+          86
+        ],
+        "do": [
+          12
+        ],
+        "manually": [
+          13
+        ],
+        "at": [
+          14
+        ],
+        "any": [
+          15
+        ],
+        "time": [
+          16
+        ],
+        "day,": [
+          18
+        ],
+        "regardless": [
+          19
+        ],
+        "where": [
+          21
+        ],
+        "the": [
+          22,
+          49,
+          90,
+          129
+        ],
+        "user": [
+          23
+        ],
+        "is.": [
+          24
+        ],
+        "Climate": [
+          25
+        ],
+        "change": [
+          26
+        ],
+        "another": [
+          28
+        ],
+        "significant": [
+          29,
+          68,
+          126
+        ],
+        "issue": [
+          30
+        ],
+        "that": [
+          31,
+          83
+        ],
+        "contemporary": [
+          32
+        ],
+        "farming": [
+          33
+        ],
+        "practices": [
+          34
+        ],
+        "are": [
+          35
+        ],
+        "attempting": [
+          36
+        ],
+        "address.": [
+          38
+        ],
+        "This": [
+          39
+        ],
+        "paper": [
+          40
+        ],
+        "presents": [
+          41
+        ],
+        "a": [
+          42,
+          55,
+          125,
+          144
+        ],
+        "system": [
+          43,
+          61,
+          77,
+          91
+        ],
+        "for": [
+          44
+        ],
+        "hydroponics": [
+          46
+        ],
+        "based": [
+          47,
+          133
+        ],
+        "on": [
+          48,
+          67,
+          128,
+          134
+        ],
+        "Internet": [
+          50
+        ],
+        "Things": [
+          52
+        ],
+        "utilizes": [
+          54
+        ],
+        "wireless": [
+          56
+        ],
+        "sensor": [
+          57
+        ],
+        "node": [
+          58
+        ],
+        "(IoT).": [
+          59
+        ],
+        "The": [
+          60,
+          76,
+          97
+        ],
+        "designed": [
+          63
+        ],
+        "collect": [
+          65
+        ],
+        "data": [
+          66
+        ],
+        "factors": [
+          69
+        ],
+        "such": [
+          70
+        ],
+        "as": [
+          71
+        ],
+        "temperature,": [
+          72
+        ],
+        "pH,": [
+          73
+        ],
+        "EC.": [
+          75
+        ],
+        "consisted": [
+          78
+        ],
+        "hydroponically": [
+          80
+        ],
+        "cultivated": [
+          81
+        ],
+        "plants": [
+          82,
+          98
+        ],
+        "were": [
+          84,
+          99,
+          140
+        ],
+        "subjected": [
+          85
+        ],
+        "various": [
+          87
+        ],
+        "treatments": [
+          88
+        ],
+        "determined": [
+          92
+        ],
+        "parameters": [
+          93
+        ],
+        "water": [
+          95
+        ],
+        "quality.": [
+          96
+        ],
+        "treated": [
+          100
+        ],
+        "with": [
+          101,
+          143
+        ],
+        "different": [
+          102
+        ],
+        "recirculation": [
+          103,
+          145
+        ],
+        "times": [
+          104
+        ],
+        "30": [
+          106,
+          116,
+          148
+        ],
+        "minutes": [
+          107,
+          117,
+          149
+        ],
+        "in": [
+          108,
+          150
+        ],
+        "1h,": [
+          109,
+          119
+        ],
+        "12h,": [
+          110
+        ],
+        "24h.": [
+          112
+        ],
+        "Recirculation": [
+          113
+        ],
+        "intervals": [
+          114
+        ],
+        "every": [
+          118,
+          151
+        ],
+        "12,": [
+          120
+        ],
+        "24": [
+          122
+        ],
+        "hours": [
+          123
+        ],
+        "had": [
+          124
+        ],
+        "effect": [
+          127
+        ],
+        "plant": [
+          130
+        ],
+        "harvested.": [
+          131
+        ],
+        "However,": [
+          132
+        ],
+        "fresh": [
+          135
+        ],
+        "weight,": [
+          136
+        ],
+        "all": [
+          137
+        ],
+        "compounds": [
+          138
+        ],
+        "studied": [
+          139
+        ],
+        "significantly": [
+          141
+        ],
+        "greater": [
+          142
+        ],
+        "interval": [
+          146
+        ],
+        "hour": [
+          152
+        ],
+        "lettuce.": [
+          154
+        ]
+      },
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "type": "conference-paper",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4312068731",
+      "display_name": "IoT-Based Growth Analysis of Red Onion in Controlled Hydroponic Environment using Electroculture",
+      "publication_year": 2022,
+      "publication_date": "2022-11-01",
+      "cited_by_count": 3,
+      "doi": "https://doi.org/10.1109/tencon55691.2022.9977614",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5065272137",
+            "display_name": "Nicole Andrei Basallote",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Nicole Andrei Basallote",
+          "raw_affiliation_strings": [
+            "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+            "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5028619846",
+            "display_name": "Mary Anne Gardones",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Mary Anne Gardones",
+          "raw_affiliation_strings": [
+            "Computer Engineering, Pamantasan ng Cabuyao,Bi&#x00F1;an City,Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao,Bi&#x00F1;an City,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5005055532",
+            "display_name": "Carl Joseph Mantilla",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Carl Joseph Mantilla",
+          "raw_affiliation_strings": [
+            "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+            "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5080363878",
+            "display_name": "Dean Andray Masaya",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Dean Andray Masaya",
+          "raw_affiliation_strings": [
+            "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+            "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5080963830",
+            "display_name": "Jet Trick Sol",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jet Trick Sol",
+          "raw_affiliation_strings": [
+            "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+            "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5048709640",
+            "display_name": "Aldrin J. Soriano",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Aldrin Soriano",
+          "raw_affiliation_strings": [
+            "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+            "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5074972529",
+            "display_name": "Mary Grace P. Beano",
+            "orcid": "https://orcid.org/0000-0002-8000-1075"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Mary Grace Beano",
+          "raw_affiliation_strings": [
+            "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+            "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5027415320",
+            "display_name": "Anna-Liza F. Sigue",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Anna-liza Sigue",
+          "raw_affiliation_strings": [
+            "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+            "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5001462798",
+            "display_name": "Maria Emmalyn Asuncion Capuno",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Maria Emmalyn Asuncion Capuno",
+          "raw_affiliation_strings": [
+            "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+            "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5023090354",
+            "display_name": "Oliver A. Medina",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405261573",
+              "display_name": "Pamantasan ng Cabuyao",
+              "ror": "https://ror.org/05h0cmr57",
+              "country_code": "PH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ],
+          "countries": [
+            "PH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Oliver Medina",
+          "raw_affiliation_strings": [
+            "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+            "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao,Cabuyao City,Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Computer Engineering, Pamantasan ng Cabuyao, Cabuyao City, Philippines",
+              "institution_ids": [
+                "https://openalex.org/I4405261573"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Hydroponics": [
+          0
+        ],
+        "has": [
+          1
+        ],
+        "grown": [
+          2
+        ],
+        "in": [
+          3,
+          5,
+          61,
+          103,
+          159,
+          183
+        ],
+        "popularity": [
+          4
+        ],
+        "recent": [
+          6
+        ],
+        "years": [
+          7
+        ],
+        "due": [
+          8
+        ],
+        "to": [
+          9,
+          12,
+          35,
+          119,
+          139,
+          172
+        ],
+        "its": [
+          10
+        ],
+        "ability": [
+          11
+        ],
+        "create": [
+          13
+        ],
+        "nutrient-rich": [
+          14
+        ],
+        "crops": [
+          15
+        ],
+        "with": [
+          16,
+          175
+        ],
+        "minimal": [
+          17
+        ],
+        "inputs.": [
+          18
+        ],
+        "The": [
+          19,
+          41,
+          68,
+          99,
+          121,
+          133,
+          155
+        ],
+        "project": [
+          20
+        ],
+        "focuses": [
+          21
+        ],
+        "on": [
+          22,
+          127
+        ],
+        "creating": [
+          23
+        ],
+        "a": [
+          24,
+          37,
+          44,
+          176
+        ],
+        "hydroponic": [
+          25,
+          105
+        ],
+        "system": [
+          26,
+          46,
+          106
+        ],
+        "that": [
+          27,
+          80,
+          158
+        ],
+        "uses": [
+          28
+        ],
+        "internet": [
+          29
+        ],
+        "of": [
+          30,
+          78,
+          109,
+          112,
+          123,
+          135,
+          164,
+          180,
+          197,
+          200
+        ],
+        "things": [
+          31
+        ],
+        "technologies": [
+          32
+        ],
+        "and": [
+          33,
+          53,
+          59,
+          85,
+          97,
+          117,
+          188
+        ],
+        "electroculture": [
+          34,
+          73
+        ],
+        "give": [
+          36
+        ],
+        "variable": [
+          38
+        ],
+        "growth": [
+          39,
+          84
+        ],
+        "analysis.": [
+          40
+        ],
+        "study": [
+          42
+        ],
+        "describes": [
+          43
+        ],
+        "current": [
+          45
+        ],
+        "for": [
+          47,
+          151
+        ],
+        "monitoring": [
+          48
+        ],
+        "total": [
+          49
+        ],
+        "dissolved": [
+          50
+        ],
+        "solids,": [
+          51
+        ],
+        "pH,": [
+          52
+        ],
+        "photosynthetically": [
+          54
+        ],
+        "active": [
+          55
+        ],
+        "radiation,": [
+          56
+        ],
+        "leaf": [
+          57
+        ],
+        "number": [
+          58
+        ],
+        "length": [
+          60,
+          178
+        ],
+        "the": [
+          62,
+          92,
+          104,
+          124,
+          145,
+          152,
+          162,
+          195,
+          198
+        ],
+        "Web": [
+          63
+        ],
+        "application": [
+          64,
+          141
+        ],
+        "platform": [
+          65
+        ],
+        "using": [
+          66
+        ],
+        "Wi-Fi.": [
+          67
+        ],
+        "old": [
+          69
+        ],
+        "horticulture": [
+          70
+        ],
+        "method": [
+          71
+        ],
+        "called": [
+          72
+        ],
+        "which": [
+          74,
+          107
+        ],
+        "supplies": [
+          75
+        ],
+        "certain": [
+          76
+        ],
+        "amount": [
+          77
+        ],
+        "voltage": [
+          79,
+          126,
+          140
+        ],
+        "can": [
+          81
+        ],
+        "stimulate": [
+          82
+        ],
+        "plant": [
+          83,
+          128
+        ],
+        "increase": [
+          86,
+          163,
+          179
+        ],
+        "crop": [
+          87
+        ],
+        "quality": [
+          88
+        ],
+        "as": [
+          89,
+          91
+        ],
+        "long": [
+          90
+        ],
+        "factor": [
+          93
+        ],
+        "contributor": [
+          94
+        ],
+        "are": [
+          95,
+          191
+        ],
+        "present": [
+          96
+        ],
+        "correct.": [
+          98
+        ],
+        "onion": [
+          100,
+          136
+        ],
+        "is": [
+          101,
+          148
+        ],
+        "planted": [
+          102
+        ],
+        "composed": [
+          108
+        ],
+        "8": [
+          110
+        ],
+        "set-ups": [
+          111
+        ],
+        "voltages": [
+          113
+        ],
+        "ranges": [
+          114,
+          169
+        ],
+        "from": [
+          115,
+          170
+        ],
+        "OV": [
+          116
+        ],
+        "3V": [
+          118
+        ],
+        "9V.": [
+          120
+        ],
+        "effects": [
+          122
+        ],
+        "provided": [
+          125
+        ],
+        "height": [
+          129,
+          147,
+          166
+        ],
+        "were": [
+          130
+        ],
+        "then": [
+          131
+        ],
+        "visualized.": [
+          132
+        ],
+        "reaction": [
+          134
+        ],
+        "(Allium": [
+          137
+        ],
+        "cepa)": [
+          138
+        ],
+        "was": [
+          142
+        ],
+        "adverse": [
+          143
+        ],
+        "-": [
+          144
+        ],
+        "average": [
+          146
+        ],
+        "significantly": [
+          149
+        ],
+        "higher": [
+          150
+        ],
+        "neutral": [
+          153,
+          160
+        ],
+        "system.": [
+          154
+        ],
+        "investigation": [
+          156
+        ],
+        "shows": [
+          157
+        ],
+        "voltage,": [
+          161
+        ],
+        "leaves": [
+          165,
+          190
+        ],
+        "per": [
+          167
+        ],
+        "day": [
+          168
+        ],
+        "0": [
+          171
+        ],
+        "1.7": [
+          173,
+          181
+        ],
+        "cm": [
+          174,
+          182
+        ],
+        "longest": [
+          177
+        ],
+        "just": [
+          184
+        ],
+        "one": [
+          185
+        ],
+        "day.": [
+          186
+        ],
+        "Dried": [
+          187
+        ],
+        "decayed": [
+          189
+        ],
+        "also": [
+          192
+        ],
+        "visible": [
+          193
+        ],
+        "at": [
+          194
+        ],
+        "end": [
+          196
+        ],
+        "month": [
+          199
+        ],
+        "experimentation": [
+          201
+        ],
+        "period.": [
+          202
+        ]
+      },
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "type": "conference-paper",
+      "language": "en"
+    }
+  ],
+  "group_by": []
+}

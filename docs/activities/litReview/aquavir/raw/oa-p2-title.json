@@ -1,0 +1,138 @@
+﻿{
+  "meta": {
+    "count": 76,
+    "db_response_time_ms": 22,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "x_query": {
+      "oql": "works where abstract has (prediction)\n  and title has (hydroponic)\n  and date >= (2018-01-01)\n  and retracted is (false)\n  and language is (en)\n  and date <= (2026-09-28)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "abstract.search",
+            "value": "prediction",
+            "operator": "has"
+          },
+          {
+            "column_id": "display_name.search",
+            "value": "hydroponic",
+            "operator": "has"
+          },
+          {
+            "column_id": "from_publication_date",
+            "value": "2018-01-01"
+          },
+          {
+            "column_id": "is_retracted",
+            "value": false
+          },
+          {
+            "column_id": "language",
+            "value": "en"
+          },
+          {
+            "column_id": "to_publication_date",
+            "value": "2026-09-28"
+          }
+        ]
+      },
+      "url": "/works?filter=abstract.search:prediction,display_name.search:hydroponic,from_publication_date:2018-01-01,is_retracted:false,language:en,to_publication_date:2026-09-28&per_page=10&page=1"
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W3007091896",
+      "display_name": "Uptake and translocation of perfluoroalkyl acids (PFAAs) in hydroponically grown red chicory (Cichorium intybus L.): Growth and developmental toxicity, comparison with growth in soil and bioavailability implications",
+      "publication_year": 2020,
+      "doi": "https://doi.org/10.1016/j.scitotenv.2020.137333",
+      "cited_by_count": 82,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4214860529",
+      "display_name": "Using Machine Learning Models to Predict Hydroponically Grown Lettuce Yield",
+      "publication_year": 2022,
+      "doi": "https://doi.org/10.3389/fpls.2022.706042",
+      "cited_by_count": 81,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2995740079",
+      "display_name": "Hybrid Signal-Processing Method Based on Neural Network for Prediction of NO3, K, Ca, and Mg Ions in Hydroponic Solutions Using an Array of Ion-Selective Electrodes",
+      "publication_year": 2019,
+      "doi": "https://doi.org/10.3390/s19245508",
+      "cited_by_count": 43,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2946781822",
+      "display_name": "Predictive models for Lettuce quality from Internet of Things-based hydroponic farm",
+      "publication_year": 2018,
+      "doi": "https://doi.org/10.1109/icsec.2018.8712676",
+      "cited_by_count": 34,
+      "type": "conference-paper",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2999171821",
+      "display_name": "Hydroponic Nutrient Control System based on Internet of Things and K-Nearest Neighbors",
+      "publication_year": 2019,
+      "doi": "https://doi.org/10.1109/ic3ina48034.2019.8949585",
+      "cited_by_count": 33,
+      "type": "conference-paper",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2946732816",
+      "display_name": "Temporal genetic patterns of root growth in Brassica napus L. revealed by a low-cost, high-efficiency hydroponic system",
+      "publication_year": 2019,
+      "doi": "https://doi.org/10.1007/s00122-019-03356-7",
+      "cited_by_count": 31,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4405584831",
+      "display_name": "AI-driven environmental monitoring for hydroponic agriculture: ExCNN-LFCP approach",
+      "publication_year": 2024,
+      "doi": "https://doi.org/10.1007/s12145-024-01516-y",
+      "cited_by_count": 29,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4386587554",
+      "display_name": "Machine Learning for Improved Detection of Pathogenic E. coli in Hydroponic Irrigation Water Using Impedimetric Aptasensors: A Comparative Study",
+      "publication_year": 2023,
+      "doi": "https://doi.org/10.1021/acsomega.3c05797",
+      "cited_by_count": 25,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4380996282",
+      "display_name": "Performance Analysis of Time Series Deep Learning Models for Climate Prediction in Indoor Hydroponic Greenhouses at Different Time Intervals",
+      "publication_year": 2023,
+      "doi": "https://doi.org/10.3390/plants12122316",
+      "cited_by_count": 25,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4403499890",
+      "display_name": "Machine learning-based analysis of nutrient and water uptake in hydroponically grown soybeans",
+      "publication_year": 2024,
+      "doi": "https://doi.org/10.1038/s41598-024-74376-7",
+      "cited_by_count": 18,
+      "type": "article",
+      "language": "en"
+    }
+  ],
+  "group_by": []
+}

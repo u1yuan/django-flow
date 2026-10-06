@@ -1,0 +1,66 @@
+﻿{
+  "meta": {
+    "count": 2,
+    "db_response_time_ms": 25,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "x_query": {
+      "oql": "works where abstract has (anomaly)\n  and title has (hydroponics)\n  and date >= (2018-01-01)\n  and retracted is (false)\n  and language is (en)\n  and date <= (2026-09-28)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "abstract.search",
+            "value": "anomaly",
+            "operator": "has"
+          },
+          {
+            "column_id": "display_name.search",
+            "value": "hydroponics",
+            "operator": "has"
+          },
+          {
+            "column_id": "from_publication_date",
+            "value": "2018-01-01"
+          },
+          {
+            "column_id": "is_retracted",
+            "value": false
+          },
+          {
+            "column_id": "language",
+            "value": "en"
+          },
+          {
+            "column_id": "to_publication_date",
+            "value": "2026-09-28"
+          }
+        ]
+      },
+      "url": "/works?filter=abstract.search:anomaly,display_name.search:hydroponics,from_publication_date:2018-01-01,is_retracted:false,language:en,to_publication_date:2026-09-28&per_page=10&page=1"
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W4408421947",
+      "display_name": "Hydroponics Farming",
+      "publication_year": 2025,
+      "doi": "https://doi.org/10.1002/9781394186426.ch13",
+      "cited_by_count": 9,
+      "type": "other",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4406728479",
+      "display_name": "Demystifying the Data: Leveraging Explainable AI for Real \u2013Time Monitoring and Decision-Making in Vertical Hydroponics Farms",
+      "publication_year": 2024,
+      "doi": "https://doi.org/10.1109/icacc63692.2024.10845548",
+      "cited_by_count": 0,
+      "type": "conference-paper",
+      "language": "en"
+    }
+  ],
+  "group_by": []
+}

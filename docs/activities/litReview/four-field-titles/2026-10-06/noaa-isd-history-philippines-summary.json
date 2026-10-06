@@ -1,0 +1,18 @@
+{
+  "source_url": "https://www.ncei.noaa.gov/pub/data/noaa/isd-history.csv",
+  "country_list_url": "https://www.ncei.noaa.gov/pub/data/noaa/country-list.txt",
+  "country_code": "RP",
+  "country_name_from_list": "PHILIPPINES",
+  "fetched_note": "Filtered from the history file downloaded 2026-10-06. Global file row count is source_rows_scanned. Only RP rows are saved.",
+  "source_rows_scanned": 29661,
+  "rp_station_rows": 116,
+  "unique_usaf_wban": 116,
+  "with_lat_lon": 116,
+  "begin_min": "19440914",
+  "begin_max": "20221006",
+  "end_min": "19450809",
+  "end_max": "20250824",
+  "station_hours_computed": false,
+  "name_hits_outside_RP": [],
+  "name_hits_outside_RP_count": 0
+}

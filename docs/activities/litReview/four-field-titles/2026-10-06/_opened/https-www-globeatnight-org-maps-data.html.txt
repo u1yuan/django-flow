@@ -1,0 +1,200 @@
+
+ Maps & Data
+ - Globe At Night
+ Loading...
+Skip to Content
+ Menu
+ Home
+ About
+ Learn 
+ Constellations
+ Light Pollution
+ Magnitudes
+ Educational Standards
+ Dark Skies Rangers
+ Observe 
+ Campaigns
+ Magnitude Charts
+ Report
+ Maps & Data 
+ Data
+ Interactive Data Map
+ Sky Brightness MN
+ Resources
+ Search
+ Home
+ Maps & Data
+ Maps & Data
+ 2026 Globe at Night Campaigns
+Globe at Night has been collecting data about the night sky since 2006. All of that data is available to download in a variety of formats, and also can be explored in our interactive map. Links to previous years’ data is available below. We are just getting started with this year’s campaign, but you can explore the data from 2026 as it comes in.
+Globe at Night - Sky Brightness Monitoring Network (GaN-MN)
+The GaN-MN project, an extension of the original Globe at Night project, is a global night sky brightness monitoring network using a commercially available meter (SQM-LE by Unihedron) for long-term monitoring of the light pollution conditions in different places around the world.
+ 2025 Results: 13421 total observations
+ Download the 2025 data:
+ GaN2025 (.json)
+ GaN2025 (.csv)
+ 2025 Observations.
+ To explore the 2025 data in more detail, click the map below to launch the Map Viewer.
+ 2024 Results: 14377 total observations
+ Download the 2024 data:
+ GaN2024 (.json)
+ GaN2024 (.csv)
+ 2024 Observations.
+ To explore the 2024 data in more detail, click the map below to launch the Map Viewer.
+ 2023 Results: 21973 total observations
+ Download the 2023 data:
+ GaN2023 (.json)
+ GaN2023 (.csv)
+ 2023 Observations.
+ To explore the 2023 data in more detail, click the map below to launch the Map Viewer.
+ 2022 Results: 19685 total observations
+ Download the 2022 data:
+ GaN2022 (.xlsx)
+ GaN2022 (.json)
+ GaN2022 (.csv)
+ 2022 Observations.
+ To explore the 2022 data in more detail, click the map below to launch the Map Viewer.
+ 2021 Results: 25268 total observations
+ Download the 2021 data:
+ GaN2021 (.kmz)
+ GaN2021_SQM (.kmz)
+ GaN2021 (.xls)
+ GaN2021 (.csv)
+ 2021 Observations.
+ To explore the 2021 data in more detail, click the map below to launch the Map Viewer.
+ 2020 Results: 29404 total observations
+ Download the 2020 data:
+ GaN2020 (.kmz)
+ GaN2020_SQM (.kmz)
+ GaN2020 (.xls)
+ GaN2020 (.csv)
+ 2020 Observations.
+ To explore the 2020 data in more detail, click the map below to launch the Map Viewer.
+ 2019 Results: 10197 total observations
+ Download the 2019 data:
+ GaN2019 (.kmz)
+ GaN2019_SQM (.kmz)
+ GaN2019 (.xls)
+ GaN2019 (.csv)
+ 2019 Observations.
+ To explore the 2019 data in more detail, click the map below to launch the Map Viewer.
+ 2018 Results: 8155 total observations
+ Download the 2018 data:
+ GaN2018 (.kmz)
+ GaN2018_SQM (.kmz)
+ GaN2018 (.xls)
+ GaN2018 (.csv)
+ 2018 Observations.
+ To explore the 2018 data in more detail, click the map below to launch the Map Viewer.
+ 2017 Results: 14260 total observations
+ Download the 2017 data:
+ GaN2017 (.kmz)
+ GaN2017_SQM (.kmz)
+ GaN2017 (.xls)
+ GaN2017 (.csv)
+ 2017 Observations.
+ To explore the 2017 data in more detail, click the map below to launch the Map Viewer.
+ 2016 Results: 15411 total observations
+ Download the 2016 data:
+ GaN2016 (.kmz)
+ GaN2016_SQM (.kmz)
+ GaN2016 (.xls)
+ GaN2016 (.csv)
+ 2016 Observations.
+ To explore the 2016 data in more detail, click the map below to launch the Map Viewer.
+ 2015 Results: 22981 total observations
+ Download the 2015 data:
+ GaN2015 (.kmz)
+ GaN2015_SQM (.kmz)
+ GaN2015 (.xls)
+ GaN2015 (.csv)
+ 2015 Observations.
+ To explore the 2015 data in more detail, click the map below to launch the Map Viewer.
+ 2014 Results: 20819 total observations
+ Download the 2014 data:
+ GaN2014 (.kmz)
+ GaN2014_SQM (.kmz)
+ GaN2014 (.xls)
+ GaN2014 (.csv)
+ 2014 Observations.
+ To explore the 2014 data in more detail, click the map below to launch the Map Viewer.
+ 2013 Results: 20695 total observations
+ Download the 2013 data:
+ GaN2013 (.kmz)
+ GaN2013_SQM (.kmz)
+ GaN2013 (.xls)
+ GaN2013 (.csv)
+ 2013 Observations.
+ To explore the 2013 data in more detail, click the map below to launch the Map Viewer.
+ 2012 Results: 16995 total observations
+ Download the 2012 data:
+ GaN2012 (.kmz)
+ GaN2012_SQM (.kmz)
+ GaN2012 (.xls)
+ GaN2012 (.csv)
+ 2012 Observations.
+ To explore the 2012 data in more detail, click the map below to launch the Map Viewer.
+ 2011 Results: 14353 total observations
+ Download the 2011 data:
+ BB2011 (.csv)
+ GaN2011 (.kmz)
+ GaN2011_SQM (.kmz)
+ BB2011 (.kmz)
+ GaN2011 (.xls)
+ GaN2011 (.csv)
+ 2011 Observations.
+ To explore the 2011 data in more detail, click the map below to launch the Map Viewer.
+ 2010 Results: 17644 total observations
+ Download the 2010 data:
+ GaN2010 (.kmz)
+ GaN2010_SQM (.kmz)
+ GaN2010_ORION (.kmz)
+ GaN2010 (.xls)
+ GaN2010_fields (.txt)
+ GaN2010.gdb (.zip)
+ GaN2010_shp (.zip)
+ GaN2010 (.csv)
+ 2010 Observations.
+ To explore the 2010 data in more detail, click the map below to launch the Map Viewer.
+ 2009 Results: 14140 total observations
+ Download the 2009 data:
+ GaN2009 (.kmz)
+ GaN2009_SQM (.kmz)
+ GaN2009 (.xls)
+ GaN2009 (.csv)
+ 2009 Observations.
+ To explore the 2009 data in more detail, click the map below to launch the Map Viewer.
+ 2008 Results: 6837 total observations
+ Download the 2008 data:
+ GaN2008 (.kmz)
+ GaN2008_SQM (.kmz)
+ GaN2008 (.xls)
+ GaN2008 (.csv)
+ 2008 Observations.
+ To explore the 2008 data in more detail, click the map below to launch the Map Viewer.
+ 2007 Results: 8491 total observations
+ Download the 2007 data:
+ GaN2007 (.kmz)
+ GaN2007_SQM (.kmz)
+ GaN2007 (.xls)
+ GaN2007 (.csv)
+ 2007 Observations.
+ To explore the 2007 data in more detail, click the map below to launch the Map Viewer.
+ 2006 Results: 3992 total observations
+ Download the 2006 data:
+ GaN2006 (.kmz)
+ GaN2006_SQM (.kmz)
+ GaN2006 (.xls)
+ GaN2006 (.csv)
+ 2006 Observations.
+ To explore the 2006 data in more detail, click the map below to launch the Map Viewer.
+ Globe at Night data is made available under a Creative Commons Attribution 4.0 International License.
+** Files generated by Dennis L. Ward, © Copyright 2007 University Corporation for Atmospheric Research.
+ Facebook profile
+ Twitter profile
+ Globe at Night is a program of NSF’s NOIRLab, the preeminent US
+ national center for ground-based, nighttime optical and infrared
+ astronomy, which is managed by the Association of Universities
+ for Research in Astronomy (AURA), under cooperative agreement
+ with the National Science Foundation.
+ Scroll to top

@@ -1,0 +1,57 @@
+Traceback (most recent call last):
+  File "C:\Users\yuanw\AppData\Local\Temp\cursor-sandbox-cache\ef26a344114a04249184326f96225c78\uv\environments-v2\search-arxiv-276c1bba7f6c839f\Lib\site-packages\polite_http\http_client.py", line 761, in _open_stream
+    response = urllib.request.urlopen(req, timeout=effective_timeout)
+  File "C:\Users\yuanw\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yuanw\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\urllib\request.py", line 495, in open
+    response = meth(req, response)
+  File "C:\Users\yuanw\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\urllib\request.py", line 604, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "C:\Users\yuanw\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\urllib\request.py", line 527, in error
+    result = self._call_chain(*args)
+  File "C:\Users\yuanw\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\yuanw\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\urllib\request.py", line 720, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yuanw\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\urllib\request.py", line 495, in open
+    response = meth(req, response)
+  File "C:\Users\yuanw\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\urllib\request.py", line 604, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "C:\Users\yuanw\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\urllib\request.py", line 533, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yuanw\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\yuanw\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\urllib\request.py", line 613, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 406: Not Acceptable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yuanw\Documents\TECH\School\1T2627\thesis1\docs\activities\litReview\.agents\skills\literature-search-arxiv\scripts\search_arxiv.py", line 174, in <module>
+    search_arxiv(main_args)
+    ~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\yuanw\Documents\TECH\School\1T2627\thesis1\docs\activities\litReview\.agents\skills\literature-search-arxiv\scripts\search_arxiv.py", line 111, in search_arxiv
+    xml_data = _CLIENT.fetch_bytes(url)
+  File "C:\Users\yuanw\AppData\Local\Temp\cursor-sandbox-cache\ef26a344114a04249184326f96225c78\uv\environments-v2\search-arxiv-276c1bba7f6c839f\Lib\site-packages\polite_http\http_client.py", line 683, in fetch_bytes
+    return self.fetch(url, **kwargs).data
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\yuanw\AppData\Local\Temp\cursor-sandbox-cache\ef26a344114a04249184326f96225c78\uv\environments-v2\search-arxiv-276c1bba7f6c839f\Lib\site-packages\polite_http\http_client.py", line 631, in fetch
+    with self._open_stream(
+         ~~~~~~~~~~~~~~~~~^
+        url, method, headers, data, json_body, timeout, max_retries
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as resp:
+    ^
+  File "C:\Users\yuanw\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\yuanw\AppData\Local\Temp\cursor-sandbox-cache\ef26a344114a04249184326f96225c78\uv\environments-v2\search-arxiv-276c1bba7f6c839f\Lib\site-packages\polite_http\http_client.py", line 800, in _open_stream
+    raise HttpError(
+    ...<4 lines>...
+    ) from exc
+polite_http.http_client.HttpError: HTTP Error 406 while fetching http://export.arxiv.org/api/query?start=0&max_results=10&search_query=%28ti%3Ahydroponic+OR+abs%3Ahydroponic%29+AND+%28abs%3Aforecast+OR+abs%3Aprediction+OR+ti%3Apredict%29+AND+%28abs%3ApH+OR+abs%3Asensor+OR+abs%3Anutrient%29&sortBy=relevance

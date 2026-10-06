@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "count": 1,
+    "db_response_time_ms": 187,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "x_query": {
+      "oql": "works where abstract has (stemmed \"isolation forest\")\n  and date >= (2018-01-01)\n  and retracted is (false)\n  and language is (en)\n  and title/abstract has (hydroponic)\n  and date <= (2026-09-29)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "abstract.search",
+            "value": "\"isolation forest\"",
+            "operator": "has"
+          },
+          {
+            "column_id": "from_publication_date",
+            "value": "2018-01-01"
+          },
+          {
+            "column_id": "is_retracted",
+            "value": false
+          },
+          {
+            "column_id": "language",
+            "value": "en"
+          },
+          {
+            "column_id": "title_and_abstract.search",
+            "value": "hydroponic",
+            "operator": "has"
+          },
+          {
+            "column_id": "to_publication_date",
+            "value": "2026-09-29"
+          }
+        ]
+      },
+      "url": "/works?filter=abstract.search:%22isolation forest%22,from_publication_date:2018-01-01,is_retracted:false,language:en,title_and_abstract.search:hydroponic,to_publication_date:2026-09-29&per_page=10&page=1"
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W4413216304",
+      "display_name": "IoT-based monitoring and control for optimized plant growth in smart greenhouses using soil and hydroponic systems",
+      "publication_year": 2025,
+      "publication_date": "2025-08-11",
+      "cited_by_count": 13,
+      "doi": "https://doi.org/10.1016/j.iot.2025.101710",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5119306786",
+            "display_name": "Kenza Bouarroudj",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210160465",
+              "display_name": "Universit\u00e9 Constantine 2",
+              "ror": "https://ror.org/056mctw68",
+              "country_code": "DZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4210160465"
+              ]
+            }
+          ],
+          "countries": [
+            "DZ"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Kenza Bouarroudj",
+          "raw_affiliation_strings": [
+            "LIRE Laboratory, University of Constantine 2 Abdelhamid Mehri Ali Mendjeli, BP : 67A, Constantine, Algeria"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "LIRE Laboratory, University of Constantine 2 Abdelhamid Mehri Ali Mendjeli, BP : 67A, Constantine, Algeria",
+              "institution_ids": [
+                "https://openalex.org/I4210160465"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5069141432",
+            "display_name": "Fatima Babaa",
+            "orcid": "https://orcid.org/0000-0002-0031-2210",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-0031-2210"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I125485651",
+              "display_name": "University Fr\u00e8res Mentouri Constantine 1",
+              "ror": "https://ror.org/017wv6808",
+              "country_code": "DZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I125485651"
+              ]
+            }
+          ],
+          "countries": [
+            "DZ"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Fatima Babaa",
+          "raw_affiliation_strings": [
+            "Electrical Laboratory of Constantine LEC, University Freres Mentouri Constantine 1, Route de Ain El Bey, Constantine, 25017, Algeria"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Electrical Laboratory of Constantine LEC, University Freres Mentouri Constantine 1, Route de Ain El Bey, Constantine, 25017, Algeria",
+              "institution_ids": [
+                "https://openalex.org/I125485651"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5001856693",
+            "display_name": "Abderrahim Touil",
+            "orcid": "https://orcid.org/0000-0001-5755-8994",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-5755-8994"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I125485651",
+              "display_name": "University Fr\u00e8res Mentouri Constantine 1",
+              "ror": "https://ror.org/017wv6808",
+              "country_code": "DZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I125485651"
+              ]
+            }
+          ],
+          "countries": [
+            "DZ"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Abderrahim Touil",
+          "raw_affiliation_strings": [
+            "Electrical Laboratory of Constantine LEC, University Freres Mentouri Constantine 1, Route de Ain El Bey, Constantine, 25017, Algeria"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Electrical Laboratory of Constantine LEC, University Freres Mentouri Constantine 1, Route de Ain El Bey, Constantine, 25017, Algeria",
+              "institution_ids": [
+                "https://openalex.org/I125485651"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "type": "article",
+      "language": "en"
+    }
+  ],
+  "group_by": []
+}

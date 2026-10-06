@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Recomputes 12/80 as 15%",
+      "passed": true,
+      "evidence": "Looked for the correct ratio result."
+    },
+    {
+      "text": "Flags code failure",
+      "passed": true,
+      "evidence": "Looked for explicit failed execution evidence."
+    },
+    {
+      "text": "Does not claim successful execution",
+      "passed": true,
+      "evidence": "Checked for claims of successful execution."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

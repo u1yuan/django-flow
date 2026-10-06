@@ -1,0 +1,133 @@
+﻿{
+  "meta": {
+    "count": 1361,
+    "db_response_time_ms": 173,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "x_query": {
+      "oql": "works where date >= (2018-01-01)\n  and full text has (hydroponic predictive analytics nutrient dosing)\n  and retracted is (false)\n  and language is (en)\n  and date <= (2026-09-28)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "from_publication_date",
+            "value": "2018-01-01"
+          },
+          {
+            "column_id": "fulltext.search",
+            "value": "hydroponic predictive analytics nutrient dosing",
+            "operator": "has"
+          },
+          {
+            "column_id": "is_retracted",
+            "value": false
+          },
+          {
+            "column_id": "language",
+            "value": "en"
+          },
+          {
+            "column_id": "to_publication_date",
+            "value": "2026-09-28"
+          }
+        ]
+      },
+      "url": "/works?filter=from_publication_date:2018-01-01,fulltext.search:hydroponic predictive analytics nutrient dosing,is_retracted:false,language:en,to_publication_date:2026-09-28&per_page=10&page=1"
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W2964535757",
+      "display_name": "Internet-of-Things (IoT)-Based Smart Agriculture: Toward Making the Fields Talk",
+      "publication_year": 2019,
+      "doi": "https://doi.org/10.1109/access.2019.2932609",
+      "cited_by_count": 1299,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2978382868",
+      "display_name": "Bio-based fertilizers: A practical approach towards circular economy",
+      "publication_year": 2019,
+      "doi": "https://doi.org/10.1016/j.biortech.2019.122223",
+      "cited_by_count": 551,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2935790340",
+      "display_name": "Microalgal Biostimulants and Biofertilisers in Crop Productions",
+      "publication_year": 2019,
+      "doi": "https://doi.org/10.3390/agronomy9040192",
+      "cited_by_count": 534,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2899908255",
+      "display_name": "Application of soilless culture technologies in the modern greenhouse industry \u2013 A review",
+      "publication_year": 2018,
+      "doi": "https://doi.org/10.17660/ejhs.2018/83.5.2",
+      "cited_by_count": 437,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2963003072",
+      "display_name": "Hydroponic Solutions for Soilless Production Systems: Issues and Opportunities in a Smart Agriculture Perspective",
+      "publication_year": 2019,
+      "doi": "https://doi.org/10.3389/fpls.2019.00923",
+      "cited_by_count": 397,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4224839097",
+      "display_name": "A Review on Machine Learning, Artificial Intelligence, and Smart Technology in Water Treatment and Monitoring",
+      "publication_year": 2022,
+      "doi": "https://doi.org/10.3390/w14091384",
+      "cited_by_count": 355,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4211258112",
+      "display_name": "Pathways of arsenic uptake and efflux",
+      "publication_year": 2019,
+      "doi": "https://doi.org/10.1016/j.envint.2019.02.058",
+      "cited_by_count": 342,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2906616642",
+      "display_name": "Biostimulants research in some horticultural plant species\u2014A review",
+      "publication_year": 2018,
+      "doi": "https://doi.org/10.1002/fes3.162",
+      "cited_by_count": 308,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W3042953105",
+      "display_name": "Selenium biofortification in the 21st century: status and challenges for healthy human nutrition",
+      "publication_year": 2020,
+      "doi": "https://doi.org/10.1007/s11104-020-04635-9",
+      "cited_by_count": 304,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W3004432508",
+      "display_name": "The intersection of nitrogen nutrition and water use in plants: new paths toward improved crop productivity",
+      "publication_year": 2020,
+      "doi": "https://doi.org/10.1093/jxb/eraa049",
+      "cited_by_count": 301,
+      "type": "article",
+      "language": "en"
+    }
+  ],
+  "group_by": []
+}

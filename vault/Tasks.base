@@ -1,0 +1,131 @@
+filters:
+  and:
+    - note.type == "task"
+    - file.ext == "md"
+formulas:
+  is_open: status != "done" && status != "completed" && status != "canceled" && status != "archived"
+  is_overdue: if(due, due < today() && formula.is_open, false)
+  days_until_due: if(due, ((due - today()) / 86400000).round(0), "")
+properties:
+  note.track:
+    displayName: Track
+  note.status:
+    displayName: Status
+  note.priority:
+    displayName: Priority
+  note.due:
+    displayName: Due
+  note.scheduled:
+    displayName: Scheduled
+  note.project:
+    displayName: Project
+  formula.days_until_due:
+    displayName: Days left
+views:
+  - type: table
+    name: Open
+    filters:
+      and:
+        - formula.is_open
+    groupBy:
+      property: track
+      direction: ASC
+    order:
+      - file.name
+      - status
+      - priority
+      - due
+      - formula.days_until_due
+      - project
+    sort:
+      - property: formula.days_until_due
+        direction: DESC
+      - property: project
+        direction: ASC
+    columnSize:
+      file.name: 89
+      note.status: 73
+      note.priority: 79
+      note.due: 65
+      formula.days_until_due: 105
+  - type: table
+    name: Overdue
+    filters:
+      and:
+        - formula.is_overdue
+    order:
+      - file.name
+      - due
+      - formula.days_until_due
+      - priority
+      - track
+      - project
+  - type: table
+    name: Today
+    filters:
+      and:
+        - formula.is_open
+        - or:
+            - due == today()
+            - scheduled == today()
+    order:
+      - file.name
+      - status
+      - priority
+      - due
+      - scheduled
+      - track
+  - type: table
+    name: Upcoming
+    filters:
+      and:
+        - formula.is_open
+        - due
+        - due >= today()
+        - due <= today() + "14d"
+    order:
+      - file.name
+      - due
+      - formula.days_until_due
+      - priority
+      - track
+      - project
+  - type: table
+    name: Inbox
+    filters:
+      and:
+        - formula.is_open
+        - "!due"
+        - "!scheduled"
+    order:
+      - file.name
+      - status
+      - priority
+      - track
+      - project
+  - type: table
+    name: This project
+    filters:
+      and:
+        - project == this
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - file.name
+      - priority
+      - due
+      - formula.days_until_due
+      - track
+  - type: table
+    name: Done
+    filters:
+      or:
+        - status == "done"
+        - status == "completed"
+    order:
+      - file.name
+      - status
+      - due
+      - track
+      - project

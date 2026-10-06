@@ -1,0 +1,10 @@
+{
+  "eval_id": 0,
+  "eval_name": "evidence-research-1",
+  "prompt": "Audit two claims in the diesel literature log using only the local log. Return an evidence ledger and identify which citations still need source-level verification.",
+  "assertions": [
+    "Records source identifiers or URLs",
+    "Does not mark log summaries as verified source passages",
+    "Names a concrete verification gap"
+  ]
+}

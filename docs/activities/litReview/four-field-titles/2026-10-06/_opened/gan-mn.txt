@@ -1,0 +1,655 @@
+
+
+
+
+
+
+  
+  
+    
+      Sky Brightness Monitoring Network
+    
+    
+      
+      - Globe At Night
+    
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+  
+
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+    
+      Loading...
+
+    
+
+  
+
+
+
+Skip to Content
+
+
+
+
+  
+
+
+
+
+  
+    
+    
+      
+        
+      
+      
+        
+      
+
+    
+
+
+    
+    
+      
+      Menu
+    
+
+    
+    
+      
+        
+        
+          
+            
+              
+                
+                  Home
+                
+              
+
+            
+          
+            
+              
+                
+                  About
+                
+              
+
+            
+          
+            
+              
+                
+                  Learn 
+                
+
+                
+                  
+                    
+                      
+                        Constellations
+                      
+                    
+
+                  
+                    
+                      
+                        Light Pollution
+                      
+                    
+
+                  
+                    
+                      
+                        Magnitudes
+                      
+                    
+
+                  
+                    
+                      
+                        Educational Standards
+                      
+                    
+
+                  
+                    
+                      
+                        Dark Skies Rangers
+                      
+                    
+
+                  
+                
+              
+
+            
+          
+            
+              
+                
+                  Observe 
+                
+
+                
+                  
+                    
+                      
+                        Campaigns
+                      
+                    
+
+                  
+                    
+                      
+                        Magnitude Charts
+                      
+                    
+
+                  
+                
+              
+
+            
+          
+            
+              
+                
+                  Report
+                
+              
+
+            
+          
+            
+              
+                
+                  Maps & Data 
+                
+
+                
+                  
+                    
+                      
+                        Data
+                      
+                    
+
+                  
+                    
+                      
+                        Interactive Data Map
+                      
+                    
+
+                  
+                    
+                      
+                        Sky Brightness MN
+                      
+                    
+
+                  
+                
+              
+
+            
+          
+            
+              
+                
+                  Resources
+                
+              
+
+            
+          
+          
+        
+
+        
+         
+
+        
+
+        
+        
+          
+             Search
+          
+
+          
+            
+              
+                
+                  
+                    
+                    
+                      
+                    
+                  
+
+                
+              
+
+            
+
+          
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    
+
+    
+  
+
+
+
+  
+    
+  
+    
+      
+        
+          
+            
+
+
+  
+    
+      
+      
+    
+      
+        Home
+      
+      
+        
+      
+    
+    Sky Brightness Monitoring Network
+  
+
+
+
+          
+
+
+          
+
+          
+        
+
+      
+
+    
+
+  
+
+  
+    
+      
+  Globe at Night - Sky Brightness Monitoring Network (GaN-MN)
+The GaN-MN project, an extension of the original Globe at Night project, is a global night sky brightness monitoring network using a commercially available meter (SQM-LE by Unihedron) for long-term monitoring of the light pollution conditions in different places around the world.
+The project aims to:
+deploy a standardized night sky measurement method for worldwide light pollution research;
+highlight the negative environmental impacts of abusive artificial lighting for the general public and policy makers; and
+sustain light pollution public education and promote public engagement by live worldwide night sky brightness data and night sky measuring programs.
+About the GaN-MN Data
+Globe at Night is hosting data taken by this network. It can be downloaded as a CSV file that can be opened in any spreadsheet application. The file has the following headers:
+id: unique ID for each data entry
+created: timestamp according to the server clock
+received_utc: timestamp converted to UTC
+received_adjusted: timestamp corrected to local time
+sqmle_serial_number: serial number of SQM-LE
+nsb, sensor_frequency, sensor_period_count, sensor_period_second, temperature: raw data reported by the unit, where nsb: reading in magnitudes per square arc second, see section 8.6 of the manual
+device_code: code of monitoring station (location of SQM-LE), complete list
+
+
+
+
+
+  Download the GaN-MN Data
+Years 2014-2021 are links to folders of data for individual months. the indicated file size is the total for all the data. Individual months file sizes are in the 100-250 MB range.
+
+
+
+
+
+  
+    
+      
+        2026Jan, 2026 (190 MB)
+Feb, 2026 (176 MB)
+Mar, 2026 (188 MB)
+Apr, 2026 (179 MB)
+
+      
+
+    
+      
+        2025Jan, 2025 (201 MB)
+Feb, 2025 (176 MB)
+Mar, 2025 (195 MB)
+Apr, 2025 (183 MB)
+May, 2025 (184 MB)
+Jun, 2025 (165MB)
+Jul, 2025 (186 MB)
+Aug, 2025 (196 MB)
+Sep, 2025 (195 MB)
+Oct, 2025 (187 MB)
+Nov, 2025 (177 MB)
+Dec, 2025 (176 MB)
+
+      
+
+    
+      
+        2024Jan, 2024 (224 MB)
+Feb, 2024 (212 MB)
+Mar, 2024 (221 MB)
+Apr, 2024 (203 MB)
+May, 2024 (186 MB)
+Jun, 2024 (171 MB)
+Jul, 2024 (174 MB)
+Aug, 2024 (169 MB)
+Sep, 2024 (176 MB)
+Oct, 2024 (175 MB)
+Nov, 2024 (189 MB)
+Dec, 2024 (194 MB)
+
+      
+
+    
+      
+        2023
+Jan, 2023 (253 MB)
+Feb, 2023 (214 MB)
+Mar, 2023 (242 MB)
+Apr, 2023 (204 MB)
+May, 2023 (208 MB)
+Jun, 2023 (191 MB)
+Jul, 2023 (210 MB)
+Aug, 2023 (204 MB)
+Sep, 2023 (199 MB)
+Oct, 2023 (198 MB)
+Nov, 2023 (201 MB)
+Dec, 2023 (220 MB)
+
+      
+
+    
+      
+        2022
+Jan, 2022 (189 MB)
+Feb, 2022 (164 MB)
+Mar, 2022 (193 MB)
+Apr, 2022 (188 MB)
+May, 2022 (196 MB)
+Jun, 2022 (202 MB)
+Jul, 2022 (231 MB)
+Aug, 2022 (220 MB)
+Sep, 2022 (240 MB)
+Oct, 2022 (250 MB)
+Nov, 2022 (254 MB)
+Dec, 2022 (267 MB)
+
+      
+
+    
+      
+        2014–20212021 (262 MB)
+2020 (260 MB)
+2019 (234 MB)
+2018 (227 MB)
+2017 (204 MB)
+2016 (196 MB)
+2015 (91 MB)
+2014 (1.4 MB)
+
+      
+
+    
+  
+
+
+
+
+
+  Remarks:Data are released on a monthly basis. For example, the CSV file of January 2015 contains the raw data collected from 00:00:00 January 1st, 2015 to 23:59:59 January 31st, 2015 UTC and sorted by the received_utc.
+The GAN-MN data is posted by six months after it has been collected. Data collected in January will be posted six months later, in July.
+The data is posted as CSV files that may be opened in a spreadsheet or a text editor.
+Data released are provisional as there is only limited quality check. Please contact GaN-MN (globeatnight.network@gmail.com) for details.
+
+
+
+
+
+  Co-organizers
+
+
+
+
+
+  
+      
+         
+      
+
+
+         
+      
+
+
+         
+      
+
+
+         
+      
+
+
+
+
+  
+
+Salt Lake City and Dead Horse Point State Park
+We are collecting sky quality meter (SQM) data from Salt Lake City and Dead Horse Point State Park for the study of the Utah night sky. The Salt Lake City SQM is located on the roof of the South Physics Building on the University of Utah’s urban campus. The Dead Horse Point State Park SQM is located on the roof of the visitor’s center; this location was the first Utah State Park to be designated as an International Dark Sky Park.
+The .zip files contain month-to-month sky quality data from each of our sky quality meters. The individual files are in .dat format and can be read using TextEdit, TextWrangler, or any other program that supports .dat files. The files can also be read into Python coding scripts. We hope for this data to be used in physics, astronomy, and computer science classrooms to allow students to use real data to find meaningful connections to their everyday lives. If you would like to learn more about or contribute to Python coding curriculum in development,this please contact Julia Kamenetzky (jkamenetzky@westminstercollege.edu) or Anil Seth (aseth@astro.utah.edu).
+
+
+
+
+
+  Download the Salt Lake City Data
+
+
+
+
+  
+    
+      
+        2018Feb, 2018 (121 KB)
+Mar, 2018 (119 KB)
+Apr, 2018 (87 KB)
+May, 2018 (139 KB)
+Jun, 2018 (108 KB)
+Jul, 2018 (141 KB)
+
+      
+
+    
+      
+        2017Dec, 2017 (59 KB)
+
+      
+
+    
+  
+
+
+
+
+    
+
+  
+
+  
+  
+
+
+
+  
+    
+    
+      
+        
+          
+          Facebook profile
+        
+      
+
+      
+        
+          
+          Twitter profile
+        
+      
+
+      
+    
+
+    
+
+
+
+    
+      
+      
+    
+
+
+    
+    
+      
+      
+        
+          
+          Globe at Night is a program of NSF’s NOIRLab, the preeminent US
+          national center for ground-based, nighttime optical and infrared
+          astronomy, which is managed by the Association of Universities
+          for Research in Astronomy (AURA), under cooperative agreement
+          with the National Science Foundation.
+          
+        
+      
+
+      
+    
+
+    
+  
+
+
+  
+  
+    Scroll to top
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+

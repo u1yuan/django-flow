@@ -1,0 +1,771 @@
+
+
+######## s2 len 19077
+
+-- bands at 1357
+17, and has a revisit interval of 5 days.
+ The data includes 12 UINT16 spectral bands representing Surface Reflectance (SR) scaled by 10000, along with additional Level-2 specific bands.
+ Usage of this Sentinel data is subject to the Copernicus Sentinel Data Terms and Conditions.
+ Dataset Availability
+ 2017-03-28T00:00:00Z–2026-10-05T23:58:37.225000Z
+ Dataset Producer
+ European Union/ESA/Copernicus
+ Earth Engine Snippet
+ ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED")
+ open_in_new
+ Revisit Interval
+5 Days
+ Tags
+ copernicus
+ esa
+ eu
+ msi
+ reflectance
+ satellite-imagery
+ sentinel
+ sr
+ Description
+ After 2022-01-25, Sentinel-2 scenes with PROCESSING_BASELINE '04.00' or above
+have their DN (value) range shifted by 1000. The HARMONIZED collection
+shifts data in newer scenes to be in the same range as in older scenes.
+Sentinel-2 is a wide-swath, high-resolution, multi-spectral
+imaging mission supporting Copernicus Land Monitoring studies,
+including the monitoring of veg
+
+-- st_b10 at -1
+
+-- surface temperature at -1
+
+-- thermal at -1
+
+-- dataset availability at 1559
+Sentinel data is subject to the Copernicus Sentinel Data Terms and Conditions.
+ Dataset Availability
+ 2017-03-28T00:00:00Z–2026-10-05T23:58:37.225000Z
+ Dataset Producer
+ European Union/ESA/Copernicus
+ Earth Engine Snippet
+ ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED")
+ open_in_new
+ Revisit Interval
+5 Days
+ Tags
+ copernicus
+ esa
+ eu
+ msi
+ reflectance
+ satellite-imagery
+ sentinel
+ sr
+ Description
+ After 2022-01-25, Sentinel-2 scenes with PROCESSING_BASELINE '04.00' or above
+have their DN (value) range shifted by 1000. The HARMONIZED collection
+shifts data in newer scenes to be in the same range as in older scenes.
+Sentinel-2 is a wide-swath, high-resolution, multi-spectral
+imaging mission supporting Copernicus Land Monitoring studies,
+including the monitoring of vegetation, soil and water cover,
+as well as observation of inland waterways and coastal areas.
+The Sentinel-2 L2 data are downloaded from CDSE. They were
+computed by running sen2cor. WARNING: 2017-2018 L2
+
+-- resolution at 1012
+
+ The Harmonized Sentinel-2 MSI Level-2A (SR) dataset provides wide-swath, high-resolution, multi-spectral imaging for land monitoring.
+ Data after January 25, 2022, with a processing baseline of '04.00' or above have been shifted to match the data range of older scenes in this harmonized collection.
+ The dataset is available from March 28, 2017, and has a revisit interval of 5 days.
+ The data includes 12 UINT16 spectral bands representing Surface Reflectance (SR) scaled by 10000, along with additional Level-2 specific bands.
+ Usage of this Sentinel data is subject to the Copernicus Sentinel Data Terms and Conditions.
+ Dataset Availability
+ 2017-03-28T00:00:00Z–2026-10-05T23:58:37.225000Z
+ Dataset Producer
+ European Union/ESA/Copernicus
+ Earth Engine Snippet
+ ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED")
+ open_in_new
+ Revisit Interval
+5 Days
+ Tags
+ copernicus
+ esa
+ eu
+ msi
+ reflectance
+ satellite-imagery
+ sentinel
+ sr
+ Description
+ After 2022-01-25, Sentinel-2 s
+
+-- copyright at -1
+
+-- terms at 1536
+ bands.
+ Usage of this Sentinel data is subject to the Copernicus Sentinel Data Terms and Conditions.
+ Dataset Availability
+ 2017-03-28T00:00:00Z–2026-10-05T23:58:37.225000Z
+ Dataset Producer
+ European Union/ESA/Copernicus
+ Earth Engine Snippet
+ ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED")
+ open_in_new
+ Revisit Interval
+5 Days
+ Tags
+ copernicus
+ esa
+ eu
+ msi
+ reflectance
+ satellite-imagery
+ sentinel
+ sr
+ Description
+ After 2022-01-25, Sentinel-2 scenes with PROCESSING_BASELINE '04.00' or above
+have their DN (value) range shifted by 1000. The HARMONIZED collection
+shifts data in newer scenes to be in the same range as in older scenes.
+Sentinel-2 is a wide-swath, high-resolution, multi-spectral
+imaging mission supporting Copernicus Land Monitoring studies,
+including the monitoring of vegetation, soil and water cover,
+as well as observation of inland waterways and coastal areas.
+The Sentinel-2 L2 data are downloaded from CDSE. They were
+computed by running sen2cor
+
+
+######## l8 len 18754
+
+-- bands at 1111
+mages include visible, near-infrared, short-wave infrared, and thermal infrared bands, along with intermediate and QA bands.
+ The dataset is processed using the Land Surface Reflectance Code (LaSRC) and a single-channel algorithm for surface temperature.
+ Data is packaged into overlapping scenes covering approximately 170km x 183km.
+ Landsat datasets are public domain and can be used freely with proper USGS acknowledgement.
+ Dataset Availability
+ 2013-03-18T15:58:14Z–2026-09-27T05:39:46.600000Z
+ Dataset Producer
+ USGS
+ Earth Engine Snippet
+ ee.ImageCollection("LANDSAT/LC08/C02/T1_L2")
+ open_in_new
+ Revisit Interval
+16 Days
+ Tags
+ cfmask
+ cloud
+ fmask
+ global
+ l8sr
+ landsat
+ lasrc
+ lc08
+ lst
+ reflectance
+ satellite-imagery
+ sr
+ usgs
+ Description
+ This dataset contains atmospherically corrected
+surface reflectance and land surface temperature derived from the data
+produced by the Landsat 8 OLI/TIRS sensors.
+These images contain 5 visible and near-infrared (VNIR) bands
+
+-- st_b10 at 5773
+olated Aerosol
+ Bits 6-7: Aerosol Level
+0: Climatology
+1: Low
+2: Medium
+3: High
+ST_B10
+K
+ 0
+ 65535
+0.00341802
+149
+ 30 meters
+10.60-11.19 μm
+Band 10 surface temperature.
+If 'PROCESSING_LEVEL' is set to 'L2SR', this band is fully masked out.
+ST_ATRAN
+ 0
+ 10000
+0.0001
+ 30 meters
+None
+Atmospheric Transmittance.
+If 'PROCESSING_LEVEL' is set to 'L2SR', this band is fully masked out.
+ST_CDIST
+km
+ 0
+ 24000
+0.01
+ 30 meters
+None
+Pixel distance to cloud.
+If 'PROCESSING_LEVEL' is set to 'L2SR', this band is fully masked out.
+ST_DRAD
+W/(m^2*sr*um)/ DN
+ 0
+ 28000
+0.001
+ 30 meters
+None
+Downwelled Radiance.
+If 'PROCESSING_LEVEL' is set to 'L2SR', this band is fully masked out.
+ST_EMIS
+ 0
+ 10000
+0.0001
+ 30 meters
+None
+Emissivity of Band 10 estimated from ASTER GED.
+If 'PROCESSING_LEVEL' is set to 'L2SR', this band is fully masked out.
+ST_EMSD
+ 0
+ 10000
+0.0001
+ 30 meters
+None
+Emissivity standard deviation.
+If 'PROCESSING_LEVEL' is set to 'L2SR', this band is fully masked out.
+ST_QA
+K
+
+
+-- surface temperature at 967
+g
+ This dataset provides atmospherically corrected surface reflectance and land surface temperature data from Landsat 8 OLI/TIRS sensors.
+ The images include visible, near-infrared, short-wave infrared, and thermal infrared bands, along with intermediate and QA bands.
+ The dataset is processed using the Land Surface Reflectance Code (LaSRC) and a single-channel algorithm for surface temperature.
+ Data is packaged into overlapping scenes covering approximately 170km x 183km.
+ Landsat datasets are public domain and can be used freely with proper USGS acknowledgement.
+ Dataset Availability
+ 2013-03-18T15:58:14Z–2026-09-27T05:39:46.600000Z
+ Dataset Producer
+ USGS
+ Earth Engine Snippet
+ ee.ImageCollection("LANDSAT/LC08/C02/T1_L2")
+ open_in_new
+ Revisit Interval
+16 Days
+ Tags
+ cfmask
+ cloud
+ fmask
+ global
+ l8sr
+ landsat
+ lasrc
+ lc08
+ lst
+ reflectance
+ satellite-imagery
+ sr
+ usgs
+ Description
+ This dataset contains atmospherically corrected
+surface reflectance and land sur
+
+-- thermal at 1094
+S sensors.
+ The images include visible, near-infrared, short-wave infrared, and thermal infrared bands, along with intermediate and QA bands.
+ The dataset is processed using the Land Surface Reflectance Code (LaSRC) and a single-channel algorithm for surface temperature.
+ Data is packaged into overlapping scenes covering approximately 170km x 183km.
+ Landsat datasets are public domain and can be used freely with proper USGS acknowledgement.
+ Dataset Availability
+ 2013-03-18T15:58:14Z–2026-09-27T05:39:46.600000Z
+ Dataset Producer
+ USGS
+ Earth Engine Snippet
+ ee.ImageCollection("LANDSAT/LC08/C02/T1_L2")
+ open_in_new
+ Revisit Interval
+16 Days
+ Tags
+ cfmask
+ cloud
+ fmask
+ global
+ l8sr
+ landsat
+ lasrc
+ lc08
+ lst
+ reflectance
+ satellite-imagery
+ sr
+ usgs
+ Description
+ This dataset contains atmospherically corrected
+surface reflectance and land surface temperature derived from the data
+produced by the Landsat 8 OLI/TIRS sensors.
+These images contain 5 visible and near-infr
+
+-- dataset availability at 1460
+ets are public domain and can be used freely with proper USGS acknowledgement.
+ Dataset Availability
+ 2013-03-18T15:58:14Z–2026-09-27T05:39:46.600000Z
+ Dataset Producer
+ USGS
+ Earth Engine Snippet
+ ee.ImageCollection("LANDSAT/LC08/C02/T1_L2")
+ open_in_new
+ Revisit Interval
+16 Days
+ Tags
+ cfmask
+ cloud
+ fmask
+ global
+ l8sr
+ landsat
+ lasrc
+ lc08
+ lst
+ reflectance
+ satellite-imagery
+ sr
+ usgs
+ Description
+ This dataset contains atmospherically corrected
+surface reflectance and land surface temperature derived from the data
+produced by the Landsat 8 OLI/TIRS sensors.
+These images contain 5 visible and near-infrared (VNIR) bands and
+2 short-wave infrared (SWIR) bands processed to orthorectified surface
+reflectance, and one thermal infrared (TIR) band processed to orthorectified
+surface temperature. They also contain intermediate bands used in
+calculation of the ST products, as well as QA bands.
+Landsat 8 SR products are created with the Land Surface Reflectance Code
+(LaS
+
+-- resolution at -1
+
+-- copyright at 14527
+reside in the public domain and may be used, transferred, or reproduced without copyright restriction.
+Acknowledgement or credit of the USGS as data source should be provided
+by including a line of text citation such as the example shown below.
+(Product, Image, Photograph, or Dataset Name) courtesy of
+the U.S. Geological Survey
+Example: Landsat-7 image courtesy of the U.S. Geological Survey
+See the
+USGS Visual Identity System Guidance
+for further details on proper citation and acknowledgement of USGS products.
+ Explore with Earth Engine
+Important: 
+ Earth Engine is a platform for petabyte-scale scientific analysis and visualization of
+ geospatial datasets, both for public benefit and for business and government users.
+ Earth Engine is free to use for research, education, and nonprofit use. To get started, please
+ register for Earth Engine access.
+ Code Editor (JavaScript)
+var dataset = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')
+ .filterDate('2021-05-01', '2021-06-
+
+-- terms at 14361
+".
+WRS_PATH
+INT
+WRS path number of scene.
+WRS_ROW
+INT
+WRS row number of scene.
+ Terms of Use
+ Terms of Use
+ Landsat datasets are federally created data
+and therefore reside in the public domain and may be used, transferred, or reproduced without copyright restriction.
+Acknowledgement or credit of the USGS as data source should be provided
+by including a line of text citation such as the example shown below.
+(Product, Image, Photograph, or Dataset Name) courtesy of
+the U.S. Geological Survey
+Example: Landsat-7 image courtesy of the U.S. Geological Survey
+See the
+USGS Visual Identity System Guidance
+for further details on proper citation and acknowledgement of USGS products.
+ Explore with Earth Engine
+Important: 
+ Earth Engine is a platform for petabyte-scale scientific analysis and visualization of
+ geospatial datasets, both for public benefit and for business and government users.
+ Earth Engine is free to use for research, education, and nonprofit use. To get starte
+
+
+######## l9 len 19297
+
+-- bands at 1060
+rature data from the Landsat 9 OLI/TIRS sensors.
+ The dataset includes multiple bands covering visible, near-infrared, short-wave infrared, and thermal infrared wavelengths.
+ Data products are packaged into overlapping scenes covering approximately 170km x 183km.
+ The dataset is available from October 2021 through October 2025 with a 16-day revisit interval.
+ Landsat datasets are in the public domain and can be used, transferred, or reproduced without copyright restriction, with acknowledgment of the USGS as the data source.
+ Dataset Availability
+ 2021-10-31T00:00:00Z–2026-10-03T23:50:25.430000Z
+ Dataset Producer
+ USGS
+ Earth Engine Snippet
+ ee.ImageCollection("LANDSAT/LC09/C02/T1_L2")
+ open_in_new
+ Revisit Interval
+16 Days
+ Tags
+ cfmask
+ cloud
+ fmask
+ global
+ l9sr
+ landsat
+ lasrc
+ lc09
+ lst
+ reflectance
+ satellite-imagery
+ sr
+ usgs
+ Description
+ This dataset contains atmospherically corrected
+surface reflectance and land surface temperature derived from the data
+pr
+
+-- st_b10 at 5825
+olated Aerosol
+ Bits 6-7: Aerosol Level
+0: Climatology
+1: Low
+2: Medium
+3: High
+ST_B10
+K
+ 0
+ 65535
+0.00341802
+149
+ 30 meters
+10.60-11.19 μm
+Band 10 surface temperature.
+If 'PROCESSING_LEVEL' is set to 'L2SR', this band is fully masked out.
+ST_ATRAN
+ 0
+ 10000
+0.0001
+ 30 meters
+None
+Atmospheric Transmittance.
+If 'PROCESSING_LEVEL' is set to 'L2SR', this band is fully masked out.
+ST_CDIST
+km
+ 0
+ 24000
+0.01
+ 30 meters
+None
+Pixel distance to cloud.
+If 'PROCESSING_LEVEL' is set to 'L2SR', this band is fully masked out.
+ST_DRAD
+W/(m^2*sr*um)/ DN
+ 0
+ 28000
+0.001
+ 30 meters
+None
+Downwelled Radiance.
+If 'PROCESSING_LEVEL' is set to 'L2SR', this band is fully masked out.
+ST_EMIS
+ 0
+ 10000
+0.0001
+ 30 meters
+None
+Emissivity of Band 10 estimated from ASTER GED.
+If 'PROCESSING_LEVEL' is set to 'L2SR', this band is fully masked out.
+ST_EMSD
+ 0
+ 10000
+0.0001
+ 30 meters
+None
+Emissivity standard deviation.
+If 'PROCESSING_LEVEL' is set to 'L2SR', this band is fully masked out.
+ST_QA
+K
+
+
+-- surface temperature at 967
+g
+ This dataset provides atmospherically corrected surface reflectance and land surface temperature data from the Landsat 9 OLI/TIRS sensors.
+ The dataset includes multiple bands covering visible, near-infrared, short-wave infrared, and thermal infrared wavelengths.
+ Data products are packaged into overlapping scenes covering approximately 170km x 183km.
+ The dataset is available from October 2021 through October 2025 with a 16-day revisit interval.
+ Landsat datasets are in the public domain and can be used, transferred, or reproduced without copyright restriction, with acknowledgment of the USGS as the data source.
+ Dataset Availability
+ 2021-10-31T00:00:00Z–2026-10-03T23:50:25.430000Z
+ Dataset Producer
+ USGS
+ Earth Engine Snippet
+ ee.ImageCollection("LANDSAT/LC09/C02/T1_L2")
+ open_in_new
+ Revisit Interval
+16 Days
+ Tags
+ cfmask
+ cloud
+ fmask
+ global
+ l9sr
+ landsat
+ lasrc
+ lc09
+ lst
+ reflectance
+ satellite-imagery
+ sr
+ usgs
+ Description
+ This dataset contains atmosp
+
+-- thermal at 1124
+cludes multiple bands covering visible, near-infrared, short-wave infrared, and thermal infrared wavelengths.
+ Data products are packaged into overlapping scenes covering approximately 170km x 183km.
+ The dataset is available from October 2021 through October 2025 with a 16-day revisit interval.
+ Landsat datasets are in the public domain and can be used, transferred, or reproduced without copyright restriction, with acknowledgment of the USGS as the data source.
+ Dataset Availability
+ 2021-10-31T00:00:00Z–2026-10-03T23:50:25.430000Z
+ Dataset Producer
+ USGS
+ Earth Engine Snippet
+ ee.ImageCollection("LANDSAT/LC09/C02/T1_L2")
+ open_in_new
+ Revisit Interval
+16 Days
+ Tags
+ cfmask
+ cloud
+ fmask
+ global
+ l9sr
+ landsat
+ lasrc
+ lc09
+ lst
+ reflectance
+ satellite-imagery
+ sr
+ usgs
+ Description
+ This dataset contains atmospherically corrected
+surface reflectance and land surface temperature derived from the data
+produced by the Landsat 9 OLI/TIRS sensors.
+These images contain 5
+
+-- dataset availability at 1512
+out copyright restriction, with acknowledgment of the USGS as the data source.
+ Dataset Availability
+ 2021-10-31T00:00:00Z–2026-10-03T23:50:25.430000Z
+ Dataset Producer
+ USGS
+ Earth Engine Snippet
+ ee.ImageCollection("LANDSAT/LC09/C02/T1_L2")
+ open_in_new
+ Revisit Interval
+16 Days
+ Tags
+ cfmask
+ cloud
+ fmask
+ global
+ l9sr
+ landsat
+ lasrc
+ lc09
+ lst
+ reflectance
+ satellite-imagery
+ sr
+ usgs
+ Description
+ This dataset contains atmospherically corrected
+surface reflectance and land surface temperature derived from the data
+produced by the Landsat 9 OLI/TIRS sensors.
+These images contain 5 visible and near-infrared (VNIR) bands and
+2 short-wave infrared (SWIR) bands processed to orthorectified surface
+reflectance, and one thermal infrared (TIR) band processed to orthorectified
+surface temperature. They also contain intermediate bands used in
+calculation of the ST products, as well as QA bands.
+Landsat 9 SR products are created with the Land Surface Reflectance Code
+(LaS
+
+-- resolution at -1
+
+-- copyright at 1436
+ts are in the public domain and can be used, transferred, or reproduced without copyright restriction, with acknowledgment of the USGS as the data source.
+ Dataset Availability
+ 2021-10-31T00:00:00Z–2026-10-03T23:50:25.430000Z
+ Dataset Producer
+ USGS
+ Earth Engine Snippet
+ ee.ImageCollection("LANDSAT/LC09/C02/T1_L2")
+ open_in_new
+ Revisit Interval
+16 Days
+ Tags
+ cfmask
+ cloud
+ fmask
+ global
+ l9sr
+ landsat
+ lasrc
+ lc09
+ lst
+ reflectance
+ satellite-imagery
+ sr
+ usgs
+ Description
+ This dataset contains atmospherically corrected
+surface reflectance and land surface temperature derived from the data
+produced by the Landsat 9 OLI/TIRS sensors.
+These images contain 5 visible and near-infrared (VNIR) bands and
+2 short-wave infrared (SWIR) bands processed to orthorectified surface
+reflectance, and one thermal infrared (TIR) band processed to orthorectified
+surface temperature. They also contain intermediate bands used in
+calculation of the ST products, as well as QA bands.
+L
+
+-- terms at 14413
+".
+WRS_PATH
+INT
+WRS path number of scene.
+WRS_ROW
+INT
+WRS row number of scene.
+ Terms of Use
+ Terms of Use
+ Landsat datasets are federally created data
+and therefore reside in the public domain and may be used, transferred, or reproduced without copyright restriction.
+Acknowledgement or credit of the USGS as data source should be provided
+by including a line of text citation such as the example shown below.
+(Product, Image, Photograph, or Dataset Name) courtesy of
+the U.S. Geological Survey
+Example: Landsat-7 image courtesy of the U.S. Geological Survey
+See the
+USGS Visual Identity System Guidance
+for further details on proper citation and acknowledgement of USGS products.
+ Explore with Earth Engine
+Important: 
+ Earth Engine is a platform for petabyte-scale scientific analysis and visualization of
+ geospatial datasets, both for public benefit and for business and government users.
+ Earth Engine is free to use for research, education, and nonprofit use. To get starte
+
+
+######## v len 8083
+
+-- bands at 1607
+mporary lights or separate lights from background values.
+ The dataset includes bands for average DNB radiance (avg_rad) and cloud-free coverages (cf_cvg), with a pixel size of 463.83 meters.
+ Dataset Availability
+ 2014-01-01T00:00:00Z–2026-08-01T00:00:00Z
+ Dataset Producer
+ Earth Observation Group, Payne Institute for Public Policy, Colorado School of Mines
+ Earth Engine Snippet
+ ee.ImageCollection("NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG")
+ open_in_new
+ Cadence
+1 Month
+ Tags
+ dnb
+ eog
+ lights
+ monthly
+ nighttime
+ noaa
+ population
+ viirs
+ visible
+ stray-light
+ Description
+ Monthly average radiance composite images using nighttime data from the
+Visible Infrared Imaging Radiometer Suite (VIIRS) Day/Night Band (DNB).
+As these data are composited monthly, there are many areas of the globe
+where it is impossible to get good quality data coverage for that month.
+This can be due to cloud cover, especially in the tropical regions, or due
+to solar illumination, as happens toward
+
+-- st_b10 at -1
+
+-- surface temperature at -1
+
+-- thermal at -1
+
+-- dataset availability at 1720
+vg_rad) and cloud-free coverages (cf_cvg), with a pixel size of 463.83 meters.
+ Dataset Availability
+ 2014-01-01T00:00:00Z–2026-08-01T00:00:00Z
+ Dataset Producer
+ Earth Observation Group, Payne Institute for Public Policy, Colorado School of Mines
+ Earth Engine Snippet
+ ee.ImageCollection("NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG")
+ open_in_new
+ Cadence
+1 Month
+ Tags
+ dnb
+ eog
+ lights
+ monthly
+ nighttime
+ noaa
+ population
+ viirs
+ visible
+ stray-light
+ Description
+ Monthly average radiance composite images using nighttime data from the
+Visible Infrared Imaging Radiometer Suite (VIIRS) Day/Night Band (DNB).
+As these data are composited monthly, there are many areas of the globe
+where it is impossible to get good quality data coverage for that month.
+This can be due to cloud cover, especially in the tropical regions, or due
+to solar illumination, as happens toward the poles in their respective
+summer months. Therefore it is recommended that users of these data utilize
+the 'c
+
+-- resolution at -1
+
+-- copyright at 4154
+rmation, and products,
+regardless of the method of delivery,
+are not subject to copyright and carry no restrictions on their subsequent
+use by the public. Once obtained, they may be put to any lawful use. The
+forgoing data is in the public domain and is being provided without
+restriction on use and distribution.
+ Explore with Earth Engine
+Important: 
+ Earth Engine is a platform for petabyte-scale scientific analysis and visualization of
+ geospatial datasets, both for public benefit and for business and government users.
+ Earth Engine is free to use for research, education, and nonprofit use. To get started, please
+ register for Earth Engine access.
+ Code Editor (JavaScript)
+var dataset = ee.ImageCollection('NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG')
+ .filter(ee.Filter.date('2017-05-01', '2017-05-31'));
+var nighttime = dataset.select('avg_rad');
+var nighttimeVis = {min: 0.0, max: 60.0};
+Map.setCenter(-77.1056, 38.8904, 8);
+Map.addLayer(nighttime, nighttimeVis, 'Nighttime')
+
+-- terms at 4011
+rs of observations where the quality is reduced.
+ * estimated min or max value
+ Terms of Use
+ Terms of Use
+ Colorado School of Mines data, information, and products,
+regardless of the method of delivery,
+are not subject to copyright and carry no restrictions on their subsequent
+use by the public. Once obtained, they may be put to any lawful use. The
+forgoing data is in the public domain and is being provided without
+restriction on use and distribution.
+ Explore with Earth Engine
+Important: 
+ Earth Engine is a platform for petabyte-scale scientific analysis and visualization of
+ geospatial datasets, both for public benefit and for business and government users.
+ Earth Engine is free to use for research, education, and nonprofit use. To get started, please
+ register for Earth Engine access.
+ Code Editor (JavaScript)
+var dataset = ee.ImageCollection('NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG')
+ .filter(ee.Filter.date('2017-05-01', '2017-05-31'));
+var nighttime = dataset.selec

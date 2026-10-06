@@ -1,0 +1,138 @@
+﻿{
+  "meta": {
+    "count": 35,
+    "db_response_time_ms": 25,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "x_query": {
+      "oql": "works where abstract has (forecast)\n  and title has (hydroponic)\n  and date >= (2018-01-01)\n  and retracted is (false)\n  and language is (en)\n  and date <= (2026-09-28)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "abstract.search",
+            "value": "forecast",
+            "operator": "has"
+          },
+          {
+            "column_id": "display_name.search",
+            "value": "hydroponic",
+            "operator": "has"
+          },
+          {
+            "column_id": "from_publication_date",
+            "value": "2018-01-01"
+          },
+          {
+            "column_id": "is_retracted",
+            "value": false
+          },
+          {
+            "column_id": "language",
+            "value": "en"
+          },
+          {
+            "column_id": "to_publication_date",
+            "value": "2026-09-28"
+          }
+        ]
+      },
+      "url": "/works?filter=abstract.search:forecast,display_name.search:hydroponic,from_publication_date:2018-01-01,is_retracted:false,language:en,to_publication_date:2026-09-28&per_page=10&page=1"
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W3116373906",
+      "display_name": "Digital twin of an urban-integrated hydroponic farm",
+      "publication_year": 2020,
+      "doi": "https://doi.org/10.1017/dce.2020.21",
+      "cited_by_count": 75,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4225395135",
+      "display_name": "Building sustainable societies through vertical soilless farming: A cost-effectiveness analysis on a small-scale non-greenhouse hydroponic system",
+      "publication_year": 2022,
+      "doi": "https://doi.org/10.1016/j.scs.2022.103923",
+      "cited_by_count": 61,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2946781822",
+      "display_name": "Predictive models for Lettuce quality from Internet of Things-based hydroponic farm",
+      "publication_year": 2018,
+      "doi": "https://doi.org/10.1109/icsec.2018.8712676",
+      "cited_by_count": 34,
+      "type": "conference-paper",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4387528852",
+      "display_name": "Growth predictions of lettuce in hydroponic farm using autoregressive integrated moving average model",
+      "publication_year": 2023,
+      "doi": "https://doi.org/10.11591/eei.v12i6.4820",
+      "cited_by_count": 12,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4409196097",
+      "display_name": "A review of machine learning approaches for predicting lettuce yield in hydroponic systems",
+      "publication_year": 2025,
+      "doi": "https://doi.org/10.1016/j.atech.2025.100925",
+      "cited_by_count": 10,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4206384149",
+      "display_name": "Fully Automatic Hydroponic Cultivation Growth System",
+      "publication_year": 2021,
+      "doi": "https://doi.org/10.1109/icac54203.2021.9671167",
+      "cited_by_count": 8,
+      "type": "conference-paper",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4406322280",
+      "display_name": "Comparative of SVM and Decision Tree Techniques for Predicting Hydroponic Tomato Growth and Yield Using Deep Water Culture",
+      "publication_year": 2024,
+      "doi": "https://doi.org/10.1109/3ict64318.2024.10824383",
+      "cited_by_count": 4,
+      "type": "conference-paper",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4386461839",
+      "display_name": "The Framework of RBL-STEM Learning Activity: Improving Students\u2019 Climate Change Literacy in Solving the Problem on Forecasting the Nutrition Supply of Hydroponic Plants with GNN",
+      "publication_year": 2023,
+      "doi": "https://doi.org/10.47191/ijcsrr/v6-i9-03",
+      "cited_by_count": 4,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W7149317202",
+      "display_name": "Smart hydroponic farming system using IoT-integrated deep learning for real-time nutrient monitoring and climate control",
+      "publication_year": 2026,
+      "doi": "https://doi.org/10.1016/j.ecohyd.2026.100754",
+      "cited_by_count": 3,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4315750627",
+      "display_name": "A TDS Prediction System for Hydroponic Vertical Farm based on ARIMA Model",
+      "publication_year": 2022,
+      "doi": "https://doi.org/10.1109/icsc56524.2022.10009260",
+      "cited_by_count": 3,
+      "type": "conference-paper",
+      "language": "en"
+    }
+  ],
+  "group_by": []
+}

@@ -1,0 +1,5830 @@
+{
+  "meta": {
+    "count": 922,
+    "db_response_time_ms": 334,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "x_query": {
+      "oql": "works where date >= (2018-01-01)\n  and retracted is (false)\n  and language is (en)\n  and title/abstract has (Temporal Fusion Transformer)\n  and date <= (2026-09-29)\n  and abstract has (\n    environmental\n    or greenhouse\n    or hydroponic\n    or multi horizon\n    or multi-horizon\n    or sensor\n  )",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "from_publication_date",
+            "value": "2018-01-01"
+          },
+          {
+            "column_id": "is_retracted",
+            "value": false
+          },
+          {
+            "column_id": "language",
+            "value": "en"
+          },
+          {
+            "column_id": "title_and_abstract.search",
+            "value": "Temporal Fusion Transformer",
+            "operator": "has"
+          },
+          {
+            "column_id": "to_publication_date",
+            "value": "2026-09-29"
+          },
+          {
+            "join": "or",
+            "filters": [
+              {
+                "column_id": "abstract.search",
+                "value": "environmental",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "greenhouse",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "hydroponic",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "multi horizon",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "multi-horizon",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "sensor",
+                "operator": "has"
+              }
+            ]
+          }
+        ]
+      },
+      "url": "/works?filter=from_publication_date:2018-01-01,is_retracted:false,language:en,title_and_abstract.search:Temporal Fusion Transformer,to_publication_date:2026-09-29,abstract.search:environmental|greenhouse|hydroponic|multi horizon|multi-horizon|sensor&per_page=10&page=1"
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W2996331899",
+      "doi": "https://doi.org/10.1016/j.ijforecast.2021.03.012",
+      "display_name": "Temporal Fusion Transformers for interpretable multi-horizon time series forecasting",
+      "publication_year": 2021,
+      "cited_by_count": 3006,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5102777271",
+            "display_name": "Bryan Y. Lim",
+            "orcid": "https://orcid.org/0000-0003-2779-4122",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-2779-4122"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I40120149",
+              "display_name": "University of Oxford",
+              "ror": "https://ror.org/052gg0110",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I40120149"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Bryan Lim",
+          "raw_affiliation_strings": [
+            "University of Oxford, UK",
+            "University of Oxford"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-2779-4122",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Oxford, UK",
+              "institution_ids": [
+                "https://openalex.org/I40120149"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Oxford",
+              "institution_ids": [
+                "https://openalex.org/I40120149"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5037420650",
+            "display_name": "Sercan \u00d6. Ar\u0131k",
+            "orcid": "https://orcid.org/0000-0001-6333-1729",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-6333-1729"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Sercan \u00d6. Ar\u0131k",
+          "raw_affiliation_strings": [
+            "Google Cloud AI, USA",
+            "Google,,,,,"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Cloud AI, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Google,,,,,",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5027801271",
+            "display_name": "Nicolas Loeff",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Nicolas Loeff",
+          "raw_affiliation_strings": [
+            "Google Cloud AI, USA",
+            "Google,,,,,"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Cloud AI, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Google,,,,,",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5101265241",
+            "display_name": "Tomas Pfister",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Tomas Pfister",
+          "raw_affiliation_strings": [
+            "Google Cloud AI, USA",
+            "Google,,,,,"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Cloud AI, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Google,,,,,",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Multi-horizon": [
+          0
+        ],
+        "forecasting": [
+          1,
+          92
+        ],
+        "often": [
+          2
+        ],
+        "contains": [
+          3
+        ],
+        "a": [
+          4,
+          84,
+          129,
+          142,
+          148
+        ],
+        "complex": [
+          5
+        ],
+        "mix": [
+          6
+        ],
+        "of": [
+          7,
+          67,
+          131,
+          145,
+          150,
+          168
+        ],
+        "inputs": [
+          8,
+          68
+        ],
+        "\u2013": [
+          9,
+          30,
+          83
+        ],
+        "including": [
+          10
+        ],
+        "static": [
+          11
+        ],
+        "(i.e.": [
+          12
+        ],
+        "time-invariant)": [
+          13
+        ],
+        "covariates,": [
+          14
+        ],
+        "known": [
+          15
+        ],
+        "future": [
+          16
+        ],
+        "inputs,": [
+          17
+        ],
+        "and": [
+          18,
+          113,
+          128,
+          161
+        ],
+        "other": [
+          19
+        ],
+        "exogenous": [
+          20
+        ],
+        "time": [
+          21
+        ],
+        "series": [
+          22,
+          130
+        ],
+        "that": [
+          23,
+          55,
+          88
+        ],
+        "are": [
+          24,
+          51
+        ],
+        "only": [
+          25
+        ],
+        "observed": [
+          26
+        ],
+        "in": [
+          27,
+          70,
+          141
+        ],
+        "the": [
+          28,
+          40,
+          64,
+          78
+        ],
+        "past": [
+          29
+        ],
+        "without": [
+          31
+        ],
+        "any": [
+          32
+        ],
+        "prior": [
+          33
+        ],
+        "information": [
+          34
+        ],
+        "on": [
+          35,
+          60
+        ],
+        "how": [
+          36,
+          61
+        ],
+        "they": [
+          37,
+          50,
+          62
+        ],
+        "interact": [
+          38
+        ],
+        "with": [
+          39,
+          93
+        ],
+        "target.": [
+          41
+        ],
+        "Several": [
+          42
+        ],
+        "deep": [
+          43
+        ],
+        "learning": [
+          44
+        ],
+        "methods": [
+          45
+        ],
+        "have": [
+          46
+        ],
+        "been": [
+          47
+        ],
+        "proposed,": [
+          48
+        ],
+        "but": [
+          49
+        ],
+        "typically": [
+          52
+        ],
+        "\u2018black-box\u2019": [
+          53
+        ],
+        "models": [
+          54
+        ],
+        "do": [
+          56
+        ],
+        "not": [
+          57
+        ],
+        "shed": [
+          58
+        ],
+        "light": [
+          59
+        ],
+        "use": [
+          63,
+          166
+        ],
+        "full": [
+          65
+        ],
+        "range": [
+          66,
+          144
+        ],
+        "present": [
+          69
+        ],
+        "practical": [
+          71,
+          164
+        ],
+        "scenarios.": [
+          72,
+          146
+        ],
+        "In": [
+          73
+        ],
+        "this": [
+          74
+        ],
+        "paper,": [
+          75
+        ],
+        "we": [
+          76,
+          153
+        ],
+        "introduce": [
+          77
+        ],
+        "Temporal": [
+          79
+        ],
+        "Fusion": [
+          80
+        ],
+        "Transformer": [
+          81
+        ],
+        "(TFT)": [
+          82
+        ],
+        "novel": [
+          85
+        ],
+        "attention-based": [
+          86
+        ],
+        "architecture": [
+          87
+        ],
+        "combines": [
+          89
+        ],
+        "high-performance": [
+          90
+        ],
+        "multi-horizon": [
+          91
+        ],
+        "interpretable": [
+          94,
+          114
+        ],
+        "insights": [
+          95
+        ],
+        "into": [
+          96
+        ],
+        "temporal": [
+          97,
+          101
+        ],
+        "dynamics.": [
+          98
+        ],
+        "To": [
+          99
+        ],
+        "learn": [
+          100
+        ],
+        "relationships": [
+          102
+        ],
+        "at": [
+          103
+        ],
+        "different": [
+          104
+        ],
+        "scales,": [
+          105
+        ],
+        "TFT": [
+          106,
+          120
+        ],
+        "uses": [
+          107
+        ],
+        "recurrent": [
+          108
+        ],
+        "layers": [
+          109,
+          116,
+          133
+        ],
+        "for": [
+          110,
+          117
+        ],
+        "local": [
+          111
+        ],
+        "processing": [
+          112
+        ],
+        "self-attention": [
+          115
+        ],
+        "long-term": [
+          118
+        ],
+        "dependencies.": [
+          119
+        ],
+        "utilizes": [
+          121
+        ],
+        "specialized": [
+          122
+        ],
+        "components": [
+          123
+        ],
+        "to": [
+          124,
+          134
+        ],
+        "select": [
+          125
+        ],
+        "relevant": [
+          126
+        ],
+        "features": [
+          127
+        ],
+        "gating": [
+          132
+        ],
+        "suppress": [
+          135
+        ],
+        "unnecessary": [
+          136
+        ],
+        "components,": [
+          137
+        ],
+        "enabling": [
+          138
+        ],
+        "high": [
+          139
+        ],
+        "performance": [
+          140,
+          156
+        ],
+        "wide": [
+          143
+        ],
+        "On": [
+          147
+        ],
+        "variety": [
+          149
+        ],
+        "real-world": [
+          151
+        ],
+        "datasets,": [
+          152
+        ],
+        "demonstrate": [
+          154
+        ],
+        "significant": [
+          155
+        ],
+        "improvements": [
+          157
+        ],
+        "over": [
+          158
+        ],
+        "existing": [
+          159
+        ],
+        "benchmarks,": [
+          160
+        ],
+        "highlight": [
+          162
+        ],
+        "three": [
+          163
+        ],
+        "interpretability": [
+          165
+        ],
+        "cases": [
+          167
+        ],
+        "TFT.": [
+          169
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.1016/j.ijforecast.2021.03.012",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1016/j.ijforecast.2021.03.012",
+        "pdf_url": "https://www.sciencedirect.com/science/article/pii/S0169207021000637/pdf",
+        "source": {
+          "id": "https://openalex.org/S39841227",
+          "display_name": "International Journal of Forecasting",
+          "issn_l": "0169-2070",
+          "issn": [
+            "0169-2070",
+            "1872-8200"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "abdc-a",
+            "cwts-core",
+            "erih-plus",
+            "jufo-2",
+            "norway-2"
+          ],
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_name": "Elsevier BV",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "type": "journal"
+        },
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "International Journal of Forecasting",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://www.sciencedirect.com/science/article/pii/S0169207021000637/pdf",
+        "any_repository_has_fulltext": true
+      },
+      "type": "article"
+    },
+    {
+      "id": "https://openalex.org/W4223926961",
+      "doi": "https://doi.org/10.1016/j.energy.2022.123990",
+      "display_name": "Interpretable wind speed prediction with multivariate time series and temporal fusion transformers",
+      "publication_year": 2022,
+      "cited_by_count": 227,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5066302483",
+            "display_name": "Binrong Wu",
+            "orcid": "https://orcid.org/0000-0001-5215-0586",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-5215-0586"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I47720641",
+              "display_name": "Huazhong University of Science and Technology",
+              "ror": "https://ror.org/00p991c53",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I47720641"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Binrong Wu",
+          "raw_affiliation_strings": [
+            "School of Management, Huazhong University of Science and Technology, Wuhan, 430074, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Management, Huazhong University of Science and Technology, Wuhan, 430074, China",
+              "institution_ids": [
+                "https://openalex.org/I47720641"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5008829405",
+            "display_name": "Lin Wang",
+            "orcid": "https://orcid.org/0000-0003-0881-9689",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-0881-9689",
+              "https://orcid.org/0009-0007-7540-1940"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I47720641",
+              "display_name": "Huazhong University of Science and Technology",
+              "ror": "https://ror.org/00p991c53",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I47720641"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Lin Wang",
+          "raw_affiliation_strings": [
+            "School of Management, Huazhong University of Science and Technology, Wuhan, 430074, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Management, Huazhong University of Science and Technology, Wuhan, 430074, China",
+              "institution_ids": [
+                "https://openalex.org/I47720641"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5085809537",
+            "display_name": "Yu\u2010Rong Zeng",
+            "orcid": "https://orcid.org/0000-0002-7627-0766",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-7627-0766"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210099437",
+              "display_name": "Hubei University Of Economics",
+              "ror": "https://ror.org/012a84b59",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4210099437"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Yu-Rong Zeng",
+          "raw_affiliation_strings": [
+            "School of Information and Communication Engineering, Hubei University of Economics, Wuhan, 430205, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-7627-0766",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Information and Communication Engineering, Hubei University of Economics, Wuhan, 430205, China",
+              "institution_ids": [
+                "https://openalex.org/I4210099437"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "primary_location": {
+        "id": "doi:10.1016/j.energy.2022.123990",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1016/j.energy.2022.123990",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S2497375143",
+          "display_name": "Energy",
+          "issn_l": "0360-5442",
+          "issn": [
+            "0360-5442",
+            "1873-6785"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "cwts-core",
+            "jufo-3",
+            "norway-2"
+          ],
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_name": "Elsevier BV",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Energy",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "type": "article"
+    },
+    {
+      "id": "https://openalex.org/W4320002769",
+      "doi": "https://doi.org/10.1109/tiv.2023.3240287",
+      "display_name": "Bridging the View Disparity Between Radar and Camera Features for Multi-Modal Fusion 3D Object Detection",
+      "publication_year": 2023,
+      "cited_by_count": 151,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5012034336",
+            "display_name": "Taohua Zhou",
+            "orcid": "https://orcid.org/0000-0002-1067-0636",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-1067-0636"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I99065089",
+              "display_name": "Tsinghua University",
+              "ror": "https://ror.org/03cve4549",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Taohua Zhou",
+          "raw_affiliation_strings": [
+            "State Key Laboratory of Automotive Safety and Energy, School of Vehicle and Mobility, Tsinghua University, Beijing, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-1067-0636",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "State Key Laboratory of Automotive Safety and Energy, School of Vehicle and Mobility, Tsinghua University, Beijing, China",
+              "institution_ids": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5033905932",
+            "display_name": "Junjie Chen",
+            "orcid": "https://orcid.org/0000-0002-3536-3501",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-3536-3501"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I99065089",
+              "display_name": "Tsinghua University",
+              "ror": "https://ror.org/03cve4549",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Junjie Chen",
+          "raw_affiliation_strings": [
+            "State Key Laboratory of Automotive Safety and Energy, School of Vehicle and Mobility, Tsinghua University, Beijing, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-3536-3501",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "State Key Laboratory of Automotive Safety and Energy, School of Vehicle and Mobility, Tsinghua University, Beijing, China",
+              "institution_ids": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5075170109",
+            "display_name": "Yining Shi",
+            "orcid": "https://orcid.org/0000-0002-2930-6164",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-2930-6164",
+              "https://orcid.org/0000-0003-2926-925X"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I99065089",
+              "display_name": "Tsinghua University",
+              "ror": "https://ror.org/03cve4549",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yining Shi",
+          "raw_affiliation_strings": [
+            "State Key Laboratory of Automotive Safety and Energy, School of Vehicle and Mobility, Tsinghua University, Beijing, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-2926-925X",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "State Key Laboratory of Automotive Safety and Energy, School of Vehicle and Mobility, Tsinghua University, Beijing, China",
+              "institution_ids": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Kun Jiang",
+            "orcid": "https://orcid.org/0000-0001-7282-172X",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-7282-172X"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I99065089",
+              "display_name": "Tsinghua University",
+              "ror": "https://ror.org/03cve4549",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Kun Jiang",
+          "raw_affiliation_strings": [
+            "State Key Laboratory of Automotive Safety and Energy, School of Vehicle and Mobility, Tsinghua University, Beijing, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-7282-172X",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "State Key Laboratory of Automotive Safety and Energy, School of Vehicle and Mobility, Tsinghua University, Beijing, China",
+              "institution_ids": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5014512074",
+            "display_name": "Mengmeng Yang",
+            "orcid": "https://orcid.org/0000-0002-3294-6437",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-3294-6437"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I99065089",
+              "display_name": "Tsinghua University",
+              "ror": "https://ror.org/03cve4549",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Mengmeng Yang",
+          "raw_affiliation_strings": [
+            "State Key Laboratory of Automotive Safety and Energy, School of Vehicle and Mobility, Tsinghua University, Beijing, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-3294-6437",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "State Key Laboratory of Automotive Safety and Energy, School of Vehicle and Mobility, Tsinghua University, Beijing, China",
+              "institution_ids": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5009072257",
+            "display_name": "Diange Yang",
+            "orcid": "https://orcid.org/0000-0003-0825-5609",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-0825-5609",
+              "https://orcid.org/0000-0002-0074-2448"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I99065089",
+              "display_name": "Tsinghua University",
+              "ror": "https://ror.org/03cve4549",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Diange Yang",
+          "raw_affiliation_strings": [
+            "State Key Laboratory of Automotive Safety and Energy, School of Vehicle and Mobility, Tsinghua University, Beijing, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-0825-5609",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "State Key Laboratory of Automotive Safety and Energy, School of Vehicle and Mobility, Tsinghua University, Beijing, China",
+              "institution_ids": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Environmental": [
+          0
+        ],
+        "perception": [
+          1
+        ],
+        "with": [
+          2,
+          58,
+          97,
+          110
+        ],
+        "the": [
+          3,
+          38,
+          42,
+          98,
+          107,
+          134,
+          138,
+          143,
+          157
+        ],
+        "multi-modal": [
+          4,
+          108
+        ],
+        "fusion": [
+          5,
+          28,
+          40,
+          113
+        ],
+        "is": [
+          6,
+          51
+        ],
+        "crucial": [
+          7,
+          145
+        ],
+        "in": [
+          8
+        ],
+        "autonomous": [
+          9
+        ],
+        "driving": [
+          10
+        ],
+        "to": [
+          11,
+          63,
+          78,
+          95
+        ],
+        "increase": [
+          12
+        ],
+        "accuracy,": [
+          13
+        ],
+        "completeness,": [
+          14
+        ],
+        "and": [
+          15,
+          25,
+          61,
+          87,
+          117,
+          127,
+          151
+        ],
+        "robustness.": [
+          16
+        ],
+        "This": [
+          17
+        ],
+        "paper": [
+          18
+        ],
+        "focuses": [
+          19
+        ],
+        "on": [
+          20,
+          156
+        ],
+        "utilizing": [
+          21
+        ],
+        "millimeter-wave": [
+          22
+        ],
+        "(MMW)": [
+          23
+        ],
+        "radar": [
+          24,
+          54,
+          68
+        ],
+        "camera": [
+          26
+        ],
+        "sensor": [
+          27
+        ],
+        "for": [
+          29,
+          46,
+          67
+        ],
+        "3D": [
+          30,
+          128
+        ],
+        "object": [
+          31
+        ],
+        "detection.": [
+          32
+        ],
+        "A": [
+          33
+        ],
+        "novel": [
+          34
+        ],
+        "method": [
+          35,
+          136
+        ],
+        "that": [
+          36,
+          133
+        ],
+        "realizes": [
+          37,
+          137
+        ],
+        "feature-level": [
+          39
+        ],
+        "under": [
+          41,
+          142
+        ],
+        "bird's-eye": [
+          43
+        ],
+        "view": [
+          44,
+          100
+        ],
+        "(BEV)": [
+          45
+        ],
+        "a": [
+          47,
+          64,
+          111,
+          121
+        ],
+        "better": [
+          48
+        ],
+        "feature": [
+          49,
+          69
+        ],
+        "representation": [
+          50
+        ],
+        "proposed.": [
+          52
+        ],
+        "Firstly,": [
+          53
+        ],
+        "points": [
+          55
+        ],
+        "are": [
+          56,
+          82,
+          93
+        ],
+        "augmented": [
+          57
+        ],
+        "temporal": [
+          59
+        ],
+        "accumulation": [
+          60
+        ],
+        "sent": [
+          62
+        ],
+        "spatial-temporal": [
+          65
+        ],
+        "encoder": [
+          66
+        ],
+        "extraction.": [
+          70
+        ],
+        "Meanwhile,": [
+          71
+        ],
+        "multi-scale": [
+          72
+        ],
+        "image": [
+          73,
+          85,
+          91
+        ],
+        "2D": [
+          74
+        ],
+        "features": [
+          75,
+          92,
+          109
+        ],
+        "which": [
+          76
+        ],
+        "adapt": [
+          77
+        ],
+        "various": [
+          79
+        ],
+        "spatial": [
+          80
+        ],
+        "scales": [
+          81
+        ],
+        "obtained": [
+          83
+        ],
+        "by": [
+          84
+        ],
+        "backbone": [
+          86
+        ],
+        "neck": [
+          88
+        ],
+        "model.": [
+          89
+        ],
+        "Then,": [
+          90
+        ],
+        "transformed": [
+          94
+        ],
+        "BEV": [
+          96
+        ],
+        "designed": [
+          99
+        ],
+        "transformer.": [
+          101
+        ],
+        "In": [
+          102
+        ],
+        "addition,": [
+          103
+        ],
+        "this": [
+          104
+        ],
+        "work": [
+          105
+        ],
+        "fuses": [
+          106
+        ],
+        "two-stage": [
+          112
+        ],
+        "model": [
+          114
+        ],
+        "called": [
+          115
+        ],
+        "point-fusion": [
+          116
+        ],
+        "ROI-fusion,": [
+          118
+        ],
+        "respectively.": [
+          119
+        ],
+        "Finally,": [
+          120
+        ],
+        "detection": [
+          122,
+          146,
+          153
+        ],
+        "head": [
+          123
+        ],
+        "regresses": [
+          124
+        ],
+        "objects": [
+          125
+        ],
+        "category": [
+          126
+        ],
+        "locations.": [
+          129
+        ],
+        "Experimental": [
+          130
+        ],
+        "results": [
+          131
+        ],
+        "demonstrate": [
+          132
+        ],
+        "proposed": [
+          135
+        ],
+        "state-of-the-art": [
+          139
+        ],
+        "(SOTA)": [
+          140
+        ],
+        "performance": [
+          141
+        ],
+        "most": [
+          144
+        ],
+        "metrics\u2013mean": [
+          147
+        ],
+        "average": [
+          148
+        ],
+        "precision": [
+          149
+        ],
+        "(mAP)": [
+          150
+        ],
+        "nuScenes": [
+          152,
+          159
+        ],
+        "score": [
+          154
+        ],
+        "(NDS)": [
+          155
+        ],
+        "challenging": [
+          158
+        ],
+        "dataset.": [
+          160
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.1109/tiv.2023.3240287",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1109/tiv.2023.3240287",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S4210199657",
+          "display_name": "IEEE Transactions on Intelligent Vehicles",
+          "issn_l": "2379-8858",
+          "issn": [
+            "2379-8858",
+            "2379-8904"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "cwts-core",
+            "jufo-2",
+            "norway-1"
+          ],
+          "host_organization": "https://openalex.org/P4310319808",
+          "host_organization_name": "Institute of Electrical and Electronics Engineers",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310319808"
+          ],
+          "host_organization_lineage_names": [
+            "Institute of Electrical and Electronics Engineers"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "IEEE Transactions on Intelligent Vehicles",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "type": "article"
+    },
+    {
+      "id": "https://openalex.org/W3100219394",
+      "doi": "https://doi.org/10.1109/tmm.2020.3037496",
+      "display_name": "Transformer Encoder With Multi-Modal Multi-Head Attention for Continuous Affect Recognition",
+      "publication_year": 2020,
+      "cited_by_count": 140,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5100456775",
+            "display_name": "Haifeng Chen",
+            "orcid": "https://orcid.org/0000-0001-7164-5840",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-7164-5840"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I17145004",
+              "display_name": "Northwestern Polytechnical University",
+              "ror": "https://ror.org/01y0j0j86",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I17145004"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210136793",
+              "display_name": "Peng Cheng Laboratory",
+              "ror": "https://ror.org/03qdqbt06",
+              "country_code": "CN",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I4210136793"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Haifeng Chen",
+          "raw_affiliation_strings": [
+            "NPU-VUB Joint AVSP Research Laboratory, Shaanxi Key Laboratory on Speech and Image Information Processing, School of Computer Science, Northwestern Polytechnical University (NPU), National Engineering Laboratory for Integrated Aero-Space-Ground-Ocean Big Data Application Technology, Xi\u2019an, China",
+            "Peng Cheng Laboratory, Shenzhen, China",
+            "NPU-VUB Joint AVSP Research Laboratory, Shaanxi Key Laboratory on Speech and Image Information Processing, School of Computer Science, Northwestern Polytechnical University (NPU), National Engineering Laboratory for Integrated Aero-Space-Ground-Ocean Big Data Application Technology, Xi'an, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-7164-5840",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "NPU-VUB Joint AVSP Research Laboratory, Shaanxi Key Laboratory on Speech and Image Information Processing, School of Computer Science, Northwestern Polytechnical University (NPU), National Engineering Laboratory for Integrated Aero-Space-Ground-Ocean Big Data Application Technology, Xi\u2019an, China",
+              "institution_ids": [
+                "https://openalex.org/I17145004"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Peng Cheng Laboratory, Shenzhen, China",
+              "institution_ids": [
+                "https://openalex.org/I4210136793"
+              ]
+            },
+            {
+              "raw_affiliation_string": "NPU-VUB Joint AVSP Research Laboratory, Shaanxi Key Laboratory on Speech and Image Information Processing, School of Computer Science, Northwestern Polytechnical University (NPU), National Engineering Laboratory for Integrated Aero-Space-Ground-Ocean Big Data Application Technology, Xi'an, China",
+              "institution_ids": [
+                "https://openalex.org/I17145004"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5102021514",
+            "display_name": "Dongmei Jiang",
+            "orcid": "https://orcid.org/0000-0002-6238-8499",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-6238-8499"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I17145004",
+              "display_name": "Northwestern Polytechnical University",
+              "ror": "https://ror.org/01y0j0j86",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I17145004"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210136793",
+              "display_name": "Peng Cheng Laboratory",
+              "ror": "https://ror.org/03qdqbt06",
+              "country_code": "CN",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I4210136793"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Dongmei Jiang",
+          "raw_affiliation_strings": [
+            "NPU-VUB Joint AVSP Research Laboratory, Shaanxi Key Laboratory on Speech and Image Information Processing, School of Computer Science, Northwestern Polytechnical University (NPU), National Engineering Laboratory for Integrated Aero-Space-Ground-Ocean Big Data Application Technology, Xi\u2019an, China",
+            "Peng Cheng Laboratory, Shenzhen, China",
+            "NPU-VUB Joint AVSP Research Laboratory, Shaanxi Key Laboratory on Speech and Image Information Processing, School of Computer Science, Northwestern Polytechnical University (NPU), National Engineering Laboratory for Integrated Aero-Space-Ground-Ocean Big Data Application Technology, Xi'an, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-6238-8499",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "NPU-VUB Joint AVSP Research Laboratory, Shaanxi Key Laboratory on Speech and Image Information Processing, School of Computer Science, Northwestern Polytechnical University (NPU), National Engineering Laboratory for Integrated Aero-Space-Ground-Ocean Big Data Application Technology, Xi\u2019an, China",
+              "institution_ids": [
+                "https://openalex.org/I17145004"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Peng Cheng Laboratory, Shenzhen, China",
+              "institution_ids": [
+                "https://openalex.org/I4210136793"
+              ]
+            },
+            {
+              "raw_affiliation_string": "NPU-VUB Joint AVSP Research Laboratory, Shaanxi Key Laboratory on Speech and Image Information Processing, School of Computer Science, Northwestern Polytechnical University (NPU), National Engineering Laboratory for Integrated Aero-Space-Ground-Ocean Big Data Application Technology, Xi'an, China",
+              "institution_ids": [
+                "https://openalex.org/I17145004"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5073820422",
+            "display_name": "Hichem Sahli",
+            "orcid": "https://orcid.org/0000-0002-1774-2970",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-1774-2970"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I13469542",
+              "display_name": "Vrije Universiteit Brussel",
+              "ror": "https://ror.org/006e5kg04",
+              "country_code": "BE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I13469542"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210114974",
+              "display_name": "IMEC",
+              "ror": "https://ror.org/02kcbn207",
+              "country_code": "BE",
+              "type": "nonprofit",
+              "lineage": [
+                "https://openalex.org/I4210114974"
+              ]
+            }
+          ],
+          "countries": [
+            "BE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Hichem Sahli",
+          "raw_affiliation_strings": [
+            "Interuniversity Microelectronics Centre, Heverlee, Belgium",
+            "VUB-NPU joint AVSP Research Laboratory, Department of Electronics and Informatics, Vrije Universiteit Brussel, Brussels, Belgium"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-1774-2970",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Interuniversity Microelectronics Centre, Heverlee, Belgium",
+              "institution_ids": [
+                "https://openalex.org/I4210114974"
+              ]
+            },
+            {
+              "raw_affiliation_string": "VUB-NPU joint AVSP Research Laboratory, Department of Electronics and Informatics, Vrije Universiteit Brussel, Brussels, Belgium",
+              "institution_ids": [
+                "https://openalex.org/I13469542"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Continuous": [
+          0
+        ],
+        "affect": [
+          1,
+          87,
+          112
+        ],
+        "recognition": [
+          2
+        ],
+        "is": [
+          3,
+          150
+        ],
+        "becoming": [
+          4
+        ],
+        "an": [
+          5,
+          135
+        ],
+        "increasingly": [
+          6
+        ],
+        "attractive": [
+          7
+        ],
+        "research": [
+          8
+        ],
+        "topic": [
+          9
+        ],
+        "in": [
+          10,
+          152,
+          179
+        ],
+        "affective": [
+          11,
+          34,
+          145
+        ],
+        "computing.": [
+          12
+        ],
+        "Previous": [
+          13
+        ],
+        "works": [
+          14
+        ],
+        "mainly": [
+          15
+        ],
+        "focused": [
+          16
+        ],
+        "on": [
+          17,
+          159,
+          174,
+          194
+        ],
+        "modelling": [
+          18
+        ],
+        "the": [
+          19,
+          42,
+          50,
+          64,
+          81,
+          93,
+          121,
+          144,
+          160,
+          195
+        ],
+        "temporal": [
+          20,
+          82,
+          126
+        ],
+        "dependency": [
+          21,
+          83
+        ],
+        "within": [
+          22
+        ],
+        "a": [
+          23,
+          67,
+          72,
+          102,
+          153
+        ],
+        "sensor": [
+          24
+        ],
+        "modality,": [
+          25
+        ],
+        "or": [
+          26,
+          29
+        ],
+        "adopting": [
+          27
+        ],
+        "early": [
+          28,
+          38
+        ],
+        "late": [
+          30,
+          47
+        ],
+        "fusion": [
+          31,
+          39,
+          48
+        ],
+        "for": [
+          32,
+          84,
+          110,
+          188,
+          192
+        ],
+        "multi-modal": [
+          33,
+          111,
+          130
+        ],
+        "state": [
+          35
+        ],
+        "recognition.": [
+          36,
+          88,
+          113
+        ],
+        "However,": [
+          37
+        ],
+        "suffers": [
+          40
+        ],
+        "from": [
+          41
+        ],
+        "curse": [
+          43
+        ],
+        "of": [
+          44,
+          181
+        ],
+        "dimensionality,": [
+          45
+        ],
+        "and": [
+          46,
+          52,
+          70,
+          95,
+          118,
+          124,
+          155,
+          162,
+          177,
+          190
+        ],
+        "ignores": [
+          49
+        ],
+        "complementarity": [
+          51,
+          94
+        ],
+        "redundancy": [
+          53,
+          96
+        ],
+        "between": [
+          54,
+          97
+        ],
+        "multiple": [
+          55,
+          98
+        ],
+        "modal": [
+          56,
+          86
+        ],
+        "streams.": [
+          57
+        ],
+        "In": [
+          58
+        ],
+        "this": [
+          59
+        ],
+        "paper,": [
+          60
+        ],
+        "we": [
+          61,
+          100
+        ],
+        "first": [
+          62
+        ],
+        "introduce": [
+          63
+        ],
+        "transformer-encoder": [
+          65
+        ],
+        "with": [
+          66,
+          105,
+          138
+        ],
+        "self-attention": [
+          68
+        ],
+        "mechanism": [
+          69
+        ],
+        "propose": [
+          71,
+          101
+        ],
+        "Convolutional": [
+          73
+        ],
+        "Neural": [
+          74
+        ],
+        "Network-Transformer": [
+          75
+        ],
+        "Encoder": [
+          76,
+          104
+        ],
+        "(CNN-TE)": [
+          77
+        ],
+        "framework": [
+          78,
+          149
+        ],
+        "to": [
+          79,
+          90,
+          116,
+          134,
+          142,
+          166
+        ],
+        "model": [
+          80
+        ],
+        "single": [
+          85
+        ],
+        "Further,": [
+          89
+        ],
+        "effectively": [
+          91
+        ],
+        "consider": [
+          92
+        ],
+        "streams": [
+          99
+        ],
+        "Transformer": [
+          103
+        ],
+        "Multi-modal": [
+          106
+        ],
+        "Multi-head": [
+          107
+        ],
+        "Attention": [
+          108
+        ],
+        "(TEMMA)": [
+          109
+        ],
+        "TEMMA": [
+          114
+        ],
+        "allows": [
+          115
+        ],
+        "progressively": [
+          117
+        ],
+        "simultaneously": [
+          119
+        ],
+        "refine": [
+          120
+        ],
+        "inter-modality": [
+          122
+        ],
+        "interactions": [
+          123
+        ],
+        "intra-modality": [
+          125
+        ],
+        "dependency.": [
+          127
+        ],
+        "The": [
+          128,
+          147
+        ],
+        "learned": [
+          129
+        ],
+        "representations": [
+          131
+        ],
+        "are": [
+          132
+        ],
+        "fed": [
+          133
+        ],
+        "Inference": [
+          136
+        ],
+        "Sub-network": [
+          137
+        ],
+        "fully": [
+          139
+        ],
+        "connected": [
+          140
+        ],
+        "layers": [
+          141
+        ],
+        "estimate": [
+          143
+        ],
+        "state.": [
+          146
+        ],
+        "proposed": [
+          148
+        ],
+        "trained": [
+          151
+        ],
+        "nutshell": [
+          154
+        ],
+        "demonstrates": [
+          156
+        ],
+        "its": [
+          157
+        ],
+        "effectiveness": [
+          158
+        ],
+        "AVEC2016": [
+          161
+        ],
+        "AVEC2019": [
+          163,
+          196
+        ],
+        "datasets.": [
+          164
+        ],
+        "Compared": [
+          165
+        ],
+        "state-of-the-art": [
+          167
+        ],
+        "models,": [
+          168
+        ],
+        "our": [
+          169
+        ],
+        "approach": [
+          170
+        ],
+        "obtains": [
+          171
+        ],
+        "remarkable": [
+          172
+        ],
+        "improvements": [
+          173
+        ],
+        "both": [
+          175
+        ],
+        "arousal": [
+          176,
+          189
+        ],
+        "valence": [
+          178,
+          193
+        ],
+        "terms": [
+          180
+        ],
+        "concordance": [
+          182
+        ],
+        "correlation": [
+          183
+        ],
+        "coefficient": [
+          184
+        ],
+        "(CCC)": [
+          185
+        ],
+        "reaching": [
+          186
+        ],
+        "0.583": [
+          187
+        ],
+        "0.564": [
+          191
+        ],
+        "test": [
+          197
+        ],
+        "set.": [
+          198
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.1109/tmm.2020.3037496",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1109/tmm.2020.3037496",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S137030581",
+          "display_name": "IEEE Transactions on Multimedia",
+          "issn_l": "1520-9210",
+          "issn": [
+            "1520-9210",
+            "1941-0077"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "cwts-core",
+            "jufo-3",
+            "norway-1"
+          ],
+          "host_organization": "https://openalex.org/P4310319808",
+          "host_organization_name": "Institute of Electrical and Electronics Engineers",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310319808"
+          ],
+          "host_organization_lineage_names": [
+            "Institute of Electrical and Electronics Engineers"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "IEEE Transactions on Multimedia",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "type": "article"
+    },
+    {
+      "id": "https://openalex.org/W4281711047",
+      "doi": "https://doi.org/10.1016/j.neucom.2022.05.083",
+      "display_name": "A temporal fusion transformer for short-term freeway traffic speed multistep prediction",
+      "publication_year": 2022,
+      "cited_by_count": 138,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5047246065",
+            "display_name": "Hao Zhang",
+            "orcid": "https://orcid.org/0000-0002-2394-3509",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-2394-3509"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I116953780",
+              "display_name": "Tongji University",
+              "ror": "https://ror.org/03rc6as71",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I116953780"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Hao Zhang",
+          "raw_affiliation_strings": [
+            "Key Laboratory of Road and Traffic Engineering of Ministry of Education, Tongji University No. 4800 Cao\u2019an Road, Shanghai 201804, China",
+            "Key Laboratory of Road and Traffic Engineering of Ministry of Education, Tongji University No. 4800 Cao'an Road, Shanghai 201804, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-2394-3509",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Key Laboratory of Road and Traffic Engineering of Ministry of Education, Tongji University No. 4800 Cao\u2019an Road, Shanghai 201804, China",
+              "institution_ids": [
+                "https://openalex.org/I116953780"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Key Laboratory of Road and Traffic Engineering of Ministry of Education, Tongji University No. 4800 Cao'an Road, Shanghai 201804, China",
+              "institution_ids": [
+                "https://openalex.org/I116953780"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5071113267",
+            "display_name": "Yajie Zou",
+            "orcid": "https://orcid.org/0000-0002-3505-168X",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-3505-168X"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I116953780",
+              "display_name": "Tongji University",
+              "ror": "https://ror.org/03rc6as71",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I116953780"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Yajie Zou",
+          "raw_affiliation_strings": [
+            "Key Laboratory of Road and Traffic Engineering of Ministry of Education, Tongji University No. 4800 Cao\u2019an Road, Shanghai 201804, China",
+            "Key Laboratory of Road and Traffic Engineering of Ministry of Education, Tongji University No. 4800 Cao'an Road, Shanghai 201804, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Key Laboratory of Road and Traffic Engineering of Ministry of Education, Tongji University No. 4800 Cao\u2019an Road, Shanghai 201804, China",
+              "institution_ids": [
+                "https://openalex.org/I116953780"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Key Laboratory of Road and Traffic Engineering of Ministry of Education, Tongji University No. 4800 Cao'an Road, Shanghai 201804, China",
+              "institution_ids": [
+                "https://openalex.org/I116953780"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5102977126",
+            "display_name": "Xiaoxue Yang",
+            "orcid": "https://orcid.org/0000-0003-1493-6195",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-1493-6195"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I116953780",
+              "display_name": "Tongji University",
+              "ror": "https://ror.org/03rc6as71",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I116953780"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Xiaoxue Yang",
+          "raw_affiliation_strings": [
+            "Key Laboratory of Road and Traffic Engineering of Ministry of Education, Tongji University No. 4800 Cao\u2019an Road, Shanghai 201804, China",
+            "Key Laboratory of Road and Traffic Engineering of Ministry of Education, Tongji University No. 4800 Cao'an Road, Shanghai 201804, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Key Laboratory of Road and Traffic Engineering of Ministry of Education, Tongji University No. 4800 Cao\u2019an Road, Shanghai 201804, China",
+              "institution_ids": [
+                "https://openalex.org/I116953780"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Key Laboratory of Road and Traffic Engineering of Ministry of Education, Tongji University No. 4800 Cao'an Road, Shanghai 201804, China",
+              "institution_ids": [
+                "https://openalex.org/I116953780"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5044267838",
+            "display_name": "Hang Yang",
+            "orcid": "https://orcid.org/0000-0003-3453-5495",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-3453-5495",
+              "https://orcid.org/0009-0001-6916-5028"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I109935558",
+              "display_name": "Ningbo University",
+              "ror": "https://ror.org/03et85d35",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I109935558"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Hang Yang",
+          "raw_affiliation_strings": [
+            "Faculty of Maritime and Transportation, Ningbo University No.769 Qixing South Road, Ningbo 315832, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Faculty of Maritime and Transportation, Ningbo University No.769 Qixing South Road, Ningbo 315832, China",
+              "institution_ids": [
+                "https://openalex.org/I109935558"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "primary_location": {
+        "id": "doi:10.1016/j.neucom.2022.05.083",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1016/j.neucom.2022.05.083",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S45693802",
+          "display_name": "Neurocomputing",
+          "issn_l": "0925-2312",
+          "issn": [
+            "0925-2312",
+            "1872-8286"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "cwts-core",
+            "doyens",
+            "jufo-2",
+            "ki-jl-2",
+            "norway-2"
+          ],
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_name": "Elsevier BV",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Neurocomputing",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "type": "article"
+    },
+    {
+      "id": "https://openalex.org/W4390768602",
+      "doi": "https://doi.org/10.1016/j.isprsjprs.2023.12.011",
+      "display_name": "Deep learning in statistical downscaling for deriving high spatial resolution gridded meteorological data: A systematic review",
+      "publication_year": 2024,
+      "cited_by_count": 119,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5059449978",
+            "display_name": "Yongjian Sun",
+            "orcid": "https://orcid.org/0000-0001-8052-141X",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-8052-141X"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I3124059619",
+              "display_name": "China University of Geosciences",
+              "ror": "https://ror.org/04gcegc37",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I3124059619"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yongjian Sun",
+          "raw_affiliation_strings": [
+            "School of Computer Science, China University of Geosciences, Wuhan 430074, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-8052-141X",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Computer Science, China University of Geosciences, Wuhan 430074, China",
+              "institution_ids": [
+                "https://openalex.org/I3124059619"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5053341118",
+            "display_name": "Kefeng Deng",
+            "orcid": "https://orcid.org/0000-0003-0925-6937",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-0925-6937",
+              "https://orcid.org/0009-0004-7694-2202"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I170215575",
+              "display_name": "National University of Defense Technology",
+              "ror": "https://ror.org/05d2yfz11",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I170215575"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Kefeng Deng",
+          "raw_affiliation_strings": [
+            "College of Meteorology and Oceanography, National University of Defense Technology, Changsha 410073, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Meteorology and Oceanography, National University of Defense Technology, Changsha 410073, China",
+              "institution_ids": [
+                "https://openalex.org/I170215575"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5025579582",
+            "display_name": "Kaijun Ren",
+            "orcid": "https://orcid.org/0000-0002-5510-6211",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-5510-6211"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I170215575",
+              "display_name": "National University of Defense Technology",
+              "ror": "https://ror.org/05d2yfz11",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I170215575"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Kaijun Ren",
+          "raw_affiliation_strings": [
+            "College of Meteorology and Oceanography, National University of Defense Technology, Changsha 410073, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-5510-6211",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Meteorology and Oceanography, National University of Defense Technology, Changsha 410073, China",
+              "institution_ids": [
+                "https://openalex.org/I170215575"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100409693",
+            "display_name": "Jia Liu",
+            "orcid": "https://orcid.org/0000-0002-2736-431X",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-2736-431X"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I3124059619",
+              "display_name": "China University of Geosciences",
+              "ror": "https://ror.org/04gcegc37",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I3124059619"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Jia Liu",
+          "raw_affiliation_strings": [
+            "School of Computer Science, China University of Geosciences, Wuhan 430074, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Computer Science, China University of Geosciences, Wuhan 430074, China",
+              "institution_ids": [
+                "https://openalex.org/I3124059619"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5075849219",
+            "display_name": "Chongjiu Deng",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I3124059619",
+              "display_name": "China University of Geosciences",
+              "ror": "https://ror.org/04gcegc37",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I3124059619"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Chongjiu Deng",
+          "raw_affiliation_strings": [
+            "School of Computer Science, China University of Geosciences, Wuhan 430074, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Computer Science, China University of Geosciences, Wuhan 430074, China",
+              "institution_ids": [
+                "https://openalex.org/I3124059619"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5019671965",
+            "display_name": "Yongjun Jin",
+            "orcid": "https://orcid.org/0009-0009-1912-0612",
+            "observed_orcids": [
+              "https://orcid.org/0009-0009-1912-0612"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I3124059619",
+              "display_name": "China University of Geosciences",
+              "ror": "https://ror.org/04gcegc37",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I3124059619"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yongjun Jin",
+          "raw_affiliation_strings": [
+            "School of Computer Science, China University of Geosciences, Wuhan 430074, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Computer Science, China University of Geosciences, Wuhan 430074, China",
+              "institution_ids": [
+                "https://openalex.org/I3124059619"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Nowadays,": [
+          0
+        ],
+        "meteorological": [
+          1,
+          33,
+          96,
+          116,
+          173,
+          189
+        ],
+        "data": [
+          2,
+          34,
+          270
+        ],
+        "plays": [
+          3
+        ],
+        "a": [
+          4,
+          54,
+          89,
+          102,
+          125,
+          248
+        ],
+        "crucial": [
+          5
+        ],
+        "role": [
+          6,
+          131
+        ],
+        "in": [
+          7,
+          80,
+          107,
+          134
+        ],
+        "various": [
+          8,
+          81
+        ],
+        "fields": [
+          9
+        ],
+        "such": [
+          10
+        ],
+        "as": [
+          11,
+          213,
+          215
+        ],
+        "remote": [
+          12
+        ],
+        "sensing": [
+          13
+        ],
+        ",": [
+          14,
+          17,
+          272
+        ],
+        "weather": [
+          15
+        ],
+        "forecasting": [
+          16
+        ],
+        "climate": [
+          18
+        ],
+        "change,": [
+          19
+        ],
+        "and": [
+          20,
+          24,
+          56,
+          70,
+          83,
+          94,
+          137,
+          142,
+          202,
+          221,
+          238,
+          241,
+          245,
+          257,
+          277
+        ],
+        "agriculture.": [
+          21
+        ],
+        "The": [
+          22,
+          259
+        ],
+        "regional": [
+          23
+        ],
+        "local": [
+          25
+        ],
+        "studies": [
+          26
+        ],
+        "call": [
+          27
+        ],
+        "for": [
+          28,
+          110,
+          280
+        ],
+        "high": [
+          29,
+          112
+        ],
+        "spatial": [
+          30,
+          61,
+          113,
+          186
+        ],
+        "resolution": [
+          31,
+          114
+        ],
+        "gridded": [
+          32,
+          115,
+          172
+        ],
+        "to": [
+          35,
+          45,
+          59,
+          87,
+          183,
+          194,
+          206
+        ],
+        "identify": [
+          36
+        ],
+        "refined": [
+          37
+        ],
+        "details,": [
+          38,
+          212
+        ],
+        "which": [
+          39
+        ],
+        "however": [
+          40
+        ],
+        "is": [
+          41
+        ],
+        "generally": [
+          42
+        ],
+        "limited": [
+          43
+        ],
+        "due": [
+          44
+        ],
+        "the": [
+          46,
+          122,
+          130,
+          138,
+          163,
+          167,
+          176,
+          185,
+          196,
+          208,
+          216,
+          229,
+          252,
+          263
+        ],
+        "models,": [
+          47,
+          267
+        ],
+        "platforms,": [
+          48
+        ],
+        "sensors,": [
+          49
+        ],
+        "etc.": [
+          50
+        ],
+        "Downscaling": [
+          51
+        ],
+        "has": [
+          52,
+          76
+        ],
+        "been": [
+          53
+        ],
+        "significant": [
+          55
+        ],
+        "practical": [
+          57
+        ],
+        "way": [
+          58
+        ],
+        "improve": [
+          60
+        ],
+        "resolution.": [
+          62
+        ],
+        "In": [
+          63,
+          224
+        ],
+        "recent": [
+          64,
+          164
+        ],
+        "years,": [
+          65
+        ],
+        "with": [
+          66
+        ],
+        "superior": [
+          67
+        ],
+        "feature": [
+          68
+        ],
+        "extraction": [
+          69
+        ],
+        "expression": [
+          71
+        ],
+        "abilities,": [
+          72
+        ],
+        "deep": [
+          73,
+          177
+        ],
+        "learning": [
+          74,
+          220
+        ],
+        "(DL)": [
+          75
+        ],
+        "outperformed": [
+          77
+        ],
+        "traditional": [
+          78
+        ],
+        "methods": [
+          79
+        ],
+        "areas,": [
+          82
+        ],
+        "exhibits": [
+          84
+        ],
+        "huge": [
+          85
+        ],
+        "potential": [
+          86
+        ],
+        "establish": [
+          88
+        ],
+        "complicated": [
+          90
+        ],
+        "mapping": [
+          91
+        ],
+        "between": [
+          92,
+          140
+        ],
+        "large-scale": [
+          93
+        ],
+        "local-scale": [
+          95
+        ],
+        "data.": [
+          97,
+          117
+        ],
+        "Therefore,": [
+          98
+        ],
+        "this": [
+          99,
+          159,
+          226
+        ],
+        "paper": [
+          100
+        ],
+        "provides": [
+          101
+        ],
+        "systematic": [
+          103
+        ],
+        "review": [
+          104,
+          119,
+          160,
+          227
+        ],
+        "of": [
+          105,
+          127,
+          132,
+          148,
+          166,
+          171,
+          188,
+          210,
+          251,
+          254,
+          265
+        ],
+        "DL": [
+          106,
+          133
+        ],
+        "statistical": [
+          108,
+          135,
+          169
+        ],
+        "downscaling": [
+          109,
+          128,
+          141,
+          150,
+          170,
+          281
+        ],
+        "deriving": [
+          111
+        ],
+        "This": [
+          118
+        ],
+        "first": [
+          120
+        ],
+        "presents": [
+          121
+        ],
+        "background,": [
+          123
+        ],
+        "including": [
+          124,
+          179,
+          234
+        ],
+        "taxonomy": [
+          126
+        ],
+        "methods,": [
+          129
+        ],
+        "downscaling,": [
+          136,
+          233
+        ],
+        "analogy": [
+          139
+        ],
+        "image": [
+          143
+        ],
+        "super-resolution.": [
+          144
+        ],
+        "It": [
+          145
+        ],
+        "shows": [
+          146
+        ],
+        "evidence": [
+          147
+        ],
+        "how": [
+          149
+        ],
+        "can": [
+          151
+        ],
+        "benefit": [
+          152
+        ],
+        "from": [
+          153,
+          199,
+          262
+        ],
+        "DL,": [
+          154
+        ],
+        "particularly": [
+          155
+        ],
+        "super-resolution": [
+          156
+        ],
+        "networks.": [
+          157
+        ],
+        "Subsequently,": [
+          158
+        ],
+        "focuses": [
+          161
+        ],
+        "on": [
+          162
+        ],
+        "development": [
+          165
+        ],
+        "DL-based": [
+          168
+        ],
+        "data,": [
+          174
+        ],
+        "especially": [
+          175
+        ],
+        "architectures,": [
+          178
+        ],
+        "convolutional": [
+          180
+        ],
+        "neural": [
+          181,
+          192
+        ],
+        "networks": [
+          182,
+          193,
+          205
+        ],
+        "capture": [
+          184
+        ],
+        "dependencies": [
+          187
+        ],
+        "variables,": [
+          190
+        ],
+        "recurrent": [
+          191
+        ],
+        "reveal": [
+          195
+        ],
+        "temporal": [
+          197
+        ],
+        "states": [
+          198
+        ],
+        "time": [
+          200
+        ],
+        "series,": [
+          201
+        ],
+        "generative": [
+          203
+        ],
+        "adversarial": [
+          204
+        ],
+        "facilitate": [
+          207
+        ],
+        "reconstruction": [
+          209
+        ],
+        "high-frequency": [
+          211
+        ],
+        "well": [
+          214
+        ],
+        "major": [
+          217
+        ],
+        "structure": [
+          218
+        ],
+        "residual": [
+          219
+        ],
+        "attention": [
+          222
+        ],
+        "mechanism.": [
+          223
+        ],
+        "addition,": [
+          225
+        ],
+        "demonstrates": [
+          228
+        ],
+        "specific": [
+          230
+        ],
+        "issues": [
+          231
+        ],
+        "towards": [
+          232
+        ],
+        "scaling": [
+          235
+        ],
+        "factors,": [
+          236
+        ],
+        "spatial\u2013temporal": [
+          237
+        ],
+        "variable": [
+          239
+        ],
+        "correlations,": [
+          240
+        ],
+        "paired": [
+          242
+        ],
+        "datasets": [
+          243
+        ],
+        "construction,": [
+          244
+        ],
+        "then": [
+          246
+        ],
+        "gives": [
+          247
+        ],
+        "comprehensive": [
+          249
+        ],
+        "summary": [
+          250
+        ],
+        "status": [
+          253
+        ],
+        "datasets,": [
+          255
+        ],
+        "toolsets": [
+          256
+        ],
+        "metrics.": [
+          258
+        ],
+        "future": [
+          260
+        ],
+        "challenges": [
+          261
+        ],
+        "perspective": [
+          264
+        ],
+        "unsupervised": [
+          266
+        ],
+        "transformer": [
+          268
+        ],
+        "architecture,": [
+          269
+        ],
+        "fusion": [
+          271
+        ],
+        "physical-informed": [
+          273
+        ],
+        "learning,": [
+          274
+        ],
+        "generalization": [
+          275
+        ],
+        "capacity,": [
+          276
+        ],
+        "uncertainty": [
+          278
+        ],
+        "quantification": [
+          279
+        ],
+        "are": [
+          282
+        ],
+        "finally": [
+          283
+        ],
+        "discussed.": [
+          284
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.1016/j.isprsjprs.2023.12.011",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1016/j.isprsjprs.2023.12.011",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S173339282",
+          "display_name": "ISPRS Journal of Photogrammetry and Remote Sensing",
+          "issn_l": "0924-2716",
+          "issn": [
+            "0924-2716",
+            "1872-8235"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "cwts-core",
+            "jufo-2",
+            "norway-1"
+          ],
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_name": "Elsevier BV",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "type": "journal"
+        },
+        "license": "cc-by-nc-nd",
+        "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "ISPRS Journal of Photogrammetry and Remote Sensing",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://doi.org/10.1016/j.isprsjprs.2023.12.011",
+        "any_repository_has_fulltext": false
+      },
+      "type": "review"
+    },
+    {
+      "id": "https://openalex.org/W4286215040",
+      "doi": "https://doi.org/10.3390/en15145232",
+      "display_name": "Application of Temporal Fusion Transformer for Day-Ahead PV Power Forecasting",
+      "publication_year": 2022,
+      "cited_by_count": 119,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5056577407",
+            "display_name": "Miguel L\u00f3pez Santos",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405277325",
+              "display_name": "Instituto Tecnol\u00f3gico de Galicia",
+              "ror": "https://ror.org/02a0ty986",
+              "country_code": "ES",
+              "type": "nonprofit",
+              "lineage": [
+                "https://openalex.org/I4405277325"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Miguel L\u00f3pez Santos",
+          "raw_affiliation_strings": [
+            "Galicia Institute of Technology (ITG), 15003 A Coru\u00f1a, Spain"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Galicia Institute of Technology (ITG), 15003 A Coru\u00f1a, Spain",
+              "institution_ids": [
+                "https://openalex.org/I4405277325"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5032924642",
+            "display_name": "Xela Garc\u00eda\u2010Santiago",
+            "orcid": "https://orcid.org/0000-0001-9799-5179",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-9799-5179"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405277325",
+              "display_name": "Instituto Tecnol\u00f3gico de Galicia",
+              "ror": "https://ror.org/02a0ty986",
+              "country_code": "ES",
+              "type": "nonprofit",
+              "lineage": [
+                "https://openalex.org/I4405277325"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Xela Garc\u00eda-Santiago",
+          "raw_affiliation_strings": [
+            "Galicia Institute of Technology (ITG), 15003 A Coru\u00f1a, Spain"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-9799-5179",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Galicia Institute of Technology (ITG), 15003 A Coru\u00f1a, Spain",
+              "institution_ids": [
+                "https://openalex.org/I4405277325"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5046398882",
+            "display_name": "Fernando Echevarr\u00eda Camarero",
+            "orcid": "https://orcid.org/0000-0002-5424-8111",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-5424-8111"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405277325",
+              "display_name": "Instituto Tecnol\u00f3gico de Galicia",
+              "ror": "https://ror.org/02a0ty986",
+              "country_code": "ES",
+              "type": "nonprofit",
+              "lineage": [
+                "https://openalex.org/I4405277325"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Fernando Echevarr\u00eda Camarero",
+          "raw_affiliation_strings": [
+            "Galicia Institute of Technology (ITG), 15003 A Coru\u00f1a, Spain"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-5424-8111",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Galicia Institute of Technology (ITG), 15003 A Coru\u00f1a, Spain",
+              "institution_ids": [
+                "https://openalex.org/I4405277325"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5027498093",
+            "display_name": "Gonzalo Bl\u00e1zquez Gil",
+            "orcid": "https://orcid.org/0000-0001-6652-5975",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-6652-5975"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405277325",
+              "display_name": "Instituto Tecnol\u00f3gico de Galicia",
+              "ror": "https://ror.org/02a0ty986",
+              "country_code": "ES",
+              "type": "nonprofit",
+              "lineage": [
+                "https://openalex.org/I4405277325"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Gonzalo Bl\u00e1zquez Gil",
+          "raw_affiliation_strings": [
+            "Galicia Institute of Technology (ITG), 15003 A Coru\u00f1a, Spain"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Galicia Institute of Technology (ITG), 15003 A Coru\u00f1a, Spain",
+              "institution_ids": [
+                "https://openalex.org/I4405277325"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5061832068",
+            "display_name": "Pablo Carrasco Ortega",
+            "orcid": "https://orcid.org/0000-0003-4343-8240",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-4343-8240"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4405277325",
+              "display_name": "Instituto Tecnol\u00f3gico de Galicia",
+              "ror": "https://ror.org/02a0ty986",
+              "country_code": "ES",
+              "type": "nonprofit",
+              "lineage": [
+                "https://openalex.org/I4405277325"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Pablo Carrasco Ortega",
+          "raw_affiliation_strings": [
+            "Galicia Institute of Technology (ITG), 15003 A Coru\u00f1a, Spain"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-4343-8240",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Galicia Institute of Technology (ITG), 15003 A Coru\u00f1a, Spain",
+              "institution_ids": [
+                "https://openalex.org/I4405277325"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "The": [
+          0,
+          78,
+          98,
+          129
+        ],
+        "energy": [
+          1,
+          40
+        ],
+        "generated": [
+          2
+        ],
+        "by": [
+          3,
+          54
+        ],
+        "a": [
+          4,
+          60
+        ],
+        "solar": [
+          5,
+          17
+        ],
+        "photovoltaic": [
+          6
+        ],
+        "(PV)": [
+          7
+        ],
+        "system": [
+          8
+        ],
+        "depends": [
+          9
+        ],
+        "on": [
+          10
+        ],
+        "uncontrollable": [
+          11
+        ],
+        "factors,": [
+          12
+        ],
+        "including": [
+          13
+        ],
+        "weather": [
+          14
+        ],
+        "conditions": [
+          15
+        ],
+        "and": [
+          16,
+          37,
+          42,
+          72,
+          85,
+          96,
+          120
+        ],
+        "irradiation,": [
+          18
+        ],
+        "which": [
+          19
+        ],
+        "leads": [
+          20
+        ],
+        "to": [
+          21,
+          33,
+          47,
+          136,
+          146
+        ],
+        "uncertainty": [
+          22
+        ],
+        "in": [
+          23,
+          94,
+          150
+        ],
+        "the": [
+          24,
+          39,
+          141,
+          144,
+          151
+        ],
+        "power": [
+          25,
+          29,
+          52
+        ],
+        "output.": [
+          26
+        ],
+        "Forecast": [
+          27
+        ],
+        "PV": [
+          28,
+          51,
+          148
+        ],
+        "generation": [
+          30,
+          53,
+          149
+        ],
+        "is": [
+          31
+        ],
+        "vital": [
+          32
+        ],
+        "improve": [
+          34
+        ],
+        "grid": [
+          35
+        ],
+        "stability": [
+          36
+        ],
+        "balance": [
+          38
+        ],
+        "supply": [
+          41
+        ],
+        "demand.": [
+          43
+        ],
+        "This": [
+          44
+        ],
+        "study": [
+          45
+        ],
+        "aims": [
+          46
+        ],
+        "predict": [
+          48
+        ],
+        "hourly": [
+          49
+        ],
+        "day-ahead": [
+          50
+        ],
+        "applying": [
+          55
+        ],
+        "Temporal": [
+          56
+        ],
+        "Fusion": [
+          57
+        ],
+        "Transformer": [
+          58
+        ],
+        "(TFT),": [
+          59
+        ],
+        "new": [
+          61
+        ],
+        "attention-based": [
+          62
+        ],
+        "architecture": [
+          63
+        ],
+        "that": [
+          64
+        ],
+        "incorporates": [
+          65
+        ],
+        "an": [
+          66
+        ],
+        "interpretable": [
+          67
+        ],
+        "explanation": [
+          68
+        ],
+        "of": [
+          69,
+          131,
+          143
+        ],
+        "temporal": [
+          70
+        ],
+        "dynamics": [
+          71
+        ],
+        "high-performance": [
+          73
+        ],
+        "forecasting": [
+          74,
+          80
+        ],
+        "over": [
+          75
+        ],
+        "multiple": [
+          76
+        ],
+        "horizons.": [
+          77
+        ],
+        "proposed": [
+          79
+        ],
+        "model": [
+          81
+        ],
+        "has": [
+          82,
+          133
+        ],
+        "been": [
+          83,
+          101,
+          134
+        ],
+        "trained": [
+          84
+        ],
+        "tested": [
+          86
+        ],
+        "using": [
+          87,
+          125
+        ],
+        "data": [
+          88
+        ],
+        "from": [
+          89
+        ],
+        "six": [
+          90
+        ],
+        "different": [
+          91
+        ],
+        "facilities": [
+          92
+        ],
+        "located": [
+          93
+        ],
+        "Germany": [
+          95
+        ],
+        "Australia.": [
+          97
+        ],
+        "results": [
+          99
+        ],
+        "have": [
+          100
+        ],
+        "compared": [
+          102
+        ],
+        "with": [
+          103
+        ],
+        "other": [
+          104
+        ],
+        "algorithms": [
+          105,
+          145
+        ],
+        "like": [
+          106
+        ],
+        "Auto": [
+          107
+        ],
+        "Regressive": [
+          108
+        ],
+        "Integrated": [
+          109
+        ],
+        "Moving": [
+          110
+        ],
+        "Average": [
+          111
+        ],
+        "(ARIMA),": [
+          112
+        ],
+        "Long": [
+          113
+        ],
+        "Short-Term": [
+          114
+        ],
+        "Memory": [
+          115
+        ],
+        "(LSTM),": [
+          116
+        ],
+        "Multi-Layer": [
+          117
+        ],
+        "Perceptron": [
+          118
+        ],
+        "(MLP),": [
+          119
+        ],
+        "Extreme": [
+          121
+        ],
+        "Gradient": [
+          122
+        ],
+        "Boosting": [
+          123
+        ],
+        "(XGBoost),": [
+          124
+        ],
+        "statistical": [
+          126
+        ],
+        "error": [
+          127
+        ],
+        "indicators.": [
+          128
+        ],
+        "use": [
+          130
+        ],
+        "TFT": [
+          132
+        ],
+        "shown": [
+          135
+        ],
+        "be": [
+          137
+        ],
+        "more": [
+          138
+        ],
+        "accurate": [
+          139
+        ],
+        "than": [
+          140
+        ],
+        "rest": [
+          142
+        ],
+        "forecast": [
+          147
+        ],
+        "aforementioned": [
+          152
+        ],
+        "facilities.": [
+          153
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.3390/en15145232",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.3390/en15145232",
+        "pdf_url": "https://www.mdpi.com/1996-1073/15/14/5232/pdf?version=1658299520",
+        "source": {
+          "id": "https://openalex.org/S198098182",
+          "display_name": "Energies",
+          "issn_l": "1996-1073",
+          "issn": [
+            "1996-1073"
+          ],
+          "is_oa": true,
+          "is_in_doaj": true,
+          "is_core": true,
+          "listed_in": [
+            "cwts-core",
+            "doaj",
+            "norway-1"
+          ],
+          "host_organization": "https://openalex.org/P4310310987",
+          "host_organization_name": "Multidisciplinary Digital Publishing Institute",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310310987"
+          ],
+          "host_organization_lineage_names": [
+            "Multidisciplinary Digital Publishing Institute"
+          ],
+          "type": "journal"
+        },
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Energies",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://www.mdpi.com/1996-1073/15/14/5232/pdf?version=1658299520",
+        "any_repository_has_fulltext": true
+      },
+      "type": "article"
+    },
+    {
+      "id": "https://openalex.org/W4302774545",
+      "doi": "https://doi.org/10.1016/j.ress.2022.108886",
+      "display_name": "Spatio-temporal degradation modeling and remaining useful life prediction under multiple operating conditions based on attention mechanism and deep learning",
+      "publication_year": 2022,
+      "cited_by_count": 115,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5101622849",
+            "display_name": "Dan Xu",
+            "orcid": "https://orcid.org/0000-0003-1753-3594",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-1753-3594"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I82880672",
+              "display_name": "Beihang University",
+              "ror": "https://ror.org/00wk2mp56",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I82880672"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Dan Xu",
+          "raw_affiliation_strings": [
+            "School of Reliability and Systems Engineering, Beihang University, Beijing 100191, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-1753-3594",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Reliability and Systems Engineering, Beihang University, Beijing 100191, China",
+              "institution_ids": [
+                "https://openalex.org/I82880672"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5064929019",
+            "display_name": "Xiaoqi Xiao",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I82880672",
+              "display_name": "Beihang University",
+              "ror": "https://ror.org/00wk2mp56",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I82880672"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Xiaoqi Xiao",
+          "raw_affiliation_strings": [
+            "School of Reliability and Systems Engineering, Beihang University, Beijing 100191, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Reliability and Systems Engineering, Beihang University, Beijing 100191, China",
+              "institution_ids": [
+                "https://openalex.org/I82880672"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100454179",
+            "display_name": "Jie Liu",
+            "orcid": "https://orcid.org/0000-0003-0895-7598",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-0895-7598",
+              "https://orcid.org/0009-0008-7013-924X"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I82880672",
+              "display_name": "Beihang University",
+              "ror": "https://ror.org/00wk2mp56",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I82880672"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jie Liu",
+          "raw_affiliation_strings": [
+            "School of Reliability and Systems Engineering, Beihang University, Beijing 100191, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Reliability and Systems Engineering, Beihang University, Beijing 100191, China",
+              "institution_ids": [
+                "https://openalex.org/I82880672"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5009731816",
+            "display_name": "Shaobo Sui",
+            "orcid": "https://orcid.org/0009-0002-1546-7087",
+            "observed_orcids": [
+              "https://orcid.org/0009-0002-1546-7087"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I82880672",
+              "display_name": "Beihang University",
+              "ror": "https://ror.org/00wk2mp56",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I82880672"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Shaobo Sui",
+          "raw_affiliation_strings": [
+            "School of Reliability and Systems Engineering, Beihang University, Beijing 100191, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Reliability and Systems Engineering, Beihang University, Beijing 100191, China",
+              "institution_ids": [
+                "https://openalex.org/I82880672"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "primary_location": {
+        "id": "doi:10.1016/j.ress.2022.108886",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1016/j.ress.2022.108886",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S202403813",
+          "display_name": "Reliability Engineering & System Safety",
+          "issn_l": "0951-8320",
+          "issn": [
+            "0951-8320",
+            "1879-0836"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "abdc-a",
+            "cwts-core",
+            "jufo-3",
+            "ki-jl-1",
+            "norway-2"
+          ],
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_name": "Elsevier BV",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Reliability Engineering &amp; System Safety",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "type": "article"
+    },
+    {
+      "id": "https://openalex.org/W4287992009",
+      "doi": "https://doi.org/10.48550/arxiv.1912.09363",
+      "display_name": "Temporal Fusion Transformers for Interpretable Multi-horizon Time Series\\n Forecasting",
+      "publication_year": 2019,
+      "cited_by_count": 83,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5102777271",
+            "display_name": "Bryan Lim",
+            "orcid": "https://orcid.org/0000-0003-2779-4122"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Lim, Bryan",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5037420650",
+            "display_name": "Sercan \u00d6. Ar\u0131k",
+            "orcid": "https://orcid.org/0000-0001-6333-1729"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Arik, Sercan O.",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5027801271",
+            "display_name": "Nicolas Loeff",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Loeff, Nicolas",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5101265241",
+            "display_name": "Tomas Pfister",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Pfister, Tomas",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        }
+      ],
+      "abstract_inverted_index": {
+        "Multi-horizon": [
+          0
+        ],
+        "forecasting": [
+          1,
+          82
+        ],
+        "problems": [
+          2
+        ],
+        "often": [
+          3
+        ],
+        "contain": [
+          4
+        ],
+        "a": [
+          5,
+          75,
+          122,
+          139
+        ],
+        "complex": [
+          6
+        ],
+        "mix": [
+          7
+        ],
+        "of": [
+          8,
+          60,
+          118,
+          136,
+          141,
+          156
+        ],
+        "inputs": [
+          9
+        ],
+        "--\\nincluding": [
+          10
+        ],
+        "static": [
+          11
+        ],
+        "(i.e.": [
+          12
+        ],
+        "time-invariant)": [
+          13
+        ],
+        "covariates,": [
+          14
+        ],
+        "known": [
+          15
+        ],
+        "future": [
+          16
+        ],
+        "inputs,": [
+          17
+        ],
+        "and\\nother": [
+          18
+        ],
+        "exogenous": [
+          19
+        ],
+        "time": [
+          20
+        ],
+        "series": [
+          21,
+          123
+        ],
+        "that": [
+          22
+        ],
+        "are": [
+          23
+        ],
+        "only": [
+          24
+        ],
+        "observed": [
+          25
+        ],
+        "historically": [
+          26
+        ],
+        "--": [
+          27,
+          74
+        ],
+        "without": [
+          28
+        ],
+        "any\\nprior": [
+          29
+        ],
+        "information": [
+          30
+        ],
+        "on": [
+          31
+        ],
+        "how": [
+          32
+        ],
+        "they": [
+          33,
+          48
+        ],
+        "interact": [
+          34
+        ],
+        "with": [
+          35,
+          83
+        ],
+        "the": [
+          36,
+          57,
+          70,
+          95,
+          115
+        ],
+        "target.": [
+          37
+        ],
+        "While": [
+          38
+        ],
+        "several": [
+          39
+        ],
+        "deep\\nlearning": [
+          40
+        ],
+        "models": [
+          41,
+          51
+        ],
+        "have": [
+          42
+        ],
+        "been": [
+          43
+        ],
+        "proposed": [
+          44
+        ],
+        "for": [
+          45,
+          56,
+          99,
+          105,
+          114
+        ],
+        "multi-step": [
+          46
+        ],
+        "prediction,": [
+          47
+        ],
+        "typically\\ncomprise": [
+          49
+        ],
+        "black-box": [
+          50
+        ],
+        "which": [
+          52,
+          79
+        ],
+        "do": [
+          53
+        ],
+        "not": [
+          54
+        ],
+        "account": [
+          55
+        ],
+        "full": [
+          58
+        ],
+        "range": [
+          59,
+          135
+        ],
+        "inputs\\npresent": [
+          61
+        ],
+        "in": [
+          62
+        ],
+        "common": [
+          63
+        ],
+        "scenarios.": [
+          64
+        ],
+        "In": [
+          65
+        ],
+        "this": [
+          66
+        ],
+        "paper,": [
+          67
+        ],
+        "we": [
+          68,
+          144
+        ],
+        "introduce": [
+          69
+        ],
+        "Temporal": [
+          71
+        ],
+        "Fusion\\nTransformer": [
+          72
+        ],
+        "(TFT)": [
+          73
+        ],
+        "novel": [
+          76
+        ],
+        "attention-based": [
+          77
+        ],
+        "architecture": [
+          78
+        ],
+        "combines\\nhigh-performance": [
+          80
+        ],
+        "multi-horizon": [
+          81
+        ],
+        "interpretable": [
+          84,
+          103
+        ],
+        "insights": [
+          85
+        ],
+        "into\\ntemporal": [
+          86
+        ],
+        "dynamics.": [
+          87
+        ],
+        "To": [
+          88
+        ],
+        "learn": [
+          89
+        ],
+        "temporal": [
+          90
+        ],
+        "relationships": [
+          91
+        ],
+        "at": [
+          92
+        ],
+        "different": [
+          93
+        ],
+        "scales,": [
+          94
+        ],
+        "TFT\\nutilizes": [
+          96
+        ],
+        "recurrent": [
+          97
+        ],
+        "layers": [
+          98,
+          125
+        ],
+        "local": [
+          100
+        ],
+        "processing": [
+          101
+        ],
+        "and": [
+          102,
+          121,
+          151
+        ],
+        "self-attention\\nlayers": [
+          104
+        ],
+        "learning": [
+          106
+        ],
+        "long-term": [
+          107
+        ],
+        "dependencies.": [
+          108
+        ],
+        "The": [
+          109
+        ],
+        "TFT": [
+          110
+        ],
+        "also": [
+          111
+        ],
+        "uses": [
+          112
+        ],
+        "specialized\\ncomponents": [
+          113
+        ],
+        "judicious": [
+          116
+        ],
+        "selection": [
+          117
+        ],
+        "relevant": [
+          119
+        ],
+        "features": [
+          120
+        ],
+        "of\\ngating": [
+          124
+        ],
+        "to": [
+          126
+        ],
+        "suppress": [
+          127
+        ],
+        "unnecessary": [
+          128
+        ],
+        "components,": [
+          129
+        ],
+        "enabling": [
+          130
+        ],
+        "high": [
+          131
+        ],
+        "performance": [
+          132,
+          146
+        ],
+        "in\\na": [
+          133
+        ],
+        "wide": [
+          134
+        ],
+        "regimes.": [
+          137
+        ],
+        "On": [
+          138
+        ],
+        "variety": [
+          140
+        ],
+        "real-world": [
+          142
+        ],
+        "datasets,": [
+          143
+        ],
+        "demonstrate\\nsignificant": [
+          145
+        ],
+        "improvements": [
+          147
+        ],
+        "over": [
+          148
+        ],
+        "existing": [
+          149
+        ],
+        "benchmarks,": [
+          150
+        ],
+        "showcase\\nthree": [
+          152
+        ],
+        "practical": [
+          153
+        ],
+        "interpretability": [
+          154
+        ],
+        "use-cases": [
+          155
+        ],
+        "TFT.\\n": [
+          157
+        ]
+      },
+      "primary_location": {
+        "id": "pmh:oai:arXiv.org:1912.09363",
+        "is_oa": true,
+        "landing_page_url": "http://arxiv.org/abs/1912.09363",
+        "pdf_url": "https://arxiv.org/pdf/1912.09363",
+        "source": {
+          "id": "https://openalex.org/S4306400194",
+          "display_name": "arXiv (Cornell University)",
+          "issn_l": "2331-8422",
+          "issn": [
+            "2331-8422"
+          ],
+          "is_oa": true,
+          "is_in_doaj": false,
+          "is_core": false,
+          "host_organization": "https://openalex.org/I205783295",
+          "host_organization_name": "Cornell University",
+          "host_organization_lineage": [
+            "https://openalex.org/I205783295"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": "",
+        "raw_type": "text"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/1912.09363",
+        "any_repository_has_fulltext": true
+      },
+      "type": "preprint"
+    },
+    {
+      "id": "https://openalex.org/W4389220939",
+      "doi": "https://doi.org/10.1016/j.enbuild.2023.113810",
+      "display_name": "A study of deep learning-based multi-horizon building energy forecasting",
+      "publication_year": 2023,
+      "cited_by_count": 77,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5039822206",
+            "display_name": "Zhongjun Ni",
+            "orcid": "https://orcid.org/0000-0003-0931-7584",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-0931-7584"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I102134673",
+              "display_name": "Link\u00f6ping University",
+              "ror": "https://ror.org/05ynxx418",
+              "country_code": "SE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I102134673"
+              ]
+            }
+          ],
+          "countries": [
+            "SE"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Zhongjun Ni",
+          "raw_affiliation_strings": [
+            "Department of Science and Technology, Link\u00f6ping University, Campus Norrk\u00f6ping, Bredgatan 33, Norrk\u00f6ping, 60174, Sweden"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-0931-7584",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Science and Technology, Link\u00f6ping University, Campus Norrk\u00f6ping, Bredgatan 33, Norrk\u00f6ping, 60174, Sweden",
+              "institution_ids": [
+                "https://openalex.org/I102134673"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100458129",
+            "display_name": "Chi Zhang",
+            "orcid": "https://orcid.org/0000-0001-6152-9387",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-6152-9387"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I881427289",
+              "display_name": "University of Gothenburg",
+              "ror": "https://ror.org/01tm6cn81",
+              "country_code": "SE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I881427289"
+              ]
+            }
+          ],
+          "countries": [
+            "SE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Chi Zhang",
+          "raw_affiliation_strings": [
+            "Department of Computer Science and Engineering, University of Gothenburg, Universitetsplatsen 1, Gothenburg, 40530, Sweden"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-6152-9387",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Science and Engineering, University of Gothenburg, Universitetsplatsen 1, Gothenburg, 40530, Sweden",
+              "institution_ids": [
+                "https://openalex.org/I881427289"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5026841919",
+            "display_name": "Magnus Karlsson",
+            "orcid": "https://orcid.org/0000-0002-4136-0817",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-4136-0817"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I102134673",
+              "display_name": "Link\u00f6ping University",
+              "ror": "https://ror.org/05ynxx418",
+              "country_code": "SE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I102134673"
+              ]
+            }
+          ],
+          "countries": [
+            "SE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Magnus Karlsson",
+          "raw_affiliation_strings": [
+            "Department of Science and Technology, Link\u00f6ping University, Campus Norrk\u00f6ping, Bredgatan 33, Norrk\u00f6ping, 60174, Sweden"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-4136-0817",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Science and Technology, Link\u00f6ping University, Campus Norrk\u00f6ping, Bredgatan 33, Norrk\u00f6ping, 60174, Sweden",
+              "institution_ids": [
+                "https://openalex.org/I102134673"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5089460616",
+            "display_name": "Shaofang Gong",
+            "orcid": "https://orcid.org/0000-0002-1401-4636",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-1401-4636"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I102134673",
+              "display_name": "Link\u00f6ping University",
+              "ror": "https://ror.org/05ynxx418",
+              "country_code": "SE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I102134673"
+              ]
+            }
+          ],
+          "countries": [
+            "SE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Shaofang Gong",
+          "raw_affiliation_strings": [
+            "Department of Science and Technology, Link\u00f6ping University, Campus Norrk\u00f6ping, Bredgatan 33, Norrk\u00f6ping, 60174, Sweden"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-1401-4636",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Science and Technology, Link\u00f6ping University, Campus Norrk\u00f6ping, Bredgatan 33, Norrk\u00f6ping, 60174, Sweden",
+              "institution_ids": [
+                "https://openalex.org/I102134673"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Building": [
+          0
+        ],
+        "energy": [
+          1,
+          10,
+          26,
+          39,
+          68,
+          99,
+          163,
+          179,
+          204,
+          257,
+          304,
+          330
+        ],
+        "forecasting": [
+          2
+        ],
+        "facilitates": [
+          3
+        ],
+        "optimizing": [
+          4
+        ],
+        "daily": [
+          5
+        ],
+        "operation": [
+          6
+        ],
+        "scheduling": [
+          7
+        ],
+        "and": [
+          8,
+          86,
+          118,
+          141,
+          156,
+          194,
+          206,
+          226,
+          268,
+          288,
+          338,
+          342
+        ],
+        "long-term": [
+          9
+        ],
+        "planning.": [
+          11
+        ],
+        "Many": [
+          12
+        ],
+        "studies": [
+          13
+        ],
+        "have": [
+          14,
+          61
+        ],
+        "demonstrated": [
+          15
+        ],
+        "the": [
+          16,
+          94,
+          138,
+          142,
+          151,
+          157,
+          191,
+          208,
+          232,
+          237,
+          243,
+          260,
+          278,
+          285,
+          295,
+          307
+        ],
+        "potential": [
+          17
+        ],
+        "of": [
+          18,
+          25,
+          52,
+          96,
+          150,
+          159,
+          162,
+          211,
+          234,
+          236,
+          253,
+          256,
+          259,
+          291,
+          294,
+          303,
+          306,
+          324
+        ],
+        "data-driven": [
+          19
+        ],
+        "approaches": [
+          20
+        ],
+        "in": [
+          21,
+          38,
+          58,
+          78,
+          128,
+          145,
+          190,
+          197,
+          203,
+          222,
+          249,
+          314
+        ],
+        "producing": [
+          22
+        ],
+        "point": [
+          23,
+          117,
+          225,
+          251
+        ],
+        "forecasts": [
+          24,
+          252
+        ],
+        "use.": [
+          27
+        ],
+        "Despite": [
+          28
+        ],
+        "this,": [
+          29
+        ],
+        "little": [
+          30
+        ],
+        "work": [
+          31
+        ],
+        "has": [
+          32,
+          84
+        ],
+        "been": [
+          33,
+          63
+        ],
+        "undertaken": [
+          34
+        ],
+        "to": [
+          35,
+          92,
+          111,
+          114,
+          283,
+          326
+        ],
+        "understand": [
+          36
+        ],
+        "uncertainty": [
+          37,
+          202
+        ],
+        "forecasts.": [
+          40,
+          53,
+          120,
+          228
+        ],
+        "However,": [
+          41
+        ],
+        "many": [
+          42
+        ],
+        "decision-making": [
+          43
+        ],
+        "scenarios": [
+          44,
+          161
+        ],
+        "require": [
+          45
+        ],
+        "information": [
+          46,
+          173
+        ],
+        "from": [
+          47
+        ],
+        "a": [
+          48,
+          122,
+          198
+        ],
+        "full": [
+          49
+        ],
+        "conditional": [
+          50
+        ],
+        "distribution": [
+          51,
+          290
+        ],
+        "In": [
+          54
+        ],
+        "addition,": [
+          55
+        ],
+        "recent": [
+          56
+        ],
+        "advances": [
+          57
+        ],
+        "deep": [
+          59,
+          89,
+          106
+        ],
+        "learning": [
+          60,
+          90
+        ],
+        "not": [
+          62
+        ],
+        "fully": [
+          64
+        ],
+        "exploited": [
+          65
+        ],
+        "for": [
+          66,
+          183,
+          265,
+          271
+        ],
+        "building": [
+          67,
+          98,
+          199,
+          336
+        ],
+        "forecasting.": [
+          69,
+          100
+        ],
+        "Motivated": [
+          70
+        ],
+        "by": [
+          71,
+          231
+        ],
+        "these": [
+          72
+        ],
+        "research": [
+          73
+        ],
+        "gaps,": [
+          74
+        ],
+        "this": [
+          75,
+          82,
+          315
+        ],
+        "study": [
+          76,
+          83,
+          125,
+          316
+        ],
+        "contributes": [
+          77
+        ],
+        "two": [
+          79,
+          129
+        ],
+        "aspects.": [
+          80
+        ],
+        "First,": [
+          81
+        ],
+        "adapted": [
+          85
+        ],
+        "applied": [
+          87
+        ],
+        "state-of-the-art": [
+          88
+        ],
+        "architectures": [
+          91
+        ],
+        "address": [
+          93
+        ],
+        "problem": [
+          95
+        ],
+        "multi-horizon": [
+          97,
+          186
+        ],
+        "Eight": [
+          101
+        ],
+        "different": [
+          102,
+          134,
+          160
+        ],
+        "methods,": [
+          103
+        ],
+        "including": [
+          104
+        ],
+        "seven": [
+          105
+        ],
+        "learning-based": [
+          107
+        ],
+        "ones,": [
+          108
+        ],
+        "were": [
+          109
+        ],
+        "investigated": [
+          110
+        ],
+        "develop": [
+          112
+        ],
+        "models": [
+          113,
+          153,
+          248,
+          312,
+          323
+        ],
+        "perform": [
+          115
+        ],
+        "both": [
+          116,
+          224,
+          254,
+          301
+        ],
+        "probabilistic": [
+          119,
+          227,
+          276
+        ],
+        "Second,": [
+          121
+        ],
+        "comprehensive": [
+          123
+        ],
+        "case": [
+          124
+        ],
+        "was": [
+          126,
+          154,
+          165
+        ],
+        "conducted": [
+          127
+        ],
+        "public": [
+          130
+        ],
+        "historic": [
+          131
+        ],
+        "buildings": [
+          132,
+          325
+        ],
+        "with": [
+          133
+        ],
+        "operating": [
+          135,
+          192
+        ],
+        "modes,": [
+          136
+        ],
+        "namely": [
+          137
+        ],
+        "City": [
+          139,
+          143,
+          261,
+          296,
+          308
+        ],
+        "Museum": [
+          140,
+          262,
+          297
+        ],
+        "Theatre,": [
+          144
+        ],
+        "Norrk\u00f6ping,": [
+          146
+        ],
+        "Sweden.": [
+          147
+        ],
+        "The": [
+          148,
+          167,
+          213,
+          310
+        ],
+        "performance": [
+          149
+        ],
+        "developed": [
+          152,
+          313
+        ],
+        "evaluated,": [
+          155
+        ],
+        "predictability": [
+          158
+        ],
+        "consumption": [
+          164,
+          267
+        ],
+        "studied.": [
+          166
+        ],
+        "results": [
+          168
+        ],
+        "show": [
+          169
+        ],
+        "that": [
+          170,
+          177
+        ],
+        "incorporating": [
+          171
+        ],
+        "future": [
+          172
+        ],
+        "on": [
+          174
+        ],
+        "exogenous": [
+          175
+        ],
+        "factors": [
+          176
+        ],
+        "determine": [
+          178
+        ],
+        "use": [
+          180,
+          205,
+          258,
+          305,
+          331
+        ],
+        "is": [
+          181
+        ],
+        "critical": [
+          182
+        ],
+        "making": [
+          184,
+          250,
+          275
+        ],
+        "accurate": [
+          185
+        ],
+        "predictions.": [
+          187
+        ],
+        "Furthermore,": [
+          188
+        ],
+        "changes": [
+          189
+        ],
+        "mode": [
+          193
+        ],
+        "activities": [
+          195
+        ],
+        "held": [
+          196
+        ],
+        "bring": [
+          200
+        ],
+        "more": [
+          201
+        ],
+        "deteriorate": [
+          207
+        ],
+        "prediction": [
+          209
+        ],
+        "accuracy": [
+          210
+        ],
+        "models.": [
+          212
+        ],
+        "temporal": [
+          214
+        ],
+        "fusion": [
+          215
+        ],
+        "transformer": [
+          216
+        ],
+        "(TFT)": [
+          217
+        ],
+        "model": [
+          218,
+          245,
+          280
+        ],
+        "exhibited": [
+          219
+        ],
+        "strong": [
+          220
+        ],
+        "competitiveness": [
+          221
+        ],
+        "performing": [
+          223
+        ],
+        "As": [
+          229
+        ],
+        "assessed": [
+          230
+        ],
+        "coefficient": [
+          233
+        ],
+        "variance": [
+          235
+        ],
+        "root": [
+          238
+        ],
+        "mean": [
+          239
+        ],
+        "square": [
+          240
+        ],
+        "error": [
+          241
+        ],
+        "(CV-RMSE),": [
+          242
+        ],
+        "TFT": [
+          244,
+          279
+        ],
+        "outperformed": [
+          246
+        ],
+        "other": [
+          247
+        ],
+        "types": [
+          255,
+          302
+        ],
+        "(CV-RMSE": [
+          263
+        ],
+        "29.7%": [
+          264
+        ],
+        "electricity": [
+          266
+        ],
+        "CV-RMSE": [
+          269
+        ],
+        "8.7%": [
+          270
+        ],
+        "heating": [
+          272,
+          292
+        ],
+        "load).": [
+          273
+        ],
+        "When": [
+          274
+        ],
+        "predictions,": [
+          277
+        ],
+        "performed": [
+          281
+        ],
+        "best": [
+          282
+        ],
+        "capture": [
+          284
+        ],
+        "central": [
+          286
+        ],
+        "tendency": [
+          287
+        ],
+        "upper": [
+          289
+        ],
+        "load": [
+          293
+        ],
+        "as": [
+          298,
+          300
+        ],
+        "well": [
+          299
+        ],
+        "Theatre.": [
+          309
+        ],
+        "predictive": [
+          311
+        ],
+        "can": [
+          317,
+          332
+        ],
+        "be": [
+          318,
+          333
+        ],
+        "integrated": [
+          319
+        ],
+        "into": [
+          320
+        ],
+        "digital": [
+          321
+        ],
+        "twin": [
+          322
+        ],
+        "discover": [
+          327
+        ],
+        "areas": [
+          328
+        ],
+        "where": [
+          329
+        ],
+        "reduced,": [
+          334
+        ],
+        "optimize": [
+          335
+        ],
+        "operations,": [
+          337
+        ],
+        "improve": [
+          339
+        ],
+        "overall": [
+          340
+        ],
+        "sustainability": [
+          341
+        ],
+        "efficiency.": [
+          343
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.1016/j.enbuild.2023.113810",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1016/j.enbuild.2023.113810",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S6846437",
+          "display_name": "Energy and Buildings",
+          "issn_l": "0378-7788",
+          "issn": [
+            "0378-7788",
+            "1872-6178"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "cwts-core",
+            "jufo-3",
+            "norway-2"
+          ],
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_name": "Elsevier BV",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "type": "journal"
+        },
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Energy and Buildings",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://doi.org/10.1016/j.enbuild.2023.113810",
+        "any_repository_has_fulltext": true
+      },
+      "type": "article"
+    }
+  ],
+  "group_by": []
+}

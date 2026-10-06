@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "States data are missing or unconfirmed",
+      "passed": true,
+      "evidence": "Looked for an explicit absence/unconfirmed statement about sensor data."
+    },
+    {
+      "text": "Does not present fabricated statistics",
+      "passed": true,
+      "evidence": "Looked for a clear limit on calculated results."
+    },
+    {
+      "text": "Lists variables, units, and time or grouping requirements",
+      "passed": true,
+      "evidence": "Looked for sensor variables/units and time or zone grouping needs."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

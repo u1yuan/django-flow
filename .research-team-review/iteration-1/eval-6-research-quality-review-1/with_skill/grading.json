@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Flags the unverified citation",
+      "passed": true,
+      "evidence": "Checked directly against the saved output text."
+    },
+    {
+      "text": "Recomputes 12/80 as 15%",
+      "passed": true,
+      "evidence": "Checked directly against the saved output text."
+    },
+    {
+      "text": "Provides severity and correction",
+      "passed": true,
+      "evidence": "Checked directly against the saved output text."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

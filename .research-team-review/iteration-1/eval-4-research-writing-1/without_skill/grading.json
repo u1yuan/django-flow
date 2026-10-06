@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Provides a claim map",
+      "passed": true,
+      "evidence": "Checked directly against the saved output text."
+    },
+    {
+      "text": "Does not assert unverified citations as confirmed",
+      "passed": true,
+      "evidence": "Checked directly against the saved output text."
+    },
+    {
+      "text": "Avoids invented results",
+      "passed": true,
+      "evidence": "Checked directly against the saved output text."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

@@ -1,0 +1,685 @@
+Global School-based Student Health Survey 
+Philippines 
+2019 Fact Sheet 
+1 
+ 
+ 
+ 
+The 2019 Philippines GSHS was a school-based survey of students in grades 7- Fourth Year, which are typically attended by students aged 13-17. A two-
+stage cluster sample design was used to produce data representative of all students in grades 7 -Fourth Year in the Philippines. At the first stage, 
+schools were selected with probability proportional to enrollment size. At the second stage, classes were randomly selected a nd all students in selected classes 
+were eligible to participate. 
+The Philippines GSHS measured alcohol use; dietary behaviors; drug use; hygiene; mental health; physical activity; protective factors; and violence and 
+unintentional injury. Students self-reported their responses to each question on a computer scannable answer sheet. 
+ 
+The school response rate was 100%, the student response rate was 85%, and the overall response rate was 85%. A total of 10,175 students participated in 
+the Philippines GSHS. Prevalence estimates (percentages) and 95% confidence intervals are presented below.  
+ 
+ 
+ 
+ Students Aged 13-15 Years Students Aged 16-17 Years Students Aged 13-17 Years 
+ Total Males Females Total Males Females Total Males Females 
+Alcohol Use 
+Percentage of students who currently drank          
+alcohol (at least one drink of alcohol on at 23.5 28.1 19.3 33.7 42.0 23.8 25.2 30.6 19.9 
+least one day during the 30 days before the (21.8-25.3) (25.6-30.7) (17.4-21.3) (30.1-37.6) (37.3-46.9) (19.7-28.4) (23.4-27.0) (28.2-33.1) (18.0-22.0) 
+survey)          
+Percentage of students who ever drank so 
+much alcohol that they were really drunk one 
+or more times during their life 
+ 
+23.2 
+(21.6-24.9) 
+ 
+27.6 
+(25.4-29.9) 
+ 
+19.2 
+(16.9-21.7) 
+ 
+36.3 
+(32.1-40.7) 
+ 
+43.7 
+(38.3-49.2) 
+ 
+27.4 
+(22.2-33.3) 
+ 
+ 
+25.3 
+(23.6-27.0) 
+ 
+30.5 
+(28.5-32.6) 
+ 
+20.4 
+(18.2-22.8) 
+Percentage of students who drank alcohol          
+before age 14 years for the first time, among 66.0 71.1 59.8 28.3 34.5 18.2 58.2 62.7 52.4 
+students who ever had a drink of alcohol other (63.2-68.7) (67.6-74.3) (56.9-62.7) (24.1-32.9) (28.6-40.9) (13.2-24.5) (55.7-60.6) (59.3-66.0) (49.6-55.1) 
+than a few sips          
+Dietary Behaviors 
+ 
+Percentage of students who were underweight 
+ 
+11.4 
+ 
+14.5 
+ 
+8.4 
+ 
+10.8 
+ 
+12.5 
+ 
+8.8 
+ 
+11.3 
+ 
+14.2 
+ 
+8.4 
+(<-2SD from median for BMI by age and sex) (10.1-12.7) (12.9-16.3) (6.9-10.2) (9.2-12.7) (9.7-16.1) (6.8-11.2) (10.1-12.5) (12.6-15.9) (7.1-10.0) 
+Global School-based Student Health Survey 
+Philippines 
+2019 Fact Sheet 
+2 
+ 
+ 
+ 
+ 
+ Students Aged 13-15 Years Students Aged 16-17 Years Students Aged 13-17 Years 
+ Total Males Females Total Males Females Total Males Females 
+Dietary Behaviors 
+ 
+Percentage of students who were overweight 
+ 
+13.1 
+ 
+13.9 
+ 
+12.3 
+ 
+10.3 
+ 
+11.9 
+ 
+8.3 
+ 
+12.6 
+ 
+13.5 
+ 
+11.7 
+(>+1SD from median for BMI by age and 
+sex) 
+(11.8-14.5) (12.0-16.0) (10.8-14.0) (7.7-13.7) (8.7-16.1) (5.4-12.7) (11.5-13.8) (11.9-15.3) (10.6-13.0) 
+ 
+Percentage of students who were obese 
+ 
+3.7 
+ 
+4.3 
+ 
+3.1 
+ 
+3.6 
+ 
+4.0 
+ 
+3.3 
+ 
+3.7 
+ 
+4.3 
+ 
+3.1 
+(>+2SD from median for BMI by age and 
+sex) 
+(2.8-4.8) (3.2-5.8) (2.2-4.3) (2.4-5.5) (2.3-6.6) (1.5-6.9) (2.9-4.6) (3.3-5.5) (2.4-4.1) 
+Percentage of students who did not drink 
+carbonated soft drinks during the 7 days 
+before the survey 
+ 
+22.1 
+(20.2-24.1) 
+ 
+21.5 
+(19.7-23.4) 
+ 
+22.5 
+(19.8-25.4) 
+ 
+20.2 
+(17.7-23.0) 
+ 
+18.0 
+(14.9-21.6) 
+ 
+22.9 
+(19.1-27.1) 
+ 
+21.8 
+(20.0-23.7) 
+ 
+20.9 
+(19.3-22.5) 
+ 
+22.5 
+(20.0-25.3) 
+Drug Use 
+Percentage of students who ever used 
+marijuana one or more times during their life 
+ 
+6.9 
+(5.7-8.4) 
+ 
+11.0 
+(9.0-13.3) 
+ 
+3.2 
+(2.3-4.6) 
+ 
+7.3 
+(5.5-9.7) 
+ 
+12.0 
+(8.9-15.8) 
+ 
+1.9 
+(1.1-3.4) 
+ 
+7.0 
+(5.9-8.4) 
+ 
+11.2 
+(9.3-13.4) 
+ 
+3.0 
+(2.2-4.2) 
+Percentage of students who used drugs 
+before age 14 years for the first time, among 
+students who ever used drugs 
+ 
+94.9 
+(91.1-97.2) 
+ 
+ 
+95.5 
+(91.7-97.6) 
+ 
+93.5 
+(87.5-96.8) 
+ 
+86.8 
+(80.1-91.5) 
+ 
+87.8 
+(80.4-92.7) 
+ 
+NA* 
+ 
+93.7 
+(90.1-96.0) 
+ 
+ 
+94.2 
+(90.7-96.4) 
+ 
+92.4 
+(86.9-95.7) 
+Hygiene 
+Percentage of students who usually 
+cleaned or brushed their teeth one or 
+more times per day during the 30 days 
+before the survey 
+ 
+94.0 
+(93.1-94.8) 
+ 
+91.5 
+(90.2-92.7) 
+ 
+96.4 
+(95.5-97.2) 
+ 
+94.0 
+(91.8-95.6) 
+ 
+91.4 
+(87.8-94.0) 
+ 
+97.2 
+(95.0-98.4) 
+ 
+94.0 
+(93.2-94.7) 
+ 
+91.5 
+(90.2-92.6) 
+ 
+96.5 
+(95.8-97.2) 
+Percentage of students who never or 
+rarely washed their hands after using the 
+toilet or latrine during the 30 days before 
+the survey 
+ 
+5.6 
+(4.7-6.6) 
+ 
+7.3 
+(5.9-8.9) 
+ 
+4.0 
+(3.2-5.0) 
+ 
+ 
+5.0 
+(3.7-6.6) 
+ 
+5.5 
+(3.7-8.0) 
+ 
+4.3 
+(2.8-6.4) 
+ 
+ 
+5.5 
+(4.7-6.4) 
+ 
+7.0 
+(5.7-8.4) 
+ 
+4.0 
+(3.3-5.0) 
+Global School-based Student Health Survey 
+Philippines 
+2019 Fact Sheet 
+3 
+ 
+ 
+ 
+ Students Aged 13-15 Years Students Aged 16-17 Years Students Aged 13-17 Years 
+ Total Males Females Total Males Females Total Males Females 
+Mental Health 
+Percentage of students who seriously 
+considered attempting suicide during 
+the 12 months before the survey 
+ 
+23.1 
+(21.5-24.7) 
+ 
+18.5 
+(16.8-20.3) 
+ 
+27.2 
+(25.0-29.5) 
+ 
+23.2 
+(20.0-26.7) 
+ 
+20.4 
+(16.5-25.0) 
+ 
+26.4 
+(22.7-30.4) 
+ 
+23.1 
+(21.5-24.7) 
+ 
+18.8 
+(17.0-20.9) 
+ 
+27.1 
+(25.1-29.1) 
+Percentage of students who attempted 
+suicide one or more times during the 12 
+months before the survey 
+ 
+24.4 
+(22.8-26.1) 
+ 
+19.9 
+(18.0-21.9) 
+ 
+28.5 
+(26.0-31.2) 
+ 
+23.5 
+(20.7-26.7) 
+ 
+20.1 
+(17.1-23.5) 
+ 
+27.5 
+(23.1-32.4) 
+ 
+24.3 
+(22.7-25.9) 
+ 
+19.9 
+(18.1-21.9) 
+ 
+28.4 
+(26.0-30.9) 
+Percentage of students who did not have any 5.8 7.3 4.4 6.1 6.1 6.0 5.9 7.1 4.6 
+close friends (5.1-6.7) (6.1-8.8) (3.6-5.4) (4.7-7.9) (4.4-8.5) (4.2-8.4) (5.3-6.6) (6.0-8.4) (4.0-5.3) 
+Physical Activity 
+Percentage of students were physically active 
+at least 60 minutes per day on all 7 days 
+during the 7 days before the survey 
+ 
+6.7 
+(5.7-7.9) 
+ 
+7.4 
+(6.0-9.2) 
+ 
+6.1 
+(5.2-7.1) 
+ 
+ 
+6.7 
+(5.2-8.5) 
+ 
+6.8 
+(4.9-9.4) 
+ 
+6.5 
+(4.6-9.1) 
+ 
+ 
+6.7 
+(5.8-7.8) 
+ 
+7.3 
+(6.0-8.9) 
+ 
+6.1 
+(5.3-7.0) 
+Percentage of students who attended physical 
+education classes on three or more days each 
+week during this school year 
+ 
+53.5 
+(49.8-57.2) 
+ 
+47.9 
+(44.2-51.6) 
+ 
+58.9 
+(54.6-63.0) 
+ 
+54.2 
+(49.3-59.0) 
+ 
+50.5 
+(44.7-56.2) 
+ 
+ 
+58.9 
+(52.4-65.1) 
+ 
+53.6 
+(50.0-57.2) 
+ 
+48.4 
+(44.7-52.0) 
+ 
+58.9 
+(54.7-62.9) 
+Percentage of students who spent three or          
+more hours per day sitting and watching 
+television, playing computer games, or talking 
+with friends, when not in school or doing 
+36.4 
+(33.9-38.9) 
+36.3 
+(33.7-39.0) 
+ 
+36.5 
+(33.2-39.8) 
+ 
+36.7 
+(32.1-41.6) 
+36.0 
+(31.1-41.2) 
+37.6 
+(31.0-44.6) 
+36.4 
+(33.9-39.1) 
+36.3 
+(33.8-38.9) 
+36.6 
+(33.3-40.1) 
+homework during a typical or usual day          
+Protective Factors 
+Percentage of students who missed classes 
+or school without permission on one or more 
+days during the 30 days before the survey 
+ 
+31.1 
+(28.8-33.5) 
+ 
+37.7 
+(34.9-40.5) 
+ 
+24.9 
+(22.6-27.4) 
+ 
+40.9 
+(36.6-45.4) 
+ 
+46.7 
+(41.6-51.8) 
+ 
+33.7 
+(28.8-39.0) 
+ 
+ 
+32.7 
+(30.7-34.8) 
+ 
+39.3 
+(37.0-41.6) 
+ 
+26.2 
+(24.0-28.5) 
+Global School-based Student Health Survey 
+Philippines 
+2019 Fact Sheet 
+4 
+ 
+ 
+ 
+ Students Aged 13-15 Years Students Aged 16-17 Years Students Aged 13-17 Years 
+ Total Males Females Total Males Females Total Males Females 
+Protective Factors 
+Percentage of students who reported that their 
+parents or guardians most of the time or 
+always understood their problems and worries 
+during the 30 days before the survey 
+ 
+ 
+29.7 
+(28.0-31.5) 
+ 
+ 
+29.4 
+(27.2-31.6) 
+ 
+ 
+30.1 
+(27.7-32.7) 
+ 
+ 
+27.7 
+(25.1-30.5) 
+ 
+ 
+27.6 
+(23.7-31.8) 
+ 
+ 
+ 
+27.8 
+(24.1-31.9) 
+ 
+ 
+29.4 
+(27.8-31.0) 
+ 
+ 
+29.0 
+(27.2-31.0) 
+ 
+ 
+29.8 
+(27.6-32.0) 
+Percentage of students who reported that their 
+parents or guardians most of the time or 
+always really knew what they were doing with 
+their free time during the 30 days before the 
+survey 
+ 
+ 
+32.7 
+(31.1-34.4) 
+ 
+ 
+30.6 
+(28.5-32.7) 
+ 
+ 
+34.9 
+(32.9-37.0) 
+ 
+ 
+29.3 
+(26.3-32.6) 
+ 
+ 
+28.1 
+(23.8-32.7) 
+ 
+ 
+31.0 
+(27.3-35.0) 
+ 
+ 
+ 
+32.2 
+(30.6-33.8) 
+ 
+ 
+30.1 
+(28.1-32.1) 
+ 
+ 
+34.3 
+(32.5-36.1) 
+Violence and Unintentional Injury 
+Percentage of students who were in a physical 
+fight one or more times during the 12 months 
+before the survey 
+ 
+31.3 
+(29.1-33.6) 
+ 
+38.5 
+(35.8-41.3) 
+ 
+24.4 
+(22.1-26.9) 
+ 
+29.2 
+(26.8-31.7) 
+ 
+35.8 
+(32.2-39.6) 
+ 
+20.9 
+(17.5-24.9) 
+ 
+31.0 
+(29.1-32.9) 
+ 
+38.0 
+(35.8-40.3) 
+ 
+23.9 
+(21.7-26.3) 
+Percentage of students who were seriously 
+injured one or more times during the 12 
+months before the survey 
+ 
+43.8 
+(41.2-46.4) 
+ 
+50.2 
+(46.8-53.5) 
+ 
+37.9 
+(35.0-40.9) 
+ 
+43.2 
+(39.1-47.4) 
+ 
+53.0 
+(48.0-57.9) 
+ 
+31.5 
+(26.3-37.1) 
+ 
+43.7 
+(41.2-46.2) 
+ 
+50.7 
+(47.4-54.0) 
+ 
+37.0 
+(34.2-39.8) 
+Percentage of students who were ever 
+bullied on school property during the 12 
+months before the survey 
+ 
+41.8 
+(39.7-43.9) 
+ 
+ 
+41.8 
+(39.0-44.7) 
+ 
+41.8 
+(39.5-44.1) 
+ 
+34.7 
+(31.5-38.0) 
+ 
+34.1 
+(29.8-38.6) 
+ 
+35.3 
+(30.9-40.0) 
+ 
+40.6 
+(38.7-42.6) 
+ 
+40.4 
+(37.9-42.9) 
+ 
+40.9 
+(38.6-43.1) 
+*Data not available because there were fewer than 100 students in this subgroup. 
+ 
+For additional information, please contact: 
+Fe A. Sinson, MA, fsinson2001@yahoo.com, Statistician III, 
+Epidemiology Bureau, Department of Health 
+Manila, Philippines 
+For general information about the GSHS, please visit: 
+https://www.who.int/teams/noncommunicable-
+diseases/surveillance/systems-tools/global-school-
+based-student-health-survey 
+ 

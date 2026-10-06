@@ -1,0 +1,69 @@
+
+Philippines - Global School-Based Student Health Survey 2019
+ NCD Microdata Repository
+ An Online Microdata Catalog
+ Home
+ Microdata Catalog
+ Citations
+ Login 
+ Login
+ Home /
+ Central Data Catalog /
+ GSHS /
+ PHL_2019_GSHS_V01
+ Global School-Based Student Health Survey 2019
+ Philippines, 2019
+ Get Microdata 
+ Reference ID 
+ PHL_2019_GSHS_v01 
+ Producer(s) 
+ Department of Health 
+ Collections 
+ Global School-based Student Health Survey
+ Metadata 
+ DDI/XML
+ JSON
+ Created on 
+ Dec 14, 2023
+ Last modified 
+ Dec 14, 2023
+ Page views 
+ 159411
+ Downloads 
+ 5948
+ Study Description
+ Data Dictionary
+ Downloads
+ Get Microdata 
+ Download related resources
+ Questionnaires 
+ Questionnaire 
+ Download [PDF, 8.8 MB] 
+ Download
+ https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/download/6695 
+ Reports 
+ Fact sheet 
+ Download [PDF, 77.8 KB] 
+ Download
+ https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/download/6665 
+ Technical documents 
+ Codebook (national) 
+ Download [PDF, 491.39 KB] 
+ Download
+ https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/download/6666 
+ Codebook (Luzon) 
+ Download [PDF, 522.79 KB] 
+ Download
+ https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/download/6667 
+ Codebook (Mindanao) 
+ Download [PDF, 496.97 KB] 
+ Download
+ https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/download/6668 
+ Codebook (Visayas) 
+ Download [PDF, 489.56 KB] 
+ Download
+ https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/download/6700 
+ Back to Catalog
+ NCD Microdata Repository 
+ ©
+ NCD Microdata Repository, All Rights Reserved.

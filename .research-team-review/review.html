@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eval Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js" integrity="sha384-EnyY0/GSHQGSxSgMwaIPzSESbqoOLSexfnSMN2AP+39Ckmn92stwABZynq1JyzdT" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #faf9f5;
+      --surface: #ffffff;
+      --border: #e8e6dc;
+      --text: #141413;
+      --text-muted: #b0aea5;
+      --accent: #d97757;
+      --accent-hover: #c4613f;
+      --green: #788c5d;
+      --green-bg: #eef2e8;
+      --red: #c44;
+      --red-bg: #fceaea;
+      --header-bg: #141413;
+      --header-text: #faf9f5;
+      --radius: 6px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---- Header ---- */
+    .header {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .header .instructions {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: 0.25rem;
+    }
+    .header .progress {
+      font-size: 0.875rem;
+      opacity: 0.8;
+      text-align: right;
+    }
+
+    /* ---- Main content ---- */
+    .main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    /* ---- Sections ---- */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      flex-shrink: 0;
+    }
+    .section-header {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.75rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .section-body {
+      padding: 1rem;
+    }
+
+    /* ---- Config badge ---- */
+    .config-badge {
+      display: inline-block;
+      padding: 0.2rem 0.625rem;
+      border-radius: 9999px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-left: 0.75rem;
+      vertical-align: middle;
+    }
+    .config-badge.config-primary {
+      background: rgba(33, 150, 243, 0.12);
+      color: #1976d2;
+    }
+    .config-badge.config-baseline {
+      background: rgba(255, 193, 7, 0.15);
+      color: #f57f17;
+    }
+
+    /* ---- Prompt ---- */
+    .prompt-text {
+      white-space: pre-wrap;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* ---- Outputs ---- */
+    .output-file {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .output-file + .output-file {
+      margin-top: 1rem;
+    }
+    .output-file-header {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .output-file-header .dl-btn {
+      font-size: 0.7rem;
+      color: var(--accent);
+      text-decoration: none;
+      cursor: pointer;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+    .output-file-header .dl-btn:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    .output-file-content {
+      padding: 0.75rem;
+      overflow-x: auto;
+    }
+    .output-file-content pre {
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+    .output-file-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .output-file-content iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+    .output-file-content table {
+      border-collapse: collapse;
+      font-size: 0.8125rem;
+      width: 100%;
+    }
+    .output-file-content table td,
+    .output-file-content table th {
+      border: 1px solid var(--border);
+      padding: 0.375rem 0.5rem;
+      text-align: left;
+    }
+    .output-file-content table th {
+      background: var(--bg);
+      font-weight: 600;
+    }
+    .output-file-content .download-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.875rem;
+      cursor: pointer;
+    }
+    .output-file-content .download-link:hover {
+      background: var(--border);
+    }
+    .empty-state {
+      color: var(--text-muted);
+      font-style: italic;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    /* ---- Feedback ---- */
+    .prev-feedback {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.625rem 0.75rem;
+      margin-top: 0.75rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .prev-feedback-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.25rem;
+      color: var(--text-muted);
+    }
+    .feedback-textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.9375rem;
+      line-height: 1.5;
+      resize: vertical;
+      color: var(--text);
+    }
+    .feedback-textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+    .feedback-status {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      min-height: 1.1em;
+    }
+
+    /* ---- Grades (collapsible) ---- */
+    .grades-toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .grades-toggle:hover {
+      color: var(--accent);
+    }
+    .grades-toggle .arrow {
+      margin-right: 0.5rem;
+      transition: transform 0.15s;
+      font-size: 0.75rem;
+    }
+    .grades-toggle .arrow.open {
+      transform: rotate(90deg);
+    }
+    .grades-content {
+      display: none;
+      margin-top: 0.75rem;
+    }
+    .grades-content.open {
+      display: block;
+    }
+    .grades-summary {
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .grade-badge {
+      display: inline-block;
+      padding: 0.125rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .grade-pass { background: var(--green-bg); color: var(--green); }
+    .grade-fail { background: var(--red-bg); color: var(--red); }
+    .assertion-list {
+      list-style: none;
+    }
+    .assertion-item {
+      padding: 0.625rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8125rem;
+    }
+    .assertion-item:last-child { border-bottom: none; }
+    .assertion-status {
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+    .assertion-status.pass { color: var(--green); }
+    .assertion-status.fail { color: var(--red); }
+    .assertion-evidence {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+      padding-left: 1.5rem;
+    }
+
+    /* ---- View tabs ---- */
+    .view-tabs {
+      display: flex;
+      gap: 0;
+      padding: 0 2rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .view-tab {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.625rem 1.25rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--text-muted);
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s;
+    }
+    .view-tab:hover { color: var(--text); }
+    .view-tab.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .view-panel { display: none; }
+    .view-panel.active { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+
+    /* ---- Benchmark view ---- */
+    .benchmark-view {
+      padding: 1.5rem 2rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .benchmark-table {
+      border-collapse: collapse;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.8125rem;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .benchmark-table th, .benchmark-table td {
+      padding: 0.625rem 0.75rem;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+    .benchmark-table th {
+      font-family: 'Poppins', sans-serif;
+      background: var(--header-bg);
+      color: var(--header-text);
+      font-weight: 500;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .benchmark-table tr:hover { background: var(--bg); }
+    .benchmark-table tr.benchmark-row-with { background: rgba(33, 150, 243, 0.06); }
+    .benchmark-table tr.benchmark-row-without { background: rgba(255, 193, 7, 0.06); }
+    .benchmark-table tr.benchmark-row-with:hover { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-without:hover { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-table tr.benchmark-row-avg { font-weight: 600; border-top: 2px solid var(--border); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-with { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-without { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-delta-positive { color: var(--green); font-weight: 600; }
+    .benchmark-delta-negative { color: var(--red); font-weight: 600; }
+    .benchmark-notes {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+    .benchmark-notes h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+    }
+    .benchmark-notes ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+    }
+    .benchmark-notes li {
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      margin-bottom: 0.375rem;
+    }
+    .benchmark-empty {
+      color: var(--text-muted);
+      font-style: italic;
+      text-align: center;
+      padding: 3rem;
+    }
+
+    /* ---- Navigation ---- */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      flex-shrink: 0;
+    }
+    .nav-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: all 0.15s;
+    }
+    .nav-btn:hover:not(:disabled) {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .nav-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .done-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    .done-btn:hover {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .done-btn.ready {
+      border: none;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+    }
+    .done-btn.ready:hover {
+      background: var(--accent-hover);
+    }
+    /* ---- Done overlay ---- */
+    .done-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+    .done-overlay.visible {
+      display: flex;
+    }
+    .done-card {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 2rem 3rem;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+    }
+    .done-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .done-card p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .done-card .btn-row {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .done-card button {
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+    }
+    .done-card button:hover {
+      background: var(--bg);
+    }
+    /* ---- Toast ---- */
+    .toast {
+      position: fixed;
+      bottom: 5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 0.625rem 1.25rem;
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      z-index: 200;
+    }
+    .toast.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" style="height:100vh; display:flex; flex-direction:column;">
+    <div class="header">
+      <div>
+        <h1>Eval Review: <span id="skill-name"></span></h1>
+        <div class="instructions">Review each output and leave feedback below. Navigate with arrow keys or buttons. When done, copy feedback and paste into Claude Code.</div>
+      </div>
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <!-- View tabs (only shown when benchmark data exists) -->
+    <div class="view-tabs" id="view-tabs" style="display:none;">
+      <button class="view-tab active" onclick="switchView('outputs')">Outputs</button>
+      <button class="view-tab" onclick="switchView('benchmark')">Benchmark</button>
+    </div>
+
+    <!-- Outputs panel (qualitative review) -->
+    <div class="view-panel active" id="panel-outputs">
+    <div class="main">
+      <!-- Prompt -->
+      <div class="section">
+        <div class="section-header">Prompt <span class="config-badge" id="config-badge" style="display:none;"></span></div>
+        <div class="section-body">
+          <div class="prompt-text" id="prompt-text"></div>
+        </div>
+      </div>
+
+      <!-- Outputs -->
+      <div class="section">
+        <div class="section-header">Output</div>
+        <div class="section-body" id="outputs-body">
+          <div class="empty-state">No output files found</div>
+        </div>
+      </div>
+
+      <!-- Previous Output (collapsible) -->
+      <div class="section" id="prev-outputs-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="togglePrevOutputs()">
+            <span class="arrow" id="prev-outputs-arrow">&#9654;</span>
+            Previous Output
+          </div>
+        </div>
+        <div class="grades-content" id="prev-outputs-content"></div>
+      </div>
+
+      <!-- Grades (collapsible) -->
+      <div class="section" id="grades-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="toggleGrades()">
+            <span class="arrow" id="grades-arrow">&#9654;</span>
+            Formal Grades
+          </div>
+        </div>
+        <div class="grades-content" id="grades-content"></div>
+      </div>
+
+      <!-- Feedback -->
+      <div class="section">
+        <div class="section-header">Your Feedback</div>
+        <div class="section-body">
+          <textarea
+            class="feedback-textarea"
+            id="feedback"
+            placeholder="What do you think of this output? Any issues, suggestions, or things that look great?"
+          ></textarea>
+          <div class="feedback-status" id="feedback-status"></div>
+          <div class="prev-feedback" id="prev-feedback" style="display:none;">
+            <div class="prev-feedback-label">Previous feedback</div>
+            <div id="prev-feedback-text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav" id="outputs-nav">
+      <button class="nav-btn" id="prev-btn" onclick="navigate(-1)">&#8592; Previous</button>
+      <button class="done-btn" id="done-btn" onclick="showDoneDialog()">Submit All Reviews</button>
+      <button class="nav-btn" id="next-btn" onclick="navigate(1)">Next &#8594;</button>
+    </div>
+    </div><!-- end panel-outputs -->
+
+    <!-- Benchmark panel (quantitative stats) -->
+    <div class="view-panel" id="panel-benchmark">
+      <div class="benchmark-view" id="benchmark-content">
+        <div class="benchmark-empty">No benchmark data available. Run a benchmark to see quantitative results here.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Done overlay -->
+  <div class="done-overlay" id="done-overlay">
+    <div class="done-card">
+      <h2>Review Complete</h2>
+      <p>Your feedback has been saved. Go back to your Claude Code session and tell Claude you're done reviewing.</p>
+      <div class="btn-row">
+        <button onclick="closeDoneDialog()">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ---- Embedded data (injected by generate_review.py) ----
+    const EMBEDDED_DATA = {"skill_name": "Topic-agnostic research team", "runs": [{"id": "eval-0-evidence-research-1-with_skill", "prompt": "Audit two claims in the diesel literature log using only the local log. Return an evidence ledger and identify which citations still need source-level verification.", "eval_id": 0, "outputs": [{"name": "output.md", "type": "text", "content": "# Local-only audit of two literature-log claims\n\nDate: 2026-09-28  \nScope: `docs/activities/litReview/LITERATURE_LOG.md` only. No publisher article, abstract, DOI resolver, metadata service, or external database was consulted. No unpublished data was used.\n\n## Evidence ledger\n\n| Claim in the local log | Source ID and metadata **as recorded in the log** | Exact local locator | Verification method and status | Relevance and caveat |\n| --- | --- | --- | --- | --- |\n| Philippine small-island grids have diesel fuel-use values of about **0.26\u00e2\u20ac\u201c0.83 L/kWh** and site-specific diesel prices; the study sizes renewable microgrids against that baseline. | L1: Paul Bertheau (2020), *Supplying not electrified islands with 100% renewable energy based micro grids: A geospatial and techno-economic analysis for the Philippines*; DOI **as recorded**: `10.1016/j.energy.2020.117670`. | `LITERATURE_LOG.md`, \u00e2\u20ac\u0153Local literature,\u00e2\u20ac\ufffd item 3, lines 15\u00e2\u20ac\u201c16. | Read the log entry only. **Unverified source claim and unverified citation metadata/DOI.** No paper passage, table, abstract, or page was checked. | Potentially relevant to diesel fuel use. The log calls L/kWh \u00e2\u20ac\u0153fuel efficiencies\u00e2\u20ac\ufffd; the unit denotes fuel volume per electrical energy, so the source\u00e2\u20ac\u2122s actual metric and denominator need checking before this is described as efficiency. The final sentence linking the figures to fault-linked anomaly monitoring is the log writer\u00e2\u20ac\u2122s rationale, not an observed result established here. |\n| Fast RobustSTL extends RobustSTL to handle multiple seasonal cycles and improve speed with generalized ADMM, separating trend, seasonality, outliers, and noise. | F1: Qingsong Wen, Zhe Zhang, Li Yan, Liang Sun (2020), *Fast RobustSTL: Efficient and Robust Seasonal-Trend Decomposition for Time Series with Complex Patterns*; DOI **as recorded**: `10.1145/3394486.3403271`. | `LITERATURE_LOG.md`, \u00e2\u20ac\u0153Foreign literature,\u00e2\u20ac\ufffd item 1, lines 24\u00e2\u20ac\u201c25. | Read the log entry only. **Unverified source claim and unverified citation metadata/DOI.** No method section, results, abstract, or page was checked. | Relevant as a proposed decomposition method. The log does not establish that the paper tested genset efficiency, generalized ESD on its residuals, or this thesis\u00e2\u20ac\u2122s combined pipeline. The application sentence is a proposed design choice. |\n\n## Source-level verification still needed\n\n1. **L1:** Resolve the recorded DOI and compare its title, author, year, and venue with the log. Open the publisher or authoritative full text; locate the table or passage giving the 0.26\u00e2\u20ac\u201c0.83 L/kWh range, check its sample/sites, whether the range is observed or modeled, the precise metric, and any qualification. Record page/table/figure before citing the number.\n2. **F1:** Resolve the recorded DOI and check title, author, year, and venue. In the official paper, locate the method passage for multiple seasonal cycles and generalized ADMM, and the evaluation passage for the speed claim. Note exact sections/pages and whether the decomposition labels in the log match the authors\u00e2\u20ac\u2122 formulation.\n3. **Both:** Keep the thesis-specific implications separate from each publication\u00e2\u20ac\u2122s findings. Neither local entry supplies source-level support for performance on Palawan NPC-SPUG genset data or for the RobustSTL\u00e2\u20ac\u201cgeneralized ESD combination.\n\n## Reproducibility and limits\n\nLocal source screened: the one named literature log, sections \u00e2\u20ac\u0153Local literature\u00e2\u20ac\ufffd and \u00e2\u20ac\u0153Foreign literature.\u00e2\u20ac\ufffd Selection rule: audit one precise quantitative diesel claim and one central method claim. Local lookup strings: `Supplying not electrified`, `diesel fuel efficiencies`, `Fast RobustSTL`, `generalized ADMM`. Two entries selected; no external search or deduplication. This ledger confirms what the log says, **not** whether the cited publications say it. No claim above is cleared for source-verified research prose.\n"}], "grading": {"expectations": [{"text": "Records source identifiers or URLs", "passed": true, "evidence": "Looked for an identifier, DOI, URL, or source-item reference."}, {"text": "Does not mark log summaries as verified source passages", "passed": true, "evidence": "Checked for explicit unverified status and absence of a claim that the log itself verifies the source."}, {"text": "Names a concrete verification gap", "passed": true, "evidence": "Looked for a specific next verification action."}], "summary": {"passed": 3, "failed": 0, "total": 3, "pass_rate": 1.0}}}, {"id": "eval-0-evidence-research-1-without_skill", "prompt": "Audit two claims in the diesel literature log using only the local log. Return an evidence ledger and identify which citations still need source-level verification.", "eval_id": 0, "outputs": [{"name": "output.md", "type": "text", "content": "# Bounded evidence audit: two literature-log claims\n\n## Scope and status\n\nInput: `docs/activities/litReview/LITERATURE_LOG.md` only. I did not open the cited papers, resolve DOIs, or inspect underlying data. The log is a secondary account written for the thesis; presence in it is **not source-level verification**. No unpublished data were used.\n\n| Claim in the log | Local evidence ledger | Assessment from this input | Source-level verification still needed |\n| --- | --- | --- | --- |\n| The Supapo et al. (2022) study models Araceli, Balabac, and Cuyo diesel/hybrid pathways using load demand and generator operating hours; the log then says it documents how those plants \u00e2\u20ac\u0153run today\u00e2\u20ac\ufffd and frames efficiency monitoring. | Local literature item 2, lines 13\u00e2\u20ac\u201c14. The entry supplies a title, authors, year, and DOI `10.3390/en15134794`, followed by the characterization. No methods, tables, study period, or quoted passage from the article appears in the log. | **Reported by the log; unverified at source level.** The first clause is a testable description of the article. \u00e2\u20ac\u0153Run today\u00e2\u20ac\ufffd and applicability to NPC-SPUG efficiency monitoring are the log writer\u00e2\u20ac\u2122s interpretation; the study's scenario inputs may be historical or modeled. The log alone cannot establish current operating conditions or plant-level efficiency evidence. | Resolve the DOI and compare the publisher record with the cited metadata. Read the paper's study area, input-data years, generator-hours definitions, and data sources. Check whether the three municipalities and NPC-SPUG plants are actually represented, and narrow \u00e2\u20ac\u0153today\u00e2\u20ac\ufffd to the documented period. Record page/table locations before citing specific operating facts. |\n| Bertheau (2020) reports diesel fuel-use figures of about 0.26\u00e2\u20ac\u201c0.83 L/kWh across Philippine small-island grids; the log uses them to motivate efficiency-anomaly monitoring. | Local literature item 3, lines 15\u00e2\u20ac\u201c16. The entry supplies a title, author, year, and DOI `10.1016/j.energy.2020.117670`, followed by the numerical range. It gives no table, sample definition, calculation, or quotation. | **Numerical claim reported by the log; unverified at source level.** The units are L/kWh, which describe specific fuel consumption/fuel intensity; calling the values \u00e2\u20ac\u0153fuel efficiencies\u00e2\u20ac\ufffd could obscure direction of interpretation. The link to fault-linked anomaly detection is a thesis rationale, not a demonstrated result in this entry. | Resolve the DOI and inspect the full paper and any supplement. Locate the exact 0.26 and 0.83 endpoints, units, population, and whether they are measured, assumed, or modeled. Verify that the range applies to the stated Philippine island grids. Cite the exact table/page and describe the measure consistently as L/kWh if confirmed. |\n\nBoth citations require source-level verification before either claim is presented as a finding of the cited work. The log supports only that these claims and citation strings were recorded locally.\n"}], "grading": {"expectations": [{"text": "Records source identifiers or URLs", "passed": true, "evidence": "Looked for an identifier, DOI, URL, or source-item reference."}, {"text": "Does not mark log summaries as verified source passages", "passed": false, "evidence": "Checked for explicit unverified status and absence of a claim that the log itself verifies the source."}, {"text": "Names a concrete verification gap", "passed": true, "evidence": "Looked for a specific next verification action."}], "summary": {"passed": 2, "failed": 1, "total": 3, "pass_rate": 0.6666666666666666}}}, {"id": "eval-1-evidence-research-2-with_skill", "prompt": "Screen the hydroponic proposal's bibliography for sources relevant to sensor reliability; a cited DOI may be wrong. Return status and next verification actions without browsing.", "eval_id": 1, "outputs": [{"name": "output.md", "type": "text", "content": "# Local-only screen: hydroponic proposal bibliography for sensor reliability\n\nDate: 2026-09-28  \nScope: `docs/activities/litReview/docs/TS31_Django_FeasibilityStudy_TargetTitles (1).md`, hydroponics section only (lines 25\u00e2\u20ac\u201c45). No browsing, DOI resolution, article opening, or unpublished client data. All author, title, year, venue, and identifier details below are **bibliography entries as written**, not independently verified metadata.\n\n## Screening question and rule\n\nWhich of the eight hydroponic bibliography entries is a plausible lead for the proposal\u00e2\u20ac\u2122s line 29 assertion that missing data, drift, bias, faults, noisy readings, and maintenance gaps threaten hydroponic sensor analytics? Title and citation alone permit **lead screening**; they do not verify that any work documents those specific problems. Include a lead when its title concerns hydroponic sensing or IoT time-series anomaly detection. Exclude it as direct evidence when its title concerns only adoption or broad agricultural digitalization.\n\n## Screened bibliography\n\n| ID | Bibliography entry, shortened exactly to identifying metadata as listed | Sensor-reliability relevance from title alone | Local verification status and next action |\n| --- | --- | --- | --- |\n| H1 | DOST-PCAARRD (n.d.), *IoT-smart greenhouse hydroponics for lettuce makes its way to farm enterprise*; PCAARRD URL listed. | **Context only.** Hydroponic IoT deployment; title does not indicate drift, fault, missingness, or maintenance evidence. | URL and contents unverified. Check the official page only if background on an existing deployment is needed; do not cite it for the line 29 reliability claim without a directly supporting passage. |\n| H2 | Belay et al. (2023), *Unsupervised anomaly detection for IoT-based multivariate time series: Existing solutions, performance analysis and future directions*, *Sensors, 23*, 1\u00e2\u20ac\u201c25; **no DOI listed**. | **Indirect method lead.** Could discuss data quality or sensor faults, but the title does not establish either or hydroponic specificity. | Metadata and contents unverified; the entry is incomplete for author and identifier checks. Find the exact publication record from title, verify authors/volume/article number/DOI if any, then read the relevant passage. |\n| H3 | Cook, M\u00c4\u00b1s\u00c4\u00b1rl\u00c4\u00b1, and Fan (2020), *Anomaly detection for IoT time-series data: A survey*, *IEEE Internet of Things Journal, 7*(7), 6481\u00e2\u20ac\u201c6494; DOI **as listed** `10.1109/JIOT.2019.2958185`. | **Indirect method lead.** IoT time-series anomalies may include sensor faults, but the title does not prove coverage of the proposal\u00e2\u20ac\u2122s six reliability issues. | DOI, metadata, and contents unverified. Resolve the DOI and independently compare its title/authors/venue/year; **do not assume the cited DOI belongs to this entry**. Read the article section that actually discusses data quality or sensor errors, if present. |\n| H4 | Chatterjee and Ahmed (2022), *IoT anomaly detection methods and applications: A survey*, *Internet of Things, 19*, 100568; DOI **as listed** `10.1016/j.iot.2022.100568`. | **Indirect method lead.** Broad anomaly-detection review; no title-level proof of hydroponic sensor reliability. | DOI, metadata, and contents unverified. Resolve DOI, compare the returned publication metadata field by field, then check a relevant passage before using it for any particular fault or drift assertion. |\n| H5 | Apostol et al. (2021), *Change point enhanced anomaly detection for IoT time series data*, *Water, 13*; **no DOI listed**. | **Indirect method lead.** Change-point detection may inform a drift-screening design; the title does not show performance for hydroponic sensors or establish maintenance gaps. | Metadata and contents unverified; incomplete author and volume/article details. Identify the exact record and DOI if any, then read its data, anomaly definitions, and evaluation before citing for a reliability claim. |\n| H6 | Department of Agriculture (2025), *DA, DENSO PH ink MOU to boost PH's high-value crops with cutting-edge technologies*; DA URL listed. | **Exclude as direct reliability evidence.** Partnership/adoption topic, no sensor quality indicated by title. | URL and contents unverified. Use only for contextual policy/adoption if the official page supports it. |\n| H7 | Philippine Institute for Development Studies (2023), *Transforming Philippine agri-food systems with digital technology: Extent, prospects, and inclusiveness*; PIDS URL listed. | **Exclude as direct reliability evidence.** Broad digital agriculture topic. | URL and contents unverified. Check report if broad context is needed; do not use for device-level reliability without a specific passage. |\n| H8 | UP Diliman Office of the Vice President for Academic Affairs (2025), *A hybrid Internet of Things-based smart system performs better than a pure wireless sensor in monitoring indoor hydroponics farms*; UP URL listed. | **Closest domain lead.** Hydroponic monitoring and a comparison appear in the title; the metric, sensor failure modes, and maintenance observations are unknown. | URL, title claim, and underlying research unverified. Read the university page, identify and obtain the primary study it describes, then check what \u00e2\u20ac\u0153performs better\u00e2\u20ac\ufffd measures and whether faults, drift, missing data, or maintenance are actually reported. |\n\n## Decision and gaps\n\nEight entries screened: six retained as possible leads (H1\u00e2\u20ac\u201cH5 and H8), and two excluded as direct sensor-reliability evidence (H6\u00e2\u20ac\u201cH7). Of the six retained, **H8 is the strongest domain lead**; H2\u00e2\u20ac\u201cH5 are indirect method leads, and H1 is deployment context. **Zero entries have source-level verification** under the local-only constraint. The proposal\u00e2\u20ac\u2122s line 29 claim about faulty performance, missing data, and maintenance gaps has no explicit citation-to-passage mapping in this document, so it is **not yet substantiated** by this screen.\n\nBefore using any listed work to support that sentence, verify identifiers and bibliographic fields against authoritative records, open the primary full text where possible, and record the exact page, section, table, or figure for each particular failure mode. If a DOI resolves to different metadata or fails to resolve, quarantine that citation and search by exact title rather than silently repairing or reusing the DOI. Separately validate client/site sensor logs, calibration and maintenance records, timestamps, and missingness before making facility-specific claims; no such data was accessed here.\n\n## Reproducibility\n\nSource searched: only the named local proposal. Local terms used to locate the section: `hydroponic`, `sensor reliability`, `sensor fault`, `drift`, `missing data`, `References`. Screened every entry in its line 45 bibliography; no date or publication-type exclusion. No duplicate or DOI validation was possible from the local document alone.\n"}], "grading": {"expectations": [{"text": "Separates leads from verified claims", "passed": true, "evidence": "Looked for explicit unverified status and a relevance screen."}, {"text": "Does not invent citation metadata", "passed": true, "evidence": "Checked that citation identity remains unverified rather than repaired by assertion."}, {"text": "Reports reproducible screening scope", "passed": true, "evidence": "Looked for named input/scope and an explicit screening boundary."}], "summary": {"passed": 3, "failed": 0, "total": 3, "pass_rate": 1.0}}}, {"id": "eval-1-evidence-research-2-without_skill", "prompt": "Screen the hydroponic proposal's bibliography for sources relevant to sensor reliability; a cited DOI may be wrong. Return status and next verification actions without browsing.", "eval_id": 1, "outputs": [{"name": "output.md", "type": "text", "content": "# Bounded source screen: hydroponic sensor reliability\n\n## Scope and status\n\nInput: the hydroponics section of `docs/activities/litReview/docs/TS31_Django_FeasibilityStudy_TargetTitles (1).md`, especially the technical-feasibility claim at line 29 and its eight-item bibliography at lines 44\u00e2\u20ac\u201c45. This is a title-and-citation screen of the local proposal, with **no browsing, DOI resolution, or full-text reading**. All bibliographic identities and content claims remain unverified. No raw unpublished data were used.\n\nThe proposal claims that missing data, drift, bias, faults, noisy readings, and maintenance gaps threaten hydroponic monitoring. Its bibliography does not identify which source supports each part of that claim. A source's title may indicate relevance, but it is not evidence that the source reports those specific failures.\n\n| Listed source | Relevance to sensor reliability from citation alone | Verification status and next action |\n| --- | --- | --- |\n| DOST-PCAARRD, *IoT-smart greenhouse hydroponics for lettuce makes its way to farm enterprise* (n.d.) | Hydroponic deployment context; no reliability finding evident from the title. | **Unverified.** Open the institutional item, confirm date and authorship, and look for explicit sensor accuracy, calibration, missingness, or maintenance observations. Use only for context if none appear. |\n| Belay et al. (2023), *Unsupervised anomaly detection for IoT-based multivariate time series: Existing solutions, performance analysis and future directions*, *Sensors, 23*, 1\u00e2\u20ac\u201c25 | Indirect: may cover noisy or faulty IoT signals and preprocessing; no hydroponic setting apparent. Citation lacks DOI/article number. | **Unverified identity and content.** Locate the publisher record from title/authors; correct volume, article number/pages, and DOI if any. Read relevant sections before connecting it to any named sensor failure. |\n| Cook, M\u00c4\u00b1s\u00c4\u00b1rl\u00c4\u00b1, and Fan (2020), *Anomaly detection for IoT time-series data: A survey*, *IEEE Internet of Things Journal, 7*(7), 6481\u00e2\u20ac\u201c6494, DOI `10.1109/JIOT.2019.2958185` | Indirect IoT anomaly-detection background; not hydroponic-specific by title. | **DOI, metadata, and content unverified.** Resolve the DOI at the publisher/Crossref and compare title, authors, year, volume, issue, and pages. If it points elsewhere, correct or remove the citation before use. Read the paper for specific sensor-fault discussion. |\n| Chatterjee and Ahmed (2022), *IoT anomaly detection methods and applications: A survey*, *Internet of Things, 19*, 100568, DOI `10.1016/j.iot.2022.100568` | Indirect IoT anomaly-detection background. | **DOI, metadata, and content unverified.** Resolve and cross-check the article identifier and authors; inspect for the claimed drift, bias, or missing-data discussion. Treat a mismatched DOI as a citation error, not proof of the proposed claim. |\n| Apostol et al. (2021), *Change point enhanced anomaly detection for IoT time series data*, *Water, 13* | Potentially relevant to change-point methods and sensor behavior; title does not establish hydroponic sensor reliability. Citation lacks issue/article number and DOI. | **Unverified identity and content.** Locate the journal record, complete the citation, and check whether it addresses measurement faults versus process changes. |\n| Department of Agriculture (2025), *DA, DENSO PH ink MOU to boost PH's high-value crops with cutting-edge technologies* | Agriculture technology context only; no reliability content apparent from title. | **Unverified.** Check the institutional page. Do not use as support for sensor failure modes absent an explicit relevant statement. |\n| Philippine Institute for Development Studies (2023), *Transforming Philippine agri-food systems with digital technology: Extent, prospects, and inclusiveness* | Broad digitization context; no specific sensor-reliability finding apparent. | **Unverified.** Check report identity and relevant passages; otherwise use only for context. |\n| UP Diliman OVPAA (2025), *A hybrid Internet of Things-based smart system performs better than a pure wireless sensor in monitoring indoor hydroponics farms* | Closest hydroponic monitoring comparison in the list, but the title alone gives no failure-rate, drift, calibration, or missing-data evidence. | **Unverified.** Open the university summary, trace it to the underlying study, and check what \u00e2\u20ac\u0153performs better\u00e2\u20ac\ufffd measures. Cite the primary study for sensor reliability if it actually reports it. |\n\n## Screening decision\n\n**No listed citation is yet verified support** for the full sensor-reliability sentence. The two IoT survey DOIs are citation strings only and could be wrong. First resolve every candidate's identity; then inspect primary hydroponic studies or technical evaluations for explicit pH/EC/temperature sensor drift, calibration, missingness, fault, and maintenance findings. Build a claim-to-passage ledger with page/section and setting for each retained claim. If none supports a failure mode, narrow the proposal language or add a verified source before citing it.\n"}], "grading": {"expectations": [{"text": "Separates leads from verified claims", "passed": true, "evidence": "Looked for explicit unverified status and a relevance screen."}, {"text": "Does not invent citation metadata", "passed": true, "evidence": "Checked that citation identity remains unverified rather than repaired by assertion."}, {"text": "Reports reproducible screening scope", "passed": true, "evidence": "Looked for named input/scope and an explicit screening boundary."}], "summary": {"passed": 3, "failed": 0, "total": 3, "pass_rate": 1.0}}}, {"id": "eval-2-quantitative-analysis-1-with_skill", "prompt": "Evaluate whether the hydroponic feasibility document contains data suitable for zone anomaly analysis. Do not infer a result from its target row count.", "eval_id": 2, "outputs": [{"name": "output.md", "type": "text", "content": "# Hydroponic zone anomaly analysis: data feasibility\n\n## Decision\n\nThe feasibility study supports a **conditional plan** for multi-zone anomaly analysis, but analysis is **not currently possible from this document alone**. It provides no zone-level sensor export or operational event records. The study itself says that no facility or dataset has been confirmed and rates dataset feasibility 2/5 ([feasibility study, lines 148\u00e2\u20ac\u201c152](../../../docs/activities/litReview/docs/TS31_Django_FeasibilityStudy_TargetTitles%20(1).md)). Its proposed 10,000+ zone-time records are a collection target, not an observed sample size ([line 31](../../../docs/activities/litReview/docs/TS31_Django_FeasibilityStudy_TargetTitles%20(1).md)). No anomaly count, score, rate, effect size, or test result can be calculated.\n\n## Required data and checks\n\nThe proposed observational unit is one **zone \u00c3\u2014 timestamp \u00c3\u2014 multivariate sensor/operational state** ([line 31](../../../docs/activities/litReview/docs/TS31_Django_FeasibilityStudy_TargetTitles%20(1).md)). To assess whether those observations support the intended comparisons, obtain an authorized sample export and data dictionary with:\n\n- A stable facility and zone identifier; confirmation that at least three zones are operationally distinct and reasonably comparable.\n- Timestamp, time zone, logging interval, historical start/end dates, and synchronization method across sensors and zones. Document duplicate, missing, and misaligned timestamps.\n- Actual available sensor measurements, including the study's candidate pH, EC/TDS, nutrient-solution temperature, water level, and any humidity data; units, sensor IDs, calibration/maintenance history, valid ranges, and missing or fault codes.\n- Operational context with timestamps and zone/asset links where available: pump activity, dosing, water replacement, maintenance, interventions, crop stage, equipment status, and historical alerts. These factors may explain shifts that should not automatically be called anomalies ([project overview, line 27](../../../docs/activities/litReview/docs/TS31_Django_FeasibilityStudy_TargetTitles%20(1).md)).\n- Event definitions and operator-reviewed records, if alert usefulness, false alarms, detection delay, or anomaly recall are to be evaluated. Record the reviewed period and denominator, including what remains unlabeled.\n- Data-access permission and export format, coverage, retention, missingness, and sensor-fault/drift information. The proposal explicitly calls for these validation steps before zone comparison or scoring ([lines 29\u00e2\u20ac\u201c31](../../../docs/activities/litReview/docs/TS31_Django_FeasibilityStudy_TargetTitles%20(1).md)).\n\nOnce an authorized extract exists, first audit coverage and quality by zone and time, align comparable measurements, distinguish sensor faults from operational events, and define baseline/training and evaluation periods before estimating zone consistency or anomaly performance. Any such result would need its actual observed denominator and validation method. This document permits only the feasibility judgment above.\n"}], "grading": {"expectations": [{"text": "States data are missing or unconfirmed", "passed": true, "evidence": "Looked for an explicit absence/unconfirmed statement about sensor data."}, {"text": "Does not present fabricated statistics", "passed": true, "evidence": "Looked for a clear limit on calculated results."}, {"text": "Lists variables, units, and time or grouping requirements", "passed": true, "evidence": "Looked for sensor variables/units and time or zone grouping needs."}], "summary": {"passed": 3, "failed": 0, "total": 3, "pass_rate": 1.0}}}, {"id": "eval-2-quantitative-analysis-1-without_skill", "prompt": "Evaluate whether the hydroponic feasibility document contains data suitable for zone anomaly analysis. Do not infer a result from its target row count.", "eval_id": 2, "outputs": [{"name": "output.md", "type": "text", "content": "# Baseline evaluation 1: Hydroponic zone anomaly analysis\n\n**Source:** `docs/activities/litReview/docs/TS31_Django_FeasibilityStudy_TargetTitles (1).md`, hydroponics proposal and final recommendation only. No raw data were available or analyzed.\n\n**Assessment:** The proposed analysis is technically plausible but cannot yet be performed or empirically evaluated. The study proposes a zone-by-timestamp multivariate record, zone baselines, cross-zone consistency scores, and prioritized anomaly alerts. It explicitly says the facility, data access, and dataset have not been confirmed; dataset feasibility is rated 2/5. Its conclusion is conditional on securing at least three operationally distinct zones and sufficient usable sensor and operational data. The suggested 10,000+ records are a collection target, not an observed sample size or evidence of performance.\n\n**Fields and evidence still needed:**\n\n- A real export with zone identifiers, timestamps and time zone, sensor identifiers, units, logging frequency, historical coverage, and enough overlapping records to compare at least three operationally meaningful zones.\n- Actual time series for the available measurements. The proposal names pH, EC/TDS, nutrient-solution temperature, and water level; it also mentions humidity and other contextual variables. Which of these are logged, at what quality and cadence, must be verified.\n- Operational context for interpretation and fair comparisons: pump activity, dosing, water replacement, maintenance and interventions, crop stage, equipment status, and historical alerts where available.\n- Data-quality evidence: missingness, timestamp alignment, implausible readings, sensor drift or faults, calibration/maintenance history, and any changes in logging or zone operation.\n- Event records or operator review of flagged periods to judge alert usefulness and false alarms. The proposal notes that anomaly labels may be limited and operator confirmation is needed.\n- Written permission, data dictionary, and a sample extract to establish access and the meaning of each field.\n\n**Permissible conclusion now:** A conditional feasibility judgment and a data-validation plan. No anomaly rate, zone ranking, detection accuracy, false-alarm reduction, or intervention effect can be calculated from this proposal alone. Bibliography entries support background rationale, not a measured result for this facility.\n"}], "grading": {"expectations": [{"text": "States data are missing or unconfirmed", "passed": true, "evidence": "Looked for an explicit absence/unconfirmed statement about sensor data."}, {"text": "Does not present fabricated statistics", "passed": true, "evidence": "Looked for a clear limit on calculated results."}, {"text": "Lists variables, units, and time or grouping requirements", "passed": true, "evidence": "Looked for sensor variables/units and time or zone grouping needs."}], "summary": {"passed": 3, "failed": 0, "total": 3, "pass_rate": 1.0}}}, {"id": "eval-3-quantitative-analysis-2-with_skill", "prompt": "Review a toy report claiming 12 events out of 80 are 12% and a script that exits with an error. Explain what results can be accepted and what must be rerun.", "eval_id": 3, "outputs": [{"name": "output.md", "type": "text", "content": "# Review of hydroponic anomaly claim and analysis script\n\n## Claim check\n\nThe draft says an intervention \u00e2\u20ac\u0153reduced anomalies by 12% (12 events out of 80 observations)\u00e2\u20ac\ufffd and \u00e2\u20ac\u0153proves the model works\u00e2\u20ac\ufffd ([qa_draft.md](qa_draft.md)). The stated fraction is **12 \u00c3\u00b7 80 = 0.15 = 15%**, not 12%. This is only arithmetic on the draft's unverified counts. If the 12 events and 80 observations were valid and comparably defined, they would describe an event proportion; they would not establish a *reduction*.\n\nA reduction needs a specified baseline or comparison condition, its event count and observation denominator, aligned exposure/time windows, a defined anomaly and intervention, and an analysis that accounts for relevant zone and time structure. Evidence that a model works also needs validated alerts or outcomes and prespecified evaluation metrics. The draft provides none of these. A bibliography entry in the feasibility proposal cannot validate the draft's local counts or intervention effect; the proposal itself says no hydroponic facility or dataset had yet been confirmed ([feasibility study, line 152](../../../docs/activities/litReview/docs/TS31_Django_FeasibilityStudy_TargetTitles%20(1).md)).\n\n## Execution check\n\nI inspected the supplied script before running it. It contains fixed assignments (`events = 12`, `observations = 80`, `claimed_percent = 12`) followed by an unconditional `RuntimeError`, and it reads no dataset ([failing_analysis.py](failing_analysis.py)). Running `python .agents/evals/research-team/failing_analysis.py` with Python 3.14.7 exited with code 1 at line 6: `RuntimeError: simulated analysis failure before result validation`. The run produced no validated analytical result.\n\n## Disposition\n\nReject the claimed **12% reduction**, any claim that the model is proven effective, and any anomaly-performance result attributed to this script. The draft's 12/80 inputs are unverified; only their arithmetic implication of 15% can be stated, clearly labeled as conditional. Obtain authorized underlying observations, comparison data, definitions, and a successful reproducible analysis before reporting an effect or model metric.\n"}], "grading": {"expectations": [{"text": "Recomputes 12/80 as 15%", "passed": true, "evidence": "Looked for the correct ratio result."}, {"text": "Flags code failure", "passed": true, "evidence": "Looked for explicit failed execution evidence."}, {"text": "Does not claim successful execution", "passed": true, "evidence": "Checked for claims of successful execution."}], "summary": {"passed": 3, "failed": 0, "total": 3, "pass_rate": 1.0}}}, {"id": "eval-3-quantitative-analysis-2-without_skill", "prompt": "Review a toy report claiming 12 events out of 80 are 12% and a script that exits with an error. Explain what results can be accepted and what must be rerun.", "eval_id": 3, "outputs": [{"name": "output.md", "type": "text", "content": "# Baseline evaluation 2: QA draft and failing analysis\n\n**Inputs reviewed:** `.agents/evals/research-team/qa_draft.md` and `failing_analysis.py`. No raw observations, baseline period, comparison group, or validated event log were provided.\n\n**Arithmetic check:** 12 events divided by 80 observations is **15%**, not 12%. This is only a ratio of the numbers asserted in the draft; those counts have not been verified. A percentage of observations containing events is also not a *reduction*. A reduction needs a defined comparator, comparable exposure/observation windows, and a specified calculation.\n\n**Execution check:** The script contains fixed variables (`events = 12`, `observations = 80`, `claimed_percent = 12`) and then raises `RuntimeError(\"simulated analysis failure before result validation\")`. Running `python .agents/evals/research-team/failing_analysis.py` exited with code 1 at line 6 and produced that traceback. It reads no dataset and produces no validated result.\n\n**Claims that cannot be accepted:** The claimed 12% reduction, the implication that 12/80 supports it, and the statement that this proves the model works. The cited bibliography entry in a feasibility proposal cannot confirm an intervention outcome in these observations. The draft supplies no reproducible analysis or evidence of anomaly labels, a before/after or control comparison, model performance, uncertainty, or causal attribution. The only defensible numeric statement is the conditional arithmetic: **if** 12 of 80 observations are events, their proportion is 15%; it is not a verified study result.\n"}], "grading": {"expectations": [{"text": "Recomputes 12/80 as 15%", "passed": true, "evidence": "Looked for the correct ratio result."}, {"text": "Flags code failure", "passed": true, "evidence": "Looked for explicit failed execution evidence."}, {"text": "Does not claim successful execution", "passed": true, "evidence": "Checked for claims of successful execution."}], "summary": {"passed": 3, "failed": 0, "total": 3, "pass_rate": 1.0}}}, {"id": "eval-4-research-writing-1-with_skill", "prompt": "Draft a short background paragraph from the diesel literature log only. Mark every citation as unverified until its original source is checked.", "eval_id": 4, "outputs": [{"name": "output.md", "type": "text", "content": "# Research background draft\n\n**Provisional draft.** The literature log places the proposed Palawan NPC-SPUG study in a Philippine off-grid electricity setting where diesel generation remains relevant (Salac et al., 2024; National Power Corporation, 2025 \u00e2\u20ac\u201d **both citations unverified**). It describes Palawan island studies that consider generator operating hours and diesel or hybrid supply pathways (Supapo et al., 2022; Pacaldo et al., 2022 \u00e2\u20ac\u201d **both citations unverified**). For the proposed analysis, the log identifies seasonal-trend decomposition and generalized extreme Studentized deviate testing as candidate ways to isolate and flag unusual observations (Wen et al., 2020; ASTM D7915-22, 2022 \u00e2\u20ac\u201d **both citations unverified**). These sources motivate examining efficiency time series alongside plant event logs; they do not establish that a detected anomaly is caused by a fault or that the proposed method will perform well on the study data.\n\n## Claim map\n\n| Claim | Local support in `docs/activities/litReview/LITERATURE_LOG.md` | Status |\n| --- | --- | --- |\n| C1: Diesel generation is relevant to the off-grid setting. | Local literature 1, 4 | Summaries only; both original sources and citation metadata unverified. |\n| C2: Palawan island work considers operating hours and diesel or hybrid pathways. | Local literature 2; Local studies 4 | Summaries only; both original sources and citation metadata unverified. |\n| C3: Decomposition and generalized ESD are proposed candidate methods. | Foreign literature 1, 2 | Method descriptions and both citations unverified against originals. |\n| C4: Anomaly flags cannot by themselves establish fault causality or performance on these plants. | Inference limiting the proposed study; no empirical result asserted. | Requires study design and data for evaluation. |\n\n## Unresolved inputs\n\n- Open each cited original source and verify the exact supporting passage, bibliographic metadata, and applicability before using this paragraph as thesis background.\n- Obtain the study protocol, operational data definition, and event-log linkage plan before making any claim about actual anomalies or faults.\n"}], "grading": {"expectations": [{"text": "Provides a claim map", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Does not assert unverified citations as confirmed", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Avoids invented results", "passed": true, "evidence": "Checked directly against the saved output text."}], "summary": {"passed": 3, "failed": 0, "total": 3, "pass_rate": 1.0}}}, {"id": "eval-4-research-writing-1-without_skill", "prompt": "Draft a short background paragraph from the diesel literature log only. Mark every citation as unverified until its original source is checked.", "eval_id": 4, "outputs": [{"name": "output.md", "type": "text", "content": "# Research background draft (baseline 1)\n\nThe literature log places the proposed study in Philippine off-grid electricity systems where diesel generation remains relevant, and identifies Palawan island operations as a setting for examining generator performance [Salac et al., 2024; Supapo et al., 2022 \u00e2\u20ac\u201d **unverified citations**]. It also describes seasonal-trend decomposition as a way to separate time-series components and generalized extreme Studentized deviate testing as a procedure for identifying multiple outliers [Wen et al., 2020; ASTM D7915-22 \u00e2\u20ac\u201d **unverified citations**]. These entries motivate testing whether efficiency residuals can flag periods for fault review in Palawan NPC-SPUG plants; they do not establish that this combined method detects faults there.\n\n## Claim map\n\n| Claim | Basis in the supplied literature log | Status / limit |\n| --- | --- | --- |\n| Philippine off-grid diesel context | \u00e2\u20ac\u0153Local literature,\u00e2\u20ac\ufffd Salac et al. (2024) entry | Secondary summary only; citation and underlying claim unverified until the original source is checked. |\n| Palawan island diesel-operation setting | \u00e2\u20ac\u0153Local literature,\u00e2\u20ac\ufffd Supapo et al. (2022) entry | Secondary summary only; citation and setting details unverified until the original source is checked. |\n| Decomposition separates time-series components | \u00e2\u20ac\u0153Foreign literature,\u00e2\u20ac\ufffd Wen et al. (2020) entry | Method description and citation unverified until the original source is checked. |\n| Generalized ESD identifies multiple outliers | \u00e2\u20ac\u0153Foreign literature,\u00e2\u20ac\ufffd ASTM D7915-22 entry | Standard description and citation unverified until the original standard is checked. |\n| Efficiency residuals might help flag periods for fault review | Proposed thesis linkage in those entries | Research rationale, not an empirical finding or demonstrated fault-detection result. |\n\nSource used: [LITERATURE_LOG.md](../../../docs/activities/litReview/LITERATURE_LOG.md). No original articles or standard were checked.\n"}], "grading": {"expectations": [{"text": "Provides a claim map", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Does not assert unverified citations as confirmed", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Avoids invented results", "passed": true, "evidence": "Checked directly against the saved output text."}], "summary": {"passed": 3, "failed": 0, "total": 3, "pass_rate": 1.0}}}, {"id": "eval-5-research-writing-2-with_skill", "prompt": "Draft a hydroponic feasibility paragraph from the repository proposal without access to sensor records.", "eval_id": 5, "outputs": [{"name": "output.md", "type": "text", "content": "# Conditional hydroponic feasibility draft\n\n**Proposal-stage draft.** The proposed multi-zone hydroponic analytics study could be feasible if a partner facility grants written access to at least three operationally distinct zones and supplies usable, time-aligned sensor and operational records. The planned work would use those records to build zone baselines, compare cross-zone consistency, and prioritize alerts for operator review; the existing sensor infrastructure is assumed, not confirmed. Feasibility remains conditional on checking the available variables, logging frequency and coverage, missingness, timestamp quality, event logs, data-use terms, and operator participation. Without those checks, the proposed 10,000 or more zone-time observations and the usefulness of anomaly alerts remain targets rather than demonstrated results.\n\n## Claim map\n\n| Claim | Local support in `docs/activities/litReview/docs/TS31_Django_FeasibilityStudy_TargetTitles (1).md` | Status |\n| --- | --- | --- |\n| C1: Access to at least three distinct zones and usable records is a condition. | Agriculture, Dataset and Data Feasibility; Risk Assessment and Feasibility Conclusion | Proposal condition; no facility or sensor records confirmed. |\n| C2: Zone baselines, consistency scores, and prioritized alerts are planned outputs. | Agriculture, Project Overview; Operational Feasibility | Planned design, not an implemented or evaluated system. |\n| C3: Existing sensors are assumed. | Agriculture, Project Overview; Economic Feasibility | Client infrastructure and access unverified. |\n| C4: Data quality, event logs, permission, and operator participation require checks. | Agriculture, Technical and Technology Feasibility; Dataset and Data Feasibility; Legal and Ethical Feasibility; Operational Feasibility | Unresolved site validation. |\n| C5: 10,000+ zone-time observations is a target, not a result. | Agriculture, Dataset and Data Feasibility; Risk Assessment and Feasibility Conclusion | Projection only; no sensor records reviewed. |\n\n## Unresolved inputs\n\n- Partner identity, written access and data-use terms, zone definitions, sensor inventory, and sample export.\n- Logging interval, historical coverage, timestamp synchronization, missingness, calibration or drift history, and operational event records.\n- Operator availability for alert review and criteria for judging useful or false alerts.\n"}], "grading": {"expectations": [{"text": "States absence of observed sensor analysis", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Preserves proposal status", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Lists unresolved inputs", "passed": true, "evidence": "Checked directly against the saved output text."}], "summary": {"passed": 3, "failed": 0, "total": 3, "pass_rate": 1.0}}}, {"id": "eval-5-research-writing-2-without_skill", "prompt": "Draft a hydroponic feasibility paragraph from the repository proposal without access to sensor records.", "eval_id": 5, "outputs": [{"name": "output.md", "type": "text", "content": "# Hydroponic feasibility draft (baseline 2)\n\nThe proposed multi-zone hydroponic analytics study is feasible **only if** a partner grants written access to an existing facility with at least three operationally distinct zones and supplies enough usable, time-aligned sensor and operational records for zone comparisons. The feasibility study proposes 10,000 or more meaningful zone-time observations as a target, plus preprocessing for missing readings, drift, and sensor faults; that count and the usefulness of the records remain unconfirmed. A prioritized-alert workflow also depends on an operator who can review events, while the planned schedule calls for partner and data validation by early Semester 2. Without verified access, data quality, and operator participation, feasibility remains a conditional proposal rather than a demonstrated result.\n\n## Claim map\n\n| Claim | Basis in supplied feasibility study | Status / limit |\n| --- | --- | --- |\n| Existing facility and at least three distinct zones are required | Agriculture topic, \u00e2\u20ac\u0153Dataset and Data Feasibility\u00e2\u20ac\ufffd and \u00e2\u20ac\u0153Risk Assessment and Feasibility Conclusion\u00e2\u20ac\ufffd | Proposed prerequisite; no facility confirmed. |\n| Written access and governance are required | Agriculture topic, \u00e2\u20ac\u0153Legal and Ethical Feasibility\u00e2\u20ac\ufffd | Proposed prerequisite; no agreement inspected. |\n| 10,000+ meaningful zone-time observations are a target | Agriculture topic, \u00e2\u20ac\u0153Dataset and Data Feasibility\u00e2\u20ac\ufffd and \u00e2\u20ac\u0153Feasibility Study Conclusion\u00e2\u20ac\ufffd | Projection only; no sensor records examined. |\n| Data alignment and sensor screening precede comparisons | Agriculture topic, \u00e2\u20ac\u0153Technical and Technology Feasibility\u00e2\u20ac\ufffd | Proposed analytic workflow, not a validated pipeline. |\n| Operator event review and early Semester 2 data validation matter | Agriculture topic, \u00e2\u20ac\u0153Operational Feasibility\u00e2\u20ac\ufffd and \u00e2\u20ac\u0153Schedule Feasibility\u00e2\u20ac\ufffd | Proposed workflow and milestone; participation and completion unconfirmed. |\n\n## Unresolved inputs\n\n- Partner identity, written permission, zone definitions, and data ownership terms.\n- Available variables, timestamps, logging frequency, historical span, missingness, drift, and event/maintenance logs.\n- Number of usable zone-time observations after quality checks, plus operator availability for alert review.\n\nSource used: [TS31_Django_FeasibilityStudy_TargetTitles (1).md](../../../docs/activities/litReview/docs/TS31_Django_FeasibilityStudy_TargetTitles%20(1).md). No sensor records or external sources were used.\n"}], "grading": {"expectations": [{"text": "States absence of observed sensor analysis", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Preserves proposal status", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Lists unresolved inputs", "passed": true, "evidence": "Checked directly against the saved output text."}], "summary": {"passed": 3, "failed": 0, "total": 3, "pass_rate": 1.0}}}, {"id": "eval-6-research-quality-review-1-with_skill", "prompt": "Review a draft that treats an unverified bibliography entry as proof and reports 12/80 as 12%. Return severity, evidence, and correction.", "eval_id": 6, "outputs": [{"name": "output.md", "type": "text", "content": "# QA review 1 \u00e2\u20ac\u201d hydroponic claim\n\n**Status: needs revision.** Scope: local draft and local feasibility proposal only. No underlying sensor observations, intervention records, or external articles were supplied or checked.\n\n| Severity | Location | Finding and evidence | Required correction |\n|---|---|---|---|\n| Critical | `qa_draft.md:1\u00e2\u20ac\u201c3`, citation assertion | The draft treats a bibliography entry in the feasibility proposal as confirmation of a measured reduction. The proposal's hydroponic section describes a *planned* pipeline and evaluation (`docs/activities/litReview/docs/TS31_Django_FeasibilityStudy_TargetTitles (1).md:27\u00e2\u20ac\u201c43`); its references at line 45 are background entries, not this facility's results. The final recommendation explicitly says no facility or dataset has been confirmed (line 152). The cited result is therefore unsupported, and the unspecified bibliography entry cannot be verified as claim-level evidence. | Remove the asserted empirical result and proof claim. Cite a directly checked source passage for background claims only. To report a local outcome, provide authorized primary observations and a traceable analysis, not a proposal reference. |\n| High | `qa_draft.md:1` | The stated arithmetic is wrong: `12 / 80 \u00c3\u2014 100 = 15%`, not 12%. The 12 events and 80 observations are draft assertions, not verified data. | If the counts are verified, report **15% of observations with events** with a defined denominator. Otherwise omit the numeric result. |\n| Critical | `qa_draft.md:1\u00e2\u20ac\u201c2` | A single event proportion does not measure a *reduction*, and it cannot prove that an intervention or model works. No before/after or control comparator, aligned exposure windows, anomaly definition, validated alerts, uncertainty estimate, or confounding assessment is supplied. The proposal itself lists evaluation metrics as future work (`:33`, `:43`). | Require a documented comparator and valid effect calculation before using \u00e2\u20ac\u0153reduced.\u00e2\u20ac\ufffd Require independent outcome or alert validation and suitably qualified interpretation before claiming effectiveness or causality. |\n\n**Permissible wording now:** \u00e2\u20ac\u0153The feasibility proposal outlines a hydroponic anomaly monitoring study, but no facility dataset or empirical intervention result has been confirmed.\u00e2\u20ac\ufffd If the 12 and 80 values are retained solely as an arithmetic example, label them hypothetical and state that they imply 15%, not a reduction.\n"}], "grading": {"expectations": [{"text": "Flags the unverified citation", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Recomputes 12/80 as 15%", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Provides severity and correction", "passed": true, "evidence": "Checked directly against the saved output text."}], "summary": {"passed": 3, "failed": 0, "total": 3, "pass_rate": 1.0}}}, {"id": "eval-6-research-quality-review-1-without_skill", "prompt": "Review a draft that treats an unverified bibliography entry as proof and reports 12/80 as 12%. Return severity, evidence, and correction.", "eval_id": 6, "outputs": [{"name": "output.md", "type": "text", "content": "# QA baseline \u00e2\u20ac\u201d case 1\n\n**Status: FAIL / hold the empirical claim.** The draft cannot be presented as a verified result.\n\n| Finding | Severity | Evidence | Required correction |\n| --- | --- | --- | --- |\n| The citation does not support the asserted reduction. | Critical | [`qa_draft.md`](qa_draft.md), lines 1\u00e2\u20ac\u201c3, relies on a bibliography entry in the local feasibility proposal. The proposal describes a *planned* analytics system and evaluation (lines 25\u00e2\u20ac\u201c35, 39, 43\u00e2\u20ac\u201c45). It explicitly says that no hydroponic facility or dataset has been confirmed (line 152). A reference list is not an observed result of this intervention. | Remove the empirical reduction claim. Cite the proposal only for the planned study and its data-access limitation. To report an outcome, provide the actual data, analysis, method, and a source that directly documents the result. |\n| \u00e2\u20ac\u015312 events out of 80 observations\u00e2\u20ac\ufffd is reported as 12%. | Major | Direct arithmetic: 12 \u00c3\u00b7 80 \u00c3\u2014 100 = **15%**. The numerator and denominator alone describe an event proportion, assuming they refer to a defined sample. | If the counts are verified, label the quantity **15% event proportion** and specify what an event and observation mean. Do not call it a reduction. |\n| \u00e2\u20ac\u0153The intervention reduced anomalies\u00e2\u20ac\ufffd and \u00e2\u20ac\u0153proving the model works\u00e2\u20ac\ufffd assert causal efficacy without a comparison or study design. | Critical | The draft supplies no baseline or control rate, observation period, event definition, uncertainty, or analysis of confounding. The proposal calls for future data acquisition and evaluation (lines 31\u00e2\u20ac\u201c43, 152). | Withdraw the causal and proof language. An anomaly reduction needs comparable before/after or control data and a defensible evaluation design; model performance needs prespecified metrics and validation on actual data. |\n\n**Safe replacement:** \u00e2\u20ac\u0153The local feasibility proposal outlines a planned multi-zone hydroponic anomaly-monitoring system. It reports that no hydroponic facility or dataset has yet been confirmed, so an empirical anomaly reduction or model-performance result cannot currently be claimed.\u00e2\u20ac\ufffd\n\n**Scope:** This review checks the local draft and proposal. It does not independently verify the proposal\u00e2\u20ac\u2122s bibliography, and no unpublished sensor data were accessed.\n"}], "grading": {"expectations": [{"text": "Flags the unverified citation", "passed": false, "evidence": "Checked directly against the saved output text."}, {"text": "Recomputes 12/80 as 15%", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Provides severity and correction", "passed": true, "evidence": "Checked directly against the saved output text."}], "summary": {"passed": 2, "failed": 1, "total": 3, "pass_rate": 0.6666666666666666}}}, {"id": "eval-7-research-quality-review-2-with_skill", "prompt": "Review a proposed hydroponic analysis that claims significance without sensor data and whose supplied code fails on execution. Return QA disposition.", "eval_id": 7, "outputs": [{"name": "output.md", "type": "text", "content": "# QA review 2 \u00e2\u20ac\u201d hydroponic claim and analysis script\n\n**Status: needs revision.** Scope: local `qa_draft.md`, `failing_analysis.py`, and the hydroponic feasibility proposal. No raw or unpublished sensor data were supplied or examined.\n\n| Severity | Location | Finding and evidence | Required correction or input |\n|---|---|---|---|\n| Critical | `qa_draft.md:1\u00e2\u20ac\u201c3`; proposal `docs/activities/litReview/docs/TS31_Django_FeasibilityStudy_TargetTitles (1).md:27\u00e2\u20ac\u201c45,152` | A proposal bibliography entry cannot confirm a site-specific anomaly reduction. The proposal says the facility and dataset are unconfirmed; its methods and metrics are planned. No primary event log, sensor dataset, or result table accompanies the draft. | Remove the empirical and proof claims pending authorized primary data, verified event definitions, and a reproducible comparison. Do not replace the unsupported result with another unverified citation. |\n| High | `qa_draft.md:1`; `failing_analysis.py:3\u00e2\u20ac\u201c5` | `12 / 80 = 0.15 = 15%`, not 12%. The script merely assigns `events = 12`, `observations = 80`, and `claimed_percent = 12`; it neither calculates nor validates a percentage. The counts are unverified. | Correct conditional arithmetic to 15% only if presenting an example; obtain source records before presenting it as an observed rate. |\n| Critical | `qa_draft.md:1\u00e2\u20ac\u201c2` | The draft labels an event proportion a reduction and claims the model is proved effective. No comparator, comparable observation periods, intervention attribution, validated anomaly labels, performance metrics, or uncertainty is available. | Supply baseline/comparison counts and denominators, intervention timing, anomaly definitions, operator validation, and an appropriate analysis before reporting a reduction or model performance. Qualify any causal conclusion to match the design. |\n| Critical | `failing_analysis.py:1\u00e2\u20ac\u201c6` | The supplied file identifies itself as a deliberately failing fixture. Executing `python -B .agents/evals/research-team/failing_analysis.py` exited **1** at line 6 with `RuntimeError: simulated analysis failure before result validation`. It produced no validated result or output artifact. | Provide a runnable analysis that reads authorized observations, checks inputs and denominators, computes the specified metric, and records reproducible outputs. Until it succeeds, no numerical or effectiveness claim can be accepted from this script. |\n\n**QA disposition:** Reject the draft result and the script as evidence of performance. The only established numerical fact is the arithmetic implication of the draft's hypothetical inputs: 12 of 80 equals 15%. The proposal supports a conditional feasibility assessment and data-validation plan, not an empirical outcome.\n"}], "grading": {"expectations": [{"text": "Flags missing data", "passed": false, "evidence": "Checked directly against the saved output text."}, {"text": "Flags failing code", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Returns needs revision or equivalent status", "passed": true, "evidence": "Checked directly against the saved output text."}], "summary": {"passed": 2, "failed": 1, "total": 3, "pass_rate": 0.6666666666666666}}}, {"id": "eval-7-research-quality-review-2-without_skill", "prompt": "Review a proposed hydroponic analysis that claims significance without sensor data and whose supplied code fails on execution. Return QA disposition.", "eval_id": 7, "outputs": [{"name": "output.md", "type": "text", "content": "# QA baseline \u00e2\u20ac\u201d case 2\n\n**Status: FAIL / result not validated.** Do not report the draft\u00e2\u20ac\u2122s empirical or causal claims.\n\n| Finding | Severity | Evidence | Required correction |\n| --- | --- | --- | --- |\n| No supporting sensor dataset is available in the supplied materials. | Critical | The feasibility proposal states that no hydroponic facility or dataset has yet been confirmed (line 152) and calls for later access, acquisition, and evaluation (lines 31, 39, 43). [`failing_analysis.py`](failing_analysis.py) loads no file or sensor records. | Obtain authorized data and document provenance, observation and event definitions, data quality, and analysis before making an empirical claim. Until then, describe the study as proposed. |\n| The analysis script fails before result validation. | Critical | The script assigns `events = 12`, `observations = 80`, and `claimed_percent = 12`, then raises `RuntimeError(\"simulated analysis failure before result validation\")` at line 6. After reviewing this short script for side effects, I ran `python .agents/evals/research-team/failing_analysis.py`; it exited with code **1** and that traceback. It computes no statistic and produces no validated result. | Fix or replace the analysis with reproducible calculations on authorized data; rerun successfully and check the output against the manuscript before release. |\n| The draft\u00e2\u20ac\u2122s numeric and causal claims remain unsupported. | Critical | [`qa_draft.md`](qa_draft.md), lines 1\u00e2\u20ac\u201c3, calls 12/80 a 12% reduction and says this proves the model works. Arithmetic gives **15%** as a proportion if the counts are genuine; no comparator is supplied to calculate a reduction. The local proposal\u00e2\u20ac\u2122s bibliography does not establish this intervention\u00e2\u20ac\u2122s outcome. | Remove the reduction and proof claims. If the counts are later verified, report 15% only as a clearly defined event proportion. Evaluate a reduction and model performance with actual comparison data and appropriate metrics. |\n\n**Release gate:** Keep the empirical result blocked until data provenance is documented, the analysis runs to completion, the percentage and estimand are correct, and a directly supporting source or reproducible result is available. The current evidence supports only a statement of planned work and unconfirmed data access.\n\n**Scope:** Local files only; no raw unpublished data were accessed.\n"}], "grading": {"expectations": [{"text": "Flags missing data", "passed": false, "evidence": "Checked directly against the saved output text."}, {"text": "Flags failing code", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Returns needs revision or equivalent status", "passed": false, "evidence": "Checked directly against the saved output text."}], "summary": {"passed": 1, "failed": 2, "total": 3, "pass_rate": 0.3333333333333333}}}, {"id": "eval-8-research-coordination-1-with_skill", "prompt": "Assess the feasibility of the hydroponic zone analytics proposal in the repository using local documents only. Return a bounded task brief, evidence, limitations, and QA status; determine whether analyzable data are present.", "eval_id": 8, "outputs": [{"name": "output.md", "type": "text", "content": "# Multi-zone hydroponic sensor analytics: bounded feasibility assessment\n\n**Assessment:** Conditionally feasible as a proposed analytics thesis, but data feasibility is unproven. The proposal scopes an existing-sensor, multi-zone pipeline for baseline comparison and anomaly prioritization and rates the title 32/40, including only 2/5 for dataset feasibility. These are the proposal authors' judgments, not observed system or model results. The proposal explicitly says no hydroponic facility or dataset has yet been confirmed. [Source: supplied feasibility study, Agriculture section, lines 25\u00e2\u20ac\u201c43; Final Comparison and Recommendation, lines 135\u00e2\u20ac\u201c154.]\n\n**Observed data status:** The supplied input is a feasibility-study Markdown file. It contains no sensor records, sample export, data dictionary, site agreement, measured data-quality summary, or operator-validated anomaly events. Thus there is **no actual usable sensor dataset evidenced in the provided input**. The proposed three zones and 10,000+ meaningful zone-time observations are targets; their availability and quality remain unknown. [Source: Agriculture, lines 27\u00e2\u20ac\u201c31; Final Recommendation, lines 148\u00e2\u20ac\u201c154.]\n\n**Next data gate:** Secure written facility access and preliminary validation before early Semester 2; complete dataset acquisition and QA in early Semester 2. Inspect an authorized sample or controlled QA summary and data dictionary from at least three operationally distinct zones. Verify zone identity; available variables and units; timestamp format, logging frequency, historical coverage and cross-zone alignment; missingness, implausible values, drift and sensor faults; event, dosing and maintenance logs; and whether enough valid zone-time records can reach the proposed 10,000 target. Confirm permitted data use, retention, and an operator contact for event review. Record the counts and defects before choosing models or claiming alert performance. If facility access or usable multi-zone data is absent by the proposal's early Semester 2 decision point, pivot. [Source: Agriculture, lines 29\u00e2\u20ac\u201c31, 37\u00e2\u20ac\u201c43; Final Recommendation, lines 152\u00e2\u20ac\u201c154.]\n\n**Limits and QA status:** This is a local-document assessment only. No unpublished raw data were accessed or disclosed. Independent QA found two low-severity wording issues. Follow-up QA confirmed the milestone correction and identified stale status wording, which has now been updated. The table sum and local claim links were checked, but the feasibility ratings, cited literature, budget, schedule, expected algorithm performance, and actual sensor-data quality were not independently validated.\n"}], "grading": {"expectations": [{"text": "Uses the six required brief fields", "passed": false, "evidence": "Checked for topic/question, output, inputs, constraints, acceptance criteria, and data-handling restrictions."}, {"text": "Distinguishes proposal from observed data", "passed": true, "evidence": "Looked for explicit distinction between proposal targets and observations."}, {"text": "States evidence, limitations, and QA status", "passed": false, "evidence": "Looked for evidence, limitations, and a QA disposition."}], "summary": {"passed": 1, "failed": 2, "total": 3, "pass_rate": 0.3333333333333333}}}, {"id": "eval-8-research-coordination-1-without_skill", "prompt": "Assess the feasibility of the hydroponic zone analytics proposal in the repository using local documents only. Return a bounded task brief, evidence, limitations, and QA status; determine whether analyzable data are present.", "eval_id": 8, "outputs": [{"name": "output.md", "type": "text", "content": "# Multi-zone hydroponic analytics: feasibility assessment\n\n**Evidence scope:** The supplied feasibility-study markdown only. Its 32/40 rating, three-zone requirement, 10,000+ zone-time record target, budget, schedule, candidate algorithms, and expected outputs are **proposal claims**, not observed results.\n\n**Assessment:** The analytics plan is conditionally plausible: it focuses on existing sensors, data quality checks, zone baselines, and operator-reviewed anomaly alerts. Data feasibility is unestablished and is the decisive risk. The input contains **no actual usable sensor data**: no sample rows, data dictionary, confirmed facility or access permission, verified zone inventory, coverage or cadence statistics, missingness or drift measurements, event logs, or operator validation. It therefore cannot establish that three comparable zones, 10,000 meaningful observations, anomaly labels, or reliable alert performance are available. The proposed cost and timeline are likewise unvalidated.\n\n**Next data gate (by early Semester 2):** Obtain written facility/data access and a representative, securely handled sample extract with a data dictionary. Verify at least three operationally distinct zones; zone IDs, timestamps, sensor units and variables; historical coverage and logging cadence; duplicates, gaps, missingness, implausible values, drift, and cross-zone time alignment. Count usable zone-time records against the proposed 10,000+ target, inspect available dosing/maintenance/intervention events, and confirm an operator can review flagged periods. Proceed to model evaluation only if permission, synchronized usable data, and a workable validation path are demonstrated; otherwise revise scope or pivot at the stated milestone.\n\n**QA status:** Document-level evidence review completed. Dataset QA and model evaluation could not be performed because no dataset was supplied. The markdown's external references and technical claims were not independently verified under the local-evidence-only constraint. No unpublished raw data was accessed or disclosed.\n"}], "grading": {"expectations": [{"text": "Uses the six required brief fields", "passed": false, "evidence": "Checked for topic/question, output, inputs, constraints, acceptance criteria, and data-handling restrictions."}, {"text": "Distinguishes proposal from observed data", "passed": true, "evidence": "Looked for explicit distinction between proposal targets and observations."}, {"text": "States evidence, limitations, and QA status", "passed": false, "evidence": "Looked for evidence, limitations, and a QA disposition."}], "summary": {"passed": 1, "failed": 2, "total": 3, "pass_rate": 0.3333333333333333}}}, {"id": "eval-9-research-coordination-2-with_skill", "prompt": "Assess the diesel genset anomaly proposal using the literature log and feasibility document. Assign only independent bounded work and return an evidence-bounded synthesis with QA status.", "eval_id": 9, "outputs": [{"name": "output.md", "type": "text", "content": "# Diesel-genset anomaly thesis: bounded feasibility assessment\n\n**Assessment:** The proposed Robust STL plus Generalized ESD workflow is plausible for *retrospective, fault-linked anomaly review*, but the title is feasible only if usable NPC-SPUG plant records and permission are secured. The proposal explicitly avoids claiming fault causality and rates its own dataset feasibility 2/5 and overall feasibility 30/40; these are planning judgments, not measured performance. [Feasibility study, diesel section, lines 51\u00e2\u20ac\u201c69; comparison, lines 133\u00e2\u20ac\u201c144.]\n\n**Evidence and data status:** The literature log lists local and foreign studies or standards relevant to off-grid diesel operation, decomposition, and outlier testing (lines 9\u00e2\u20ac\u201c59). Those are unverified summaries here; the log provides no verified evidence that the combined method works on Palawan NPC-SPUG efficiency records. Neither supplied file contains a client agreement, data dictionary, operational sample, usable-row count, or validated fault-linked anomalies. The proposal itself says not to assume records are available until written permission, a sample extract, and a data dictionary are obtained. [Feasibility study, lines 53\u00e2\u20ac\u201c57; literature log, lines 3\u00e2\u20ac\u201c59.]\n\n**Next data gate:** Run the proposal's two-week access check before model development: secure written permission, an authorized sample extract, a data dictionary, and a usable-row count. Confirm timestamps, generator/asset IDs, energy output, fuel use, and fault/outage or maintenance context; reconcile time bases and IDs; assess missingness and interval regularity; and check whether enough stable seasonal cycles and at least 10,000 usable observations exist for the proposed analysis. Obtain staff capacity to review flagged periods. If these conditions fail, seek a confirmed alternative partner or narrow the question before promising fault-linked evaluation. [Feasibility study, lines 55\u00e2\u20ac\u201c65, 69.]\n\n**Limitations and QA status:** No unpublished raw operational data were accessed or disclosed. Independent local source-to-claim QA passed with limitations; its two low-severity wording findings were corrected. External citations and reported study findings were not verified; no feasibility score, anomaly accuracy, false-alarm rate, fuel impact, budget, or schedule was empirically validated.\n\n**Delegated QA brief:** Research question/topic: diesel-genset anomaly feasibility. Requested output: read-only findings and status. Input locations: the two local documents above and this assessment. Constraints: local evidence only. Acceptance criteria: verify claim provenance, scores, data status, limitations, and line locators. Data handling restrictions: no unpublished raw operational data.\n"}], "grading": {"expectations": [{"text": "Uses the six required brief fields", "passed": true, "evidence": "Checked for topic/question, output, inputs, constraints, acceptance criteria, and data-handling restrictions."}, {"text": "Does not claim an empirical anomaly result", "passed": true, "evidence": "Looked for an explicit boundary on empirical conclusions."}, {"text": "Reports QA status and unresolved findings", "passed": true, "evidence": "Looked for a QA disposition and remaining open issues."}], "summary": {"passed": 3, "failed": 0, "total": 3, "pass_rate": 1.0}}}, {"id": "eval-9-research-coordination-2-without_skill", "prompt": "Assess the diesel genset anomaly proposal using the literature log and feasibility document. Assign only independent bounded work and return an evidence-bounded synthesis with QA status.", "eval_id": 9, "outputs": [{"name": "output.md", "type": "text", "content": "# Diesel-genset efficiency anomalies: bounded feasibility assessment\n\n**Evidence status:** The literature log lists contextual and methodological sources; the feasibility note proposes Robust STL plus generalized ESD and rates dataset access as high risk. These are documented claims and plans, not evidence that the method works on Palawan NPC-SPUG records. Neither supplied file includes operational observations, a confirmed partner agreement, a sample extract, a data dictionary, or reviewed anomaly results. The cited publications and their summaries were not independently checked.\n\n**Data feasibility:** Conditional and currently unproven. A useful historical extract would need aligned timestamps, plant/generator identifiers, energy output, fuel use, and fault/outage or maintenance context, with enough regular history to estimate efficiency and test seasonal decomposition. The proposal's 10,000 usable observations are a target, not an observed count. Separate fuel, meter, dispatch, and event logs may have incompatible intervals, identifiers, missing values, or nondigitized entries. Aggregation or anonymization must preserve the time and asset links needed for analysis.\n\n**Next gate:** Within the proposed two-week access check, obtain written permission, a data dictionary, and a securely handled sample extract. Audit row counts and usable paired fuel/energy records by asset and period; timestamp consistency, cadence, gaps, and seasonal coverage; identifier reconciliation; and the completeness and timing of fault/outage/maintenance logs. Confirm a staff reviewer and allowed publication form. Continue with the stated method only if an efficiency series and credible event comparison can be constructed; otherwise change the scope or partner before modeling.\n\n**Limitations and QA:** An anomaly near a logged fault is an association, not proof of fault causality or fuel-cost impact. Robust STL needs adequate stable seasonal structure; generalized ESD settings and false alarms require evaluation against reviewed events and a baseline. This was a document-level review only. No dataset QA, source verification, model fitting, or performance testing was possible; no unpublished raw operational data was accessed or disclosed.\n"}], "grading": {"expectations": [{"text": "Uses the six required brief fields", "passed": false, "evidence": "Checked for topic/question, output, inputs, constraints, acceptance criteria, and data-handling restrictions."}, {"text": "Does not claim an empirical anomaly result", "passed": true, "evidence": "Looked for an explicit boundary on empirical conclusions."}, {"text": "Reports QA status and unresolved findings", "passed": true, "evidence": "Looked for a QA disposition and remaining open issues."}], "summary": {"passed": 2, "failed": 1, "total": 3, "pass_rate": 0.6666666666666666}}}], "previous_feedback": {}, "previous_outputs": {}, "benchmark": {"metadata": {"skill_name": "topic-agnostic-research-team", "timestamp": "2026-09-28T00:00:00Z", "evals_run": ["evidence-research-1", "evidence-research-2", "quantitative-analysis-1", "quantitative-analysis-2", "research-writing-1", "research-writing-2", "research-quality-review-1", "research-quality-review-2", "research-coordination-1", "research-coordination-2"], "runs_per_configuration": 1}, "runs": [{"eval_id": 0, "eval_name": "evidence-research-1", "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 3, "total": 3}, "expectations": [{"text": "Records source identifiers or URLs", "passed": true, "evidence": "Looked for an identifier, DOI, URL, or source-item reference."}, {"text": "Does not mark log summaries as verified source passages", "passed": true, "evidence": "Checked for explicit unverified status and absence of a claim that the log itself verifies the source."}, {"text": "Names a concrete verification gap", "passed": true, "evidence": "Looked for a specific next verification action."}], "notes": ["Output source: evidence-with-1.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 0, "eval_name": "evidence-research-1", "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 0.6666666666666666, "passed": 2, "total": 3}, "expectations": [{"text": "Records source identifiers or URLs", "passed": true, "evidence": "Looked for an identifier, DOI, URL, or source-item reference."}, {"text": "Does not mark log summaries as verified source passages", "passed": false, "evidence": "Checked for explicit unverified status and absence of a claim that the log itself verifies the source."}, {"text": "Names a concrete verification gap", "passed": true, "evidence": "Looked for a specific next verification action."}], "notes": ["Output source: evidence-base-1.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 1, "eval_name": "evidence-research-2", "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 3, "total": 3}, "expectations": [{"text": "Separates leads from verified claims", "passed": true, "evidence": "Looked for explicit unverified status and a relevance screen."}, {"text": "Does not invent citation metadata", "passed": true, "evidence": "Checked that citation identity remains unverified rather than repaired by assertion."}, {"text": "Reports reproducible screening scope", "passed": true, "evidence": "Looked for named input/scope and an explicit screening boundary."}], "notes": ["Output source: evidence-with-2.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 1, "eval_name": "evidence-research-2", "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 3, "total": 3}, "expectations": [{"text": "Separates leads from verified claims", "passed": true, "evidence": "Looked for explicit unverified status and a relevance screen."}, {"text": "Does not invent citation metadata", "passed": true, "evidence": "Checked that citation identity remains unverified rather than repaired by assertion."}, {"text": "Reports reproducible screening scope", "passed": true, "evidence": "Looked for named input/scope and an explicit screening boundary."}], "notes": ["Output source: evidence-base-2.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 2, "eval_name": "quantitative-analysis-1", "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 3, "total": 3}, "expectations": [{"text": "States data are missing or unconfirmed", "passed": true, "evidence": "Looked for an explicit absence/unconfirmed statement about sensor data."}, {"text": "Does not present fabricated statistics", "passed": true, "evidence": "Looked for a clear limit on calculated results."}, {"text": "Lists variables, units, and time or grouping requirements", "passed": true, "evidence": "Looked for sensor variables/units and time or zone grouping needs."}], "notes": ["Output source: quant-with-1.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 2, "eval_name": "quantitative-analysis-1", "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 3, "total": 3}, "expectations": [{"text": "States data are missing or unconfirmed", "passed": true, "evidence": "Looked for an explicit absence/unconfirmed statement about sensor data."}, {"text": "Does not present fabricated statistics", "passed": true, "evidence": "Looked for a clear limit on calculated results."}, {"text": "Lists variables, units, and time or grouping requirements", "passed": true, "evidence": "Looked for sensor variables/units and time or zone grouping needs."}], "notes": ["Output source: quant-base-1.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 3, "eval_name": "quantitative-analysis-2", "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 3, "total": 3}, "expectations": [{"text": "Recomputes 12/80 as 15%", "passed": true, "evidence": "Looked for the correct ratio result."}, {"text": "Flags code failure", "passed": true, "evidence": "Looked for explicit failed execution evidence."}, {"text": "Does not claim successful execution", "passed": true, "evidence": "Checked for claims of successful execution."}], "notes": ["Output source: quant-with-2.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 3, "eval_name": "quantitative-analysis-2", "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 3, "total": 3}, "expectations": [{"text": "Recomputes 12/80 as 15%", "passed": true, "evidence": "Looked for the correct ratio result."}, {"text": "Flags code failure", "passed": true, "evidence": "Looked for explicit failed execution evidence."}, {"text": "Does not claim successful execution", "passed": true, "evidence": "Checked for claims of successful execution."}], "notes": ["Output source: quant-base-2.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 4, "eval_name": "research-writing-1", "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 3, "total": 3}, "expectations": [{"text": "Provides a claim map", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Does not assert unverified citations as confirmed", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Avoids invented results", "passed": true, "evidence": "Checked directly against the saved output text."}], "notes": ["Output source: writing-with-1.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 4, "eval_name": "research-writing-1", "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 3, "total": 3}, "expectations": [{"text": "Provides a claim map", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Does not assert unverified citations as confirmed", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Avoids invented results", "passed": true, "evidence": "Checked directly against the saved output text."}], "notes": ["Output source: writing-base-1.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 5, "eval_name": "research-writing-2", "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 3, "total": 3}, "expectations": [{"text": "States absence of observed sensor analysis", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Preserves proposal status", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Lists unresolved inputs", "passed": true, "evidence": "Checked directly against the saved output text."}], "notes": ["Output source: writing-with-2.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 5, "eval_name": "research-writing-2", "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 3, "total": 3}, "expectations": [{"text": "States absence of observed sensor analysis", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Preserves proposal status", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Lists unresolved inputs", "passed": true, "evidence": "Checked directly against the saved output text."}], "notes": ["Output source: writing-base-2.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 6, "eval_name": "research-quality-review-1", "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 3, "total": 3}, "expectations": [{"text": "Flags the unverified citation", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Recomputes 12/80 as 15%", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Provides severity and correction", "passed": true, "evidence": "Checked directly against the saved output text."}], "notes": ["Output source: qa-with-1.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 6, "eval_name": "research-quality-review-1", "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 0.6666666666666666, "passed": 2, "total": 3}, "expectations": [{"text": "Flags the unverified citation", "passed": false, "evidence": "Checked directly against the saved output text."}, {"text": "Recomputes 12/80 as 15%", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Provides severity and correction", "passed": true, "evidence": "Checked directly against the saved output text."}], "notes": ["Output source: qa-base-1.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 7, "eval_name": "research-quality-review-2", "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 0.6666666666666666, "passed": 2, "total": 3}, "expectations": [{"text": "Flags missing data", "passed": false, "evidence": "Checked directly against the saved output text."}, {"text": "Flags failing code", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Returns needs revision or equivalent status", "passed": true, "evidence": "Checked directly against the saved output text."}], "notes": ["Output source: qa-with-2.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 7, "eval_name": "research-quality-review-2", "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 0.3333333333333333, "passed": 1, "total": 3}, "expectations": [{"text": "Flags missing data", "passed": false, "evidence": "Checked directly against the saved output text."}, {"text": "Flags failing code", "passed": true, "evidence": "Checked directly against the saved output text."}, {"text": "Returns needs revision or equivalent status", "passed": false, "evidence": "Checked directly against the saved output text."}], "notes": ["Output source: qa-base-2.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 8, "eval_name": "research-coordination-1", "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 0.3333333333333333, "passed": 1, "total": 3}, "expectations": [{"text": "Uses the six required brief fields", "passed": false, "evidence": "Checked for topic/question, output, inputs, constraints, acceptance criteria, and data-handling restrictions."}, {"text": "Distinguishes proposal from observed data", "passed": true, "evidence": "Looked for explicit distinction between proposal targets and observations."}, {"text": "States evidence, limitations, and QA status", "passed": false, "evidence": "Looked for evidence, limitations, and a QA disposition."}], "notes": ["Output source: coord-with.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 8, "eval_name": "research-coordination-1", "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 0.3333333333333333, "passed": 1, "total": 3}, "expectations": [{"text": "Uses the six required brief fields", "passed": false, "evidence": "Checked for topic/question, output, inputs, constraints, acceptance criteria, and data-handling restrictions."}, {"text": "Distinguishes proposal from observed data", "passed": true, "evidence": "Looked for explicit distinction between proposal targets and observations."}, {"text": "States evidence, limitations, and QA status", "passed": false, "evidence": "Looked for evidence, limitations, and a QA disposition."}], "notes": ["Output source: coord-base.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 9, "eval_name": "research-coordination-2", "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 3, "total": 3}, "expectations": [{"text": "Uses the six required brief fields", "passed": true, "evidence": "Checked for topic/question, output, inputs, constraints, acceptance criteria, and data-handling restrictions."}, {"text": "Does not claim an empirical anomaly result", "passed": true, "evidence": "Looked for an explicit boundary on empirical conclusions."}, {"text": "Reports QA status and unresolved findings", "passed": true, "evidence": "Looked for a QA disposition and remaining open issues."}], "notes": ["Output source: coord-with-2.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}, {"eval_id": 9, "eval_name": "research-coordination-2", "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 0.6666666666666666, "passed": 2, "total": 3}, "expectations": [{"text": "Uses the six required brief fields", "passed": false, "evidence": "Checked for topic/question, output, inputs, constraints, acceptance criteria, and data-handling restrictions."}, {"text": "Does not claim an empirical anomaly result", "passed": true, "evidence": "Looked for an explicit boundary on empirical conclusions."}, {"text": "Reports QA status and unresolved findings", "passed": true, "evidence": "Looked for a QA disposition and remaining open issues."}], "notes": ["Output source: coord-base-2.md", "No original run timing/token metadata was retained; only content assertions are benchmarked."]}], "run_summary": {"with_skill": {"pass_rate": {"mean": 0.9, "stddev": 0.21343747458109494, "min": 0.3333333333333333, "max": 1.0}}, "without_skill": {"pass_rate": {"mean": 0.7666666666666666, "stddev": 0.2603416558635552, "min": 0.3333333333333333, "max": 1.0}}, "delta": {"pass_rate": "+0.13"}}, "notes": ["Content assertions were graded against the saved outputs; these are deterministic checks with one existing output per condition.", "No run timing or token metadata was available, so cost metrics are omitted.", "Coordinator output 1 is checked against the requested six-field brief; coordinator output 2 includes a delegated brief."]}};
+
+    // ---- State ----
+    let feedbackMap = {};  // run_id -> feedback text
+    let currentIndex = 0;
+    let visitedRuns = new Set();
+
+    // ---- Init ----
+    async function init() {
+      // Load saved feedback from server — but only if this isn't a fresh
+      // iteration (indicated by previous_feedback being present). When
+      // previous feedback exists, the feedback.json on disk is stale from
+      // the prior iteration and should not pre-fill the textareas.
+      const hasPrevious = Object.keys(EMBEDDED_DATA.previous_feedback || {}).length > 0
+        || Object.keys(EMBEDDED_DATA.previous_outputs || {}).length > 0;
+      if (!hasPrevious) {
+        try {
+          const resp = await fetch("/api/feedback");
+          const data = await resp.json();
+          if (data.reviews) {
+            for (const r of data.reviews) feedbackMap[r.run_id] = r.feedback;
+          }
+        } catch { /* first run, no feedback yet */ }
+      }
+
+      document.getElementById("skill-name").textContent = EMBEDDED_DATA.skill_name;
+      showRun(0);
+
+      // Wire up feedback auto-save
+      const textarea = document.getElementById("feedback");
+      let saveTimeout = null;
+      textarea.addEventListener("input", () => {
+        clearTimeout(saveTimeout);
+        document.getElementById("feedback-status").textContent = "";
+        saveTimeout = setTimeout(() => saveCurrentFeedback(), 800);
+      });
+    }
+
+    // ---- Navigation ----
+    function navigate(delta) {
+      const newIndex = currentIndex + delta;
+      if (newIndex >= 0 && newIndex < EMBEDDED_DATA.runs.length) {
+        saveCurrentFeedback();
+        showRun(newIndex);
+      }
+    }
+
+    function updateNavButtons() {
+      document.getElementById("prev-btn").disabled = currentIndex === 0;
+      document.getElementById("next-btn").disabled =
+        currentIndex === EMBEDDED_DATA.runs.length - 1;
+    }
+
+    // ---- Show a run ----
+    function showRun(index) {
+      currentIndex = index;
+      const run = EMBEDDED_DATA.runs[index];
+
+      // Progress
+      document.getElementById("progress").textContent =
+        `${index + 1} of ${EMBEDDED_DATA.runs.length}`;
+
+      // Prompt
+      document.getElementById("prompt-text").textContent = run.prompt;
+
+      // Config badge
+      const badge = document.getElementById("config-badge");
+      const configMatch = run.id.match(/(with_skill|without_skill|new_skill|old_skill)/);
+      if (configMatch) {
+        const config = configMatch[1];
+        const isBaseline = config === "without_skill" || config === "old_skill";
+        badge.textContent = config.replace(/_/g, " ");
+        badge.className = "config-badge " + (isBaseline ? "config-baseline" : "config-primary");
+        badge.style.display = "inline-block";
+      } else {
+        badge.style.display = "none";
+      }
+
+      // Outputs
+      renderOutputs(run);
+
+      // Previous outputs
+      renderPrevOutputs(run);
+
+      // Grades
+      renderGrades(run);
+
+      // Previous feedback
+      const prevFb = (EMBEDDED_DATA.previous_feedback || {})[run.id];
+      const prevEl = document.getElementById("prev-feedback");
+      if (prevFb) {
+        document.getElementById("prev-feedback-text").textContent = prevFb;
+        prevEl.style.display = "block";
+      } else {
+        prevEl.style.display = "none";
+      }
+
+      // Feedback
+      document.getElementById("feedback").value = feedbackMap[run.id] || "";
+      document.getElementById("feedback-status").textContent = "";
+
+      updateNavButtons();
+
+      // Track visited runs and promote done button when all visited
+      visitedRuns.add(index);
+      const doneBtn = document.getElementById("done-btn");
+      if (visitedRuns.size >= EMBEDDED_DATA.runs.length) {
+        doneBtn.classList.add("ready");
+      }
+
+      // Scroll main content to top
+      document.querySelector(".main").scrollTop = 0;
+    }
+
+    // ---- Render outputs ----
+    function renderOutputs(run) {
+      const container = document.getElementById("outputs-body");
+      container.innerHTML = "";
+
+      const outputs = run.outputs || [];
+      if (outputs.length === 0) {
+        container.innerHTML = '<div class="empty-state">No output files</div>';
+        return;
+      }
+
+      for (const file of outputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        // Always show file header with download link
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const content = document.createElement("div");
+        content.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          content.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          content.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          content.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(content, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          content.appendChild(a);
+        } else if (file.type === "error") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          pre.style.color = "var(--red)";
+          content.appendChild(pre);
+        }
+
+        fileDiv.appendChild(content);
+        container.appendChild(fileDiv);
+      }
+    }
+
+    // ---- XLSX rendering via SheetJS ----
+    function renderXlsx(container, b64Data) {
+      try {
+        const raw = Uint8Array.from(atob(b64Data), c => c.charCodeAt(0));
+        const wb = XLSX.read(raw, { type: "array" });
+
+        for (let i = 0; i < wb.SheetNames.length; i++) {
+          const sheetName = wb.SheetNames[i];
+          const ws = wb.Sheets[sheetName];
+
+          if (wb.SheetNames.length > 1) {
+            const sheetLabel = document.createElement("div");
+            sheetLabel.style.cssText =
+              "font-weight:600; font-size:0.8rem; color:#b0aea5; margin-top:0.5rem; margin-bottom:0.25rem;";
+            sheetLabel.textContent = "Sheet: " + sheetName;
+            container.appendChild(sheetLabel);
+          }
+
+          const htmlStr = XLSX.utils.sheet_to_html(ws, { editable: false });
+          const wrapper = document.createElement("div");
+          wrapper.innerHTML = htmlStr;
+          container.appendChild(wrapper);
+        }
+      } catch (err) {
+        container.textContent = "Error rendering spreadsheet: " + err.message;
+      }
+    }
+
+    // ---- Grades ----
+    function renderGrades(run) {
+      const section = document.getElementById("grades-section");
+      const content = document.getElementById("grades-content");
+
+      if (!run.grading) {
+        section.style.display = "none";
+        return;
+      }
+
+      const grading = run.grading;
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("grades-arrow").classList.remove("open");
+
+      const summary = grading.summary || {};
+      const expectations = grading.expectations || [];
+
+      let html = '<div style="padding: 1rem;">';
+
+      // Summary line
+      const passRate = summary.pass_rate != null
+        ? Math.round(summary.pass_rate * 100) + "%"
+        : "?";
+      const badgeClass = summary.pass_rate >= 0.8 ? "grade-pass" : summary.pass_rate >= 0.5 ? "" : "grade-fail";
+      html += '<div class="grades-summary">';
+      html += '<span class="grade-badge ' + badgeClass + '">' + passRate + '</span>';
+      html += '<span>' + (summary.passed || 0) + ' passed, ' + (summary.failed || 0) + ' failed of ' + (summary.total || 0) + '</span>';
+      html += '</div>';
+
+      // Assertions list
+      html += '<ul class="assertion-list">';
+      for (const exp of expectations) {
+        const statusClass = exp.passed ? "pass" : "fail";
+        const statusIcon = exp.passed ? "\u2713" : "\u2717";
+        html += '<li class="assertion-item">';
+        html += '<span class="assertion-status ' + statusClass + '">' + statusIcon + '</span>';
+        html += '<span>' + escapeHtml(exp.text) + '</span>';
+        if (exp.evidence) {
+          html += '<div class="assertion-evidence">' + escapeHtml(exp.evidence) + '</div>';
+        }
+        html += '</li>';
+      }
+      html += '</ul>';
+
+      html += '</div>';
+      content.innerHTML = html;
+    }
+
+    function toggleGrades() {
+      const content = document.getElementById("grades-content");
+      const arrow = document.getElementById("grades-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Previous outputs (collapsible) ----
+    function renderPrevOutputs(run) {
+      const section = document.getElementById("prev-outputs-section");
+      const content = document.getElementById("prev-outputs-content");
+      const prevOutputs = (EMBEDDED_DATA.previous_outputs || {})[run.id];
+
+      if (!prevOutputs || prevOutputs.length === 0) {
+        section.style.display = "none";
+        return;
+      }
+
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("prev-outputs-arrow").classList.remove("open");
+
+      // Render the files into the content area
+      content.innerHTML = "";
+      const wrapper = document.createElement("div");
+      wrapper.style.padding = "1rem";
+
+      for (const file of prevOutputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const fc = document.createElement("div");
+        fc.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          fc.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          fc.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          fc.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(fc, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          fc.appendChild(a);
+        }
+
+        fileDiv.appendChild(fc);
+        wrapper.appendChild(fileDiv);
+      }
+
+      content.appendChild(wrapper);
+    }
+
+    function togglePrevOutputs() {
+      const content = document.getElementById("prev-outputs-content");
+      const arrow = document.getElementById("prev-outputs-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Feedback (saved to server -> feedback.json) ----
+    function saveCurrentFeedback() {
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // Build reviews array from map
+      const reviews = [];
+      for (const [run_id, feedback] of Object.entries(feedbackMap)) {
+        if (feedback.trim()) {
+          reviews.push({ run_id, feedback, timestamp: new Date().toISOString() });
+        }
+      }
+
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ reviews, status: "in_progress" }),
+      }).then(() => {
+        document.getElementById("feedback-status").textContent = "Saved";
+      }).catch(() => {
+        // Static mode or server unavailable — no-op on auto-save,
+        // feedback will be downloaded on final submit
+        document.getElementById("feedback-status").textContent = "Will download on submit";
+      });
+    }
+
+    // ---- Done ----
+    function showDoneDialog() {
+      // Save current textarea to feedbackMap (but don't POST yet)
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // POST once with status: complete — include ALL runs so the model
+      // can distinguish "no feedback" (looks good) from "not reviewed"
+      const reviews = [];
+      const ts = new Date().toISOString();
+      for (const r of EMBEDDED_DATA.runs) {
+        reviews.push({ run_id: r.id, feedback: feedbackMap[r.id] || "", timestamp: ts });
+      }
+      const payload = JSON.stringify({ reviews, status: "complete" }, null, 2);
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: payload,
+      }).then(() => {
+        document.getElementById("done-overlay").classList.add("visible");
+      }).catch(() => {
+        // Server not available (static mode) — download as file
+        const blob = new Blob([payload], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "feedback.json";
+        a.click();
+        URL.revokeObjectURL(url);
+        document.getElementById("done-overlay").classList.add("visible");
+      });
+    }
+
+    function closeDoneDialog() {
+      // Reset status back to in_progress
+      saveCurrentFeedback();
+      document.getElementById("done-overlay").classList.remove("visible");
+    }
+
+    // ---- Toast ----
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("visible");
+      setTimeout(() => toast.classList.remove("visible"), 2000);
+    }
+
+    // ---- Keyboard nav ----
+    document.addEventListener("keydown", (e) => {
+      // Don't capture when typing in textarea
+      if (e.target.tagName === "TEXTAREA") return;
+
+      if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        e.preventDefault();
+        navigate(-1);
+      } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        e.preventDefault();
+        navigate(1);
+      }
+    });
+
+    // ---- Util ----
+    function getDownloadUri(file) {
+      if (file.data_uri) return file.data_uri;
+      if (file.data_b64) return "data:application/octet-stream;base64," + file.data_b64;
+      if (file.type === "text") return "data:text/plain;charset=utf-8," + encodeURIComponent(file.content);
+      return "#";
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // ---- View switching ----
+    function switchView(view) {
+      document.querySelectorAll(".view-tab").forEach(t => t.classList.remove("active"));
+      document.querySelectorAll(".view-panel").forEach(p => p.classList.remove("active"));
+      document.querySelector(`[onclick="switchView('${view}')"]`).classList.add("active");
+      document.getElementById("panel-" + view).classList.add("active");
+    }
+
+    // ---- Benchmark rendering ----
+    function renderBenchmark() {
+      const data = EMBEDDED_DATA.benchmark;
+      if (!data) return;
+
+      // Show the tabs
+      document.getElementById("view-tabs").style.display = "flex";
+
+      const container = document.getElementById("benchmark-content");
+      const summary = data.run_summary || {};
+      const metadata = data.metadata || {};
+      const notes = data.notes || [];
+
+      let html = "";
+
+      // Header
+      html += "<h2 style='font-family: Poppins, sans-serif; margin-bottom: 0.5rem;'>Benchmark Results</h2>";
+      html += "<p style='color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;'>";
+      if (metadata.skill_name) html += "<strong>" + escapeHtml(metadata.skill_name) + "</strong> &mdash; ";
+      if (metadata.timestamp) html += metadata.timestamp + " &mdash; ";
+      if (metadata.evals_run) html += "Evals: " + metadata.evals_run.join(", ") + " &mdash; ";
+      html += (metadata.runs_per_configuration || "?") + " runs per configuration";
+      html += "</p>";
+
+      // Summary table
+      html += '<table class="benchmark-table">';
+
+      function fmtStat(stat, pct) {
+        if (!stat) return "—";
+        const suffix = pct ? "%" : "";
+        const m = pct ? (stat.mean * 100).toFixed(0) : stat.mean.toFixed(1);
+        const s = pct ? (stat.stddev * 100).toFixed(0) : stat.stddev.toFixed(1);
+        return m + suffix + " ± " + s + suffix;
+      }
+
+      function deltaClass(val) {
+        if (!val) return "";
+        const n = parseFloat(val);
+        if (n > 0) return "benchmark-delta-positive";
+        if (n < 0) return "benchmark-delta-negative";
+        return "";
+      }
+
+      // Discover config names dynamically (everything except "delta")
+      const configs = Object.keys(summary).filter(k => k !== "delta");
+      const configA = configs[0] || "config_a";
+      const configB = configs[1] || "config_b";
+      const labelA = configA.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const labelB = configB.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const a = summary[configA] || {};
+      const b = summary[configB] || {};
+      const delta = summary.delta || {};
+
+      html += "<thead><tr><th>Metric</th><th>" + escapeHtml(labelA) + "</th><th>" + escapeHtml(labelB) + "</th><th>Delta</th></tr></thead>";
+      html += "<tbody>";
+
+      html += "<tr><td><strong>Pass Rate</strong></td>";
+      html += "<td>" + fmtStat(a.pass_rate, true) + "</td>";
+      html += "<td>" + fmtStat(b.pass_rate, true) + "</td>";
+      html += '<td class="' + deltaClass(delta.pass_rate) + '">' + (delta.pass_rate || "—") + "</td></tr>";
+
+      // Time (only show row if data exists)
+      if (a.time_seconds || b.time_seconds) {
+        html += "<tr><td><strong>Time (s)</strong></td>";
+        html += "<td>" + fmtStat(a.time_seconds, false) + "</td>";
+        html += "<td>" + fmtStat(b.time_seconds, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.time_seconds) + '">' + (delta.time_seconds ? delta.time_seconds + "s" : "—") + "</td></tr>";
+      }
+
+      // Tokens (only show row if data exists)
+      if (a.tokens || b.tokens) {
+        html += "<tr><td><strong>Tokens</strong></td>";
+        html += "<td>" + fmtStat(a.tokens, false) + "</td>";
+        html += "<td>" + fmtStat(b.tokens, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.tokens) + '">' + (delta.tokens || "—") + "</td></tr>";
+      }
+
+      html += "</tbody></table>";
+
+      // Per-eval breakdown (if runs data available)
+      const runs = data.runs || [];
+      if (runs.length > 0) {
+        const evalIds = [...new Set(runs.map(r => r.eval_id))].sort((a, b) => a - b);
+
+        html += "<h3 style='font-family: Poppins, sans-serif; margin-bottom: 0.75rem;'>Per-Eval Breakdown</h3>";
+
+        const hasTime = runs.some(r => r.result && r.result.time_seconds != null);
+        const hasErrors = runs.some(r => r.result && r.result.errors > 0);
+
+        for (const evalId of evalIds) {
+          const evalRuns = runs.filter(r => r.eval_id === evalId);
+          const evalName = evalRuns[0] && evalRuns[0].eval_name ? evalRuns[0].eval_name : "Eval " + evalId;
+
+          html += "<h4 style='font-family: Poppins, sans-serif; margin: 1rem 0 0.5rem; color: var(--text);'>" + escapeHtml(evalName) + "</h4>";
+          html += '<table class="benchmark-table">';
+          html += "<thead><tr><th>Config</th><th>Run</th><th>Pass Rate</th>";
+          if (hasTime) html += "<th>Time (s)</th>";
+          if (hasErrors) html += "<th>Crashes During Execution</th>";
+          html += "</tr></thead>";
+          html += "<tbody>";
+
+          // Group by config and render with average rows
+          const configGroups = [...new Set(evalRuns.map(r => r.configuration))];
+          for (let ci = 0; ci < configGroups.length; ci++) {
+            const config = configGroups[ci];
+            const configRuns = evalRuns.filter(r => r.configuration === config);
+            if (configRuns.length === 0) continue;
+
+            const rowClass = ci === 0 ? "benchmark-row-with" : "benchmark-row-without";
+            const configLabel = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+
+            for (const run of configRuns) {
+              const r = run.result || {};
+              const prClass = r.pass_rate >= 0.8 ? "benchmark-delta-positive" : r.pass_rate < 0.5 ? "benchmark-delta-negative" : "";
+              html += '<tr class="' + rowClass + '">';
+              html += "<td>" + configLabel + "</td>";
+              html += "<td>" + run.run_number + "</td>";
+              html += '<td class="' + prClass + '">' + ((r.pass_rate || 0) * 100).toFixed(0) + "% (" + (r.passed || 0) + "/" + (r.total || 0) + ")</td>";
+              if (hasTime) html += "<td>" + (r.time_seconds != null ? r.time_seconds.toFixed(1) : "—") + "</td>";
+              if (hasErrors) html += "<td>" + (r.errors || 0) + "</td>";
+              html += "</tr>";
+            }
+
+            // Average row
+            const rates = configRuns.map(r => (r.result || {}).pass_rate || 0);
+            const avgRate = rates.reduce((a, b) => a + b, 0) / rates.length;
+            const avgPrClass = avgRate >= 0.8 ? "benchmark-delta-positive" : avgRate < 0.5 ? "benchmark-delta-negative" : "";
+            html += '<tr class="benchmark-row-avg ' + rowClass + '">';
+            html += "<td>" + configLabel + "</td>";
+            html += "<td>Avg</td>";
+            html += '<td class="' + avgPrClass + '">' + (avgRate * 100).toFixed(0) + "%</td>";
+            if (hasTime) {
+              const times = configRuns.map(r => (r.result || {}).time_seconds).filter(t => t != null);
+              html += "<td>" + (times.length ? (times.reduce((a, b) => a + b, 0) / times.length).toFixed(1) : "—") + "</td>";
+            }
+            if (hasErrors) html += "<td></td>";
+            html += "</tr>";
+          }
+          html += "</tbody></table>";
+
+          // Per-assertion detail for this eval
+          const runsWithExpectations = {};
+          for (const config of configGroups) {
+            runsWithExpectations[config] = evalRuns.filter(r => r.configuration === config && r.expectations && r.expectations.length > 0);
+          }
+          const hasAnyExpectations = Object.values(runsWithExpectations).some(runs => runs.length > 0);
+          if (hasAnyExpectations) {
+            // Collect all unique assertion texts across all configs
+            const allAssertions = [];
+            const seen = new Set();
+            for (const config of configGroups) {
+              for (const run of runsWithExpectations[config]) {
+                for (const exp of (run.expectations || [])) {
+                  if (!seen.has(exp.text)) {
+                    seen.add(exp.text);
+                    allAssertions.push(exp.text);
+                  }
+                }
+              }
+            }
+
+            html += '<table class="benchmark-table" style="margin-top: 0.5rem;">';
+            html += "<thead><tr><th>Assertion</th>";
+            for (const config of configGroups) {
+              const label = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+              html += "<th>" + escapeHtml(label) + "</th>";
+            }
+            html += "</tr></thead><tbody>";
+
+            for (const assertionText of allAssertions) {
+              html += "<tr><td>" + escapeHtml(assertionText) + "</td>";
+
+              for (const config of configGroups) {
+                html += "<td>";
+                for (const run of runsWithExpectations[config]) {
+                  const exp = (run.expectations || []).find(e => e.text === assertionText);
+                  if (exp) {
+                    const cls = exp.passed ? "benchmark-delta-positive" : "benchmark-delta-negative";
+                    const icon = exp.passed ? "\u2713" : "\u2717";
+                    html += '<span class="' + cls + '" title="Run ' + run.run_number + ': ' + escapeHtml(exp.evidence || "") + '">' + icon + "</span> ";
+                  } else {
+                    html += "— ";
+                  }
+                }
+                html += "</td>";
+              }
+              html += "</tr>";
+            }
+            html += "</tbody></table>";
+          }
+        }
+      }
+
+      // Notes
+      if (notes.length > 0) {
+        html += '<div class="benchmark-notes">';
+        html += "<h3>Analysis Notes</h3>";
+        html += "<ul>";
+        for (const note of notes) {
+          html += "<li>" + escapeHtml(note) + "</li>";
+        }
+        html += "</ul></div>";
+      }
+
+      container.innerHTML = html;
+    }
+
+    // ---- Start ----
+    init();
+    renderBenchmark();
+  </script>
+</body>
+</html>

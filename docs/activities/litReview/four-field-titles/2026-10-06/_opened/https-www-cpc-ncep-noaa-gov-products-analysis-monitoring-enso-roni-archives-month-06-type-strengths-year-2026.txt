@@ -1,0 +1,81 @@
+
+ Climate Prediction Center — Official NOAA CPC ENSO Strength Probabilities
+ www.weather.gov 
+ Home
+ Site Map
+ News
+ Organization
+ Search 
+ Search
+ Climate Outlooks
+ Climate-Weather Link
+ El Niño/La Niña
+ MJO
+ Teleconnections
+ AO
+ NAO
+ PNA
+ AAO
+ Blocking
+ Storm Tracks
+ Climate Glossary
+ Outreach
+ About Us
+ Our Mission
+ Who We Are
+ Contact Us
+ Web Team
+ HOME >
+ Climate & Weather Linkage >
+ El Niño / Southern Oscillation (ENSO) > Official NOAA CPC ENSO Probabilities
+ ENSO Archives
+ Official NOAA CPC ENSO Strength Probabilities
+ Issued June 2026
+ The bars show the chance of El Niño (red bars), ENSO-Neutral (grey bars), and La Niña (blue bars) provided for 9 upcoming, overlapping 3-month seasons (each letter represents a month, for example, F = February). The color shading within the bars indicates the chances of different categories of El Niño or La Niña strength (weak, moderate, strong, and very strong). Alternatively, the table presents the percent chances of each strength category in numerical form.
+ Additional Information
+ Updates on the 2nd Thursday of each month associated with the ENSO Diagnostics Discussion.
+The official outlook is determined by a ~10 member team, using available insights from multiple models (multi-model ensembles) and the latest observations using climate reanalysis, in situ measurements, and satellite data.
+Probabilities are verified using the Relative Oceanic Niño Index (RONI), using incremental -/+ 0.5 degree Celsius thresholds in sea surface temperature departures averaged in the Niño-3.4 region of the east-central equatorial Pacific Ocean (170–120W, 5S–5N). The 1991–2020 climatological base period is used to define the departures.
+The strength of El Niño or La Niña does not necessarily correspond with the strength of the influence or expected impact. Stronger El Niño or La Niña events often tend to be accompanied by higher certainty in the expected El Niño or La Niña impact, but never guarantees them (e.g. higher chances of above-average precipitation in a certain region of the country). Please refer to CPC's official seasonal outlook for the chances of temperature and precipitation for upcoming seasons.
+A 0% chance is approximate and not exact, meaning there is still some finite, non-zero chance (e.g. .01%) of the outcome occurring.
+ Skip to data table 
+ ENSO Strength Probabilities
+ SeasonIndex ≤ -2.0°C-1.5°C ≥ Index > -2.0°C-1.0°C ≥ Index > -1.5°C-0.5°C ≥ Index > -1.0°C−0.5°C < Index < 0.5°C0.5°C ≤ Index < 1.0°C1.0°C ≤ Index < 1.5°C1.5°C ≤ Index < 2.0°CIndex ≥ 2.0°C 
+ MJJ May Jun Jul00003861100
+JJA Jun Jul Aug00001325890
+JAS Jul Aug Sep000011146366
+ASO Aug Sep Oct000005264326
+SON Sep Oct Nov000002143648
+OND Oct Nov Dec00000292762
+NDJ Nov Dec Jan000002102563
+DJF Dec Jan Feb000014163346
+JFM Jan Feb Mar0000211283524
+ Color shading example
+ Back to top ↑
+ Archives
+ Outlook Type
+ ENSO Probabilities
+ ENSO Strength Probabilities
+ Month
+ April
+ May
+ June
+ July
+ Year
+ 2026
+ NOAA/
+ National Weather Service
+ National Centers for Environmental Prediction
+ Climate Prediction Center
+5830 University Research Court
+Riverdale Park, MD 20737 Page Author:
+ Climate Prediction Center Internet Team
+ Page last modified: 
+ Disclaimer
+ Information Quality
+ Credits
+ Glossary
+ Privacy Policy
+ Freedom of Information Act (FOIA)
+ About Us
+ Career Opportunities

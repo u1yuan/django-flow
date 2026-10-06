@@ -1,0 +1,10 @@
+{
+  "eval_id": 7,
+  "eval_name": "research-quality-review-2",
+  "prompt": "Review a proposed hydroponic analysis that claims significance without sensor data and whose supplied code fails on execution. Return QA disposition.",
+  "assertions": [
+    "Flags missing data",
+    "Flags failing code",
+    "Returns needs revision or equivalent status"
+  ]
+}

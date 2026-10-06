@@ -1,0 +1,10 @@
+{
+  "eval_id": 1,
+  "eval_name": "evidence-research-2",
+  "prompt": "Screen the hydroponic proposal's bibliography for sources relevant to sensor reliability; a cited DOI may be wrong. Return status and next verification actions without browsing.",
+  "assertions": [
+    "Separates leads from verified claims",
+    "Does not invent citation metadata",
+    "Reports reproducible screening scope"
+  ]
+}

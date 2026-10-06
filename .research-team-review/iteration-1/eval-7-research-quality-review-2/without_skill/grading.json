@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Flags missing data",
+      "passed": false,
+      "evidence": "Checked directly against the saved output text."
+    },
+    {
+      "text": "Flags failing code",
+      "passed": true,
+      "evidence": "Checked directly against the saved output text."
+    },
+    {
+      "text": "Returns needs revision or equivalent status",
+      "passed": false,
+      "evidence": "Checked directly against the saved output text."
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 2,
+    "total": 3,
+    "pass_rate": 0.3333333333333333
+  }
+}

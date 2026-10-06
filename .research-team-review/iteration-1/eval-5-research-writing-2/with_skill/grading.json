@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "States absence of observed sensor analysis",
+      "passed": true,
+      "evidence": "Checked directly against the saved output text."
+    },
+    {
+      "text": "Preserves proposal status",
+      "passed": true,
+      "evidence": "Checked directly against the saved output text."
+    },
+    {
+      "text": "Lists unresolved inputs",
+      "passed": true,
+      "evidence": "Checked directly against the saved output text."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

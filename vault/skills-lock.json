@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "secretary": {
+      "source": "u1yuan/obsidian-skill-secretary",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "09cdd095af1f5bda098a03cbac98bcfed74d291c0aadb8096c6ed1f39a7d68c2"
+    }
+  }
+}

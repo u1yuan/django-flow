@@ -1,0 +1,28 @@
+https://extranet.who.int/ncdsmicrodata/index.php
+https://extranet.who.int/ncdsmicrodata/index.php/home
+https://extranet.who.int/ncdsmicrodata/index.php/catalog
+https://extranet.who.int/ncdsmicrodata/index.php/citations
+https://extranet.who.int/ncdsmicrodata/index.php/auth/login
+https://extranet.who.int/ncdsmicrodata/index.php/
+https://extranet.who.int/ncdsmicrodata/index.php/catalog
+https://extranet.who.int/ncdsmicrodata/index.php/catalog/GSHS
+https://extranet.who.int/ncdsmicrodata/index.php/catalog/944
+https://extranet.who.int/ncdsmicrodata/index.php/catalog/GSHS
+https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/get-microdata
+https://extranet.who.int/ncdsmicrodata/index.php/collections/GSHS
+https://extranet.who.int/ncdsmicrodata/index.php/metadata/export/944/ddi
+https://extranet.who.int/ncdsmicrodata/index.php/metadata/export/944/json
+https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/study-description
+https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/data-dictionary
+https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/related-materials
+https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/get-microdata
+https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/data-dictionary/F5?file_name=PHL2019
+https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/data-dictionary/F6?file_name=PHL2019 (Luzon)
+https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/data-dictionary/F7?file_name=PHL2019 (Mindanao)
+https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/data-dictionary/F8?file_name=PHL2019 (Visayas)
+https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/data-dictionary/F5?file_name=PHL2019
+https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/data-dictionary/F6?file_name=PHL2019 (Luzon)
+https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/data-dictionary/F7?file_name=PHL2019 (Mindanao)
+https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/data-dictionary/F8?file_name=PHL2019 (Visayas)
+https://extranet.who.int/ncdsmicrodata/index.php/catalog
+https://extranet.who.int/ncdsmicrodata/index.php

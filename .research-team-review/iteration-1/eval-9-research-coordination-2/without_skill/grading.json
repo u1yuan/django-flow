@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Uses the six required brief fields",
+      "passed": false,
+      "evidence": "Checked for topic/question, output, inputs, constraints, acceptance criteria, and data-handling restrictions."
+    },
+    {
+      "text": "Does not claim an empirical anomaly result",
+      "passed": true,
+      "evidence": "Looked for an explicit boundary on empirical conclusions."
+    },
+    {
+      "text": "Reports QA status and unresolved findings",
+      "passed": true,
+      "evidence": "Looked for a QA disposition and remaining open issues."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 1,
+    "total": 3,
+    "pass_rate": 0.6666666666666666
+  }
+}

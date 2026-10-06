@@ -1,0 +1,7376 @@
+{
+  "meta": {
+    "count": 9,
+    "db_response_time_ms": 331,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "x_query": {
+      "oql": "works where date >= (2018-01-01)\n  and retracted is (false)\n  and language is (en)\n  and title/abstract has (hydroponic)\n  and date <= (2026-09-29)\n  and abstract has (\n    stemmed \"change-point\"\n    or stemmed \"isolation forest\"\n    or stemmed \"one-class\"\n    or autoencoder\n    or unsupervised\n  )",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "from_publication_date",
+            "value": "2018-01-01"
+          },
+          {
+            "column_id": "is_retracted",
+            "value": false
+          },
+          {
+            "column_id": "language",
+            "value": "en"
+          },
+          {
+            "column_id": "title_and_abstract.search",
+            "value": "hydroponic",
+            "operator": "has"
+          },
+          {
+            "column_id": "to_publication_date",
+            "value": "2026-09-29"
+          },
+          {
+            "join": "or",
+            "filters": [
+              {
+                "column_id": "abstract.search",
+                "value": "\"change-point\"",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "\"isolation forest\"",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "\"one-class\"",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "autoencoder",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "unsupervised",
+                "operator": "has"
+              }
+            ]
+          }
+        ]
+      },
+      "url": "/works?filter=from_publication_date:2018-01-01,is_retracted:false,language:en,title_and_abstract.search:hydroponic,to_publication_date:2026-09-29,abstract.search:%22change-point%22|%22isolation forest%22|%22one-class%22|autoencoder|unsupervised&per_page=10&page=1"
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W4399319832",
+      "display_name": "A Machine Learning Approach for Predicting Plant Uptake and Translocation of Per- and Polyfluoroalkyl Substances (PFAS) from Hydroponics",
+      "publication_year": 2024,
+      "publication_date": "2024-06-04",
+      "cited_by_count": 19,
+      "doi": "https://doi.org/10.1021/acsestengg.4c00107",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5054727016",
+            "display_name": "Olatunbosun Adu",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I91045830",
+              "display_name": "Texas A&M University",
+              "ror": "https://ror.org/01f5ytq51",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I91045830"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Olatunbosun Adu",
+          "raw_affiliation_strings": [
+            "Department of Water Management and Hydrological Science, Texas A&M University, College Station, Texas 77843, United States",
+            "Program for the Environment and Sustainability, Department of Environmental and Occupational Health, School of Public Health, Texas A&M University, 212 Adriance Lab Rd., 1266 TAMU, College Station, Texas 77843, United States"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Water Management and Hydrological Science, Texas A&M University, College Station, Texas 77843, United States",
+              "institution_ids": [
+                "https://openalex.org/I91045830"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Program for the Environment and Sustainability, Department of Environmental and Occupational Health, School of Public Health, Texas A&M University, 212 Adriance Lab Rd., 1266 TAMU, College Station, Texas 77843, United States",
+              "institution_ids": [
+                "https://openalex.org/I91045830"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5009138864",
+            "display_name": "Michael Bryant",
+            "orcid": "https://orcid.org/0009-0009-0341-4069"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I91045830",
+              "display_name": "Texas A&M University",
+              "ror": "https://ror.org/01f5ytq51",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I91045830"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Michael Taylor Bryant",
+          "raw_affiliation_strings": [
+            "Department of Civil and Environmental Engineering, Texas A&M University, College Station, Texas 77843, United States"
+          ],
+          "raw_orcid": "https://orcid.org/0009-0009-0341-4069",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Civil and Environmental Engineering, Texas A&M University, College Station, Texas 77843, United States",
+              "institution_ids": [
+                "https://openalex.org/I91045830"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5042326398",
+            "display_name": "Xingmao Ma",
+            "orcid": "https://orcid.org/0000-0003-4650-2455"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I91045830",
+              "display_name": "Texas A&M University",
+              "ror": "https://ror.org/01f5ytq51",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I91045830"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Xingmao Ma",
+          "raw_affiliation_strings": [
+            "Department of Civil and Environmental Engineering, Texas A&M University, College Station, Texas 77843, United States"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-4650-2455",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Civil and Environmental Engineering, Texas A&M University, College Station, Texas 77843, United States",
+              "institution_ids": [
+                "https://openalex.org/I91045830"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5001769021",
+            "display_name": "Virender K. Sharma",
+            "orcid": "https://orcid.org/0000-0002-5980-8675"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I91045830",
+              "display_name": "Texas A&M University",
+              "ror": "https://ror.org/01f5ytq51",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I91045830"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Virender K. Sharma",
+          "raw_affiliation_strings": [
+            "Program for the Environment and Sustainability, Department of Environmental and Occupational Health, School of Public Health, Texas A&M University, 212 Adriance Lab Rd., 1266 TAMU, College Station, Texas 77843, United States"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-5980-8675",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Program for the Environment and Sustainability, Department of Environmental and Occupational Health, School of Public Health, Texas A&M University, 212 Adriance Lab Rd., 1266 TAMU, College Station, Texas 77843, United States",
+              "institution_ids": [
+                "https://openalex.org/I91045830"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "High": [
+          0
+        ],
+        "Resolution": [
+          1
+        ],
+        "Image": [
+          2
+        ],
+        "Download": [
+          3
+        ],
+        "MS": [
+          4
+        ],
+        "PowerPoint": [
+          5
+        ],
+        "Slide": [
+          6
+        ],
+        "Plant": [
+          7
+        ],
+        "uptake": [
+          8,
+          197
+        ],
+        "and": [
+          9,
+          13,
+          28,
+          46,
+          63,
+          81,
+          118,
+          130,
+          143,
+          155,
+          159,
+          163,
+          181,
+          198,
+          200,
+          211
+        ],
+        "accumulation": [
+          10,
+          177,
+          199
+        ],
+        "of": [
+          11,
+          145
+        ],
+        "per-": [
+          12
+        ],
+        "polyfluoroalkyl": [
+          14
+        ],
+        "substances": [
+          15
+        ],
+        "(PFAS),": [
+          16
+        ],
+        "represented": [
+          17
+        ],
+        "by": [
+          18
+        ],
+        "the": [
+          19,
+          60,
+          91,
+          97,
+          102,
+          113,
+          122,
+          146,
+          164,
+          187,
+          204
+        ],
+        "root": [
+          20
+        ],
+        "concentration": [
+          21,
+          25
+        ],
+        "factor": [
+          22,
+          26,
+          30
+        ],
+        "(RCF),": [
+          23
+        ],
+        "shoot": [
+          24
+        ],
+        "(SCF),": [
+          27
+        ],
+        "translocation": [
+          29
+        ],
+        "(TF),": [
+          31
+        ],
+        "were": [
+          32,
+          87
+        ],
+        "predicted": [
+          33
+        ],
+        "using": [
+          34,
+          109
+        ],
+        "machine": [
+          35,
+          84
+        ],
+        "learning": [
+          36
+        ],
+        "(ML)": [
+          37
+        ],
+        "models": [
+          38
+        ],
+        "from": [
+          39,
+          209
+        ],
+        "experimental": [
+          40
+        ],
+        "data": [
+          41
+        ],
+        "with": [
+          42
+        ],
+        "19": [
+          43
+        ],
+        "PFAS": [
+          44,
+          150,
+          195,
+          210
+        ],
+        "compounds": [
+          45,
+          171
+        ],
+        "nine": [
+          47
+        ],
+        "plant": [
+          48,
+          119,
+          179,
+          196
+        ],
+        "species.": [
+          49
+        ],
+        "Unsupervised": [
+          50
+        ],
+        "principal": [
+          51
+        ],
+        "component": [
+          52
+        ],
+        "analysis": [
+          53,
+          107
+        ],
+        "(PCA)": [
+          54
+        ],
+        "was": [
+          55,
+          136
+        ],
+        "first": [
+          56
+        ],
+        "used": [
+          57
+        ],
+        "to": [
+          58,
+          139
+        ],
+        "classify": [
+          59
+        ],
+        "input": [
+          61
+        ],
+        "data,": [
+          62
+        ],
+        "then": [
+          64
+        ],
+        "supervised": [
+          65
+        ],
+        "ML": [
+          66,
+          188
+        ],
+        "models,": [
+          67
+        ],
+        "including": [
+          68
+        ],
+        "multiple": [
+          69
+        ],
+        "linear": [
+          70
+        ],
+        "regression": [
+          71
+        ],
+        "model": [
+          72
+        ],
+        "(MLR),": [
+          73
+        ],
+        "artificial": [
+          74
+        ],
+        "neural": [
+          75
+        ],
+        "network": [
+          76
+        ],
+        "(ANN),": [
+          77
+        ],
+        "random": [
+          78
+        ],
+        "forest": [
+          79
+        ],
+        "(RF),": [
+          80
+        ],
+        "support": [
+          82
+        ],
+        "vector": [
+          83
+        ],
+        "(SVM)": [
+          85
+        ],
+        "algorithms,": [
+          86
+        ],
+        "applied": [
+          88,
+          138
+        ],
+        "for": [
+          89,
+          126
+        ],
+        "predicting": [
+          90,
+          127
+        ],
+        "chosen": [
+          92
+        ],
+        "output": [
+          93
+        ],
+        "parameters.": [
+          94
+        ],
+        "RF": [
+          95,
+          110,
+          135
+        ],
+        "displayed": [
+          96
+        ],
+        "highest": [
+          98
+        ],
+        "prediction": [
+          99
+        ],
+        "accuracy": [
+          100
+        ],
+        "among": [
+          101
+        ],
+        "tested": [
+          103
+        ],
+        "models.": [
+          104
+        ],
+        "Feature": [
+          105
+        ],
+        "importance": [
+          106
+        ],
+        "performed": [
+          108
+        ],
+        "showed": [
+          111
+        ],
+        "that": [
+          112,
+          167,
+          186
+        ],
+        "molecular": [
+          114
+        ],
+        "weight,": [
+          115
+        ],
+        "exposure": [
+          116
+        ],
+        "time,": [
+          117
+        ],
+        "species": [
+          120
+        ],
+        "are": [
+          121
+        ],
+        "most": [
+          123,
+          148
+        ],
+        "important": [
+          124
+        ],
+        "parameters": [
+          125
+        ],
+        "RCF,": [
+          128,
+          141
+        ],
+        "SCF,": [
+          129,
+          142
+        ],
+        "TF": [
+          131,
+          144
+        ],
+        "in": [
+          132,
+          178
+        ],
+        "hydroponic": [
+          133
+        ],
+        "systems.": [
+          134
+        ],
+        "further": [
+          137
+        ],
+        "estimate": [
+          140
+        ],
+        "two": [
+          147
+        ],
+        "prevalent": [
+          149
+        ],
+        "compounds,": [
+          151
+        ],
+        "perfluorooctanoic": [
+          152
+        ],
+        "acid": [
+          153,
+          157
+        ],
+        "(PFOA)": [
+          154
+        ],
+        "perfluorooctanesulfonic": [
+          156
+        ],
+        "(PFOS),": [
+          158
+        ],
+        "their": [
+          160,
+          168,
+          212
+        ],
+        "common": [
+          161,
+          169
+        ],
+        "alternatives": [
+          162
+        ],
+        "results": [
+          165,
+          184
+        ],
+        "revealed": [
+          166
+        ],
+        "replacing": [
+          170
+        ],
+        "have": [
+          172
+        ],
+        "either": [
+          173
+        ],
+        "comparable": [
+          174
+        ],
+        "or": [
+          175
+        ],
+        "higher": [
+          176
+        ],
+        "roots": [
+          180
+        ],
+        "shoots.": [
+          182
+        ],
+        "Our": [
+          183
+        ],
+        "demonstrated": [
+          185
+        ],
+        "approach": [
+          189
+        ],
+        "could": [
+          190
+        ],
+        "generate": [
+          191
+        ],
+        "critical": [
+          192
+        ],
+        "insight": [
+          193
+        ],
+        "into": [
+          194
+        ],
+        "shed": [
+          201
+        ],
+        "light": [
+          202
+        ],
+        "on": [
+          203
+        ],
+        "potential": [
+          205
+        ],
+        "food": [
+          206
+        ],
+        "safety": [
+          207
+        ],
+        "concerns": [
+          208
+        ],
+        "replacements.": [
+          213
+        ]
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://doi.org/10.1021/acsestengg.4c00107",
+        "any_repository_has_fulltext": false
+      },
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4413216304",
+      "display_name": "IoT-based monitoring and control for optimized plant growth in smart greenhouses using soil and hydroponic systems",
+      "publication_year": 2025,
+      "publication_date": "2025-08-11",
+      "cited_by_count": 13,
+      "doi": "https://doi.org/10.1016/j.iot.2025.101710",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5119306786",
+            "display_name": "Kenza Bouarroudj",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210160465",
+              "display_name": "Universit\u00e9 Constantine 2",
+              "ror": "https://ror.org/056mctw68",
+              "country_code": "DZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4210160465"
+              ]
+            }
+          ],
+          "countries": [
+            "DZ"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Kenza Bouarroudj",
+          "raw_affiliation_strings": [
+            "LIRE Laboratory, University of Constantine 2 Abdelhamid Mehri Ali Mendjeli, BP : 67A, Constantine, Algeria"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "LIRE Laboratory, University of Constantine 2 Abdelhamid Mehri Ali Mendjeli, BP : 67A, Constantine, Algeria",
+              "institution_ids": [
+                "https://openalex.org/I4210160465"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5069141432",
+            "display_name": "Fatima Babaa",
+            "orcid": "https://orcid.org/0000-0002-0031-2210",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-0031-2210"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I125485651",
+              "display_name": "University Fr\u00e8res Mentouri Constantine 1",
+              "ror": "https://ror.org/017wv6808",
+              "country_code": "DZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I125485651"
+              ]
+            }
+          ],
+          "countries": [
+            "DZ"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Fatima Babaa",
+          "raw_affiliation_strings": [
+            "Electrical Laboratory of Constantine LEC, University Freres Mentouri Constantine 1, Route de Ain El Bey, Constantine, 25017, Algeria"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Electrical Laboratory of Constantine LEC, University Freres Mentouri Constantine 1, Route de Ain El Bey, Constantine, 25017, Algeria",
+              "institution_ids": [
+                "https://openalex.org/I125485651"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5001856693",
+            "display_name": "Abderrahim Touil",
+            "orcid": "https://orcid.org/0000-0001-5755-8994",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-5755-8994"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I125485651",
+              "display_name": "University Fr\u00e8res Mentouri Constantine 1",
+              "ror": "https://ror.org/017wv6808",
+              "country_code": "DZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I125485651"
+              ]
+            }
+          ],
+          "countries": [
+            "DZ"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Abderrahim Touil",
+          "raw_affiliation_strings": [
+            "Electrical Laboratory of Constantine LEC, University Freres Mentouri Constantine 1, Route de Ain El Bey, Constantine, 25017, Algeria"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Electrical Laboratory of Constantine LEC, University Freres Mentouri Constantine 1, Route de Ain El Bey, Constantine, 25017, Algeria",
+              "institution_ids": [
+                "https://openalex.org/I125485651"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4412196756",
+      "display_name": "Interpretable Machine Learning Models and Symbolic Regressions Reveal Transfer of Per- and Polyfluoroalkyl Substances (PFASs) in Plants: A New Small-Data Machine Learning Method to Augment Data and Obtain Predictive Equations",
+      "publication_year": 2025,
+      "publication_date": "2025-07-10",
+      "cited_by_count": 3,
+      "doi": "https://doi.org/10.3390/toxics13070579",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5029752627",
+            "display_name": "Yuan Zhang",
+            "orcid": "https://orcid.org/0000-0002-7909-9845",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-7909-9845"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I162868743",
+              "display_name": "Tianjin University",
+              "ror": "https://ror.org/012tb2g32",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I162868743"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yuan Zhang",
+          "raw_affiliation_strings": [
+            "Georgia Tech Shenzhen Institute, Tianjin University, Shenzhen 518071, China",
+            "School of Environmental Science and Engineering, Tianjin University, Tianjin 300350, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Georgia Tech Shenzhen Institute, Tianjin University, Shenzhen 518071, China",
+              "institution_ids": [
+                "https://openalex.org/I162868743"
+              ]
+            },
+            {
+              "raw_affiliation_string": "School of Environmental Science and Engineering, Tianjin University, Tianjin 300350, China",
+              "institution_ids": [
+                "https://openalex.org/I162868743"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100720241",
+            "display_name": "Yanting Li",
+            "orcid": "https://orcid.org/0000-0002-2528-747X",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-2528-747X",
+              "https://orcid.org/0000-0002-6496-4461"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I162868743",
+              "display_name": "Tianjin University",
+              "ror": "https://ror.org/012tb2g32",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I162868743"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yanting Li",
+          "raw_affiliation_strings": [
+            "School of Environmental Science and Engineering, Tianjin University, Tianjin 300350, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Environmental Science and Engineering, Tianjin University, Tianjin 300350, China",
+              "institution_ids": [
+                "https://openalex.org/I162868743"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100645665",
+            "display_name": "Li Yang",
+            "orcid": "https://orcid.org/0000-0002-1889-3113",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-1889-3113"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I162868743",
+              "display_name": "Tianjin University",
+              "ror": "https://ror.org/012tb2g32",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I162868743"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yang Li",
+          "raw_affiliation_strings": [
+            "School of Environmental Science and Engineering, Tianjin University, Tianjin 300350, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Environmental Science and Engineering, Tianjin University, Tianjin 300350, China",
+              "institution_ids": [
+                "https://openalex.org/I162868743"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100781561",
+            "display_name": "Lin Zhao",
+            "orcid": "https://orcid.org/0000-0002-6469-2902",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-6469-2902"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I162868743",
+              "display_name": "Tianjin University",
+              "ror": "https://ror.org/012tb2g32",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I162868743"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Lin Zhao",
+          "raw_affiliation_strings": [
+            "School of Environmental Science and Engineering, Tianjin University, Tianjin 300350, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Environmental Science and Engineering, Tianjin University, Tianjin 300350, China",
+              "institution_ids": [
+                "https://openalex.org/I162868743"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5029236662",
+            "display_name": "Yongkui Yang",
+            "orcid": "https://orcid.org/0000-0003-2453-0973",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-2453-0973"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I162868743",
+              "display_name": "Tianjin University",
+              "ror": "https://ror.org/012tb2g32",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I162868743"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Yongkui Yang",
+          "raw_affiliation_strings": [
+            "School of Environmental Science and Engineering, Tianjin University, Tianjin 300350, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Environmental Science and Engineering, Tianjin University, Tianjin 300350, China",
+              "institution_ids": [
+                "https://openalex.org/I162868743"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Machine": [
+          0
+        ],
+        "learning": [
+          1
+        ],
+        "(ML)": [
+          2
+        ],
+        "techniques": [
+          3
+        ],
+        "are": [
+          4
+        ],
+        "becoming": [
+          5
+        ],
+        "increasingly": [
+          6
+        ],
+        "valuable": [
+          7
+        ],
+        "for": [
+          8
+        ],
+        "modeling": [
+          9
+        ],
+        "the": [
+          10,
+          41,
+          50,
+          71,
+          77,
+          94,
+          104,
+          111,
+          116,
+          124,
+          144,
+          161,
+          170,
+          176
+        ],
+        "transport": [
+          11
+        ],
+        "of": [
+          12,
+          26,
+          43
+        ],
+        "pollutants": [
+          13
+        ],
+        "in": [
+          14,
+          37,
+          196
+        ],
+        "plant": [
+          15,
+          197
+        ],
+        "systems.": [
+          16,
+          39
+        ],
+        "However,": [
+          17
+        ],
+        "two": [
+          18
+        ],
+        "challenges": [
+          19
+        ],
+        "(small": [
+          20
+        ],
+        "sample": [
+          21
+        ],
+        "sizes": [
+          22
+        ],
+        "and": [
+          23,
+          45,
+          53,
+          62,
+          99,
+          140,
+          163,
+          194
+        ],
+        "a": [
+          24,
+          100
+        ],
+        "lack": [
+          25
+        ],
+        "quantitative": [
+          27,
+          54
+        ],
+        "calculation": [
+          28,
+          55
+        ],
+        "functions)": [
+          29
+        ],
+        "remain": [
+          30
+        ],
+        "when": [
+          31
+        ],
+        "using": [
+          32
+        ],
+        "ML": [
+          33,
+          106
+        ],
+        "to": [
+          34,
+          110,
+          114,
+          154
+        ],
+        "predict": [
+          35,
+          115
+        ],
+        "migration": [
+          36
+        ],
+        "hydroponic": [
+          38
+        ],
+        "For": [
+          40
+        ],
+        "bioaccumulation": [
+          42
+        ],
+        "per-": [
+          44
+        ],
+        "polyfluoroalkyl": [
+          46
+        ],
+        "substances,": [
+          47
+        ],
+        "we": [
+          48
+        ],
+        "studied": [
+          49
+        ],
+        "key": [
+          51
+        ],
+        "factors": [
+          52
+        ],
+        "equations": [
+          56,
+          158
+        ],
+        "based": [
+          57,
+          159
+        ],
+        "on": [
+          58,
+          70,
+          160,
+          167
+        ],
+        "data": [
+          59,
+          73,
+          75,
+          82
+        ],
+        "augmentation,": [
+          60
+        ],
+        "ML,": [
+          61
+        ],
+        "symbolic": [
+          63,
+          151
+        ],
+        "regression.": [
+          64
+        ],
+        "First,": [
+          65
+        ],
+        "feature": [
+          66
+        ],
+        "expansion": [
+          67
+        ],
+        "was": [
+          68,
+          81,
+          88
+        ],
+        "performed": [
+          69
+        ],
+        "input": [
+          72
+        ],
+        "after": [
+          74
+        ],
+        "preprocessing;": [
+          76
+        ],
+        "most": [
+          78,
+          145
+        ],
+        "important": [
+          79,
+          146
+        ],
+        "step": [
+          80
+        ],
+        "augmentation.": [
+          83
+        ],
+        "The": [
+          84,
+          131
+        ],
+        "original": [
+          85,
+          162
+        ],
+        "training": [
+          86
+        ],
+        "set": [
+          87,
+          113
+        ],
+        "expanded": [
+          89
+        ],
+        "nine": [
+          90
+        ],
+        "times": [
+          91
+        ],
+        "by": [
+          92
+        ],
+        "combining": [
+          93
+        ],
+        "synthetic": [
+          95
+        ],
+        "minority": [
+          96
+        ],
+        "oversampling": [
+          97
+        ],
+        "technique": [
+          98
+        ],
+        "variational": [
+          101
+        ],
+        "autoencoder.": [
+          102
+        ],
+        "Subsequently,": [
+          103
+        ],
+        "four": [
+          105
+        ],
+        "models": [
+          107,
+          153
+        ],
+        "were": [
+          108,
+          143
+        ],
+        "applied": [
+          109,
+          149
+        ],
+        "test": [
+          112
+        ],
+        "selected": [
+          117
+        ],
+        "output": [
+          118
+        ],
+        "parameters.": [
+          119,
+          147
+        ],
+        "Categorical": [
+          120
+        ],
+        "boosting": [
+          121
+        ],
+        "(CatBoost)": [
+          122
+        ],
+        "had": [
+          123
+        ],
+        "highest": [
+          125,
+          177
+        ],
+        "prediction": [
+          126,
+          157
+        ],
+        "accuracy": [
+          127,
+          178
+        ],
+        "(R2": [
+          128,
+          179
+        ],
+        "=": [
+          129,
+          180
+        ],
+        "0.83).": [
+          130
+        ],
+        "Shapley": [
+          132
+        ],
+        "Additive": [
+          133
+        ],
+        "Explanation": [
+          134
+        ],
+        "values": [
+          135
+        ],
+        "indicated": [
+          136
+        ],
+        "that": [
+          137,
+          185
+        ],
+        "molecular": [
+          138
+        ],
+        "weight": [
+          139
+        ],
+        "exposure": [
+          141
+        ],
+        "time": [
+          142
+        ],
+        "We": [
+          148
+        ],
+        "three": [
+          150
+        ],
+        "regression": [
+          152
+        ],
+        "obtain": [
+          155
+        ],
+        "accurate": [
+          156
+        ],
+        "augmented": [
+          164,
+          168
+        ],
+        "data.": [
+          165
+        ],
+        "Based": [
+          166
+        ],
+        "data,": [
+          169
+        ],
+        "high-dimensional": [
+          171
+        ],
+        "sparse": [
+          172
+        ],
+        "interaction": [
+          173
+        ],
+        "equation": [
+          174
+        ],
+        "exhibited": [
+          175
+        ],
+        "0.776).": [
+          181
+        ],
+        "Our": [
+          182
+        ],
+        "results": [
+          183
+        ],
+        "indicate": [
+          184
+        ],
+        "this": [
+          186
+        ],
+        "method": [
+          187
+        ],
+        "could": [
+          188
+        ],
+        "provide": [
+          189
+        ],
+        "crucial": [
+          190
+        ],
+        "insights": [
+          191
+        ],
+        "into": [
+          192
+        ],
+        "absorption": [
+          193
+        ],
+        "accumulation": [
+          195
+        ],
+        "roots.": [
+          198
+        ]
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://www.mdpi.com/2305-6304/13/7/579/pdf?version=1752128673",
+        "any_repository_has_fulltext": true
+      },
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4399505262",
+      "display_name": "Performance enhancement in hydroponic and soil compound prediction by deep learning techniques",
+      "publication_year": 2024,
+      "publication_date": "2024-06-10",
+      "cited_by_count": 2,
+      "doi": "https://doi.org/10.7717/peerj-cs.2101",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5014762349",
+            "display_name": "Mustufa Haider Abidi",
+            "orcid": "https://orcid.org/0000-0001-5609-5705"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I28022161",
+              "display_name": "King Saud University",
+              "ror": "https://ror.org/02f81g417",
+              "country_code": "SA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I28022161"
+              ]
+            }
+          ],
+          "countries": [
+            "SA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Mustufa Haider Abidi",
+          "raw_affiliation_strings": [
+            "Advanced Manufacturing Institute, King Saud University, Riyadh, Saudi Arabia"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Advanced Manufacturing Institute, King Saud University, Riyadh, Saudi Arabia",
+              "institution_ids": [
+                "https://openalex.org/I28022161"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5102991731",
+            "display_name": "Sanjay Chintakindi",
+            "orcid": "https://orcid.org/0000-0003-2936-9875"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I28022161",
+              "display_name": "King Saud University",
+              "ror": "https://ror.org/02f81g417",
+              "country_code": "SA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I28022161"
+              ]
+            }
+          ],
+          "countries": [
+            "SA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Sanjay Chintakindi",
+          "raw_affiliation_strings": [
+            "Department of Industrial Engineering, King Saud University, Riyadh, Saudi Arabia"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Industrial Engineering, King Saud University, Riyadh, Saudi Arabia",
+              "institution_ids": [
+                "https://openalex.org/I28022161"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5045185353",
+            "display_name": "Ateekh Ur Rehman",
+            "orcid": "https://orcid.org/0000-0003-2265-5828"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I28022161",
+              "display_name": "King Saud University",
+              "ror": "https://ror.org/02f81g417",
+              "country_code": "SA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I28022161"
+              ]
+            }
+          ],
+          "countries": [
+            "SA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ateekh Ur Rehman",
+          "raw_affiliation_strings": [
+            "Department of Industrial Engineering, King Saud University, Riyadh, Saudi Arabia"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Industrial Engineering, King Saud University, Riyadh, Saudi Arabia",
+              "institution_ids": [
+                "https://openalex.org/I28022161"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5008485834",
+            "display_name": "Muneer Khan Mohammed",
+            "orcid": "https://orcid.org/0000-0003-4867-2458"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I28022161",
+              "display_name": "King Saud University",
+              "ror": "https://ror.org/02f81g417",
+              "country_code": "SA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I28022161"
+              ]
+            }
+          ],
+          "countries": [
+            "SA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Muneer Khan Mohammed",
+          "raw_affiliation_strings": [
+            "Advanced Manufacturing Institute, King Saud University, Riyadh, Saudi Arabia"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Advanced Manufacturing Institute, King Saud University, Riyadh, Saudi Arabia",
+              "institution_ids": [
+                "https://openalex.org/I28022161"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "The": [
+          0,
+          153,
+          182
+        ],
+        "soil": [
+          1,
+          21,
+          50,
+          83,
+          114,
+          162,
+          242,
+          249
+        ],
+        "quality": [
+          2
+        ],
+        "plays": [
+          3
+        ],
+        "a": [
+          4,
+          16,
+          56,
+          233
+        ],
+        "crucial": [
+          5
+        ],
+        "role": [
+          6
+        ],
+        "in": [
+          7,
+          33,
+          88,
+          137,
+          196,
+          255
+        ],
+        "providing": [
+          8
+        ],
+        "essential": [
+          9
+        ],
+        "nutrients": [
+          10
+        ],
+        "for": [
+          11,
+          38,
+          239
+        ],
+        "crop": [
+          12,
+          43,
+          151
+        ],
+        "growth": [
+          13
+        ],
+        "and": [
+          14,
+          28,
+          45,
+          63,
+          74,
+          82,
+          113,
+          149,
+          161,
+          190,
+          241,
+          248,
+          268
+        ],
+        "ensuring": [
+          15
+        ],
+        "bountiful": [
+          17
+        ],
+        "yield.": [
+          18
+        ],
+        "Identifying": [
+          19
+        ],
+        "the": [
+          20,
+          29,
+          72,
+          80,
+          95,
+          125,
+          158,
+          178,
+          191,
+          197,
+          203,
+          206,
+          212,
+          226,
+          246,
+          256,
+          259,
+          263,
+          276
+        ],
+        "composition,": [
+          22
+        ],
+        "which": [
+          23
+        ],
+        "includes": [
+          24
+        ],
+        "sand,": [
+          25
+        ],
+        "silt": [
+          26
+        ],
+        "particles,": [
+          27
+        ],
+        "mixture": [
+          30
+        ],
+        "of": [
+          31,
+          76,
+          85,
+          97,
+          127,
+          262
+        ],
+        "clay": [
+          32
+        ],
+        "specific": [
+          34
+        ],
+        "proportions,": [
+          35
+        ],
+        "is": [
+          36,
+          84,
+          166,
+          175,
+          253,
+          266
+        ],
+        "vital": [
+          37
+        ],
+        "making": [
+          39,
+          138
+        ],
+        "informed": [
+          40,
+          140
+        ],
+        "decisions": [
+          41,
+          141
+        ],
+        "about": [
+          42,
+          142
+        ],
+        "selection": [
+          44
+        ],
+        "managing": [
+          46
+        ],
+        "weed": [
+          47
+        ],
+        "growth.": [
+          48,
+          119
+        ],
+        "Furthermore,": [
+          49
+        ],
+        "pollution": [
+          51
+        ],
+        "from": [
+          52,
+          168
+        ],
+        "emerging": [
+          53
+        ],
+        "contaminants": [
+          54
+        ],
+        "presents": [
+          55
+        ],
+        "substantial": [
+          57
+        ],
+        "risk": [
+          58
+        ],
+        "to": [
+          59,
+          69,
+          110,
+          146,
+          156,
+          177,
+          274
+        ],
+        "water": [
+          60
+        ],
+        "resource": [
+          61
+        ],
+        "management": [
+          62
+        ],
+        "food": [
+          64
+        ],
+        "production.": [
+          65,
+          152
+        ],
+        "Developing": [
+          66
+        ],
+        "numerical": [
+          67
+        ],
+        "models": [
+          68,
+          273
+        ],
+        "comprehensively": [
+          70
+        ],
+        "describe": [
+          71
+        ],
+        "transport": [
+          73
+        ],
+        "reactions": [
+          75
+        ],
+        "chemicals": [
+          77
+        ],
+        "within": [
+          78
+        ],
+        "both": [
+          79
+        ],
+        "plants": [
+          81,
+          129
+        ],
+        "utmost": [
+          86
+        ],
+        "importance": [
+          87
+        ],
+        "crafting": [
+          89
+        ],
+        "effective": [
+          90
+        ],
+        "mitigation": [
+          91
+        ],
+        "strategies.": [
+          92
+        ],
+        "To": [
+          93,
+          201
+        ],
+        "address": [
+          94
+        ],
+        "limitations": [
+          96
+        ],
+        "traditional": [
+          98
+        ],
+        "models,": [
+          99
+        ],
+        "this": [
+          100,
+          173
+        ],
+        "paper": [
+          101
+        ],
+        "devises": [
+          102
+        ],
+        "an": [
+          103
+        ],
+        "innovative": [
+          104
+        ],
+        "approach": [
+          105
+        ],
+        "that": [
+          106
+        ],
+        "leverages": [
+          107
+        ],
+        "deep": [
+          108,
+          185
+        ],
+        "learning": [
+          109
+        ],
+        "predict": [
+          111
+        ],
+        "hydroponic": [
+          112,
+          160,
+          240,
+          247
+        ],
+        "compound": [
+          115,
+          163,
+          243,
+          250
+        ],
+        "dynamics": [
+          116
+        ],
+        "during": [
+          117
+        ],
+        "plant": [
+          118
+        ],
+        "This": [
+          120
+        ],
+        "method": [
+          121
+        ],
+        "not": [
+          122
+        ],
+        "only": [
+          123
+        ],
+        "enhances": [
+          124
+        ],
+        "understanding": [
+          126
+        ],
+        "how": [
+          128
+        ],
+        "interact": [
+          130
+        ],
+        "with": [
+          131,
+          232,
+          270
+        ],
+        "their": [
+          132
+        ],
+        "environment": [
+          133
+        ],
+        "but": [
+          134
+        ],
+        "also": [
+          135
+        ],
+        "aids": [
+          136
+        ],
+        "more": [
+          139,
+          147
+        ],
+        "agriculture,": [
+          143
+        ],
+        "ultimately": [
+          144
+        ],
+        "contributing": [
+          145
+        ],
+        "sustainable": [
+          148
+        ],
+        "efficient": [
+          150
+        ],
+        "data": [
+          154,
+          174,
+          252
+        ],
+        "needed": [
+          155
+        ],
+        "perform": [
+          157
+        ],
+        "developed": [
+          159
+        ],
+        "prediction": [
+          164,
+          251
+        ],
+        "model": [
+          165
+        ],
+        "acquired": [
+          167
+        ],
+        "online": [
+          169
+        ],
+        "resources.": [
+          170
+        ],
+        "After": [
+          171
+        ],
+        "that,": [
+          172
+        ],
+        "forwarded": [
+          176
+        ],
+        "feature": [
+          179,
+          198,
+          228
+        ],
+        "extraction": [
+          180,
+          199
+        ],
+        "phase.": [
+          181
+        ],
+        "weighted": [
+          183,
+          204
+        ],
+        "features,": [
+          184,
+          189,
+          205
+        ],
+        "belief": [
+          186
+        ],
+        "network": [
+          187,
+          238
+        ],
+        "(DBN)": [
+          188
+        ],
+        "original": [
+          192
+        ],
+        "features": [
+          193,
+          222
+        ],
+        "are": [
+          194,
+          208,
+          223
+        ],
+        "achieved": [
+          195
+        ],
+        "stage.": [
+          200
+        ],
+        "get": [
+          202
+        ],
+        "weights": [
+          207
+        ],
+        "optimally": [
+          209
+        ],
+        "obtained": [
+          210
+        ],
+        "using": [
+          211
+        ],
+        "Iteration-assisted": [
+          213
+        ],
+        "Enhanced": [
+          214
+        ],
+        "Mother": [
+          215
+        ],
+        "Optimization": [
+          216
+        ],
+        "Algorithm": [
+          217
+        ],
+        "(IEMOA).": [
+          218
+        ],
+        "Subsequently,": [
+          219
+        ],
+        "these": [
+          220
+        ],
+        "extracted": [
+          221
+        ],
+        "fed": [
+          224
+        ],
+        "into": [
+          225
+        ],
+        "Multi-Scale": [
+          227
+        ],
+        "fusion-based": [
+          229
+        ],
+        "Convolution": [
+          230
+        ],
+        "Autoencoder": [
+          231
+        ],
+        "Gated": [
+          234
+        ],
+        "Recurrent": [
+          235
+        ],
+        "Unit": [
+          236
+        ],
+        "(MS-CAGRU)": [
+          237
+        ],
+        "prediction.": [
+          244
+        ],
+        "Thus,": [
+          245
+        ],
+        "attained": [
+          254
+        ],
+        "end.": [
+          257
+        ],
+        "Finally,": [
+          258
+        ],
+        "performance": [
+          260
+        ],
+        "evaluation": [
+          261
+        ],
+        "suggested": [
+          264
+        ],
+        "work": [
+          265
+        ],
+        "conducted": [
+          267
+        ],
+        "contrasted": [
+          269
+        ],
+        "numerous": [
+          271
+        ],
+        "conventional": [
+          272
+        ],
+        "showcase": [
+          275
+        ],
+        "system's": [
+          277
+        ],
+        "efficacy.": [
+          278
+        ]
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.7717/peerj-cs.2101",
+        "any_repository_has_fulltext": true
+      },
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W7213623860",
+      "display_name": "Greenhouse basil disease image corpus with per-image acquisition provenance",
+      "publication_year": 2026,
+      "publication_date": "2026-09-20",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.5281/zenodo.22848388",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5136285880",
+            "display_name": "Lin Ding Shan",
+            "orcid": "https://orcid.org/0009-0009-6031-8479"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I55285296",
+              "display_name": "UCSI University",
+              "ror": "https://ror.org/019787q29",
+              "country_code": "MY",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I55285296"
+              ]
+            }
+          ],
+          "countries": [
+            "MY"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Lin, Ding Shan",
+          "raw_affiliation_strings": [
+            "UCSI University"
+          ],
+          "raw_orcid": "https://orcid.org/0009-0009-6031-8479",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "UCSI University",
+              "institution_ids": [
+                "https://openalex.org/I55285296"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "1,698": [
+          0
+        ],
+        "images": [
+          1,
+          61,
+          534
+        ],
+        "of": [
+          2,
+          32,
+          39,
+          122,
+          195,
+          418,
+          467,
+          552,
+          557,
+          600
+        ],
+        "basil": [
+          3
+        ],
+        "(Ocimum": [
+          4
+        ],
+        "basilicum)": [
+          5
+        ],
+        "from": [
+          6,
+          84,
+          150,
+          236,
+          338,
+          452,
+          460
+        ],
+        "a": [
+          7,
+          56,
+          89,
+          145,
+          178,
+          201,
+          205,
+          244,
+          251,
+          288,
+          358,
+          464,
+          483,
+          582,
+          595
+        ],
+        "commercial": [
+          8
+        ],
+        "hydroponic": [
+          9
+        ],
+        "greenhouse": [
+          10
+        ],
+        "in": [
+          11,
+          15,
+          219,
+          433,
+          611
+        ],
+        "Kuala": [
+          12
+        ],
+        "Lumpur,": [
+          13
+        ],
+        "Malaysia,": [
+          14
+        ],
+        "three": [
+          16,
+          37,
+          93,
+          256
+        ],
+        "classes": [
+          17,
+          154
+        ],
+        "\u2014": [
+          18,
+          26,
+          303,
+          501,
+          597,
+          603
+        ],
+        "background": [
+          19
+        ],
+        "(640),": [
+          20
+        ],
+        "healthy": [
+          21
+        ],
+        "(498)": [
+          22
+        ],
+        "and": [
+          23,
+          35,
+          55,
+          92,
+          119,
+          144,
+          208,
+          247,
+          250,
+          274,
+          315,
+          345,
+          364,
+          388,
+          398,
+          410,
+          441,
+          447,
+          459,
+          496,
+          567,
+          618
+        ],
+        "disease": [
+          24,
+          105,
+          149,
+          183,
+          576
+        ],
+        "(560)": [
+          25
+        ],
+        "released": [
+          27
+        ],
+        "with": [
+          28,
+          36,
+          100,
+          135,
+          563
+        ],
+        "the": [
+          29,
+          101,
+          123,
+          136,
+          151,
+          157,
+          182,
+          192,
+          228,
+          231,
+          233,
+          237,
+          241,
+          275,
+          281,
+          304,
+          310,
+          312,
+          347,
+          369,
+          382,
+          385,
+          389,
+          408,
+          411,
+          414,
+          420,
+          438,
+          456,
+          470,
+          550,
+          555,
+          561,
+          586,
+          598,
+          615,
+          619
+        ],
+        "acquisition": [
+          30,
+          53,
+          95
+        ],
+        "provenance": [
+          31
+        ],
+        "every": [
+          33,
+          336
+        ],
+        "image": [
+          34,
+          130,
+          158,
+          337,
+          432
+        ],
+        "sets": [
+          38
+        ],
+        "evaluation": [
+          40
+        ],
+        "splits.": [
+          41
+        ],
+        "READ": [
+          42
+        ],
+        "THIS": [
+          43
+        ],
+        "BEFORE": [
+          44
+        ],
+        "TRAINING": [
+          45
+        ],
+        "ANYTHING": [
+          46
+        ],
+        "ON": [
+          47
+        ],
+        "IT.": [
+          48
+        ],
+        "The": [
+          49,
+          74,
+          104,
+          255,
+          379,
+          404,
+          425
+        ],
+        "corpus": [
+          50,
+          75,
+          363,
+          415,
+          435
+        ],
+        "carries": [
+          51,
+          215,
+          436
+        ],
+        "an": [
+          52,
+          170,
+          507
+        ],
+        "confound,": [
+          54
+        ],
+        "number": [
+          57,
+          551,
+          556
+        ],
+        "reported": [
+          58
+        ],
+        "on": [
+          59,
+          155,
+          163,
+          342,
+          377,
+          544,
+          606,
+          623
+        ],
+        "these": [
+          60
+        ],
+        "without": [
+          62,
+          286
+        ],
+        "controlling": [
+          63
+        ],
+        "for": [
+          64,
+          169,
+          223,
+          225,
+          361,
+          469
+        ],
+        "it": [
+          65,
+          70,
+          165,
+          209,
+          481
+        ],
+        "does": [
+          66
+        ],
+        "not": [
+          67,
+          77,
+          212,
+          269,
+          357,
+          429,
+          486,
+          554,
+          581
+        ],
+        "measure": [
+          68
+        ],
+        "what": [
+          69,
+          164,
+          216
+        ],
+        "appears": [
+          71
+        ],
+        "to": [
+          72,
+          204,
+          221
+        ],
+        "measure.": [
+          73
+        ],
+        "did": [
+          76
+        ],
+        "accumulate": [
+          78
+        ],
+        "under": [
+          79,
+          400
+        ],
+        "one": [
+          80,
+          197,
+          266,
+          339,
+          343,
+          512,
+          514,
+          516
+        ],
+        "protocol.": [
+          81
+        ],
+        "It": [
+          82,
+          199
+        ],
+        "came": [
+          83
+        ],
+        "several": [
+          85
+        ],
+        "capture": [
+          86,
+          229,
+          340,
+          478,
+          539
+        ],
+        "sessions": [
+          87
+        ],
+        "across": [
+          88
+        ],
+        "sixteen-week": [
+          90
+        ],
+        "internship,": [
+          91
+        ],
+        "separate": [
+          94,
+          148,
+          260
+        ],
+        "variables": [
+          96
+        ],
+        "ended": [
+          97
+        ],
+        "up": [
+          98
+        ],
+        "correlated": [
+          99,
+          134
+        ],
+        "class": [
+          102,
+          106,
+          137,
+          184,
+          257,
+          267,
+          546
+        ],
+        "label.": [
+          103
+        ],
+        "contains": [
+          107
+        ],
+        "no": [
+          108,
+          476,
+          564,
+          568,
+          572
+        ],
+        "native": [
+          109
+        ],
+        "224x224": [
+          110
+        ],
+        "crops": [
+          111,
+          599
+        ],
+        "at": [
+          112,
+          463
+        ],
+        "all,": [
+          113
+        ],
+        "is": [
+          114,
+          132,
+          142,
+          200,
+          210,
+          346,
+          352,
+          356,
+          365,
+          413,
+          427,
+          499,
+          531
+        ],
+        "51%": [
+          115
+        ],
+        "decoded": [
+          116
+        ],
+        "video": [
+          117
+        ],
+        "frames,": [
+          118
+        ],
+        "holds": [
+          120
+        ],
+        "196": [
+          121
+        ],
+        "corpus's": [
+          124
+        ],
+        "213": [
+          125
+        ],
+        "PNG": [
+          126
+        ],
+        "files.": [
+          127
+        ],
+        "Residual": [
+          128
+        ],
+        "high-frequency": [
+          129
+        ],
+        "content": [
+          131
+        ],
+        "therefore": [
+          133
+        ],
+        "label": [
+          138
+        ],
+        "before": [
+          139
+        ],
+        "any": [
+          140,
+          504
+        ],
+        "model": [
+          141,
+          421
+        ],
+        "fitted,": [
+          143
+        ],
+        "classifier": [
+          146
+        ],
+        "can": [
+          147,
+          283,
+          371,
+          526
+        ],
+        "other": [
+          152
+        ],
+        "two": [
+          153
+        ],
+        "how": [
+          156
+        ],
+        "was": [
+          159,
+          185
+        ],
+        "captured": [
+          160
+        ],
+        "rather": [
+          161,
+          330,
+          374
+        ],
+        "than": [
+          162,
+          331,
+          375
+        ],
+        "shows.": [
+          166
+        ],
+        "This": [
+          167
+        ],
+        "happened": [
+          168
+        ],
+        "ordinary": [
+          171
+        ],
+        "reason.": [
+          172
+        ],
+        "Symptomatic": [
+          173
+        ],
+        "plants": [
+          174
+        ],
+        "were": [
+          175,
+          450
+        ],
+        "scarce": [
+          176
+        ],
+        "over": [
+          177
+        ],
+        "single": [
+          179
+        ],
+        "season,": [
+          180,
+          513
+        ],
+        "so": [
+          181,
+          261,
+          280,
+          368,
+          518,
+          541,
+          571,
+          604
+        ],
+        "supplemented": [
+          186
+        ],
+        "by": [
+          187,
+          549,
+          590
+        ],
+        "decoding": [
+          188
+        ],
+        "video,": [
+          189
+        ],
+        "which": [
+          190,
+          308
+        ],
+        "changed": [
+          191
+        ],
+        "encoding": [
+          193
+        ],
+        "chain": [
+          194,
+          443
+        ],
+        "that": [
+          196,
+          262,
+          545
+        ],
+        "class.": [
+          198
+        ],
+        "routine": [
+          202
+        ],
+        "response": [
+          203
+        ],
+        "sampling": [
+          206
+        ],
+        "constraint": [
+          207
+        ],
+        "probably": [
+          211
+        ],
+        "rare.": [
+          213
+        ],
+        "metadata.csv": [
+          214,
+          273,
+          299
+        ],
+        "you": [
+          217
+        ],
+        "need": [
+          218,
+          268
+        ],
+        "order": [
+          220
+        ],
+        "control": [
+          222
+        ],
+        "it:": [
+          224
+        ],
+        "each": [
+          226
+        ],
+        "image,": [
+          227
+        ],
+        "regime,": [
+          230
+        ],
+        "medium,": [
+          232
+        ],
+        "container": [
+          234
+        ],
+        "read": [
+          235,
+          285
+        ],
+        "file's": [
+          238
+        ],
+        "magic": [
+          239
+        ],
+        "bytes,": [
+          240
+        ],
+        "filename": [
+          242,
+          453,
+          457
+        ],
+        "shape,": [
+          243
+        ],
+        "recovered": [
+          245,
+          451
+        ],
+        "source-photograph": [
+          246
+        ],
+        "capture-burst": [
+          248
+        ],
+        "identifier,": [
+          249
+        ],
+        "perceptual": [
+          252,
+          461
+        ],
+        "hash.": [
+          253
+        ],
+        "Files.": [
+          254
+        ],
+        "archives": [
+          258
+        ],
+        "are": [
+          259,
+          278,
+          547,
+          560,
+          622
+        ],
+        "someone": [
+          263
+        ],
+        "who": [
+          264
+        ],
+        "wants": [
+          265
+        ],
+        "download": [
+          270
+        ],
+        "all": [
+          271
+        ],
+        "three;": [
+          272
+        ],
+        "dataset": [
+          276,
+          306
+        ],
+        "card": [
+          277
+        ],
+        "unarchived": [
+          279
+        ],
+        "index": [
+          282
+        ],
+        "be": [
+          284,
+          372,
+          494,
+          527
+        ],
+        "downloading": [
+          287
+        ],
+        "gigabyte": [
+          289
+        ],
+        "first.": [
+          290
+        ],
+        "background.zip": [
+          291
+        ],
+        "(640": [
+          292
+        ],
+        "images),": [
+          293
+        ],
+        "healthy.zip": [
+          294
+        ],
+        "(498),": [
+          295
+        ],
+        "disease.zip": [
+          296
+        ],
+        "(560),": [
+          297
+        ],
+        "splits.zip,": [
+          298
+        ],
+        "(1,698": [
+          300
+        ],
+        "rows),": [
+          301
+        ],
+        "README.md": [
+          302
+        ],
+        "full": [
+          305
+        ],
+        "card,": [
+          307
+        ],
+        "documents": [
+          309
+        ],
+        "schema,": [
+          311
+        ],
+        "provenance-recovery": [
+          313
+        ],
+        "procedure": [
+          314
+        ],
+        "its": [
+          316,
+          497
+        ],
+        "failure": [
+          317
+        ],
+        "modes.": [
+          318
+        ],
+        "Splits.": [
+          319
+        ],
+        "Three": [
+          320
+        ],
+        "groupings,": [
+          321
+        ],
+        "five": [
+          322
+        ],
+        "folds": [
+          323
+        ],
+        "each,": [
+          324
+        ],
+        "given": [
+          325
+        ],
+        "as": [
+          326,
+          332,
+          482,
+          487
+        ],
+        "explicit": [
+          327
+        ],
+        "path": [
+          328
+        ],
+        "lists": [
+          329
+        ],
+        "seeds.": [
+          333
+        ],
+        "burst_disjoint": [
+          334
+        ],
+        "keeps": [
+          335
+        ],
+        "episode": [
+          341
+        ],
+        "side": [
+          344
+        ],
+        "strictest;": [
+          348
+        ],
+        "use": [
+          349
+        ],
+        "it.": [
+          350,
+          445
+        ],
+        "photo_disjoint": [
+          351
+        ],
+        "strictly": [
+          353
+        ],
+        "weaker.": [
+          354
+        ],
+        "random": [
+          355,
+          402
+        ],
+        "valid": [
+          359
+        ],
+        "protocol": [
+          360,
+          387
+        ],
+        "this": [
+          362,
+          434
+        ],
+        "included": [
+          366
+        ],
+        "only": [
+          367,
+          536
+        ],
+        "leakage": [
+          370,
+          505
+        ],
+        "reproduced": [
+          373
+        ],
+        "taken": [
+          376
+        ],
+        "trust.": [
+          378
+        ],
+        "same": [
+          380,
+          383,
+          386,
+          390
+        ],
+        "model,": [
+          381
+        ],
+        "images,": [
+          384
+        ],
+        "seeds": [
+          391
+        ],
+        "give": [
+          392
+        ],
+        "88.22%": [
+          393
+        ],
+        "accuracy": [
+          394
+        ],
+        "burst-disjoint,": [
+          395
+        ],
+        "94.94%": [
+          396
+        ],
+        "photograph-disjoint": [
+          397
+        ],
+        "98.31%": [
+          399
+        ],
+        "image-level": [
+          401
+        ],
+        "assignment.": [
+          403
+        ],
+        "10.09-point": [
+          405
+        ],
+        "gap": [
+          406
+        ],
+        "between": [
+          407
+        ],
+        "last": [
+          409
+        ],
+        "first": [
+          412
+        ],
+        "measuring": [
+          416
+        ],
+        "re-recognition": [
+          417
+        ],
+        "specimens": [
+          419
+        ],
+        "has": [
+          422
+        ],
+        "already": [
+          423
+        ],
+        "seen.": [
+          424
+        ],
+        "grouping": [
+          426,
+          491
+        ],
+        "reconstructed,": [
+          428
+        ],
+        "recorded.": [
+          430
+        ],
+        "No": [
+          431
+        ],
+        "EXIF;": [
+          437
+        ],
+        "capture,": [
+          439
+        ],
+        "cropping": [
+          440
+        ],
+        "transfer": [
+          442
+        ],
+        "stripped": [
+          444
+        ],
+        "Source-photograph": [
+          446
+        ],
+        "burst": [
+          448
+        ],
+        "identity": [
+          449
+        ],
+        "structure": [
+          454
+        ],
+        "where": [
+          455
+        ],
+        "survived,": [
+          458
+        ],
+        "hashing": [
+          462
+        ],
+        "Hamming": [
+          465
+        ],
+        "radius": [
+          466
+        ],
+        "4": [
+          468
+        ],
+        "456": [
+          471
+        ],
+        "files": [
+          472,
+          588
+        ],
+        "whose": [
+          473
+        ],
+        "names": [
+          474
+        ],
+        "carry": [
+          475
+        ],
+        "usable": [
+          477
+        ],
+        "identity.": [
+          479
+        ],
+        "Treat": [
+          480
+        ],
+        "good": [
+          484
+        ],
+        "estimate,": [
+          485
+        ],
+        "ground": [
+          488
+        ],
+        "truth;": [
+          489
+        ],
+        "residual": [
+          490
+        ],
+        "error": [
+          492
+        ],
+        "cannot": [
+          493
+        ],
+        "excluded,": [
+          495
+        ],
+        "direction": [
+          498
+        ],
+        "known": [
+          500
+        ],
+        "under-merging": [
+          502
+        ],
+        "makes": [
+          503
+        ],
+        "estimate": [
+          506,
+          574
+        ],
+        "underestimate.": [
+          508
+        ],
+        "Limitations.": [
+          509
+        ],
+        "One": [
+          510
+        ],
+        "site,": [
+          511
+        ],
+        "crop,": [
+          515
+        ],
+        "device,": [
+          517
+        ],
+        "nothing": [
+          519
+        ],
+        "about": [
+          520
+        ],
+        "between-site,": [
+          521
+        ],
+        "between-device": [
+          522
+        ],
+        "or": [
+          523
+        ],
+        "between-season": [
+          524
+        ],
+        "generalisation": [
+          525
+        ],
+        "established": [
+          528
+        ],
+        "here.": [
+          529
+        ],
+        "Healthy": [
+          530
+        ],
+        "under-collected:": [
+          532
+        ],
+        "498": [
+          533
+        ],
+        "but": [
+          535
+        ],
+        "28": [
+          537
+        ],
+        "independent": [
+          538
+        ],
+        "episodes,": [
+          540,
+          553
+        ],
+        "held-out": [
+          542
+        ],
+        "estimates": [
+          543
+        ],
+        "governed": [
+          548
+        ],
+        "images.": [
+          558
+        ],
+        "Labels": [
+          559
+        ],
+        "author's,": [
+          562
+        ],
+        "second": [
+          565
+        ],
+        "annotator": [
+          566
+        ],
+        "agronomist": [
+          569
+        ],
+        "adjudication,": [
+          570
+        ],
+        "inter-rater": [
+          573
+        ],
+        "exists;": [
+          575
+        ],
+        "labels": [
+          577
+        ],
+        "mark": [
+          578
+        ],
+        "visible": [
+          579
+        ],
+        "symptoms,": [
+          580
+        ],
+        "confirmed": [
+          583
+        ],
+        "pathogen.": [
+          584
+        ],
+        "Read": [
+          585
+        ],
+        "split": [
+          587
+        ],
+        "line": [
+          589
+        ],
+        "line.": [
+          591
+        ],
+        "Nine": [
+          592
+        ],
+        "filenames": [
+          593
+        ],
+        "contain": [
+          594
+        ],
+        "space": [
+          596
+        ],
+        "duplicated": [
+          601
+        ],
+        "photographs": [
+          602
+        ],
+        "splitting": [
+          605
+        ],
+        "whitespace": [
+          607
+        ],
+        "tears": [
+          608
+        ],
+        "those": [
+          609
+        ],
+        "paths": [
+          610
+        ],
+        "half.": [
+          612
+        ],
+        "Analysis": [
+          613
+        ],
+        "code,": [
+          614
+        ],
+        "characterisation": [
+          616
+        ],
+        "notebook": [
+          617
+        ],
+        "deployment": [
+          620
+        ],
+        "telemetry": [
+          621
+        ],
+        "GitHub:": [
+          624
+        ],
+        "https://github.com/xiaolin200206/unified-agtech-engine": [
+          625
+        ]
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.22848388",
+        "any_repository_has_fulltext": true
+      },
+      "type": "dataset",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W7213664172",
+      "display_name": "Greenhouse basil disease image corpus with per-image acquisition provenance",
+      "publication_year": 2026,
+      "publication_date": "2026-09-20",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.5281/zenodo.22848387",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5136285880",
+            "display_name": "Lin Ding Shan",
+            "orcid": "https://orcid.org/0009-0009-6031-8479"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I55285296",
+              "display_name": "UCSI University",
+              "ror": "https://ror.org/019787q29",
+              "country_code": "MY",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I55285296"
+              ]
+            }
+          ],
+          "countries": [
+            "MY"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Lin, Ding Shan",
+          "raw_affiliation_strings": [
+            "UCSI University"
+          ],
+          "raw_orcid": "https://orcid.org/0009-0009-6031-8479",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "UCSI University",
+              "institution_ids": [
+                "https://openalex.org/I55285296"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "1,698": [
+          0
+        ],
+        "images": [
+          1,
+          61,
+          534
+        ],
+        "of": [
+          2,
+          32,
+          39,
+          122,
+          195,
+          418,
+          467,
+          552,
+          557,
+          600
+        ],
+        "basil": [
+          3
+        ],
+        "(Ocimum": [
+          4
+        ],
+        "basilicum)": [
+          5
+        ],
+        "from": [
+          6,
+          84,
+          150,
+          236,
+          338,
+          452,
+          460
+        ],
+        "a": [
+          7,
+          56,
+          89,
+          145,
+          178,
+          201,
+          205,
+          244,
+          251,
+          288,
+          358,
+          464,
+          483,
+          582,
+          595
+        ],
+        "commercial": [
+          8
+        ],
+        "hydroponic": [
+          9
+        ],
+        "greenhouse": [
+          10
+        ],
+        "in": [
+          11,
+          15,
+          219,
+          433,
+          611
+        ],
+        "Kuala": [
+          12
+        ],
+        "Lumpur,": [
+          13
+        ],
+        "Malaysia,": [
+          14
+        ],
+        "three": [
+          16,
+          37,
+          93,
+          256
+        ],
+        "classes": [
+          17,
+          154
+        ],
+        "\u2014": [
+          18,
+          26,
+          303,
+          501,
+          597,
+          603
+        ],
+        "background": [
+          19
+        ],
+        "(640),": [
+          20
+        ],
+        "healthy": [
+          21
+        ],
+        "(498)": [
+          22
+        ],
+        "and": [
+          23,
+          35,
+          55,
+          92,
+          119,
+          144,
+          208,
+          247,
+          250,
+          274,
+          315,
+          345,
+          364,
+          388,
+          398,
+          410,
+          441,
+          447,
+          459,
+          496,
+          567,
+          618
+        ],
+        "disease": [
+          24,
+          105,
+          149,
+          183,
+          576
+        ],
+        "(560)": [
+          25
+        ],
+        "released": [
+          27
+        ],
+        "with": [
+          28,
+          36,
+          100,
+          135,
+          563
+        ],
+        "the": [
+          29,
+          101,
+          123,
+          136,
+          151,
+          157,
+          182,
+          192,
+          228,
+          231,
+          233,
+          237,
+          241,
+          275,
+          281,
+          304,
+          310,
+          312,
+          347,
+          369,
+          382,
+          385,
+          389,
+          408,
+          411,
+          414,
+          420,
+          438,
+          456,
+          470,
+          550,
+          555,
+          561,
+          586,
+          598,
+          615,
+          619
+        ],
+        "acquisition": [
+          30,
+          53,
+          95
+        ],
+        "provenance": [
+          31
+        ],
+        "every": [
+          33,
+          336
+        ],
+        "image": [
+          34,
+          130,
+          158,
+          337,
+          432
+        ],
+        "sets": [
+          38
+        ],
+        "evaluation": [
+          40
+        ],
+        "splits.": [
+          41
+        ],
+        "READ": [
+          42
+        ],
+        "THIS": [
+          43
+        ],
+        "BEFORE": [
+          44
+        ],
+        "TRAINING": [
+          45
+        ],
+        "ANYTHING": [
+          46
+        ],
+        "ON": [
+          47
+        ],
+        "IT.": [
+          48
+        ],
+        "The": [
+          49,
+          74,
+          104,
+          255,
+          379,
+          404,
+          425
+        ],
+        "corpus": [
+          50,
+          75,
+          363,
+          415,
+          435
+        ],
+        "carries": [
+          51,
+          215,
+          436
+        ],
+        "an": [
+          52,
+          170,
+          507
+        ],
+        "confound,": [
+          54
+        ],
+        "number": [
+          57,
+          551,
+          556
+        ],
+        "reported": [
+          58
+        ],
+        "on": [
+          59,
+          155,
+          163,
+          342,
+          377,
+          544,
+          606,
+          623
+        ],
+        "these": [
+          60
+        ],
+        "without": [
+          62,
+          286
+        ],
+        "controlling": [
+          63
+        ],
+        "for": [
+          64,
+          169,
+          223,
+          225,
+          361,
+          469
+        ],
+        "it": [
+          65,
+          70,
+          165,
+          209,
+          481
+        ],
+        "does": [
+          66
+        ],
+        "not": [
+          67,
+          77,
+          212,
+          269,
+          357,
+          429,
+          486,
+          554,
+          581
+        ],
+        "measure": [
+          68
+        ],
+        "what": [
+          69,
+          164,
+          216
+        ],
+        "appears": [
+          71
+        ],
+        "to": [
+          72,
+          204,
+          221
+        ],
+        "measure.": [
+          73
+        ],
+        "did": [
+          76
+        ],
+        "accumulate": [
+          78
+        ],
+        "under": [
+          79,
+          400
+        ],
+        "one": [
+          80,
+          197,
+          266,
+          339,
+          343,
+          512,
+          514,
+          516
+        ],
+        "protocol.": [
+          81
+        ],
+        "It": [
+          82,
+          199
+        ],
+        "came": [
+          83
+        ],
+        "several": [
+          85
+        ],
+        "capture": [
+          86,
+          229,
+          340,
+          478,
+          539
+        ],
+        "sessions": [
+          87
+        ],
+        "across": [
+          88
+        ],
+        "sixteen-week": [
+          90
+        ],
+        "internship,": [
+          91
+        ],
+        "separate": [
+          94,
+          148,
+          260
+        ],
+        "variables": [
+          96
+        ],
+        "ended": [
+          97
+        ],
+        "up": [
+          98
+        ],
+        "correlated": [
+          99,
+          134
+        ],
+        "class": [
+          102,
+          106,
+          137,
+          184,
+          257,
+          267,
+          546
+        ],
+        "label.": [
+          103
+        ],
+        "contains": [
+          107
+        ],
+        "no": [
+          108,
+          476,
+          564,
+          568,
+          572
+        ],
+        "native": [
+          109
+        ],
+        "224x224": [
+          110
+        ],
+        "crops": [
+          111,
+          599
+        ],
+        "at": [
+          112,
+          463
+        ],
+        "all,": [
+          113
+        ],
+        "is": [
+          114,
+          132,
+          142,
+          200,
+          210,
+          346,
+          352,
+          356,
+          365,
+          413,
+          427,
+          499,
+          531
+        ],
+        "51%": [
+          115
+        ],
+        "decoded": [
+          116
+        ],
+        "video": [
+          117
+        ],
+        "frames,": [
+          118
+        ],
+        "holds": [
+          120
+        ],
+        "196": [
+          121
+        ],
+        "corpus's": [
+          124
+        ],
+        "213": [
+          125
+        ],
+        "PNG": [
+          126
+        ],
+        "files.": [
+          127
+        ],
+        "Residual": [
+          128
+        ],
+        "high-frequency": [
+          129
+        ],
+        "content": [
+          131
+        ],
+        "therefore": [
+          133
+        ],
+        "label": [
+          138
+        ],
+        "before": [
+          139
+        ],
+        "any": [
+          140,
+          504
+        ],
+        "model": [
+          141,
+          421
+        ],
+        "fitted,": [
+          143
+        ],
+        "classifier": [
+          146
+        ],
+        "can": [
+          147,
+          283,
+          371,
+          526
+        ],
+        "other": [
+          152
+        ],
+        "two": [
+          153
+        ],
+        "how": [
+          156
+        ],
+        "was": [
+          159,
+          185
+        ],
+        "captured": [
+          160
+        ],
+        "rather": [
+          161,
+          330,
+          374
+        ],
+        "than": [
+          162,
+          331,
+          375
+        ],
+        "shows.": [
+          166
+        ],
+        "This": [
+          167
+        ],
+        "happened": [
+          168
+        ],
+        "ordinary": [
+          171
+        ],
+        "reason.": [
+          172
+        ],
+        "Symptomatic": [
+          173
+        ],
+        "plants": [
+          174
+        ],
+        "were": [
+          175,
+          450
+        ],
+        "scarce": [
+          176
+        ],
+        "over": [
+          177
+        ],
+        "single": [
+          179
+        ],
+        "season,": [
+          180,
+          513
+        ],
+        "so": [
+          181,
+          261,
+          280,
+          368,
+          518,
+          541,
+          571,
+          604
+        ],
+        "supplemented": [
+          186
+        ],
+        "by": [
+          187,
+          549,
+          590
+        ],
+        "decoding": [
+          188
+        ],
+        "video,": [
+          189
+        ],
+        "which": [
+          190,
+          308
+        ],
+        "changed": [
+          191
+        ],
+        "encoding": [
+          193
+        ],
+        "chain": [
+          194,
+          443
+        ],
+        "that": [
+          196,
+          262,
+          545
+        ],
+        "class.": [
+          198
+        ],
+        "routine": [
+          202
+        ],
+        "response": [
+          203
+        ],
+        "sampling": [
+          206
+        ],
+        "constraint": [
+          207
+        ],
+        "probably": [
+          211
+        ],
+        "rare.": [
+          213
+        ],
+        "metadata.csv": [
+          214,
+          273,
+          299
+        ],
+        "you": [
+          217
+        ],
+        "need": [
+          218,
+          268
+        ],
+        "order": [
+          220
+        ],
+        "control": [
+          222
+        ],
+        "it:": [
+          224
+        ],
+        "each": [
+          226
+        ],
+        "image,": [
+          227
+        ],
+        "regime,": [
+          230
+        ],
+        "medium,": [
+          232
+        ],
+        "container": [
+          234
+        ],
+        "read": [
+          235,
+          285
+        ],
+        "file's": [
+          238
+        ],
+        "magic": [
+          239
+        ],
+        "bytes,": [
+          240
+        ],
+        "filename": [
+          242,
+          453,
+          457
+        ],
+        "shape,": [
+          243
+        ],
+        "recovered": [
+          245,
+          451
+        ],
+        "source-photograph": [
+          246
+        ],
+        "capture-burst": [
+          248
+        ],
+        "identifier,": [
+          249
+        ],
+        "perceptual": [
+          252,
+          461
+        ],
+        "hash.": [
+          253
+        ],
+        "Files.": [
+          254
+        ],
+        "archives": [
+          258
+        ],
+        "are": [
+          259,
+          278,
+          547,
+          560,
+          622
+        ],
+        "someone": [
+          263
+        ],
+        "who": [
+          264
+        ],
+        "wants": [
+          265
+        ],
+        "download": [
+          270
+        ],
+        "all": [
+          271
+        ],
+        "three;": [
+          272
+        ],
+        "dataset": [
+          276,
+          306
+        ],
+        "card": [
+          277
+        ],
+        "unarchived": [
+          279
+        ],
+        "index": [
+          282
+        ],
+        "be": [
+          284,
+          372,
+          494,
+          527
+        ],
+        "downloading": [
+          287
+        ],
+        "gigabyte": [
+          289
+        ],
+        "first.": [
+          290
+        ],
+        "background.zip": [
+          291
+        ],
+        "(640": [
+          292
+        ],
+        "images),": [
+          293
+        ],
+        "healthy.zip": [
+          294
+        ],
+        "(498),": [
+          295
+        ],
+        "disease.zip": [
+          296
+        ],
+        "(560),": [
+          297
+        ],
+        "splits.zip,": [
+          298
+        ],
+        "(1,698": [
+          300
+        ],
+        "rows),": [
+          301
+        ],
+        "README.md": [
+          302
+        ],
+        "full": [
+          305
+        ],
+        "card,": [
+          307
+        ],
+        "documents": [
+          309
+        ],
+        "schema,": [
+          311
+        ],
+        "provenance-recovery": [
+          313
+        ],
+        "procedure": [
+          314
+        ],
+        "its": [
+          316,
+          497
+        ],
+        "failure": [
+          317
+        ],
+        "modes.": [
+          318
+        ],
+        "Splits.": [
+          319
+        ],
+        "Three": [
+          320
+        ],
+        "groupings,": [
+          321
+        ],
+        "five": [
+          322
+        ],
+        "folds": [
+          323
+        ],
+        "each,": [
+          324
+        ],
+        "given": [
+          325
+        ],
+        "as": [
+          326,
+          332,
+          482,
+          487
+        ],
+        "explicit": [
+          327
+        ],
+        "path": [
+          328
+        ],
+        "lists": [
+          329
+        ],
+        "seeds.": [
+          333
+        ],
+        "burst_disjoint": [
+          334
+        ],
+        "keeps": [
+          335
+        ],
+        "episode": [
+          341
+        ],
+        "side": [
+          344
+        ],
+        "strictest;": [
+          348
+        ],
+        "use": [
+          349
+        ],
+        "it.": [
+          350,
+          445
+        ],
+        "photo_disjoint": [
+          351
+        ],
+        "strictly": [
+          353
+        ],
+        "weaker.": [
+          354
+        ],
+        "random": [
+          355,
+          402
+        ],
+        "valid": [
+          359
+        ],
+        "protocol": [
+          360,
+          387
+        ],
+        "this": [
+          362,
+          434
+        ],
+        "included": [
+          366
+        ],
+        "only": [
+          367,
+          536
+        ],
+        "leakage": [
+          370,
+          505
+        ],
+        "reproduced": [
+          373
+        ],
+        "taken": [
+          376
+        ],
+        "trust.": [
+          378
+        ],
+        "same": [
+          380,
+          383,
+          386,
+          390
+        ],
+        "model,": [
+          381
+        ],
+        "images,": [
+          384
+        ],
+        "seeds": [
+          391
+        ],
+        "give": [
+          392
+        ],
+        "88.22%": [
+          393
+        ],
+        "accuracy": [
+          394
+        ],
+        "burst-disjoint,": [
+          395
+        ],
+        "94.94%": [
+          396
+        ],
+        "photograph-disjoint": [
+          397
+        ],
+        "98.31%": [
+          399
+        ],
+        "image-level": [
+          401
+        ],
+        "assignment.": [
+          403
+        ],
+        "10.09-point": [
+          405
+        ],
+        "gap": [
+          406
+        ],
+        "between": [
+          407
+        ],
+        "last": [
+          409
+        ],
+        "first": [
+          412
+        ],
+        "measuring": [
+          416
+        ],
+        "re-recognition": [
+          417
+        ],
+        "specimens": [
+          419
+        ],
+        "has": [
+          422
+        ],
+        "already": [
+          423
+        ],
+        "seen.": [
+          424
+        ],
+        "grouping": [
+          426,
+          491
+        ],
+        "reconstructed,": [
+          428
+        ],
+        "recorded.": [
+          430
+        ],
+        "No": [
+          431
+        ],
+        "EXIF;": [
+          437
+        ],
+        "capture,": [
+          439
+        ],
+        "cropping": [
+          440
+        ],
+        "transfer": [
+          442
+        ],
+        "stripped": [
+          444
+        ],
+        "Source-photograph": [
+          446
+        ],
+        "burst": [
+          448
+        ],
+        "identity": [
+          449
+        ],
+        "structure": [
+          454
+        ],
+        "where": [
+          455
+        ],
+        "survived,": [
+          458
+        ],
+        "hashing": [
+          462
+        ],
+        "Hamming": [
+          465
+        ],
+        "radius": [
+          466
+        ],
+        "4": [
+          468
+        ],
+        "456": [
+          471
+        ],
+        "files": [
+          472,
+          588
+        ],
+        "whose": [
+          473
+        ],
+        "names": [
+          474
+        ],
+        "carry": [
+          475
+        ],
+        "usable": [
+          477
+        ],
+        "identity.": [
+          479
+        ],
+        "Treat": [
+          480
+        ],
+        "good": [
+          484
+        ],
+        "estimate,": [
+          485
+        ],
+        "ground": [
+          488
+        ],
+        "truth;": [
+          489
+        ],
+        "residual": [
+          490
+        ],
+        "error": [
+          492
+        ],
+        "cannot": [
+          493
+        ],
+        "excluded,": [
+          495
+        ],
+        "direction": [
+          498
+        ],
+        "known": [
+          500
+        ],
+        "under-merging": [
+          502
+        ],
+        "makes": [
+          503
+        ],
+        "estimate": [
+          506,
+          574
+        ],
+        "underestimate.": [
+          508
+        ],
+        "Limitations.": [
+          509
+        ],
+        "One": [
+          510
+        ],
+        "site,": [
+          511
+        ],
+        "crop,": [
+          515
+        ],
+        "device,": [
+          517
+        ],
+        "nothing": [
+          519
+        ],
+        "about": [
+          520
+        ],
+        "between-site,": [
+          521
+        ],
+        "between-device": [
+          522
+        ],
+        "or": [
+          523
+        ],
+        "between-season": [
+          524
+        ],
+        "generalisation": [
+          525
+        ],
+        "established": [
+          528
+        ],
+        "here.": [
+          529
+        ],
+        "Healthy": [
+          530
+        ],
+        "under-collected:": [
+          532
+        ],
+        "498": [
+          533
+        ],
+        "but": [
+          535
+        ],
+        "28": [
+          537
+        ],
+        "independent": [
+          538
+        ],
+        "episodes,": [
+          540,
+          553
+        ],
+        "held-out": [
+          542
+        ],
+        "estimates": [
+          543
+        ],
+        "governed": [
+          548
+        ],
+        "images.": [
+          558
+        ],
+        "Labels": [
+          559
+        ],
+        "author's,": [
+          562
+        ],
+        "second": [
+          565
+        ],
+        "annotator": [
+          566
+        ],
+        "agronomist": [
+          569
+        ],
+        "adjudication,": [
+          570
+        ],
+        "inter-rater": [
+          573
+        ],
+        "exists;": [
+          575
+        ],
+        "labels": [
+          577
+        ],
+        "mark": [
+          578
+        ],
+        "visible": [
+          579
+        ],
+        "symptoms,": [
+          580
+        ],
+        "confirmed": [
+          583
+        ],
+        "pathogen.": [
+          584
+        ],
+        "Read": [
+          585
+        ],
+        "split": [
+          587
+        ],
+        "line": [
+          589
+        ],
+        "line.": [
+          591
+        ],
+        "Nine": [
+          592
+        ],
+        "filenames": [
+          593
+        ],
+        "contain": [
+          594
+        ],
+        "space": [
+          596
+        ],
+        "duplicated": [
+          601
+        ],
+        "photographs": [
+          602
+        ],
+        "splitting": [
+          605
+        ],
+        "whitespace": [
+          607
+        ],
+        "tears": [
+          608
+        ],
+        "those": [
+          609
+        ],
+        "paths": [
+          610
+        ],
+        "half.": [
+          612
+        ],
+        "Analysis": [
+          613
+        ],
+        "code,": [
+          614
+        ],
+        "characterisation": [
+          616
+        ],
+        "notebook": [
+          617
+        ],
+        "deployment": [
+          620
+        ],
+        "telemetry": [
+          621
+        ],
+        "GitHub:": [
+          624
+        ],
+        "https://github.com/xiaolin200206/unified-agtech-engine": [
+          625
+        ]
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.22848387",
+        "any_repository_has_fulltext": true
+      },
+      "type": "dataset",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4416995466",
+      "display_name": "A Novel Semi-Hydroponic Root Observation System Combined with Unsupervised Semantic Segmentation for Root Phenotyping",
+      "publication_year": 2025,
+      "publication_date": "2025-12-04",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.3390/agronomy15122794",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5047532570",
+            "display_name": "Kunhong Li",
+            "orcid": "https://orcid.org/0000-0002-5708-1812",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-5708-1812"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I37574244",
+              "display_name": "Sichuan Agricultural University",
+              "ror": "https://ror.org/0388c3403",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I37574244"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Kunhong Li",
+          "raw_affiliation_strings": [
+            "College of Information Engineering, Sichuan Agricultural University, Ya\u2019an 625000, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-5708-1812",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Information Engineering, Sichuan Agricultural University, Ya\u2019an 625000, China",
+              "institution_ids": [
+                "https://openalex.org/I37574244"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Siyue Xu",
+            "orcid": "https://orcid.org/0009-0008-7676-349X",
+            "observed_orcids": [
+              "https://orcid.org/0009-0008-7676-349X"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I37574244",
+              "display_name": "Sichuan Agricultural University",
+              "ror": "https://ror.org/0388c3403",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I37574244"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Siyue Xu",
+          "raw_affiliation_strings": [
+            "College of Information Engineering, Sichuan Agricultural University, Ya\u2019an 625000, China"
+          ],
+          "raw_orcid": "https://orcid.org/0009-0008-7676-349X",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Information Engineering, Sichuan Agricultural University, Ya\u2019an 625000, China",
+              "institution_ids": [
+                "https://openalex.org/I37574244"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5069849816",
+            "display_name": "Christoph Menz",
+            "orcid": "https://orcid.org/0000-0001-5127-1554",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-5127-1554"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I60200437",
+              "display_name": "Potsdam Institute for Climate Impact Research",
+              "ror": "https://ror.org/03e8s1d88",
+              "country_code": "DE",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I315704651",
+                "https://openalex.org/I60200437"
+              ]
+            }
+          ],
+          "countries": [
+            "DE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Christoph Menz",
+          "raw_affiliation_strings": [
+            "Potsdam Institute for Climate Impact Research e. V. (PIK), Telegrafenberg A 31, 14473 Potsdam, Germany"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-5127-1554",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Potsdam Institute for Climate Impact Research e. V. (PIK), Telegrafenberg A 31, 14473 Potsdam, Germany",
+              "institution_ids": [
+                "https://openalex.org/I60200437"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5113298231",
+            "display_name": "Feng Yang",
+            "orcid": "https://orcid.org/0000-0002-1435-6169",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-1435-6169"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I37574244",
+              "display_name": "Sichuan Agricultural University",
+              "ror": "https://ror.org/0388c3403",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I37574244"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Feng Yang",
+          "raw_affiliation_strings": [
+            "College of Agronomy, Sichuan Agricultural University, Ya\u2019an 625000, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-1435-6169",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Agronomy, Sichuan Agricultural University, Ya\u2019an 625000, China",
+              "institution_ids": [
+                "https://openalex.org/I37574244"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5016443364",
+            "display_name": "H\u00e9lder Fraga",
+            "orcid": "https://orcid.org/0000-0002-7946-8786",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-7946-8786"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I155381812",
+              "display_name": "University of Tr\u00e1s-os-Montes and Alto Douro",
+              "ror": "https://ror.org/03qc8vh97",
+              "country_code": "PT",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I155381812"
+              ]
+            }
+          ],
+          "countries": [
+            "PT"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Helder Fraga",
+          "raw_affiliation_strings": [
+            "Centre for the Research and Technology of Agroenvironmental and Biological Sciences (CITAB), Inov4Agro, Universidade de Tr\u00e1s-os-Montes e Alto Douro (UTAD), Quinta de Prados, 5000-801 Vila Real, Portugal"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-7946-8786",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Centre for the Research and Technology of Agroenvironmental and Biological Sciences (CITAB), Inov4Agro, Universidade de Tr\u00e1s-os-Montes e Alto Douro (UTAD), Quinta de Prados, 5000-801 Vila Real, Portugal",
+              "institution_ids": [
+                "https://openalex.org/I155381812"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5074553039",
+            "display_name": "Jo\u00e3o A. Santos",
+            "orcid": "https://orcid.org/0000-0002-8135-5078",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-8135-5078"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I155381812",
+              "display_name": "University of Tr\u00e1s-os-Montes and Alto Douro",
+              "ror": "https://ror.org/03qc8vh97",
+              "country_code": "PT",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I155381812"
+              ]
+            }
+          ],
+          "countries": [
+            "PT"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jo\u00e3o A. Santos",
+          "raw_affiliation_strings": [
+            "Centre for the Research and Technology of Agroenvironmental and Biological Sciences (CITAB), Inov4Agro, Universidade de Tr\u00e1s-os-Montes e Alto Douro (UTAD), Quinta de Prados, 5000-801 Vila Real, Portugal"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-8135-5078",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Centre for the Research and Technology of Agroenvironmental and Biological Sciences (CITAB), Inov4Agro, Universidade de Tr\u00e1s-os-Montes e Alto Douro (UTAD), Quinta de Prados, 5000-801 Vila Real, Portugal",
+              "institution_ids": [
+                "https://openalex.org/I155381812"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100339890",
+            "display_name": "Bing Liu",
+            "orcid": "https://orcid.org/0000-0001-5046-7029",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-5046-7029"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I119454577",
+              "display_name": "Nanjing Agricultural University",
+              "ror": "https://ror.org/05td3s095",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I119454577"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Bing Liu",
+          "raw_affiliation_strings": [
+            "Sanya Institute of Nanjing Agricultural University, Nanjing Agricultural University, Sanya 572025, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-5046-7029",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Sanya Institute of Nanjing Agricultural University, Nanjing Agricultural University, Sanya 572025, China",
+              "institution_ids": [
+                "https://openalex.org/I119454577"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5014950622",
+            "display_name": "Chenyao Yang",
+            "orcid": "https://orcid.org/0000-0002-6079-8689",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-6079-8689"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I155381812",
+              "display_name": "University of Tr\u00e1s-os-Montes and Alto Douro",
+              "ror": "https://ror.org/03qc8vh97",
+              "country_code": "PT",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I155381812"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I37574244",
+              "display_name": "Sichuan Agricultural University",
+              "ror": "https://ror.org/0388c3403",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I37574244"
+              ]
+            }
+          ],
+          "countries": [
+            "CN",
+            "PT"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Chenyao Yang",
+          "raw_affiliation_strings": [
+            "Centre for the Research and Technology of Agroenvironmental and Biological Sciences (CITAB), Inov4Agro, Universidade de Tr\u00e1s-os-Montes e Alto Douro (UTAD), Quinta de Prados, 5000-801 Vila Real, Portugal",
+            "College of Agronomy, Sichuan Agricultural University, Ya\u2019an 625000, China",
+            "Key Laboratory of Agricultural Bioinformatics, Ministry of Education, Sichuan Agricultural University, Chengdu 625014, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-6079-8689",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Centre for the Research and Technology of Agroenvironmental and Biological Sciences (CITAB), Inov4Agro, Universidade de Tr\u00e1s-os-Montes e Alto Douro (UTAD), Quinta de Prados, 5000-801 Vila Real, Portugal",
+              "institution_ids": [
+                "https://openalex.org/I155381812"
+              ]
+            },
+            {
+              "raw_affiliation_string": "College of Agronomy, Sichuan Agricultural University, Ya\u2019an 625000, China",
+              "institution_ids": [
+                "https://openalex.org/I37574244"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Key Laboratory of Agricultural Bioinformatics, Ministry of Education, Sichuan Agricultural University, Chengdu 625014, China",
+              "institution_ids": [
+                "https://openalex.org/I37574244"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Root": [
+          0
+        ],
+        "system": [
+          1,
+          40,
+          143
+        ],
+        "analysis": [
+          2
+        ],
+        "remains": [
+          3
+        ],
+        "methodologically": [
+          4
+        ],
+        "challenging": [
+          5
+        ],
+        "in": [
+          6,
+          61,
+          101,
+          130
+        ],
+        "plant": [
+          7
+        ],
+        "research:": [
+          8
+        ],
+        "traditional": [
+          9
+        ],
+        "soil": [
+          10,
+          24,
+          49,
+          63,
+          163
+        ],
+        "cultivation": [
+          11
+        ],
+        "obstructs": [
+          12
+        ],
+        "comprehensive": [
+          13
+        ],
+        "root": [
+          14,
+          59,
+          94,
+          103,
+          132,
+          140,
+          153
+        ],
+        "observation,": [
+          15
+        ],
+        "whereas": [
+          16
+        ],
+        "hydroponic": [
+          17
+        ],
+        "visualization": [
+          18
+        ],
+        "lacks": [
+          19
+        ],
+        "ecological": [
+          20
+        ],
+        "relevance": [
+          21
+        ],
+        "due": [
+          22
+        ],
+        "to": [
+          23
+        ],
+        "environment": [
+          25
+        ],
+        "exclusion\u2014a": [
+          26
+        ],
+        "critical": [
+          27
+        ],
+        "limitation": [
+          28
+        ],
+        "for": [
+          29,
+          152
+        ],
+        "crops": [
+          30
+        ],
+        "like": [
+          31
+        ],
+        "soybean.": [
+          32
+        ],
+        "This": [
+          33,
+          145
+        ],
+        "manuscript": [
+          34,
+          70
+        ],
+        "developed": [
+          35
+        ],
+        "a": [
+          36
+        ],
+        "cost-effective": [
+          37
+        ],
+        "hybrid": [
+          38
+        ],
+        "imaging": [
+          39,
+          53
+        ],
+        "integrating": [
+          41
+        ],
+        "transparent": [
+          42
+        ],
+        "acrylic": [
+          43
+        ],
+        "plates,": [
+          44
+        ],
+        "semi-permeable": [
+          45
+        ],
+        "membranes,": [
+          46
+        ],
+        "and": [
+          47,
+          54,
+          92,
+          115,
+          138,
+          161,
+          170
+        ],
+        "natural": [
+          48
+        ],
+        "substrates": [
+          50
+        ],
+        "with": [
+          51,
+          81,
+          105,
+          128,
+          155
+        ],
+        "high-resolution": [
+          52
+        ],
+        "controlled": [
+          55
+        ],
+        "illumination,": [
+          56
+        ],
+        "enabling": [
+          57
+        ],
+        "non-destructive": [
+          58
+        ],
+        "monitoring": [
+          60
+        ],
+        "quasi-natural": [
+          62
+        ],
+        "conditions.": [
+          64
+        ],
+        "Complementing": [
+          65
+        ],
+        "this": [
+          66,
+          69
+        ],
+        "hardware": [
+          67,
+          168
+        ],
+        "innovation,": [
+          68
+        ],
+        "proposed": [
+          71
+        ],
+        "an": [
+          72,
+          82
+        ],
+        "unsupervised": [
+          73,
+          120
+        ],
+        "semantic": [
+          74
+        ],
+        "segmentation": [
+          75,
+          106
+        ],
+        "algorithm": [
+          76,
+          173
+        ],
+        "that": [
+          77
+        ],
+        "synergizes": [
+          78
+        ],
+        "path": [
+          79
+        ],
+        "planning": [
+          80
+        ],
+        "enhanced": [
+          83
+        ],
+        "DBSCAN": [
+          84
+        ],
+        "framework,": [
+          85
+        ],
+        "achieving": [
+          86
+        ],
+        "the": [
+          87
+        ],
+        "precise": [
+          88
+        ],
+        "extraction": [
+          89
+        ],
+        "of": [
+          90
+        ],
+        "primary": [
+          91
+        ],
+        "lateral": [
+          93,
+          139
+        ],
+        "architectures.": [
+          95
+        ],
+        "Experimental": [
+          96
+        ],
+        "validation": [
+          97
+        ],
+        "demonstrated": [
+          98
+        ],
+        "superior": [
+          99
+        ],
+        "performance": [
+          100
+        ],
+        "soybean": [
+          102
+        ],
+        "analysis,": [
+          104
+        ],
+        "metrics": [
+          107
+        ],
+        "reaching": [
+          108
+        ],
+        "0.8444": [
+          109
+        ],
+        "accuracy,": [
+          110
+        ],
+        "0.9203": [
+          111
+        ],
+        "recall,": [
+          112
+        ],
+        "0.8743": [
+          113
+        ],
+        "F1-score,": [
+          114
+        ],
+        "0.7921": [
+          116
+        ],
+        "mIoU\u2014significantly": [
+          117
+        ],
+        "outperforming": [
+          118
+        ],
+        "existing": [
+          119
+        ],
+        "methods": [
+          121
+        ],
+        "(p<0.01).": [
+          122
+        ],
+        "Strong": [
+          123
+        ],
+        "correlations": [
+          124
+        ],
+        "(R2": [
+          125
+        ],
+        ">": [
+          126
+        ],
+        "0.94)": [
+          127
+        ],
+        "WinRHIZO": [
+          129
+        ],
+        "quantifying": [
+          131
+        ],
+        "length,": [
+          133
+        ],
+        "projected": [
+          134
+        ],
+        "area,": [
+          135
+        ],
+        "dimensional": [
+          136
+        ],
+        "parameters,": [
+          137
+        ],
+        "counts": [
+          141
+        ],
+        "confirmed": [
+          142
+        ],
+        "reliability.": [
+          144
+        ],
+        "soil-compatible": [
+          146
+        ],
+        "phenotyping": [
+          147
+        ],
+        "platform": [
+          148
+        ],
+        "establishes": [
+          149
+        ],
+        "new": [
+          150
+        ],
+        "opportunities": [
+          151
+        ],
+        "research,": [
+          154
+        ],
+        "future": [
+          156
+        ],
+        "developments": [
+          157
+        ],
+        "targeting": [
+          158
+        ],
+        "multi-crop": [
+          159
+        ],
+        "adaptability": [
+          160
+        ],
+        "complex": [
+          162
+        ],
+        "condition": [
+          164
+        ],
+        "applications": [
+          165
+        ],
+        "through": [
+          166
+        ],
+        "modular": [
+          167
+        ],
+        "redesign": [
+          169
+        ],
+        "3D": [
+          171
+        ],
+        "reconstruction": [
+          172
+        ],
+        "integration.": [
+          174
+        ]
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.3390/agronomy15122794",
+        "any_repository_has_fulltext": true
+      },
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4410106524",
+      "display_name": "Reviewing the Impact of Machine Learning and IoT on Hydroponic Yield and Resource Efficiency",
+      "publication_year": 2025,
+      "publication_date": "2025-01-01",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.2139/ssrn.5196854",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5117444151",
+            "display_name": "Purnima Baagdi",
+            "orcid": "https://orcid.org/0009-0006-5977-1530"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Purnima Baagdi",
+          "raw_affiliation_strings": [
+            "Shri Chimanbhai Patel Institute of Management & Research"
+          ],
+          "raw_orcid": "https://orcid.org/0009-0006-5977-1530",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Shri Chimanbhai Patel Institute of Management & Research",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5016300311",
+            "display_name": "Prof. Dr. Vishal Dahiya",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Prof Dr Vishal Dahiya",
+          "raw_affiliation_strings": [
+            "Chimanbhai Patel Institute of Management & Research"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Chimanbhai Patel Institute of Management & Research",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5030091449",
+            "display_name": "Madhavi Dave",
+            "orcid": "https://orcid.org/0000-0001-6058-5440"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I99165933",
+              "display_name": "University of Gujrat",
+              "ror": "https://ror.org/01xe5fb92",
+              "country_code": "PK",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I99165933"
+              ]
+            }
+          ],
+          "countries": [
+            "PK"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Dr. Madhvi Dave",
+          "raw_affiliation_strings": [
+            "University of Gujrat"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Gujrat",
+              "institution_ids": [
+                "https://openalex.org/I99165933"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.2139/ssrn.5196854",
+        "any_repository_has_fulltext": true
+      },
+      "type": "preprint",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W3104719279",
+      "display_name": "Mapping the genomic regions underlying the ionome in the model crop foxtail millet (Setaria italica) and the proposal of a probabilistic method for their validation",
+      "publication_year": 2020,
+      "publication_date": "2020-01-01",
+      "cited_by_count": 0,
+      "doi": null,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5081316964",
+            "display_name": "Brianna Haining",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Brianna Haining",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        }
+      ],
+      "abstract_inverted_index": {
+        "Most": [
+          0
+        ],
+        "cultures": [
+          1
+        ],
+        "obtain": [
+          2
+        ],
+        "the": [
+          3,
+          20,
+          24,
+          29,
+          61,
+          82,
+          92,
+          118,
+          123,
+          133,
+          143,
+          149,
+          165,
+          184,
+          191,
+          216,
+          222,
+          229,
+          241,
+          262,
+          272,
+          290,
+          295,
+          332,
+          350,
+          364,
+          377,
+          383,
+          387,
+          392,
+          403,
+          411,
+          427,
+          430,
+          440,
+          448,
+          456,
+          472,
+          484,
+          509,
+          512,
+          520,
+          523,
+          531,
+          542,
+          547,
+          573
+        ],
+        "majority": [
+          4
+        ],
+        "of": [
+          5,
+          26,
+          41,
+          63,
+          70,
+          81,
+          87,
+          94,
+          99,
+          132,
+          145,
+          151,
+          155,
+          177,
+          224,
+          243,
+          264,
+          334,
+          337,
+          352,
+          366,
+          379,
+          394,
+          405,
+          429,
+          439,
+          474,
+          487,
+          511,
+          522,
+          534,
+          552,
+          560,
+          575
+        ],
+        "their": [
+          6,
+          375,
+          498
+        ],
+        "caloric": [
+          7
+        ],
+        "and": [
+          8,
+          49,
+          55,
+          105,
+          112,
+          127,
+          158,
+          198,
+          201,
+          205,
+          221,
+          249,
+          311,
+          386,
+          462,
+          477,
+          492
+        ],
+        "mineral": [
+          9
+        ],
+        "nutrition": [
+          10
+        ],
+        "from": [
+          11,
+          28,
+          455,
+          546
+        ],
+        "cereals": [
+          12
+        ],
+        "either": [
+          13
+        ],
+        "directly": [
+          14
+        ],
+        "or": [
+          15
+        ],
+        "through": [
+          16,
+          79
+        ],
+        "livestock;": [
+          17
+        ],
+        "therefore,": [
+          18
+        ],
+        "understanding": [
+          19
+        ],
+        "genetic": [
+          21
+        ],
+        "architecture": [
+          22
+        ],
+        "underlying": [
+          23
+        ],
+        "acquisition": [
+          25
+        ],
+        "ions": [
+          27
+        ],
+        "soil": [
+          30,
+          166
+        ],
+        "in": [
+          31,
+          52,
+          60,
+          76,
+          122,
+          164,
+          186,
+          190,
+          228,
+          301,
+          308,
+          358,
+          391,
+          410,
+          447,
+          467,
+          481,
+          519
+        ],
+        "these": [
+          32,
+          488
+        ],
+        "crops": [
+          33
+        ],
+        "is": [
+          34,
+          44,
+          90,
+          399
+        ],
+        "important": [
+          35,
+          571
+        ],
+        "for": [
+          36,
+          240,
+          349,
+          371,
+          382,
+          572
+        ],
+        "agricultural": [
+          37
+        ],
+        "purposes.": [
+          38
+        ],
+        "The": [
+          39,
+          85,
+          233,
+          276,
+          326,
+          354,
+          396
+        ],
+        "ionome": [
+          40,
+          93,
+          150,
+          521
+        ],
+        "an": [
+          42,
+          67,
+          77,
+          321
+        ],
+        "organism": [
+          43,
+          78,
+          393
+        ],
+        "intricately": [
+          45
+        ],
+        "interconnected;": [
+          46
+        ],
+        "many": [
+          47
+        ],
+        "transporters": [
+          48
+        ],
+        "enzymes": [
+          50
+        ],
+        "involved": [
+          51
+        ],
+        "ion": [
+          53
+        ],
+        "uptake": [
+          54
+        ],
+        "storage": [
+          56
+        ],
+        "have": [
+          57
+        ],
+        "been": [
+          58
+        ],
+        "implicated": [
+          59
+        ],
+        "homeostasis": [
+          62,
+          446
+        ],
+        "multiple": [
+          64
+        ],
+        "elements.": [
+          65
+        ],
+        "Thus,": [
+          66
+        ],
+        "elemental": [
+          68
+        ],
+        "signature": [
+          69
+        ],
+        "iron": [
+          71,
+          146,
+          187
+        ],
+        "deficiency": [
+          72,
+          286
+        ],
+        "can": [
+          73
+        ],
+        "be": [
+          74
+        ],
+        "detected": [
+          75
+        ],
+        "analysis": [
+          80
+        ],
+        "entire": [
+          83
+        ],
+        "ionome.": [
+          84
+        ],
+        "focus": [
+          86
+        ],
+        "this": [
+          88,
+          138,
+          317,
+          359
+        ],
+        "thesis": [
+          89,
+          108
+        ],
+        "on": [
+          91,
+          541
+        ],
+        "two": [
+          95,
+          244
+        ],
+        "closely": [
+          96
+        ],
+        "related": [
+          97
+        ],
+        "species": [
+          98,
+          125,
+          449,
+          524
+        ],
+        "grass": [
+          100
+        ],
+        "known": [
+          101
+        ],
+        "as": [
+          102,
+          167,
+          169,
+          210,
+          305,
+          570
+        ],
+        "Setaria": [
+          103,
+          124,
+          156,
+          441
+        ],
+        "viridis": [
+          104,
+          461
+        ],
+        "S.": [
+          106,
+          460,
+          463
+        ],
+        "italica.This": [
+          107
+        ],
+        "uses": [
+          109
+        ],
+        "standing": [
+          110
+        ],
+        "diversity": [
+          111
+        ],
+        "constructed": [
+          113
+        ],
+        "inbred": [
+          114
+        ],
+        "lines": [
+          115
+        ],
+        "to": [
+          116,
+          128,
+          182,
+          271,
+          281,
+          292,
+          316,
+          436,
+          470,
+          494,
+          496,
+          507
+        ],
+        "illustrate": [
+          117
+        ],
+        "ionomic": [
+          119,
+          266,
+          278,
+          499
+        ],
+        "variation": [
+          120,
+          185
+        ],
+        "present": [
+          121,
+          189
+        ],
+        "complex,": [
+          126
+        ],
+        "determine": [
+          129
+        ],
+        "which": [
+          130,
+          268,
+          538
+        ],
+        "regions": [
+          131,
+          438,
+          510,
+          559,
+          567
+        ],
+        "genome": [
+          134,
+          442,
+          513
+        ],
+        "are": [
+          135,
+          369,
+          515
+        ],
+        "associated": [
+          136,
+          421,
+          443,
+          516
+        ],
+        "with": [
+          137,
+          261,
+          320,
+          422,
+          444,
+          517,
+          566
+        ],
+        "variation.": [
+          139
+        ],
+        "Chapter": [
+          140,
+          309,
+          482
+        ],
+        "1": [
+          141
+        ],
+        "explores": [
+          142
+        ],
+        "effect": [
+          144
+        ],
+        "concentration": [
+          147
+        ],
+        "upon": [
+          148
+        ],
+        "a": [
+          152,
+          170,
+          283,
+          313,
+          335,
+          338,
+          372,
+          406
+        ],
+        "diverse": [
+          153
+        ],
+        "group": [
+          154,
+          279
+        ],
+        "landraces": [
+          157
+        ],
+        "cultivars.": [
+          159
+        ],
+        "Each": [
+          160
+        ],
+        "accession": [
+          161
+        ],
+        "was": [
+          162,
+          208,
+          211,
+          219,
+          416,
+          465,
+          528
+        ],
+        "grown": [
+          163,
+          195,
+          466
+        ],
+        "well": [
+          168
+        ],
+        "hydroponic": [
+          171
+        ],
+        "medium": [
+          172
+        ],
+        "containing": [
+          173
+        ],
+        "three": [
+          174,
+          250
+        ],
+        "varying": [
+          175
+        ],
+        "concentrations": [
+          176,
+          223
+        ],
+        "iron.": [
+          178
+        ],
+        "This": [
+          179
+        ],
+        "experiment": [
+          180,
+          409
+        ],
+        "aimed": [
+          181,
+          417
+        ],
+        "assess": [
+          183
+        ],
+        "accumulation": [
+          188
+        ],
+        "species.": [
+          192
+        ],
+        "Plants": [
+          193
+        ],
+        "were": [
+          194,
+          231,
+          346,
+          490,
+          504,
+          539,
+          555,
+          562
+        ],
+        "until": [
+          196
+        ],
+        "senescence": [
+          197
+        ],
+        "then": [
+          199,
+          505
+        ],
+        "harvested": [
+          200,
+          491
+        ],
+        "dried.": [
+          202
+        ],
+        "Dry": [
+          203
+        ],
+        "root": [
+          204
+        ],
+        "shoot": [
+          206
+        ],
+        "weight": [
+          207
+        ],
+        "assessed,": [
+          209
+        ],
+        "yield": [
+          212
+        ],
+        "by": [
+          213,
+          401
+        ],
+        "weight.": [
+          214
+        ],
+        "Additionally,": [
+          215
+        ],
+        "uppermost": [
+          217
+        ],
+        "leaf": [
+          218
+        ],
+        "taken": [
+          220
+        ],
+        "20": [
+          225
+        ],
+        "different": [
+          226
+        ],
+        "elements": [
+          227
+        ],
+        "plant": [
+          230
+        ],
+        "assessed.": [
+          232
+        ],
+        "unsupervised": [
+          234
+        ],
+        "machine": [
+          235
+        ],
+        "learning": [
+          236
+        ],
+        "algorithm": [
+          237
+        ],
+        "DBSCAN": [
+          238
+        ],
+        "allowed": [
+          239
+        ],
+        "identification": [
+          242
+        ],
+        "separate": [
+          245
+        ],
+        "ionomically": [
+          246
+        ],
+        "defined": [
+          247,
+          252
+        ],
+        "groups": [
+          248
+        ],
+        "morphologically": [
+          251
+        ],
+        "groups.": [
+          253
+        ],
+        "These": [
+          254,
+          501
+        ],
+        "groupings": [
+          255
+        ],
+        "did": [
+          256,
+          269
+        ],
+        "not": [
+          257
+        ],
+        "show": [
+          258,
+          282
+        ],
+        "strong": [
+          259
+        ],
+        "intercorrelation,": [
+          260
+        ],
+        "exception": [
+          263
+        ],
+        "one": [
+          265
+        ],
+        "group,": [
+          267
+        ],
+        "correspond": [
+          270
+        ],
+        "African": [
+          273
+        ],
+        "morphology": [
+          274
+        ],
+        "group.": [
+          275
+        ],
+        "second": [
+          277
+        ],
+        "appeared": [
+          280
+        ],
+        "constitutive": [
+          284
+        ],
+        "phosphate": [
+          285
+        ],
+        "response.Chapter": [
+          287
+        ],
+        "2": [
+          288
+        ],
+        "addresses": [
+          289
+        ],
+        "need": [
+          291
+        ],
+        "statistically": [
+          293
+        ],
+        "validate": [
+          294
+        ],
+        "quantitative": [
+          296,
+          431
+        ],
+        "trait": [
+          297,
+          351,
+          432,
+          574
+        ],
+        "loci": [
+          298
+        ],
+        "(QTL)": [
+          299,
+          434
+        ],
+        "identified": [
+          300,
+          348,
+          370,
+          563,
+          569
+        ],
+        "association": [
+          302
+        ],
+        "studies": [
+          303
+        ],
+        "such": [
+          304
+        ],
+        "those": [
+          306
+        ],
+        "completed": [
+          307
+        ],
+        "3": [
+          310,
+          425
+        ],
+        "offers": [
+          312
+        ],
+        "mathematical": [
+          314
+        ],
+        "solution": [
+          315
+        ],
+        "issue": [
+          318
+        ],
+        "along": [
+          319
+        ],
+        "open": [
+          322
+        ],
+        "source": [
+          323
+        ],
+        "R": [
+          324
+        ],
+        "module.": [
+          325
+        ],
+        "Scanning": [
+          327
+        ],
+        "Probabilistic": [
+          328
+        ],
+        "QTL": [
+          329,
+          336,
+          367,
+          407,
+          554,
+          561
+        ],
+        "Validator": [
+          330
+        ],
+        "calculates": [
+          331
+        ],
+        "significance": [
+          333
+        ],
+        "particular": [
+          339,
+          373
+        ],
+        "length": [
+          340
+        ],
+        "overlaying": [
+          341
+        ],
+        "any": [
+          342
+        ],
+        "N": [
+          343
+        ],
+        "genes": [
+          344,
+          420
+        ],
+        "that": [
+          345,
+          368,
+          415,
+          514,
+          564
+        ],
+        "previously": [
+          347,
+          568
+        ],
+        "interest.": [
+          353,
+          395
+        ],
+        "strategy": [
+          355
+        ],
+        "put": [
+          356
+        ],
+        "forth": [
+          357
+        ],
+        "chapter": [
+          360
+        ],
+        "takes": [
+          361
+        ],
+        "into": [
+          362
+        ],
+        "account": [
+          363
+        ],
+        "number": [
+          365,
+          378
+        ],
+        "model,": [
+          374
+        ],
+        "lengths,": [
+          376
+        ],
+        "markers": [
+          380
+        ],
+        "used": [
+          381,
+          506
+        ],
+        "initial": [
+          384,
+          548
+        ],
+        "mapping,": [
+          385
+        ],
+        "overall": [
+          388
+        ],
+        "gene": [
+          389
+        ],
+        "distribution": [
+          390
+        ],
+        "SPQV\u2019s": [
+          397
+        ],
+        "usage": [
+          398
+        ],
+        "demonstrated": [
+          400
+        ],
+        "validating": [
+          402
+        ],
+        "results": [
+          404
+        ],
+        "mapping": [
+          408,
+          435,
+          527
+        ],
+        "TeoNAM": [
+          412
+        ],
+        "RIL": [
+          413,
+          452
+        ],
+        "population": [
+          414,
+          453
+        ],
+        "at": [
+          418
+        ],
+        "identifying": [
+          419
+        ],
+        "branching.": [
+          423
+        ],
+        "\\tChapter": [
+          424
+        ],
+        "details": [
+          426
+        ],
+        "use": [
+          428,
+          577
+        ],
+        "locus": [
+          433
+        ],
+        "identify": [
+          437
+        ],
+        "ionic": [
+          445
+        ],
+        "complex.": [
+          450,
+          525
+        ],
+        "A": [
+          451,
+          550
+        ],
+        "resulting": [
+          454,
+          545
+        ],
+        "interspecific": [
+          457
+        ],
+        "cross": [
+          458
+        ],
+        "between": [
+          459
+        ],
+        "italica": [
+          464
+        ],
+        "treatments": [
+          468
+        ],
+        "designed": [
+          469
+        ],
+        "assay": [
+          471,
+          497
+        ],
+        "effects": [
+          473
+        ],
+        "planting": [
+          475
+        ],
+        "density": [
+          476
+        ],
+        "water": [
+          478,
+          576
+        ],
+        "availability.": [
+          479
+        ],
+        "As": [
+          480
+        ],
+        "1,": [
+          483
+        ],
+        "flag": [
+          485
+        ],
+        "leaves": [
+          486
+        ],
+        "plants": [
+          489
+        ],
+        "subjected": [
+          493
+        ],
+        "ICP-MS": [
+          495
+        ],
+        "content.": [
+          500
+        ],
+        "phenotypic": [
+          502,
+          543
+        ],
+        "data": [
+          503,
+          544
+        ],
+        "map": [
+          508
+        ],
+        "alterations": [
+          518
+        ],
+        "Further": [
+          526
+        ],
+        "performed": [
+          529,
+          540
+        ],
+        "using": [
+          530
+        ],
+        "rotated": [
+          532
+        ],
+        "loadings": [
+          533
+        ],
+        "principal": [
+          535
+        ],
+        "components": [
+          536
+        ],
+        "analyses": [
+          537
+        ],
+        "grow-outs.": [
+          549
+        ],
+        "total": [
+          551
+        ],
+        "251": [
+          553
+        ],
+        "identified.": [
+          556
+        ],
+        "Multiple": [
+          557
+        ],
+        "concentrated": [
+          558
+        ],
+        "overlapped": [
+          565
+        ],
+        "efficiency.": [
+          578
+        ]
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://escholarship.org/uc/item/93z439ft",
+        "any_repository_has_fulltext": true
+      },
+      "type": "dissertation",
+      "language": "en"
+    }
+  ],
+  "group_by": []
+}

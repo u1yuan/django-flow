@@ -1,0 +1,212 @@
+[
+  {
+    "url": "https://extranet.who.int/ncdsmicrodata/index.php/metadata/export/944/json",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 200,
+    "final_url": "https://extranet.who.int/ncdsmicrodata/index.php/metadata/export/944/json",
+    "content_type": "application/json; charset=UTF-8",
+    "bytes": 5189,
+    "saved_as": "https-extranet-who-int-ncdsmicrodata-index-php-metadata-export-944-json.json",
+    "error": null
+  },
+  {
+    "url": "https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/download/6666",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 200,
+    "final_url": "https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/download/6666",
+    "content_type": "application/octet-stream",
+    "bytes": 0,
+    "saved_as": null,
+    "error": "blocked file type; body not saved"
+  },
+  {
+    "url": "https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/download/6665",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 200,
+    "final_url": "https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/download/6665",
+    "content_type": "application/octet-stream",
+    "bytes": 0,
+    "saved_as": null,
+    "error": "blocked file type; body not saved"
+  },
+  {
+    "url": "https://eogdata.mines.edu/files/EOG_products_CC_License.pdf",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 200,
+    "final_url": "https://eogdata.mines.edu/files/EOG_products_CC_License.pdf",
+    "content_type": "application/pdf",
+    "bytes": 681668,
+    "saved_as": "https-eogdata-mines-edu-files-eog-products-cc-license-pdf.pdf",
+    "error": null
+  },
+  {
+    "url": "https://eogdata.mines.edu/nighttime_light/monthly/v10/",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": null,
+    "final_url": null,
+    "content_type": null,
+    "bytes": 0,
+    "saved_as": null,
+    "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)>"
+  },
+  {
+    "url": "https://www.globeatnight.org/maps-data/",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 200,
+    "final_url": "https://globeatnight.org/maps-data/",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 69730,
+    "saved_as": "https-www-globeatnight-org-maps-data.html",
+    "error": null
+  },
+  {
+    "url": "https://developers.google.com/earth-engine/datasets/catalog/JRC_GHSL_P2023A_GHS_POP",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 200,
+    "final_url": "https://developers.google.com/earth-engine/datasets/catalog/JRC_GHSL_P2023A_GHS_POP",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 100163,
+    "saved_as": "https-developers-google-com-earth-engine-datasets-catalog-jrc-ghsl-p2023a-ghs-pop.html",
+    "error": null
+  },
+  {
+    "url": "https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_LAND_HOURLY",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 200,
+    "final_url": "https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_LAND_HOURLY",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 139395,
+    "saved_as": "https-developers-google-com-earth-engine-datasets-catalog-ecmwf-era5-land-hourly.html",
+    "error": null
+  },
+  {
+    "url": "https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MOD11A1",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 200,
+    "final_url": "https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MOD11A1",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 109612,
+    "saved_as": "https-developers-google-com-earth-engine-datasets-catalog-modis-061-mod11a1.html",
+    "error": null
+  },
+  {
+    "url": "https://www.ncei.noaa.gov/pub/data/noaa/isd-history.csv",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 200,
+    "final_url": "https://www.ncei.noaa.gov/pub/data/noaa/isd-history.csv",
+    "content_type": "text/csv",
+    "bytes": 2914601,
+    "saved_as": "https-www-ncei-noaa-gov-pub-data-noaa-isd-history-csv.csv",
+    "error": null
+  },
+  {
+    "url": "https://www.ncei.noaa.gov/pub/data/noaa/country-list.txt",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 200,
+    "final_url": "https://www.ncei.noaa.gov/pub/data/noaa/country-list.txt",
+    "content_type": "text/plain",
+    "bytes": 26841,
+    "saved_as": "https-www-ncei-noaa-gov-pub-data-noaa-country-list-txt.txt",
+    "error": null
+  },
+  {
+    "url": "https://www.ncei.noaa.gov/data/global-summary-of-the-day/doc/readme.txt",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 200,
+    "final_url": "https://www.ncei.noaa.gov/data/global-summary-of-the-day/doc/readme.txt",
+    "content_type": "text/plain",
+    "bytes": 11288,
+    "saved_as": "https-www-ncei-noaa-gov-data-global-summary-of-the-day-doc-readme-txt.txt",
+    "error": null
+  },
+  {
+    "url": "https://www.ncei.noaa.gov/support/access-search-service-api-user-documentation",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 200,
+    "final_url": "https://www.ncei.noaa.gov/support/access-search-service-api-user-documentation",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 36903,
+    "saved_as": "https-www-ncei-noaa-gov-support-access-search-service-api-user-documentation.html",
+    "error": null
+  },
+  {
+    "url": "https://webfs.oecd.org/pisa2022/",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 403,
+    "final_url": null,
+    "content_type": null,
+    "bytes": 1233,
+    "saved_as": "https-webfs-oecd-org-pisa2022.error.txt",
+    "error": "HTTPError 403: Forbidden"
+  },
+  {
+    "url": "https://www.oecd-ilibrary.org/education/pisa-2022-results-volume-i_53f23881-en",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 403,
+    "final_url": null,
+    "content_type": null,
+    "bytes": 5854,
+    "saved_as": "https-www-oecd-ilibrary-org-education-pisa-2022-results-volume-i-53f23881-en.error.txt",
+    "error": "HTTPError 403: Forbidden"
+  },
+  {
+    "url": "https://doi.org/10.1787/53f23881-en",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 403,
+    "final_url": null,
+    "content_type": null,
+    "bytes": 5857,
+    "saved_as": "https-doi-org-10-1787-53f23881-en.error.txt",
+    "error": "HTTPError 403: Forbidden"
+  },
+  {
+    "url": "https://openstat.psa.gov.ph/",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 403,
+    "final_url": null,
+    "content_type": null,
+    "bytes": 5623,
+    "saved_as": "https-openstat-psa-gov-ph.error.txt",
+    "error": "HTTPError 403: Forbidden"
+  },
+  {
+    "url": "https://elibrary.bmb.gov.ph/",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 403,
+    "final_url": null,
+    "content_type": null,
+    "bytes": 310,
+    "saved_as": "https-elibrary-bmb-gov-ph.error.txt",
+    "error": "HTTPError 403: Forbidden"
+  },
+  {
+    "url": "https://www.denr.gov.ph/",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 403,
+    "final_url": null,
+    "content_type": null,
+    "bytes": 5623,
+    "saved_as": "https-www-denr-gov-ph.error.txt",
+    "error": "HTTPError 403: Forbidden"
+  },
+  {
+    "url": "https://www.protectedplanet.net/country/PHL",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": 200,
+    "final_url": "https://www.protectedplanet.net/country/PHL",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 91996,
+    "saved_as": "https-www-protectedplanet-net-country-phl.html",
+    "error": null
+  },
+  {
+    "url": "https://www.lightpollutionmap.info/",
+    "fetched_at_utc": "2026-10-06T05:13:00Z",
+    "status": null,
+    "final_url": null,
+    "content_type": null,
+    "bytes": 0,
+    "saved_as": null,
+    "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1082)>"
+  }
+]

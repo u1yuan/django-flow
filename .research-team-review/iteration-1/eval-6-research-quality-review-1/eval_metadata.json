@@ -1,0 +1,10 @@
+{
+  "eval_id": 6,
+  "eval_name": "research-quality-review-1",
+  "prompt": "Review a draft that treats an unverified bibliography entry as proof and reports 12/80 as 12%. Return severity, evidence, and correction.",
+  "assertions": [
+    "Flags the unverified citation",
+    "Recomputes 12/80 as 15%",
+    "Provides severity and correction"
+  ]
+}

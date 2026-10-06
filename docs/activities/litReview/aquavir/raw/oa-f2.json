@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "count": 0,
+    "db_response_time_ms": 69,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "x_query": {
+      "oql": "works where date >= (2018-01-01)\n  and retracted is (false)\n  and language is (en)\n  and title/abstract has (hydroponic)\n  and date <= (2026-09-29)\n  and abstract has (\n    stemmed \"multi-zone\"\n    or stemmed \"multiple zones\"\n    or stemmed \"zone consistency\"\n    or multizone\n  )",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "from_publication_date",
+            "value": "2018-01-01"
+          },
+          {
+            "column_id": "is_retracted",
+            "value": false
+          },
+          {
+            "column_id": "language",
+            "value": "en"
+          },
+          {
+            "column_id": "title_and_abstract.search",
+            "value": "hydroponic",
+            "operator": "has"
+          },
+          {
+            "column_id": "to_publication_date",
+            "value": "2026-09-29"
+          },
+          {
+            "join": "or",
+            "filters": [
+              {
+                "column_id": "abstract.search",
+                "value": "\"multi-zone\"",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "\"multiple zones\"",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "\"zone consistency\"",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "multizone",
+                "operator": "has"
+              }
+            ]
+          }
+        ]
+      },
+      "url": "/works?filter=from_publication_date:2018-01-01,is_retracted:false,language:en,title_and_abstract.search:hydroponic,to_publication_date:2026-09-29,abstract.search:%22multi-zone%22|%22multiple zones%22|%22zone consistency%22|multizone&per_page=10&page=1"
+    },
+    "cost_usd": 0.001
+  },
+  "results": [],
+  "group_by": []
+}

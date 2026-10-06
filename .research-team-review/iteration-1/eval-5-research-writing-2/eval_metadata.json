@@ -1,0 +1,10 @@
+{
+  "eval_id": 5,
+  "eval_name": "research-writing-2",
+  "prompt": "Draft a hydroponic feasibility paragraph from the repository proposal without access to sensor records.",
+  "assertions": [
+    "States absence of observed sensor analysis",
+    "Preserves proposal status",
+    "Lists unresolved inputs"
+  ]
+}

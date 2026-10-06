@@ -1,0 +1,10 @@
+{
+  "eval_id": 2,
+  "eval_name": "quantitative-analysis-1",
+  "prompt": "Evaluate whether the hydroponic feasibility document contains data suitable for zone anomaly analysis. Do not infer a result from its target row count.",
+  "assertions": [
+    "States data are missing or unconfirmed",
+    "Does not present fabricated statistics",
+    "Lists variables, units, and time or grouping requirements"
+  ]
+}

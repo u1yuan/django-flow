@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {
+      "text": "Separates leads from verified claims",
+      "passed": true,
+      "evidence": "Looked for explicit unverified status and a relevance screen."
+    },
+    {
+      "text": "Does not invent citation metadata",
+      "passed": true,
+      "evidence": "Checked that citation identity remains unverified rather than repaired by assertion."
+    },
+    {
+      "text": "Reports reproducible screening scope",
+      "passed": true,
+      "evidence": "Looked for named input/scope and an explicit screening boundary."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

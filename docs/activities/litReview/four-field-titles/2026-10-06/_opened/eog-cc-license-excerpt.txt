@@ -1,0 +1,67 @@
+ 
+EOG Products - Data Access and Licensing 
+ 
+The Earth Observation Group (EOG), Payne Institute for Public Policy, Colorado School of Mines, makes many 
+of their datasets publicly available under the Creative Commons Attribution 4.0 International license (CC-BY 
+4.0). These include the DMSP nighttime lights, VIIRS nighttime lights (VNL), and select subsets of VIIRS Boat 
+Detection (VBD) and VIIRS Nightfire (VNF). The EOG has other datasets which are available under other 
+licenses.  
+ 
+Under the Creative Commons Attribution 4.0 International license users are allowed to copy, modify, and 
+distribute data in any format for any purpose, including commercial use. Users are only obligated to give 
+appropriate credit (attribution) and indicate if they have made any changes. Derived products, including graphs 
+or pictorial representations which are produced or generated utilizing EOG data products should carry the 
+notice as set forth in the attached EXHIBIT 1. Reports and publications which use EOG data products should cite 
+one or more of the papers listed in the attached EXHIBIT 2. 
+ 
+EXHIBIT 1: MARKING OF PRODUCTS 
+ 
+Licensee agrees to apply the following notice to all tangible forms of products, including graphs or pictorial 
+presentations, which are produced or generated utilizing the licensed EOG data products, or to the packaging 
+thereof if direct application to products is not feasible: 
+This product was made utilizing (name the appropriate EOG data product) data produced by the Earth 
+Observation Group, Payne Institute for Public Policy, Colorado School of Mines. 
+Large format graphical renditions made from EOG data products data shall carry the Earth Observation 
+Group logo. Logos of Earth Observation Group are available at 
+https://eogdata.mines.edu/products/logo 
+ 
+If the product is a small format image or something similar where space does not permit use of the provided 
+logo in any rendition or entire notice shown above, Licensee shall apply the following credit line: 
+Source: EOG, Colorado School of Mines. 
+              
+ 
+ 
+ 
+ 
+ 
+ 
+EXHIBIT 2: CITATIONS 
+ 
+Reports and publications made using EOG data products should cite one or more of the listed papers as 
+appropriate: 
+ 
+DMSP nighttime lights - 
+• K. Baugh, C. D. Elvidge, T. Ghosh, and D. Ziskin, “Development of a 2009 Stable Lights Product using 
+DMSP-OLS data,” Proceedings of the Asia-Pacific Advanced Network 30, vol. 30, p. 114, 2010. 
+• C, D. Elvidge, K.E. Baugh, E.A. Kihn, H.W. Kroehl and E.R. Davis, “Mapping City Lights with Nighttime 
+Data from the DMSP Operational Linescan System,” Photogrammetry and Remote Sensing, vol. 63, no. 
+6, pp. 727–734, 1997. 
+• C. D. Elvidge, K. E. Baugh, J. B. Dietz, T. Bland, P. C. Sutton, and H. W. Kroehl, “Radiance Calibration of 
+DMSP-OLS Low-Light Imaging Data of Human Settlements,” Remote Sensing of Environment, vol. 68, 
+no. 1, pp. 77–88, Apr. 1999. 
+• F. C. Hsu, K. Baugh, T. Ghosh, M. Zhizhin, and C. Elvidge, “DMSP-OLS Radiance Calibrated Nighttime 
+Lights Time Series with Intercalibration,” Remote Sensing, vol. 7, pp. 1855–1876, 2015. 
+ 
+VIIRS Nighttime Lights (VNL) 
+• C. D. Elvidge, K. Baugh, M. Zhizhin, F. C. Hsu, and T. Ghosh, “VIIRS night-time lights,” International 
+Journal of Remote Sensing, vol. 38, pp. 5860–5879, 2017. 
+• C. D. Elvidge, K. E. Baugh, M. Zhizhin, and F.-C. Hsu, “Why VIIRS data are superior to DMSP for mapping 
+nighttime lights,” Asia-Pacific Advanced Network 35, vol. 35, pp. 62, 2013. 
+• C. D. Elvidge, F.C. Hsu, M. Zhizhin, T. Ghosh, J. Taneja, M. Bazilian, "Indicators of Electric Power 
+Instability from Satellite Observed Nighttime Lights," Remote Sensing, vol.12, no. 19, pp. 3194, 2020. 
+• C. D. Elvidge, M. Zhizhin, T. Ghosh, F.C. Hsu, and J. Taneja, “Annual time series of global VIIRS nighttime 
+lights derived from monthly averages:2012 to 2019,” Remote Sensing , vol. 13, no. 5, pp. 922, 2021, 
+doi:10.3390/rs13050922. 
+ 
+VIIRS Boat Detection (VBD) 
+• C. D. Elvidge, M. Zhizhin, K. Baugh, and F

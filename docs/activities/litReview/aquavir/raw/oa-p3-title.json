@@ -1,0 +1,138 @@
+﻿{
+  "meta": {
+    "count": 1550,
+    "db_response_time_ms": 33,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "x_query": {
+      "oql": "works where abstract has (yield)\n  and title has (hydroponic)\n  and date >= (2018-01-01)\n  and retracted is (false)\n  and language is (en)\n  and date <= (2026-09-28)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "abstract.search",
+            "value": "yield",
+            "operator": "has"
+          },
+          {
+            "column_id": "display_name.search",
+            "value": "hydroponic",
+            "operator": "has"
+          },
+          {
+            "column_id": "from_publication_date",
+            "value": "2018-01-01"
+          },
+          {
+            "column_id": "is_retracted",
+            "value": false
+          },
+          {
+            "column_id": "language",
+            "value": "en"
+          },
+          {
+            "column_id": "to_publication_date",
+            "value": "2026-09-28"
+          }
+        ]
+      },
+      "url": "/works?filter=abstract.search:yield,display_name.search:hydroponic,from_publication_date:2018-01-01,is_retracted:false,language:en,to_publication_date:2026-09-28&per_page=10&page=1"
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W3092675094",
+      "display_name": "Evaluation of hydroponic systems for the cultivation of Lettuce (Lactuca sativa L., var. Longifolia) and comparison with protected soil-based cultivation",
+      "publication_year": 2020,
+      "doi": "https://doi.org/10.1016/j.agwat.2020.106572",
+      "cited_by_count": 207,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2989804064",
+      "display_name": "Identification of genes for salt tolerance and yield-related traits in rice plants grown hydroponically and under saline field conditions by genome-wide association study",
+      "publication_year": 2019,
+      "doi": "https://doi.org/10.1186/s12284-019-0349-z",
+      "cited_by_count": 146,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2909348483",
+      "display_name": "Evaluation of growth and quality of hydroponic lettuce at harvest as affected by the light intensity, photoperiod and light quality at seedling stage",
+      "publication_year": 2019,
+      "doi": "https://doi.org/10.1016/j.scienta.2019.01.002",
+      "cited_by_count": 138,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W3023654504",
+      "display_name": "Characterizing Nutrient Composition and Concentration in Tomato-, Basil-, and Lettuce-Based Aquaponic and Hydroponic Systems",
+      "publication_year": 2020,
+      "doi": "https://doi.org/10.3390/w12051259",
+      "cited_by_count": 126,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2893640533",
+      "display_name": "Effects of solid and liquid digestate for hydroponic baby leaf lettuce (Lactuca sativa L.) cultivation",
+      "publication_year": 2018,
+      "doi": "https://doi.org/10.1016/j.scienta.2018.09.037",
+      "cited_by_count": 109,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W3198534376",
+      "display_name": "Evaluation of Lettuce (Lactuca sativa L.) Production under Hydroponic System: Nutrient Solution Derived from Fish Waste vs. Inorganic Nutrient Solution",
+      "publication_year": 2021,
+      "doi": "https://doi.org/10.3390/horticulturae7090292",
+      "cited_by_count": 108,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W4313519150",
+      "display_name": "Hydroponic Agriculture and Microbial Safety of Vegetables: Promises, Challenges, and Solutions",
+      "publication_year": 2023,
+      "doi": "https://doi.org/10.3390/horticulturae9010051",
+      "cited_by_count": 99,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W3120107406",
+      "display_name": "Controlled comparisons between soil and hydroponic systems reveal increased water use efficiency and higher lycopene and \u03b2-carotene contents in hydroponically grown tomatoes",
+      "publication_year": 2021,
+      "doi": "https://doi.org/10.1016/j.scienta.2021.109896",
+      "cited_by_count": 99,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2803329012",
+      "display_name": "Novel bioprocess for the cultivation of microalgae in hydroponic growing system of tomato plants",
+      "publication_year": 2018,
+      "doi": "https://doi.org/10.1007/s10811-018-1518-y",
+      "cited_by_count": 98,
+      "type": "article",
+      "language": "en"
+    },
+    {
+      "id": "https://openalex.org/W2792343486",
+      "display_name": "On-site ion monitoring system for precision hydroponic nutrient management",
+      "publication_year": 2018,
+      "doi": "https://doi.org/10.1016/j.compag.2018.01.019",
+      "cited_by_count": 95,
+      "type": "article",
+      "language": "en"
+    }
+  ],
+  "group_by": []
+}

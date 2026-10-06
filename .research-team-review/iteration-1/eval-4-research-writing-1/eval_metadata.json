@@ -1,0 +1,10 @@
+{
+  "eval_id": 4,
+  "eval_name": "research-writing-1",
+  "prompt": "Draft a short background paragraph from the diesel literature log only. Mark every citation as unverified until its original source is checked.",
+  "assertions": [
+    "Provides a claim map",
+    "Does not assert unverified citations as confirmed",
+    "Avoids invented results"
+  ]
+}

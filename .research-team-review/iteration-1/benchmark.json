@@ -1,0 +1,687 @@
+{
+  "metadata": {
+    "skill_name": "topic-agnostic-research-team",
+    "timestamp": "2026-09-28T00:00:00Z",
+    "evals_run": [
+      "evidence-research-1",
+      "evidence-research-2",
+      "quantitative-analysis-1",
+      "quantitative-analysis-2",
+      "research-writing-1",
+      "research-writing-2",
+      "research-quality-review-1",
+      "research-quality-review-2",
+      "research-coordination-1",
+      "research-coordination-2"
+    ],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "eval_name": "evidence-research-1",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "Records source identifiers or URLs",
+          "passed": true,
+          "evidence": "Looked for an identifier, DOI, URL, or source-item reference."
+        },
+        {
+          "text": "Does not mark log summaries as verified source passages",
+          "passed": true,
+          "evidence": "Checked for explicit unverified status and absence of a claim that the log itself verifies the source."
+        },
+        {
+          "text": "Names a concrete verification gap",
+          "passed": true,
+          "evidence": "Looked for a specific next verification action."
+        }
+      ],
+      "notes": [
+        "Output source: evidence-with-1.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 0,
+      "eval_name": "evidence-research-1",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6666666666666666,
+        "passed": 2,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "Records source identifiers or URLs",
+          "passed": true,
+          "evidence": "Looked for an identifier, DOI, URL, or source-item reference."
+        },
+        {
+          "text": "Does not mark log summaries as verified source passages",
+          "passed": false,
+          "evidence": "Checked for explicit unverified status and absence of a claim that the log itself verifies the source."
+        },
+        {
+          "text": "Names a concrete verification gap",
+          "passed": true,
+          "evidence": "Looked for a specific next verification action."
+        }
+      ],
+      "notes": [
+        "Output source: evidence-base-1.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "evidence-research-2",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "Separates leads from verified claims",
+          "passed": true,
+          "evidence": "Looked for explicit unverified status and a relevance screen."
+        },
+        {
+          "text": "Does not invent citation metadata",
+          "passed": true,
+          "evidence": "Checked that citation identity remains unverified rather than repaired by assertion."
+        },
+        {
+          "text": "Reports reproducible screening scope",
+          "passed": true,
+          "evidence": "Looked for named input/scope and an explicit screening boundary."
+        }
+      ],
+      "notes": [
+        "Output source: evidence-with-2.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "evidence-research-2",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "Separates leads from verified claims",
+          "passed": true,
+          "evidence": "Looked for explicit unverified status and a relevance screen."
+        },
+        {
+          "text": "Does not invent citation metadata",
+          "passed": true,
+          "evidence": "Checked that citation identity remains unverified rather than repaired by assertion."
+        },
+        {
+          "text": "Reports reproducible screening scope",
+          "passed": true,
+          "evidence": "Looked for named input/scope and an explicit screening boundary."
+        }
+      ],
+      "notes": [
+        "Output source: evidence-base-2.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "quantitative-analysis-1",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "States data are missing or unconfirmed",
+          "passed": true,
+          "evidence": "Looked for an explicit absence/unconfirmed statement about sensor data."
+        },
+        {
+          "text": "Does not present fabricated statistics",
+          "passed": true,
+          "evidence": "Looked for a clear limit on calculated results."
+        },
+        {
+          "text": "Lists variables, units, and time or grouping requirements",
+          "passed": true,
+          "evidence": "Looked for sensor variables/units and time or zone grouping needs."
+        }
+      ],
+      "notes": [
+        "Output source: quant-with-1.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "quantitative-analysis-1",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "States data are missing or unconfirmed",
+          "passed": true,
+          "evidence": "Looked for an explicit absence/unconfirmed statement about sensor data."
+        },
+        {
+          "text": "Does not present fabricated statistics",
+          "passed": true,
+          "evidence": "Looked for a clear limit on calculated results."
+        },
+        {
+          "text": "Lists variables, units, and time or grouping requirements",
+          "passed": true,
+          "evidence": "Looked for sensor variables/units and time or zone grouping needs."
+        }
+      ],
+      "notes": [
+        "Output source: quant-base-1.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "quantitative-analysis-2",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "Recomputes 12/80 as 15%",
+          "passed": true,
+          "evidence": "Looked for the correct ratio result."
+        },
+        {
+          "text": "Flags code failure",
+          "passed": true,
+          "evidence": "Looked for explicit failed execution evidence."
+        },
+        {
+          "text": "Does not claim successful execution",
+          "passed": true,
+          "evidence": "Checked for claims of successful execution."
+        }
+      ],
+      "notes": [
+        "Output source: quant-with-2.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "quantitative-analysis-2",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "Recomputes 12/80 as 15%",
+          "passed": true,
+          "evidence": "Looked for the correct ratio result."
+        },
+        {
+          "text": "Flags code failure",
+          "passed": true,
+          "evidence": "Looked for explicit failed execution evidence."
+        },
+        {
+          "text": "Does not claim successful execution",
+          "passed": true,
+          "evidence": "Checked for claims of successful execution."
+        }
+      ],
+      "notes": [
+        "Output source: quant-base-2.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "research-writing-1",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "Provides a claim map",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        },
+        {
+          "text": "Does not assert unverified citations as confirmed",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        },
+        {
+          "text": "Avoids invented results",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        }
+      ],
+      "notes": [
+        "Output source: writing-with-1.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "research-writing-1",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "Provides a claim map",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        },
+        {
+          "text": "Does not assert unverified citations as confirmed",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        },
+        {
+          "text": "Avoids invented results",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        }
+      ],
+      "notes": [
+        "Output source: writing-base-1.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "research-writing-2",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "States absence of observed sensor analysis",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        },
+        {
+          "text": "Preserves proposal status",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        },
+        {
+          "text": "Lists unresolved inputs",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        }
+      ],
+      "notes": [
+        "Output source: writing-with-2.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "research-writing-2",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "States absence of observed sensor analysis",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        },
+        {
+          "text": "Preserves proposal status",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        },
+        {
+          "text": "Lists unresolved inputs",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        }
+      ],
+      "notes": [
+        "Output source: writing-base-2.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 6,
+      "eval_name": "research-quality-review-1",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "Flags the unverified citation",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        },
+        {
+          "text": "Recomputes 12/80 as 15%",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        },
+        {
+          "text": "Provides severity and correction",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        }
+      ],
+      "notes": [
+        "Output source: qa-with-1.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 6,
+      "eval_name": "research-quality-review-1",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6666666666666666,
+        "passed": 2,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "Flags the unverified citation",
+          "passed": false,
+          "evidence": "Checked directly against the saved output text."
+        },
+        {
+          "text": "Recomputes 12/80 as 15%",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        },
+        {
+          "text": "Provides severity and correction",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        }
+      ],
+      "notes": [
+        "Output source: qa-base-1.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 7,
+      "eval_name": "research-quality-review-2",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6666666666666666,
+        "passed": 2,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "Flags missing data",
+          "passed": false,
+          "evidence": "Checked directly against the saved output text."
+        },
+        {
+          "text": "Flags failing code",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        },
+        {
+          "text": "Returns needs revision or equivalent status",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        }
+      ],
+      "notes": [
+        "Output source: qa-with-2.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 7,
+      "eval_name": "research-quality-review-2",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.3333333333333333,
+        "passed": 1,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "Flags missing data",
+          "passed": false,
+          "evidence": "Checked directly against the saved output text."
+        },
+        {
+          "text": "Flags failing code",
+          "passed": true,
+          "evidence": "Checked directly against the saved output text."
+        },
+        {
+          "text": "Returns needs revision or equivalent status",
+          "passed": false,
+          "evidence": "Checked directly against the saved output text."
+        }
+      ],
+      "notes": [
+        "Output source: qa-base-2.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 8,
+      "eval_name": "research-coordination-1",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.3333333333333333,
+        "passed": 1,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "Uses the six required brief fields",
+          "passed": false,
+          "evidence": "Checked for topic/question, output, inputs, constraints, acceptance criteria, and data-handling restrictions."
+        },
+        {
+          "text": "Distinguishes proposal from observed data",
+          "passed": true,
+          "evidence": "Looked for explicit distinction between proposal targets and observations."
+        },
+        {
+          "text": "States evidence, limitations, and QA status",
+          "passed": false,
+          "evidence": "Looked for evidence, limitations, and a QA disposition."
+        }
+      ],
+      "notes": [
+        "Output source: coord-with.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 8,
+      "eval_name": "research-coordination-1",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.3333333333333333,
+        "passed": 1,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "Uses the six required brief fields",
+          "passed": false,
+          "evidence": "Checked for topic/question, output, inputs, constraints, acceptance criteria, and data-handling restrictions."
+        },
+        {
+          "text": "Distinguishes proposal from observed data",
+          "passed": true,
+          "evidence": "Looked for explicit distinction between proposal targets and observations."
+        },
+        {
+          "text": "States evidence, limitations, and QA status",
+          "passed": false,
+          "evidence": "Looked for evidence, limitations, and a QA disposition."
+        }
+      ],
+      "notes": [
+        "Output source: coord-base.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 9,
+      "eval_name": "research-coordination-2",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "Uses the six required brief fields",
+          "passed": true,
+          "evidence": "Checked for topic/question, output, inputs, constraints, acceptance criteria, and data-handling restrictions."
+        },
+        {
+          "text": "Does not claim an empirical anomaly result",
+          "passed": true,
+          "evidence": "Looked for an explicit boundary on empirical conclusions."
+        },
+        {
+          "text": "Reports QA status and unresolved findings",
+          "passed": true,
+          "evidence": "Looked for a QA disposition and remaining open issues."
+        }
+      ],
+      "notes": [
+        "Output source: coord-with-2.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    },
+    {
+      "eval_id": 9,
+      "eval_name": "research-coordination-2",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6666666666666666,
+        "passed": 2,
+        "total": 3
+      },
+      "expectations": [
+        {
+          "text": "Uses the six required brief fields",
+          "passed": false,
+          "evidence": "Checked for topic/question, output, inputs, constraints, acceptance criteria, and data-handling restrictions."
+        },
+        {
+          "text": "Does not claim an empirical anomaly result",
+          "passed": true,
+          "evidence": "Looked for an explicit boundary on empirical conclusions."
+        },
+        {
+          "text": "Reports QA status and unresolved findings",
+          "passed": true,
+          "evidence": "Looked for a QA disposition and remaining open issues."
+        }
+      ],
+      "notes": [
+        "Output source: coord-base-2.md",
+        "No original run timing/token metadata was retained; only content assertions are benchmarked."
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.9,
+        "stddev": 0.21343747458109494,
+        "min": 0.3333333333333333,
+        "max": 1.0
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.7666666666666666,
+        "stddev": 0.2603416558635552,
+        "min": 0.3333333333333333,
+        "max": 1.0
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.13"
+    }
+  },
+  "notes": [
+    "Content assertions were graded against the saved outputs; these are deterministic checks with one existing output per condition.",
+    "No run timing or token metadata was available, so cost metrics are omitted.",
+    "Coordinator output 1 is checked against the requested six-field brief; coordinator output 2 includes a delegated brief."
+  ]
+}

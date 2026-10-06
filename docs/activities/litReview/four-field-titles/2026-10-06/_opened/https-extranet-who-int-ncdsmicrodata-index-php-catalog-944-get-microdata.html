@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Philippines - Global School-Based Student Health Survey 2019</title>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+
+<link rel="stylesheet" href="https://extranet.who.int/ncdsmicrodata/themes/nada52_ncd/css/style.css?v2021-231">
+<link rel="stylesheet" href="https://extranet.who.int/ncdsmicrodata/themes/nada52_ncd/css/custom.css?v2021">
+<link rel="stylesheet" href="https://extranet.who.int/ncdsmicrodata/themes/nada52_ncd/css/home.css?v03212019">
+<link rel="stylesheet" href="https://extranet.who.int/ncdsmicrodata/themes/nada52_ncd/css/variables.css?v07042021">
+<link rel="stylesheet" href="https://extranet.who.int/ncdsmicrodata/themes/nada52_ncd/css/facets.css?v062021">
+<link rel="stylesheet" href="https://extranet.who.int/ncdsmicrodata/themes/nada52_ncd/css/catalog-tab.css?v07052021">
+<link rel="stylesheet" href="https://extranet.who.int/ncdsmicrodata/themes/nada52_ncd/css/catalog-card.css?v10102021-1">
+<link rel="stylesheet" href="https://extranet.who.int/ncdsmicrodata/themes/nada52_ncd/css/filter-action-bar.css?v14052021-3">
+
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    var CI = {'base_url': 'https://extranet.who.int/ncdsmicrodata/index.php'};
+
+    if (top.frames.length!=0) {
+        top.location=self.document.location;
+    }
+
+    $(document).ready(function()  {
+        /*global ajax error handler */
+        $( document ).ajaxError(function(event, jqxhr, settings, exception) {
+            if(jqxhr.status==401){
+                window.location=CI.base_url+'/auth/login/?destination=catalog/';
+            }
+            else if (jqxhr.status>=500){
+                alert(jqxhr.responseText);
+            }
+        });
+
+    }); //end-document-ready
+
+</script>
+
+
+
+</head>
+
+<body>
+
+    <!-- site header -->
+    <style>
+.site-header .navbar-light .no-logo .navbar-brand--sitename {border:0px!important;margin-left:0px}
+.site-header .navbar-light .no-logo .nada-site-title {font-size:18px;}
+.catalog-search-container #search-keywords{
+    border: 1px solid #008dc9;
+}
+
+</style>
+<header class="site-header">
+    
+        
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-md navbar-light rounded navbar-toggleable-md wb-navbar">
+
+                                                            <div class="navbar-brand">
+                        <div class="navbar-brand--logo">
+                            <img src="https://extranet.who.int/ncdsmicrodata/themes/nada52_ncd/images/who_logo.jpg" style="max-width:150px;">
+                        </div>
+                        <div class="navbar-brand--sitename">
+                            <div><a class="nada-site-title" href="https://extranet.who.int/ncdsmicrodata/index.php">NCD Microdata Repository</a></div>
+                            <div class="nada-site-subtitle" style="display:none;">An Online Microdata Catalog</div>
+                        </div>
+                    </div>
+                    
+
+                                                            
+
+                    <button class="navbar-toggler navbar-toggler-right collapsed wb-navbar-button-toggler" type="button" data-toggle="collapse" data-target="#containerNavbar" aria-controls="containerNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Start menus -->
+                    <!-- Start menus -->
+<div class="navbar-collapse collapse" id="containerNavbar" aria-expanded="false">
+        <ul class="navbar-nav ml-auto">
+                                            <li class="nav-item">
+                <a   class="nav-link" href="https://extranet.who.int/ncdsmicrodata/index.php/home">Home</a>
+            </li>            
+                                            <li class="nav-item">
+                <a   class="nav-link" href="https://extranet.who.int/ncdsmicrodata/index.php/catalog">Microdata  Catalog</a>
+            </li>            
+                                            <li class="nav-item">
+                <a   class="nav-link" href="https://extranet.who.int/ncdsmicrodata/index.php/citations">Citations</a>
+            </li>            
+        
+        
+<li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user-circle fa-lg"></i>Login            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="https://extranet.who.int/ncdsmicrodata/index.php/auth/login">Login</a>
+            </div>
+                </li>
+<!-- /row -->
+    </ul>
+
+</div>
+<!-- Close Menus -->                    <!-- Close Menus -->
+
+                </nav>
+            </div>
+
+        </div>
+        <!-- /row -->
+
+    </div>
+
+</header>
+    <!-- page body -->
+    <div class="wp-page-body container-fluid page-catalog catalog-get-microdata">
+
+        <div class="body-content-wrap theme-nada-2">
+
+            <!--breadcrumbs -->
+            <div class="container">
+                                                    <ol class="breadcrumb wb-breadcrumb">
+                        	    <div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+           <span typeof="v:Breadcrumb">
+                		         <a href="https://extranet.who.int/ncdsmicrodata/index.php/" rel="v:url" property="v:title">Home</a> /
+                        
+       </span>
+                  <span typeof="v:Breadcrumb">
+                		         <a href="https://extranet.who.int/ncdsmicrodata/index.php/catalog" rel="v:url" property="v:title">Central Data Catalog</a> /
+                        
+       </span>
+                  <span typeof="v:Breadcrumb">
+                		         <a href="https://extranet.who.int/ncdsmicrodata/index.php/catalog/GSHS" rel="v:url" property="v:title">GSHS</a> /
+                        
+       </span>
+                  <span typeof="v:Breadcrumb">
+        	         	         <a class="active" href="https://extranet.who.int/ncdsmicrodata/index.php/catalog/944" rel="v:url" property="v:title">PHL_2019_GSHS_V01</a>
+                        
+       </span>
+               </div>
+                    </ol>
+                            </div>
+            <!-- /breadcrumbs -->
+
+            <style>
+.metadata-sidebar-container .nav .active{
+	background:#e9ecef;		
+}
+.study-metadata-page .page-header .nav-tabs .active a {
+	background: white;
+	font-weight: bold;
+	border-top: 2px solid #0071bc;
+	border-left:1px solid gainsboro;
+	border-right:1px solid gainsboro;
+}
+
+.study-info-content {
+    font-size: 14px;
+}
+
+.study-subtitle{
+	font-size:.7em;
+	margin-bottom:10px;
+}
+
+.badge-outline{
+	background:transparent;
+	color:#03a9f4;
+	border:1px solid #9e9e9e;
+}
+.study-header-right-bar span{
+	display:block;
+	margin-bottom:15px;
+}
+.study-header-right-bar{
+	font-size:14px;
+	color:gray;
+}
+.get-microdata-btn{
+	font-size:14px;
+}
+
+.link-col .badge{
+	font-size:14px;
+	font-weight:normal;
+	background:transparent;
+	border:1px solid #9E9E9E;
+	color:#03a9f4;
+}
+
+.link-col .badge:hover{
+	background:#03a9f4;
+	color:#ffffff;
+}
+
+.study-header-right-bar .stat{
+	margin-bottom:10px;
+	font-size:small;
+}
+
+.study-header-right-bar .stat .stat-label{
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+.field-metadata__table_description__ref_country .field-value,
+.field-metadata__study_desc__study_info__nation .field-value{
+	max-height:350px;
+	overflow:auto;
+}
+.field-metadata__table_description__ref_country .field-value  ::-webkit-scrollbar,
+.field-metadata__study_desc__study_info__nation .field-value ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+.field-metadata__table_description__ref_country .field-value  ::-webkit-scrollbar-thumb,
+.field-metadata__study_desc__study_info__nation .field-value ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+</style>
+
+
+<div class="page-body-full study-metadata-page">
+	<span 
+		id="dataset-metadata-info" 
+		data-repositoryid="GSHS"
+		data-id="944"
+		data-idno="PHL_2019_GSHS_v01"
+	></span>
+
+<div class="container-fluid page-header">
+<div class="container">
+
+
+<div class="row study-info">
+					<div class="col-md-2">
+			<div class="collection-thumb-container">
+				<a href="https://extranet.who.int/ncdsmicrodata/index.php/catalog/GSHS">
+				<img  src="https://extranet.who.int/ncdsmicrodata/files/gshs-logo-small.jpg?v=1702568163" class="mr-3 img-fluid img-thumbnail" alt="GSHS" title="Global School-based Student Health Survey"/>
+				</a>
+			</div>		
+		</div>
+	
+	<div class="col">
+		
+		<div>
+		    <h1 class="mt-0 mb-1" id="dataset-title">
+                <span>Global School-Based Student Health Survey 2019</span>
+                            </h1>
+            <div class="clearfix">
+		        <h6 class="sub-title float-left" id="dataset-sub-title"><span id="dataset-country">Philippines</span>, <span id="dataset-year">2019</span></h6>
+                                <a  
+                    href="https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/get-microdata" 
+                    class="get-microdata-btn badge badge-primary wb-text-link-uppercase float-left ml-3" 
+                    title="Get Microdata">					
+                    <span class="fa fa-download"></span>
+                    Get Microdata                </a>
+                                
+            </div>
+		</div>
+
+		<div class="row study-info-content">
+		
+            <div class="col pr-5">
+
+                <div class="row mt-4 mb-2 pb-2  border-bottom">
+                    <div class="col-md-2">
+                        Reference ID                    </div>
+                    <div class="col">
+                        <div class="study-idno">
+                            PHL_2019_GSHS_v01                            
+                        </div>
+                    </div>
+                </div>
+
+                		
+                                <div class="row mb-2 pb-2  border-bottom">
+                    <div class="col-md-2">
+                        Producer(s)                    </div>
+                    <div class="col">
+                        <div class="producers">
+                            Department of Health                        </div>
+                    </div>
+                </div>
+                                
+                
+                 
+                <div class="row  border-bottom mb-2 pb-2 mt-2">
+                    <div class="col-md-2">
+                        Collections                    </div>
+                    <div class="col">
+                        <div class="collections link-col">           
+                                                            <span class="collection">
+                                    <a href="https://extranet.who.int/ncdsmicrodata/index.php/collections/GSHS">
+                                        <span class="badge badge-primary">Global School-based Student Health Survey</span>
+                                    </a>                                    
+                                </span>
+                                                    </div>
+                    </div>
+                </div>
+                
+                <div class="row border-bottom mb-2 pb-2 mt-2">
+                    <div class="col-md-2">
+                        Metadata                    </div>
+                    <div class="col">
+                        <div class="metadata">
+                            <!--metadata-->
+                            <span class="mr-2 link-col">
+                                                                                            
+                                                                    <a class="download" 
+                                       href="https://extranet.who.int/ncdsmicrodata/index.php/metadata/export/944/ddi" 
+                                       title="DDI Codebook (2.5)"
+                                       data-filename="metadata-944.xml"
+                                       data-dctype="metadata"
+                                       data-isurl="0"
+                                       data-extension="xml"
+                                       data-sid="944">
+                                        <span class="badge badge-primary"> DDI/XML</span>
+                                    </a>
+                                
+                                <a class="download" 
+                                   href="https://extranet.who.int/ncdsmicrodata/index.php/metadata/export/944/json" 
+                                   title="JSON"
+                                   data-filename="metadata-944.json"
+                                   data-dctype="metadata"
+                                   data-isurl="0"
+                                   data-extension="json"
+                                   data-sid="944">
+                                    <span class="badge badge-info">JSON</span>
+                                </a>
+                            </span>	
+                            <!--end-metadata-->
+                        </div>
+                    </div>
+                </div>
+
+                
+                	    </div>
+	
+	</div>
+
+	</div>
+
+    <div class="col-md-2 border-left">
+		<!--right-->
+		<div class="study-header-right-bar">
+				<div class="stat">
+					<div class="stat-label">Created on </div>
+					<div class="stat-value">Dec 14, 2023</div>
+				</div>
+
+				<div class="stat">
+					<div class="stat-label">Last modified </div>
+					<div class="stat-value">Dec 14, 2023</div>
+				</div>
+				
+									<div class="stat">
+						<div class="stat-label">Page views </div>
+						<div class="stat-value">159412</div>
+					</div>
+				
+									<div class="stat">
+						<div class="stat-label">Downloads </div>
+						<div class="stat-value">5948</div>
+					</div>				
+						</div>		
+		<!--end-right-->
+	</div>
+
+</div>
+
+
+
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs wb-nav-tab-space flex-wrap" role="tablist">
+								<li class="nav-item tab-description "  >
+				<a href="https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/study-description" class="nav-link wb-nav-link wb-text-link-uppercase " role="tab"  data-id="related-materials" >Study Description</a>
+			</li>
+										<li class="nav-item tab-data_dictionary "  >
+				<a href="https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/data-dictionary" class="nav-link wb-nav-link wb-text-link-uppercase " role="tab"  data-id="related-materials" >Data Dictionary</a>
+			</li>
+										<li class="nav-item tab-related_materials "  >
+				<a href="https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/related-materials" class="nav-link wb-nav-link wb-text-link-uppercase " role="tab"  data-id="related-materials" >Downloads</a>
+			</li>
+										<li class="nav-item nav-item-get-microdata tab-get_microdata active" >
+				<a href="https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/get-microdata" class="nav-link wb-nav-link wb-text-link-uppercase " role="tab" data-id="related-materials" >
+					<span class="get-microdata icon-da-direct"></span> Get Microdata				</a>
+			</li>                            
+										
+	<!--review-->
+	</ul>
+<!-- end nav tabs -->
+</div>
+</div>
+
+
+
+<div class="container study-metadata-body-content " >
+
+
+<!-- tabs -->
+<div id="tabs" class="study-metadata ui-tabs ui-widget ui-widget-content ui-corner-all study-tabs" >	
+  
+  <div id="tabs-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" >
+  	
+        <div class="tab-body-no-sidebar-x"><form action="https://extranet.who.int/ncdsmicrodata/index.php/catalog/944/get-microdata" class="form" method="post" accept-charset="utf-8">
+                                <input type="hidden" name="ncsrf" value="160c90fc40f63cf0b152c706da665977" />
+<div>
+<h1>Terms and conditions</h1>
+<div class="nl"><ol>
+  <li>The data and other materials provided by the WHO NCD Microdata Repository will not
+    be redistributed or sold to other individuals, institutions, or organizations
+    without the written agreement of the WHO NCD Microdata Repository. </li>
+  <li>The data will be used for statistical and scientific research purposes only. They will be used solely for reporting of aggregated information, and not for
+    investigation of specific individuals or organizations.</li>
+  <li>No attempt will be made to re-identify respondents, and no use will be made
+    of the identity of any person or establishment discovered inadvertently. Any
+    such discovery would immediately be reported to the WHO NCD Microdata Repository.</li>
+  <li>No attempt will be made to produce links among datasets provided by the
+    WHO NCD Microdata Repository, or among data from the WHO NCD Microdata Repository and other
+    datasets that could identify individuals or organizations.</li>
+  <li>Any books, articles, conference papers, theses, dissertations, reports, or other
+    publications that employ data obtained from the WHO NCD Microdata Repository will cite
+    the source of data in accordance with the Citation Requirement provided with each
+    dataset.</li>
+  <li>An electronic copy of all reports and publications based on the requested
+    data will be sent to the WHO NCD Microdata Repository.</li>
+  <li>The original collector of the data, the WHO NCD Microdata Repository, and the
+    relevant funding agencies bear no responsibility for use of the data or for
+    interpretations or inferences based upon such uses.</li>
+</ol>
+<p>By continuing past this point to the data retrieval process, you signify your
+  agreement to comply with the above-stated terms and conditions and give your
+  assurance that the use of statistical data obtained from the WHO NCD Microdata Repository
+ will conform to widely-accepted standards of practice and legal
+  restrictions that are intended to protect the confidentiality of respondents.</p></div>
+  <input type="submit" name="accept" value="Accept"/>
+    </div>
+</form><p>&nbsp;</p>
+<p>&nbsp;</p></div>
+    
+	<div class="mt-5">                
+            <a class="btn btn-sm btn-secondary" href="https://extranet.who.int/ncdsmicrodata/index.php/catalog"><i class="fas fa-arrow-circle-left"></i> Back to Catalog</a>
+        </div>
+  </div>
+</div>
+<!-- end-tabs-->    
+   </div> 
+</div>
+
+
+<!--survey summary resources-->
+<script type="text/javascript">
+	function toggle_resource(element_id){
+		$("#"+element_id).parent(".resource").toggleClass("active");
+		$("#"+element_id).toggle();
+	}
+	
+	$(document).ready(function () { 
+		bind_behaviours();
+		
+		$(".show-datafiles").click(function(){
+			$(".data-files .hidden").removeClass("hidden");
+			$(".show-datafiles").hide();
+			return false;
+		});
+
+		//setup bootstrap scrollspy
+		$("body").attr('data-spy', 'scroll');
+		$("body").attr('data-target', '#dataset-metadata-sidebar');
+		$("body").attr('data-offset', '0');
+		$("body").scrollspy('refresh');
+
+	});	
+	
+	function bind_behaviours() {
+		//show variable info by id
+		$(".resource-info").unbind('click');
+		$(".resource-info").click(function(){
+			if($(this).attr("id")!=''){
+				toggle_resource('info_'+$(this).attr("id"));
+			}
+			return false;
+		});			
+	}
+</script>        </div>
+    </div>
+
+    <!-- page footer -->
+    <footer>
+    <!-- footer top section -->
+        <!-- End footer top section -->
+
+    <!-- footer bottom section -->
+    <div class="full-row-footer-black-components">
+        <div class="container">
+            <div class="footer">
+                <div class="row">
+
+                    <!-- / footer logo -->
+                    <div class="col-12 col-md-6">
+
+                        <div class="text-center text-lg-left mt-2">
+                        
+                                                <a href="https://extranet.who.int/ncdsmicrodata/index.php" style="color:white;padding-top:20px;" >
+                            NCD Microdata Repository                        </a>                        
+                                                </div>
+
+                    </div>
+                    <!-- / footer logo -->
+
+                    <!-- Copyrights-->
+                    <div class="col-12 col-md-6 footer-bottom-right">
+                        <div class="">
+                            <div class="footer-copy-right">
+
+                                <p class="text-center text-lg-right">
+
+                                    <small>
+                                        ©
+                                        <script language="JavaScript">
+                                            var time = new Date();
+                                            var year = time.getYear();
+                                            if (year < 2000)
+                                                year = year + 1900 + ", ";
+                                            document.write(year); // End -->
+                                        </script> NCD Microdata Repository, All Rights Reserved.
+                                    </small>
+
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- / Copyrights  -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer></body>
+
+</html>

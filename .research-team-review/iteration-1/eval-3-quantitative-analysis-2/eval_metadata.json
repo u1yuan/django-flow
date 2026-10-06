@@ -1,0 +1,10 @@
+{
+  "eval_id": 3,
+  "eval_name": "quantitative-analysis-2",
+  "prompt": "Review a toy report claiming 12 events out of 80 are 12% and a script that exits with an error. Explain what results can be accepted and what must be rerun.",
+  "assertions": [
+    "Recomputes 12/80 as 15%",
+    "Flags code failure",
+    "Does not claim successful execution"
+  ]
+}

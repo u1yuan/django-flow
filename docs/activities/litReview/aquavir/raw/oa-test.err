@@ -1,0 +1,3 @@
+usage: openalex_cli.py [-h] [--api-key API_KEY]
+                       {resolve,get,download-pdf,filter,rate-limit} ...
+openalex_cli.py: error: unrecognized arguments: anomaly detection

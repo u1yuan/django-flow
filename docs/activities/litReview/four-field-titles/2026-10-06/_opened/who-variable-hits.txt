@@ -1,0 +1,128 @@
+labl: Felt lonely
+qstnLit: During the past 12 months, how often have you felt lonely?
+labl: Close friends
+qstnLit: How many close friends do you have?
+labl: I got it from my friends
+qstnLit: During your life, how many times have you got into trouble with your family or friends, missed school, or got into fights, as a result of drinking alcohol?
+qstnLit: How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?
+labl: Parents check homework
+qstnLit: During the past 30 days, how often did your parents or guardians check to see if your homework was done?
+labl: Parents understand problems
+qstnLit: During the past 30 days, how often did your parents or guardians understand your problems and worries?
+labl: Parents know about free time
+qstnLit: During the past 30 days, how often did your parents or guardians really know what you were doing with your free time?
+labl: Parents go through their things
+qstnLit: During the past 30 days, how often did your parents or guardians go through your things without your approval?
+labl: Most of the time or always felt lonely
+qstnLit: Percentage of students who most of the time or always felt lonely (during the 12 months before the survey)
+labl: Did not have any close friends
+qstnLit: Percentage of students who did not have any close friends
+labl: Usually obtained the alcohol they drank from friends
+qstnLit: Percentage of students who usually obtained the alcohol they drank from friends (among students who drank alcohol during the 30 days before the survey)
+labl: Ever got into trouble with their family or friends, missed school, or got into fights as a result of drinking alcohol
+qstnLit: Percentage of students who ever got into trouble with their family or friends, missed school, or got into fights as a result of drinking alcohol (one or more times during their life)
+qstnLit: Percentage of students who spent three or more hours per day doing sitting activities (sitting and watching television, playing computer games, talking with friends when not in school or doing homework during a typical or usual day)
+labl: Reported that their parents or guardians most of the time or always checked to see if their homework was done
+qstnLit: Percentage of students who reported that their parents or guardians most of the time or always checked to see if their homework was done (during the 30 days before the survey)
+labl: Reported that their parents or guardians most of the time or always understood their problems and worries
+qstnLit: Percentage of students who reported that their parents or guardians most of the time or always understood their problems and worries (during the 30 days before the survey)
+labl: Reported that their parents or guardians most of the time or always really knew what they were doing with their free time
+qstnLit: Percentage of students who reported that their parents or guardians most of the time or always really knew what they were doing with their free time (during the 30 days before the survey)
+labl: Reported that their parents or guardians never or rarely went through their things without their approval
+qstnLit: Percentage of students who reported that their parents or guardians never or rarely went through their things without their approval (during the 30 days before the survey)
+labl: Felt lonely
+qstnLit: During the past 12 months, how often have you felt lonely?
+labl: Close friends
+qstnLit: How many close friends do you have?
+labl: I got it from my friends
+qstnLit: During your life, how many times have you got into trouble with your family or friends, missed school, or got into fights, as a result of drinking alcohol?
+qstnLit: How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?
+labl: Parents check homework
+qstnLit: During the past 30 days, how often did your parents or guardians check to see if your homework was done?
+labl: Parents understand problems
+qstnLit: During the past 30 days, how often did your parents or guardians understand your problems and worries?
+labl: Parents know about free time
+qstnLit: During the past 30 days, how often did your parents or guardians really know what you were doing with your free time?
+labl: Parents go through their things
+qstnLit: During the past 30 days, how often did your parents or guardians go through your things without your approval?
+labl: Most of the time or always felt lonely
+qstnLit: Percentage of students who most of the time or always felt lonely (during the 12 months before the survey)
+labl: Did not have any close friends
+qstnLit: Percentage of students who did not have any close friends
+labl: Usually obtained the alcohol they drank from friends
+qstnLit: Percentage of students who usually obtained the alcohol they drank from friends (among students who drank alcohol during the 30 days before the survey)
+labl: Ever got into trouble with their family or friends, missed school, or got into fights as a result of drinking alcohol
+qstnLit: Percentage of students who ever got into trouble with their family or friends, missed school, or got into fights as a result of drinking alcohol (one or more times during their life)
+qstnLit: Percentage of students who spent three or more hours per day doing sitting activities (sitting and watching television, playing computer games, talking with friends when not in school or doing homework during a typical or usual day)
+labl: Reported that their parents or guardians most of the time or always checked to see if their homework was done
+qstnLit: Percentage of students who reported that their parents or guardians most of the time or always checked to see if their homework was done (during the 30 days before the survey)
+labl: Reported that their parents or guardians most of the time or always understood their problems and worries
+qstnLit: Percentage of students who reported that their parents or guardians most of the time or always understood their problems and worries (during the 30 days before the survey)
+labl: Reported that their parents or guardians most of the time or always really knew what they were doing with their free time
+qstnLit: Percentage of students who reported that their parents or guardians most of the time or always really knew what they were doing with their free time (during the 30 days before the survey)
+labl: Reported that their parents or guardians never or rarely went through their things without their approval
+qstnLit: Percentage of students who reported that their parents or guardians never or rarely went through their things without their approval (during the 30 days before the survey)
+labl: Felt lonely
+qstnLit: During the past 12 months, how often have you felt lonely?
+labl: Close friends
+qstnLit: How many close friends do you have?
+labl: I got it from my friends
+qstnLit: During your life, how many times have you got into trouble with your family or friends, missed school, or got into fights, as a result of drinking alcohol?
+qstnLit: How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?
+labl: Parents check homework
+qstnLit: During the past 30 days, how often did your parents or guardians check to see if your homework was done?
+labl: Parents understand problems
+qstnLit: During the past 30 days, how often did your parents or guardians understand your problems and worries?
+labl: Parents know about free time
+qstnLit: During the past 30 days, how often did your parents or guardians really know what you were doing with your free time?
+labl: Parents go through their things
+qstnLit: During the past 30 days, how often did your parents or guardians go through your things without your approval?
+labl: Most of the time or always felt lonely
+qstnLit: Percentage of students who most of the time or always felt lonely (during the 12 months before the survey)
+labl: Did not have any close friends
+qstnLit: Percentage of students who did not have any close friends
+labl: Usually obtained the alcohol they drank from friends
+qstnLit: Percentage of students who usually obtained the alcohol they drank from friends (among students who drank alcohol during the 30 days before the survey)
+labl: Ever got into trouble with their family or friends, missed school, or got into fights as a result of drinking alcohol
+qstnLit: Percentage of students who ever got into trouble with their family or friends, missed school, or got into fights as a result of drinking alcohol (one or more times during their life)
+qstnLit: Percentage of students who spent three or more hours per day doing sitting activities (sitting and watching television, playing computer games, talking with friends when not in school or doing homework during a typical or usual day)
+labl: Reported that their parents or guardians most of the time or always checked to see if their homework was done
+qstnLit: Percentage of students who reported that their parents or guardians most of the time or always checked to see if their homework was done (during the 30 days before the survey)
+labl: Reported that their parents or guardians most of the time or always understood their problems and worries
+qstnLit: Percentage of students who reported that their parents or guardians most of the time or always understood their problems and worries (during the 30 days before the survey)
+labl: Reported that their parents or guardians most of the time or always really knew what they were doing with their free time
+qstnLit: Percentage of students who reported that their parents or guardians most of the time or always really knew what they were doing with their free time (during the 30 days before the survey)
+labl: Reported that their parents or guardians never or rarely went through their things without their approval
+qstnLit: Percentage of students who reported that their parents or guardians never or rarely went through their things without their approval (during the 30 days before the survey)
+labl: Felt lonely
+qstnLit: During the past 12 months, how often have you felt lonely?
+labl: Close friends
+qstnLit: How many close friends do you have?
+labl: I got it from my friends
+qstnLit: During your life, how many times have you got into trouble with your family or friends, missed school, or got into fights, as a result of drinking alcohol?
+qstnLit: How much time do you spend during a typical or usual day sitting and watching television, playing computer games, talking with friends, or doing other sitting activities, such as COUNTRY SPECIFIC EXAMPLES?
+labl: Parents check homework
+qstnLit: During the past 30 days, how often did your parents or guardians check to see if your homework was done?
+labl: Parents understand problems
+qstnLit: During the past 30 days, how often did your parents or guardians understand your problems and worries?
+labl: Parents know about free time
+qstnLit: During the past 30 days, how often did your parents or guardians really know what you were doing with your free time?
+labl: Parents go through their things
+qstnLit: During the past 30 days, how often did your parents or guardians go through your things without your approval?
+labl: Most of the time or always felt lonely
+qstnLit: Percentage of students who most of the time or always felt lonely (during the 12 months before the survey)
+labl: Did not have any close friends
+qstnLit: Percentage of students who did not have any close friends
+labl: Usually obtained the alcohol they drank from friends
+qstnLit: Percentage of students who usually obtained the alcohol they drank from friends (among students who drank alcohol during the 30 days before the survey)
+labl: Ever got into trouble with their family or friends, missed school, or got into fights as a result of drinking alcohol
+qstnLit: Percentage of students who ever got into trouble with their family or friends, missed school, or got into fights as a result of drinking alcohol (one or more times during their life)
+qstnLit: Percentage of students who spent three or more hours per day doing sitting activities (sitting and watching television, playing computer games, talking with friends when not in school or doing homework during a typical or usual day)
+labl: Reported that their parents or guardians most of the time or always checked to see if their homework was done
+qstnLit: Percentage of students who reported that their parents or guardians most of the time or always checked to see if their homework was done (during the 30 days before the survey)
+labl: Reported that their parents or guardians most of the time or always understood their problems and worries
+qstnLit: Percentage of students who reported that their parents or guardians most of the time or always understood their problems and worries (during the 30 days before the survey)
+labl: Reported that their parents or guardians most of the time or always really knew what they were doing with their free time
+qstnLit: Percentage of students who reported that their parents or guardians most of the time or always really knew what they were doing with their free time (during the 30 days before the survey)
+labl: Reported that their parents or guardians never or rarely went through their things without their approval
+qstnLit: Percentage of students who reported that their parents or guardians never or rarely went through their things without their approval (during the 30 days before the survey)

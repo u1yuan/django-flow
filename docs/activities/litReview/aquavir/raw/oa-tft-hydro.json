@@ -1,0 +1,1927 @@
+{
+  "meta": {
+    "count": 3,
+    "db_response_time_ms": 717,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "x_query": {
+      "oql": "works where date >= (2018-01-01)\n  and retracted is (false)\n  and language is (en)\n  and title/abstract has (Temporal Fusion Transformer)\n  and date <= (2026-09-29)\n  and abstract has (\n    aquaponic\n    or aquaponics\n    or hydroponic\n    or nutrient solution\n    or soilless\n  )",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "from_publication_date",
+            "value": "2018-01-01"
+          },
+          {
+            "column_id": "is_retracted",
+            "value": false
+          },
+          {
+            "column_id": "language",
+            "value": "en"
+          },
+          {
+            "column_id": "title_and_abstract.search",
+            "value": "Temporal Fusion Transformer",
+            "operator": "has"
+          },
+          {
+            "column_id": "to_publication_date",
+            "value": "2026-09-29"
+          },
+          {
+            "join": "or",
+            "filters": [
+              {
+                "column_id": "abstract.search",
+                "value": "aquaponic",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "aquaponics",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "hydroponic",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "nutrient solution",
+                "operator": "has"
+              },
+              {
+                "column_id": "abstract.search",
+                "value": "soilless",
+                "operator": "has"
+              }
+            ]
+          }
+        ]
+      },
+      "url": "/works?filter=from_publication_date:2018-01-01,is_retracted:false,language:en,title_and_abstract.search:Temporal Fusion Transformer,to_publication_date:2026-09-29,abstract.search:aquaponic|aquaponics|hydroponic|nutrient solution|soilless&per_page=10&page=1"
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W4379537704",
+      "doi": "https://doi.org/10.1007/s11227-023-05389-8",
+      "display_name": "Temporal fusion transformer-based prediction in aquaponics",
+      "publication_year": 2023,
+      "cited_by_count": 25,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5108624637",
+            "display_name": "Ahmet Metin",
+            "orcid": "https://orcid.org/0000-0002-7318-4926",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-7318-4926"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I192257213",
+              "display_name": "Bursa Technical University",
+              "ror": "https://ror.org/03rdpn141",
+              "country_code": "TR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I192257213"
+              ]
+            }
+          ],
+          "countries": [
+            "TR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ahmet Metin",
+          "raw_affiliation_strings": [
+            "Computer Engineering, Bursa Technical University, Bursa, Turkey"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Engineering, Bursa Technical University, Bursa, Turkey",
+              "institution_ids": [
+                "https://openalex.org/I192257213"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5049248460",
+            "display_name": "Ahmet Ka\u015fif",
+            "orcid": "https://orcid.org/0000-0003-2707-6075",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-2707-6075",
+              "https://orcid.org/0000-0002-2629-0240"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I192257213",
+              "display_name": "Bursa Technical University",
+              "ror": "https://ror.org/03rdpn141",
+              "country_code": "TR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I192257213"
+              ]
+            }
+          ],
+          "countries": [
+            "TR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ahmet Kasif",
+          "raw_affiliation_strings": [
+            "Computer Engineering, Bursa Technical University, Bursa, Turkey"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Engineering, Bursa Technical University, Bursa, Turkey",
+              "institution_ids": [
+                "https://openalex.org/I192257213"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5038073619",
+            "display_name": "Cagatay Catal",
+            "orcid": "https://orcid.org/0000-0003-0959-2930",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-0959-2930",
+              "https://orcid.org/0000-0002-9475-2494"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I60342839",
+              "display_name": "Qatar University",
+              "ror": "https://ror.org/00yhnba62",
+              "country_code": "QA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I60342839"
+              ]
+            }
+          ],
+          "countries": [
+            "QA"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Cagatay Catal",
+          "raw_affiliation_strings": [
+            "Computer Science and Engineering, Qatar University, Doha, Qatar"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Science and Engineering, Qatar University, Doha, Qatar",
+              "institution_ids": [
+                "https://openalex.org/I60342839"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Abstract": [
+          0
+        ],
+        "Aquaponics": [
+          1
+        ],
+        "offers": [
+          2
+        ],
+        "a": [
+          3,
+          64,
+          99,
+          142
+        ],
+        "soilless": [
+          4
+        ],
+        "farming": [
+          5
+        ],
+        "ecosystem": [
+          6
+        ],
+        "by": [
+          7,
+          25
+        ],
+        "merging": [
+          8
+        ],
+        "modern": [
+          9
+        ],
+        "hydroponics": [
+          10
+        ],
+        "with": [
+          11,
+          138
+        ],
+        "aquaculture.": [
+          12
+        ],
+        "The": [
+          13,
+          56
+        ],
+        "fish": [
+          14,
+          27
+        ],
+        "food": [
+          15,
+          109
+        ],
+        "is": [
+          16,
+          28,
+          36,
+          83
+        ],
+        "provided": [
+          17
+        ],
+        "to": [
+          18,
+          30,
+          85,
+          98,
+          106,
+          127
+        ],
+        "the": [
+          19,
+          22,
+          26,
+          44,
+          48,
+          79,
+          108,
+          162,
+          181,
+          187
+        ],
+        "aquaculture,": [
+          20
+        ],
+        "and": [
+          21,
+          52,
+          125,
+          141,
+          153,
+          173
+        ],
+        "ammonia": [
+          23,
+          45
+        ],
+        "generated": [
+          24,
+          49
+        ],
+        "converted": [
+          29
+        ],
+        "nitrate": [
+          31,
+          50,
+          129
+        ],
+        "using": [
+          32
+        ],
+        "specialized": [
+          33
+        ],
+        "bacteria,": [
+          34
+        ],
+        "which": [
+          35,
+          68
+        ],
+        "an": [
+          37,
+          115,
+          132
+        ],
+        "essential": [
+          38
+        ],
+        "resource": [
+          39
+        ],
+        "for": [
+          40,
+          151
+        ],
+        "vegetation.": [
+          41
+        ],
+        "Fluctuations": [
+          42
+        ],
+        "in": [
+          43,
+          131,
+          168
+        ],
+        "levels": [
+          46,
+          51,
+          130
+        ],
+        "affect": [
+          47
+        ],
+        "influence": [
+          53
+        ],
+        "farm": [
+          54
+        ],
+        "yields.": [
+          55
+        ],
+        "sensor-based": [
+          57
+        ],
+        "autonomous": [
+          58
+        ],
+        "control": [
+          59,
+          77
+        ],
+        "of": [
+          60,
+          78,
+          91,
+          145,
+          161,
+          170,
+          189
+        ],
+        "aquaponics": [
+          61,
+          81,
+          133,
+          136,
+          190
+        ],
+        "can": [
+          62,
+          69,
+          94,
+          184
+        ],
+        "offer": [
+          63
+        ],
+        "highly": [
+          65
+        ],
+        "rewarding": [
+          66
+        ],
+        "solution,": [
+          67
+        ],
+        "enable": [
+          70
+        ],
+        "much": [
+          71
+        ],
+        "more": [
+          72,
+          103
+        ],
+        "efficient": [
+          73
+        ],
+        "ecosystems.": [
+          74
+        ],
+        "Also,": [
+          75
+        ],
+        "manual": [
+          76
+        ],
+        "whole": [
+          80
+        ],
+        "operation": [
+          82
+        ],
+        "prone": [
+          84
+        ],
+        "human": [
+          86,
+          96
+        ],
+        "error.": [
+          87
+        ],
+        "Artificial": [
+          88
+        ],
+        "Intelligence-powered": [
+          89
+        ],
+        "Internet": [
+          90
+        ],
+        "Things": [
+          92
+        ],
+        "solutions": [
+          93
+        ],
+        "reduce": [
+          95
+        ],
+        "intervention": [
+          97
+        ],
+        "certain": [
+          100
+        ],
+        "extent,": [
+          101
+        ],
+        "realizing": [
+          102
+        ],
+        "scalable": [
+          104
+        ],
+        "environments": [
+          105
+        ],
+        "handle": [
+          107
+        ],
+        "production": [
+          110
+        ],
+        "problem.": [
+          111
+        ],
+        "In": [
+          112
+        ],
+        "this": [
+          113
+        ],
+        "research,": [
+          114
+        ],
+        "attention-based": [
+          116
+        ],
+        "Temporal": [
+          117
+        ],
+        "Fusion": [
+          118
+        ],
+        "Transformers": [
+          119
+        ],
+        "deep": [
+          120
+        ],
+        "learning": [
+          121
+        ],
+        "model": [
+          122,
+          164
+        ],
+        "was": [
+          123
+        ],
+        "proposed": [
+          124,
+          163,
+          182
+        ],
+        "validated": [
+          126
+        ],
+        "forecast": [
+          128
+        ],
+        "environment.": [
+          134
+        ],
+        "An": [
+          135
+        ],
+        "dataset": [
+          137
+        ],
+        "temporal": [
+          139
+        ],
+        "features": [
+          140
+        ],
+        "high": [
+          143
+        ],
+        "number": [
+          144
+        ],
+        "input": [
+          146
+        ],
+        "lines": [
+          147
+        ],
+        "has": [
+          148
+        ],
+        "been": [
+          149
+        ],
+        "employed": [
+          150
+        ],
+        "validation": [
+          152
+        ],
+        "extensive": [
+          154
+        ],
+        "analysis.": [
+          155
+        ],
+        "Experimental": [
+          156
+        ],
+        "results": [
+          157
+        ],
+        "demonstrate": [
+          158
+        ],
+        "significant": [
+          159
+        ],
+        "improvements": [
+          160
+        ],
+        "over": [
+          165
+        ],
+        "baseline": [
+          166
+        ],
+        "models": [
+          167
+        ],
+        "terms": [
+          169
+        ],
+        "MAE,": [
+          171
+        ],
+        "MSE,": [
+          172
+        ],
+        "Explained": [
+          174
+        ],
+        "Variance": [
+          175
+        ],
+        "metrics": [
+          176
+        ],
+        "considering": [
+          177
+        ],
+        "one-hour": [
+          178
+        ],
+        "sequences.": [
+          179
+        ],
+        "Utilizing": [
+          180
+        ],
+        "solution": [
+          183
+        ],
+        "help": [
+          185
+        ],
+        "enhance": [
+          186
+        ],
+        "automation": [
+          188
+        ],
+        "environments.": [
+          191
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.1007/s11227-023-05389-8",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1007/s11227-023-05389-8",
+        "pdf_url": "https://link.springer.com/content/pdf/10.1007/s11227-023-05389-8.pdf",
+        "source": {
+          "id": "https://openalex.org/S32326811",
+          "display_name": "The Journal of Supercomputing",
+          "issn_l": "0920-8542",
+          "issn": [
+            "0920-8542",
+            "1573-0484"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "cwts-core",
+            "jufo-1"
+          ],
+          "host_organization": "https://openalex.org/P4310319900",
+          "host_organization_name": "Springer Science+Business Media",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310319900",
+            "https://openalex.org/P4310319965"
+          ],
+          "host_organization_lineage_names": [
+            "Springer Science+Business Media",
+            "Springer Nature"
+          ],
+          "type": "journal"
+        },
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "The Journal of Supercomputing",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://link.springer.com/content/pdf/10.1007/s11227-023-05389-8.pdf",
+        "any_repository_has_fulltext": true
+      },
+      "type": "article"
+    },
+    {
+      "id": "https://openalex.org/W7120243430",
+      "doi": "https://doi.org/10.1007/s41870-025-03020-y",
+      "display_name": "A Temporal-Spatial Feature Fusion (TSFF) based hybrid deep learning model for IoT-driven smart farming",
+      "publication_year": 2026,
+      "cited_by_count": 1,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5021652033",
+            "display_name": "Shikha Chaudhary",
+            "orcid": "https://orcid.org/0000-0002-5932-0581"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I178000100",
+              "display_name": "Kurukshetra University",
+              "ror": "https://ror.org/019bzvf55",
+              "country_code": "IN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I178000100"
+              ]
+            }
+          ],
+          "countries": [
+            "IN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Shikha Chaudhary",
+          "raw_affiliation_strings": [
+            "Department of CSE, University Institute of Engineering and Technology, Kurukshetra University, Kurukshetra, Kurukshetra, Haryana, India"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of CSE, University Institute of Engineering and Technology, Kurukshetra University, Kurukshetra, Kurukshetra, Haryana, India",
+              "institution_ids": [
+                "https://openalex.org/I178000100"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5012059325",
+            "display_name": "Pragya Chandi",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I178000100",
+              "display_name": "Kurukshetra University",
+              "ror": "https://ror.org/019bzvf55",
+              "country_code": "IN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I178000100"
+              ]
+            }
+          ],
+          "countries": [
+            "IN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Pragya Chandi",
+          "raw_affiliation_strings": [
+            "Department of CSE, University Institute of Engineering and Technology, Kurukshetra University, Kurukshetra, Kurukshetra, Haryana, India"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of CSE, University Institute of Engineering and Technology, Kurukshetra University, Kurukshetra, Kurukshetra, Haryana, India",
+              "institution_ids": [
+                "https://openalex.org/I178000100"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5103868947",
+            "display_name": "Tarun Kumar",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Tarun Kumar",
+          "raw_affiliation_strings": [
+            "Department of CSE, Global Research Institute of Management and Technology (GRIMT), Radaur, Yamunanagar, India"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of CSE, Global Research Institute of Management and Technology (GRIMT), Radaur, Yamunanagar, India",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5044077887",
+            "display_name": "Chander Diwaker",
+            "orcid": "https://orcid.org/0000-0002-3737-9654"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I178000100",
+              "display_name": "Kurukshetra University",
+              "ror": "https://ror.org/019bzvf55",
+              "country_code": "IN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I178000100"
+              ]
+            }
+          ],
+          "countries": [
+            "IN"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Chander Diwaker",
+          "raw_affiliation_strings": [
+            "Department of CSE, University Institute of Engineering and Technology, Kurukshetra University, Kurukshetra, Kurukshetra, Haryana, India"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-3737-9654",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of CSE, University Institute of Engineering and Technology, Kurukshetra University, Kurukshetra, Kurukshetra, Haryana, India",
+              "institution_ids": [
+                "https://openalex.org/I178000100"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5015639304",
+            "display_name": "Rachita Kansal",
+            "orcid": "https://orcid.org/0000-0002-1124-5797"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I178000100",
+              "display_name": "Kurukshetra University",
+              "ror": "https://ror.org/019bzvf55",
+              "country_code": "IN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I178000100"
+              ]
+            }
+          ],
+          "countries": [
+            "IN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Rachita Kansal",
+          "raw_affiliation_strings": [
+            "Department of CSE, University Institute of Engineering and Technology, Kurukshetra University, Kurukshetra, Kurukshetra, Haryana, India"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of CSE, University Institute of Engineering and Technology, Kurukshetra University, Kurukshetra, Kurukshetra, Haryana, India",
+              "institution_ids": [
+                "https://openalex.org/I178000100"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5122566567",
+            "display_name": "Bandana Sharma",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I155284866",
+              "display_name": "Maharishi Markandeshwar University, Mullana",
+              "ror": "https://ror.org/013qfkw58",
+              "country_code": "IN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I155284866"
+              ]
+            }
+          ],
+          "countries": [
+            "IN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Bandana Sharma",
+          "raw_affiliation_strings": [
+            "Department of CSE, Maharishi Markandeshwar University (MMU), Mullana, Haryana, India"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of CSE, Maharishi Markandeshwar University (MMU), Mullana, Haryana, India",
+              "institution_ids": [
+                "https://openalex.org/I155284866"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5122424610",
+            "display_name": "Vijay Kumar Sharma",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I74319210",
+              "display_name": "Chitkara University",
+              "ror": "https://ror.org/057d6z539",
+              "country_code": "IN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I74319210"
+              ]
+            }
+          ],
+          "countries": [
+            "IN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Vijay Kumar Sharma",
+          "raw_affiliation_strings": [
+            "Department of Mechanical Engineering, Chitkara University Institute of Engineering and Technology,Chitkara University, Rajpura, Punjab, India"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mechanical Engineering, Chitkara University Institute of Engineering and Technology,Chitkara University, Rajpura, Punjab, India",
+              "institution_ids": [
+                "https://openalex.org/I74319210"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5011975352",
+            "display_name": "Vijayshri Nitin Khedkar",
+            "orcid": "https://orcid.org/0000-0001-6704-4823"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I244572783",
+              "display_name": "Symbiosis International University",
+              "ror": "https://ror.org/005r2ww51",
+              "country_code": "IN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I244572783"
+              ]
+            }
+          ],
+          "countries": [
+            "IN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Vijayshri Khedkar",
+          "raw_affiliation_strings": [
+            "Department of Computer Science & Engineering, Symbiosis Institute of Technology, Symbiosis International (Deemed University), Pune, India"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Science & Engineering, Symbiosis Institute of Technology, Symbiosis International (Deemed University), Pune, India",
+              "institution_ids": [
+                "https://openalex.org/I244572783"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "primary_location": {
+        "id": "doi:10.1007/s41870-025-03020-y",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1007/s41870-025-03020-y",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S4210223273",
+          "display_name": "International Journal of Information Technology",
+          "issn_l": "2511-2104",
+          "issn": [
+            "2511-2104",
+            "2511-2112"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "cwts-core",
+            "jufo-1"
+          ],
+          "host_organization": "https://openalex.org/P4310319965",
+          "host_organization_name": "Springer Nature",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310319965"
+          ],
+          "host_organization_lineage_names": [
+            "Springer Nature"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "International Journal of Information Technology",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "type": "article"
+    },
+    {
+      "id": "https://openalex.org/W7140187071",
+      "doi": "https://doi.org/10.1201/9781003637264-9",
+      "display_name": "Implementation of Machine Learning and Deep Learning Techniques for Disease Detection and Classification",
+      "publication_year": 2026,
+      "cited_by_count": 0,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5013508978",
+            "display_name": "Ketan Sarvakar",
+            "orcid": "https://orcid.org/0000-0003-4486-0224",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-4486-0224"
+            ]
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Ketan Sarvakar",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5141733418",
+            "display_name": "Akshita Patel",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Akshita Patel",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5141566060",
+            "display_name": "Rahul Yadava",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Rahul Yadava",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        }
+      ],
+      "abstract_inverted_index": {
+        "Agriculture": [
+          0,
+          351
+        ],
+        "is": [
+          1,
+          16,
+          108,
+          207
+        ],
+        "essential": [
+          2
+        ],
+        "to": [
+          3,
+          22,
+          97,
+          143,
+          161,
+          169,
+          182,
+          187,
+          209,
+          219,
+          264,
+          303
+        ],
+        "human": [
+          4
+        ],
+        "society,": [
+          5
+        ],
+        "as": [
+          6,
+          73,
+          123,
+          177,
+          230,
+          283
+        ],
+        "it": [
+          7
+        ],
+        "provides": [
+          8
+        ],
+        "food": [
+          9
+        ],
+        "and": [
+          10,
+          30,
+          35,
+          43,
+          51,
+          63,
+          68,
+          78,
+          86,
+          92,
+          99,
+          112,
+          133,
+          140,
+          165,
+          180,
+          192,
+          203,
+          248,
+          256,
+          274,
+          290,
+          300,
+          314,
+          325,
+          358
+        ],
+        "supports": [
+          11
+        ],
+        "the": [
+          12,
+          24,
+          119,
+          124,
+          170,
+          217,
+          239,
+          266,
+          320,
+          338
+        ],
+        "economy.": [
+          13
+        ],
+        "Precision": [
+          14,
+          350
+        ],
+        "agriculture": [
+          15
+        ],
+        "a": [
+          17,
+          153,
+          195,
+          210,
+          316,
+          341
+        ],
+        "new": [
+          18,
+          154
+        ],
+        "method": [
+          19
+        ],
+        "that": [
+          20,
+          352
+        ],
+        "tries": [
+          21
+        ],
+        "solve": [
+          23
+        ],
+        "issue": [
+          25
+        ],
+        "of": [
+          26,
+          32,
+          130,
+          305,
+          322,
+          340
+        ],
+        "sustainability.": [
+          27
+        ],
+        "Disease": [
+          28
+        ],
+        "detection": [
+          29,
+          83
+        ],
+        "classification": [
+          31,
+          89
+        ],
+        "plant": [
+          33,
+          135
+        ],
+        "leaf": [
+          34,
+          148
+        ],
+        "crop": [
+          36,
+          267,
+          354
+        ],
+        "diseases": [
+          37,
+          132
+        ],
+        "are": [
+          38,
+          262
+        ],
+        "important": [
+          39
+        ],
+        "in": [
+          40,
+          331
+        ],
+        "minimizing": [
+          41
+        ],
+        "losses": [
+          42,
+          62
+        ],
+        "maximizing": [
+          44
+        ],
+        "productivity.": [
+          45,
+          65
+        ],
+        "Traditional": [
+          46,
+          102
+        ],
+        "methods": [
+          47
+        ],
+        "may": [
+          48
+        ],
+        "be": [
+          49
+        ],
+        "time-consuming": [
+          50
+        ],
+        "error-prone.": [
+          52
+        ],
+        "Computer": [
+          53
+        ],
+        "vision-based": [
+          54
+        ],
+        "image": [
+          55,
+          88
+        ],
+        "processing": [
+          56
+        ],
+        "algorithms": [
+          57,
+          71,
+          160,
+          215
+        ],
+        "can": [
+          58
+        ],
+        "help": [
+          59
+        ],
+        "farmers": [
+          60
+        ],
+        "minimize": [
+          61
+        ],
+        "maximize": [
+          64
+        ],
+        "Machine": [
+          66,
+          249
+        ],
+        "learning": [
+          67,
+          70,
+          104,
+          107,
+          159,
+          214,
+          273,
+          276
+        ],
+        "deep": [
+          69,
+          106,
+          275
+        ],
+        "such": [
+          72,
+          122,
+          176,
+          229,
+          282
+        ],
+        "k-means": [
+          74
+        ],
+        "clustering,": [
+          75
+        ],
+        "naive": [
+          76
+        ],
+        "Bayes,": [
+          77
+        ],
+        "artificial": [
+          79
+        ],
+        "neural": [
+          80
+        ],
+        "networks": [
+          81
+        ],
+        "(disease": [
+          82
+        ],
+        "using": [
+          84,
+          90,
+          157,
+          194
+        ],
+        "YOLOv5,": [
+          85
+        ],
+        "best": [
+          87
+        ],
+        "ResNet50": [
+          91
+        ],
+        "MobileNetv2)": [
+          93
+        ],
+        "have": [
+          94
+        ],
+        "been": [
+          95
+        ],
+        "researched": [
+          96
+        ],
+        "detect": [
+          98,
+          144
+        ],
+        "classify": [
+          100
+        ],
+        "disease.": [
+          101
+        ],
+        "machine": [
+          103,
+          158,
+          213,
+          272
+        ],
+        "or": [
+          105
+        ],
+        "problem-dependent,": [
+          109
+        ],
+        "data": [
+          110,
+          206,
+          218,
+          280,
+          296,
+          355
+        ],
+        "availability,": [
+          111
+        ],
+        "computational": [
+          113
+        ],
+        "power": [
+          114
+        ],
+        "available.": [
+          115
+        ],
+        "This": [
+          116,
+          150,
+          223
+        ],
+        "chapter": [
+          117,
+          151,
+          224,
+          309,
+          335
+        ],
+        "gives": [
+          118,
+          152
+        ],
+        "dataset": [
+          120
+        ],
+        "information": [
+          121
+        ],
+        "\u201cPlant": [
+          125
+        ],
+        "Village\u201d": [
+          126
+        ],
+        "dataset,": [
+          127
+        ],
+        "which": [
+          128
+        ],
+        "consists": [
+          129
+        ],
+        "17": [
+          131
+        ],
+        "12": [
+          134
+        ],
+        "species,": [
+          136
+        ],
+        "uses": [
+          137,
+          174
+        ],
+        "prediction": [
+          138
+        ],
+        "models": [
+          139,
+          327
+        ],
+        "backpropagation": [
+          141
+        ],
+        "ANNs": [
+          142
+        ],
+        "disease": [
+          145
+        ],
+        "from": [
+          146
+        ],
+        "real-time": [
+          147,
+          184,
+          298
+        ],
+        "images.": [
+          149
+        ],
+        "IoT": [
+          155,
+          291
+        ],
+        "device": [
+          156,
+          173
+        ],
+        "analyze": [
+          162,
+          216
+        ],
+        "soil": [
+          163,
+          185,
+          189,
+          286
+        ],
+        "nutrients": [
+          164
+        ],
+        "give": [
+          166,
+          220
+        ],
+        "accurate": [
+          167
+        ],
+        "advice": [
+          168
+        ],
+        "crop.": [
+          171
+        ],
+        "The": [
+          172,
+          205,
+          308,
+          334
+        ],
+        "sensors": [
+          175
+        ],
+        "FC-28,": [
+          178
+        ],
+        "DHT11,": [
+          179
+        ],
+        "JXBS-3001": [
+          181
+        ],
+        "get": [
+          183
+        ],
+        "composition,": [
+          186
+        ],
+        "examine": [
+          188
+        ],
+        "macronutrient": [
+          190
+        ],
+        "availability": [
+          191
+        ],
+        "pH": [
+          193
+        ],
+        "color": [
+          196
+        ],
+        "optical": [
+          197
+        ],
+        "sensor": [
+          198,
+          292
+        ],
+        "TCS3200,": [
+          199
+        ],
+        "moisture,": [
+          200
+        ],
+        "humidity,": [
+          201
+        ],
+        "temperature,": [
+          202
+        ],
+        "nutrient.": [
+          204
+        ],
+        "transmitted": [
+          208
+        ],
+        "server,": [
+          211
+        ],
+        "where": [
+          212
+        ],
+        "personalized": [
+          221
+        ],
+        "advice.": [
+          222
+        ],
+        "discusses": [
+          225,
+          295
+        ],
+        "advanced": [
+          226
+        ],
+        "modeling": [
+          227
+        ],
+        "techniques,": [
+          228
+        ],
+        "Deep": [
+          231,
+          252
+        ],
+        "Reinforcement": [
+          232
+        ],
+        "Learning": [
+          233,
+          250,
+          254
+        ],
+        "with": [
+          234,
+          278
+        ],
+        "Multi-Source": [
+          235
+        ],
+        "Remote": [
+          236
+        ],
+        "Sensing": [
+          237
+        ],
+        "Data,": [
+          238
+        ],
+        "Multimodal": [
+          240
+        ],
+        "Meta-Transformer,": [
+          241
+        ],
+        "Temporal": [
+          242
+        ],
+        "Graph": [
+          243
+        ],
+        "Neural": [
+          244
+        ],
+        "Networks,": [
+          245
+        ],
+        "Hybrid": [
+          246
+        ],
+        "Process-Based": [
+          247
+        ],
+        "Models,": [
+          251
+        ],
+        "Transfer": [
+          253
+        ],
+        "Approaches,": [
+          255
+        ],
+        "Data": [
+          257
+        ],
+        "Fusion": [
+          258
+        ],
+        "Techniques.": [
+          259
+        ],
+        "These": [
+          260
+        ],
+        "techniques": [
+          261,
+          277
+        ],
+        "employed": [
+          263
+        ],
+        "estimate": [
+          265
+        ],
+        "yield": [
+          268,
+          329
+        ],
+        "accurately": [
+          269
+        ],
+        "by": [
+          270
+        ],
+        "combining": [
+          271
+        ],
+        "various": [
+          279
+        ],
+        "sources": [
+          281
+        ],
+        "climatic": [
+          284
+        ],
+        "conditions,": [
+          285
+        ],
+        "types,": [
+          287
+        ],
+        "satellite": [
+          288
+        ],
+        "images,": [
+          289
+        ],
+        "readings.": [
+          293
+        ],
+        "It": [
+          294
+        ],
+        "heterogeneity,": [
+          297
+        ],
+        "processing,": [
+          299
+        ],
+        "issues": [
+          301
+        ],
+        "related": [
+          302
+        ],
+        "interpretability": [
+          304
+        ],
+        "these": [
+          306
+        ],
+        "techniques.": [
+          307
+        ],
+        "also": [
+          310,
+          336
+        ],
+        "contains": [
+          311
+        ],
+        "case": [
+          312
+        ],
+        "studies": [
+          313
+        ],
+        "presents": [
+          315,
+          337
+        ],
+        "methodological": [
+          317
+        ],
+        "framework": [
+          318
+        ],
+        "for": [
+          319,
+          328,
+          349
+        ],
+        "design": [
+          321
+        ],
+        "resilient,": [
+          323
+        ],
+        "scalable,": [
+          324
+        ],
+        "adaptive": [
+          326
+        ],
+        "estimation": [
+          330
+        ],
+        "sustainable": [
+          332
+        ],
+        "agriculture.": [
+          333
+        ],
+        "solution": [
+          339
+        ],
+        "cost-effective,": [
+          342
+        ],
+        "low-power": [
+          343
+        ],
+        "Integrated": [
+          344
+        ],
+        "Wireless": [
+          345
+        ],
+        "Sensor": [
+          346
+        ],
+        "Network": [
+          347
+        ],
+        "(WSN)": [
+          348
+        ],
+        "combines": [
+          353
+        ],
+        "acquisition,": [
+          356
+        ],
+        "transmission,": [
+          357
+        ],
+        "video": [
+          359
+        ],
+        "surveillance": [
+          360
+        ],
+        "operations.": [
+          361
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.1201/9781003637264-9",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1201/9781003637264-9",
+        "pdf_url": null,
+        "source": null,
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Multimodal Artificial Intelligence in Precision Agriculture",
+        "raw_type": "book-chapter"
+      },
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "type": "book-chapter"
+    }
+  ],
+  "group_by": []
+}

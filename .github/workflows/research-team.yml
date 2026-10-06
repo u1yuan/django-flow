@@ -1,0 +1,38 @@
+name: Research team CI and sync
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: research-team-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate-and-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Validate research team files
+        run: python3 scripts/validate-research-team.py
+
+      - name: Commit and push changes made during this run
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No runner-side changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: sync research team outputs"
+          git push origin HEAD:main

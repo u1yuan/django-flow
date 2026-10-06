@@ -1,0 +1,194 @@
+
+Philippines - Global School-Based Student Health Survey 2019
+ NCD Microdata Repository
+ An Online Microdata Catalog
+ Home
+ Microdata Catalog
+ Citations
+ Login 
+ Login
+ Home /
+ Central Data Catalog /
+ GSHS /
+ PHL_2019_GSHS_V01
+ Global School-Based Student Health Survey 2019
+ Philippines, 2019
+ Get Microdata 
+ Reference ID 
+ PHL_2019_GSHS_v01 
+ Producer(s) 
+ Department of Health 
+ Collections 
+ Global School-based Student Health Survey
+ Metadata 
+ DDI/XML
+ JSON
+ Created on 
+ Dec 14, 2023
+ Last modified 
+ Dec 14, 2023
+ Page views 
+ 159409
+ Downloads 
+ 5948
+ Study Description
+ Data Dictionary
+ Downloads
+ Get Microdata 
+ Identification
+ Version
+ Scope
+ Coverage
+ Producers and sponsors
+ Sampling
+ Survey instrument
+ Data collection
+ Data processing
+ Data Access
+ Disclaimer and copyrights
+ Metadata production
+ Identification
+ Survey ID number
+ PHL_2019_GSHS_v01
+ Title
+ Global School-Based Student Health Survey 2019
+ Country
+ Name
+ Country code
+ Philippines 
+ PHL 
+ Study type
+ Global School-Based Student Health Survey
+ Series Information
+ This is the fifth GSHS conducted by Philippines.
+ Abstract
+ The GSHS is a school-based survey which uses a self-administered questionnaire to obtain data on young people's health behaviour and protective factors related to the leading causes of morbidity and mortality among children and adults worldwide.
+ Kind of Data
+ Sample survey data [ssd]
+ Unit of Analysis
+ Individuals
+Version
+ Version Description
+ Public-use dataset
+Scope
+ Notes
+ The following core modules were included in the survey:
+alcohol use
+dietary behaviours
+drug use
+hygiene
+mental health
+physical activity
+protective factors
+violence and unintentional injury
+ Topics
+ Topic
+ Vocabulary
+ Global School-based Student Health Survey (GSHS) 
+ Survey 
+ Keywords
+ adolescents
+ school health
+ noncommunicable diseases
+ risk factors
+ protective factors
+ health surveys
+ alcohol use
+ diet
+ nutrition
+ drug use
+ hygiene
+ mental health
+ physical activity
+ violence and unintentional injury
+ overweight
+ obesity
+ bullying
+Coverage
+ Geographic Coverage
+ National plus Luzon, Mindanao and Visayas.
+ Universe
+ School-going adolescents aged 13-17 years.
+Producers and sponsors
+ Primary investigators
+ Name
+ Department of Health 
+ Funding Agency/Sponsor
+ Name
+ World Health Organization 
+ US Centers for Disease Control and Prevention 
+Sampling
+ Sampling Procedure
+ A two-stage cluster sample design was used to produce data representative of all students in grades 7-Fourth Year in the Philippines. At the first stage, schools were selected with probability proportional to enrollment size. At the second stage, classes were randomly selected and all students in selected classes were eligible to participate.
+ Response Rate
+ The school response rate was 100%, the student response rate was 85%, and the overall response rate was 85%.
+ Weighting
+ The weighting formula used is:
+W=W1 W2 f1 f2 f3.
+The list below shows what each variable in the formula represents.
+W1 - The inverse of the probability of selecting each school
+W2 - The inverse of the probability of selecting each classroom
+f1 - A school-level non response adjustment factor
+f2 - A student-level non response adjustment factor calculated by classroom
+f3 - A post stratification adjustment factor calculated by sex within grade
+Survey instrument
+ Questionnaires
+ The following core modules were included in the survey:
+alcohol use
+dietary behaviours
+drug use
+hygiene
+mental health
+physical activity
+protective factors
+violence and unintentional injury
+Data collection
+ Dates of Data Collection
+ Start
+ 2019 
+ Mode of data collection
+ self-administered
+Data processing
+ Data Editing
+ All data processing (scanning, cleaning, editing, and weighting) was conducted at WHO and the US Centers for Disease Control.
+Data Access
+ Access authority
+ Name
+ Affiliation
+ URL
+ Email
+ NCD Surveillance Team 
+ World Health Organization 
+ https://www.who.int/teams/noncommunicable-diseases/surveillance/systems-tools/global-school-based-student-health-survey 
+ ncdmonitoring@who.int 
+ Access conditions
+ The user undertakes:
+(1) to acknowledge the data source.
+(2) to share any planned publications with WHO prior to publication.
+(3) to offer co-authorship of any reports or publications using the survey results to the coordinator of the survey.
+(4) to use the data for non-commercial, not-for-profit public health purposes only.
+ Citation requirements
+ Publications based on GSHS data should use the following acknowledgement:
+"This paper uses data from the Global School-Based Student Health Survey (GSHS). GSHS is supported by the World Health Organization and the US Centers for Disease Control and Prevention."
+Disclaimer and copyrights
+ Disclaimer
+ The data is being distributed without warranty of any kind. The responsibility for the use of the data lies with the user. In no event shall the World Health Organization be liable for damages arising from its use.
+Metadata production
+ DDI Document ID
+ DDI_PHL_2019_GSHS_v01_M
+ Producers
+ Name
+ Affiliation
+ Role
+ Melanie Cowan 
+ World Health Organization 
+ Documentation of data 
+ Date of Metadata Production
+ 2023-12-14
+Metadata version
+ DDI Document version
+ Version 1.0 (December 2023).
+ Back to Catalog
+ NCD Microdata Repository 
+ ©
+ NCD Microdata Repository, All Rights Reserved.
