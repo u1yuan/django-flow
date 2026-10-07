@@ -1,10 +1,9 @@
-# Fathi
-## Psychology
-Association between Mental Health and Urban Lights
-	**Gap** significant research
-	**Data** from NASA
-	Data is lightweight: access is not a barrier
-		Credibility?
 
+[[02 fathi-peerDefense]] contains my notes for Fathi's Titles
+
+# Denienz
+## Psychology
 ## Meteorology
-Heat sickness 
+## Astronomy
+
+# Reese

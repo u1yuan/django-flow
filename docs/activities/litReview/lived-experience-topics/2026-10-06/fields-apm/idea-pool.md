@@ -16,6 +16,8 @@ Two meteorology leads already have gap cards in `four-field-gaps/2026-10-06/gap-
 
 ## Astronomy
 
+
+
 ### A01. Will the org's telescope night be clouded out?
 
 - Hook: The astronomy org books the rooftop, carries the telescope up, and the sky is milk.
@@ -24,6 +26,8 @@ Two meteorology leads already have gap cards in `four-field-gaps/2026-10-06/gap-
 - Data lead: a public hourly weather or reanalysis archive joined to night hours. Unverified.
 - Record unit: station-night.
 - Why 10,000 might be reachable: stations times nights. Not opened. This is a cloud forecast, not a night-sky brightness estimate, and it does not use the 323 Globe at Night rows.
+
+
 
 ### A02. When a bright satellite will cross the photo
 
@@ -35,6 +39,8 @@ Two meteorology leads already have gap cards in `four-field-gaps/2026-10-06/gap-
 - Why 10,000 might be reachable: many satellites times nights. A sighting log alone may be small. Not opened.
 - Ethics: orbits, not people. This is not a dark-sky conservation-site ranking.
 
+
+
 ### A03. Was the meteor shower actually visible from here?
 
 - Hook: The group chat says the Perseids are on, the roof is cloudy or bright, and people argue about whether anyone saw one.
@@ -43,6 +49,8 @@ Two meteorology leads already have gap cards in `four-field-gaps/2026-10-06/gap-
 - Data lead: a public meteor-camera network. Unverified.
 - Record unit: camera-hour or detection.
 - Why 10,000 might be reachable: cameras times hours. A Philippine-only camera may not exist. Not opened.
+
+
 
 ### A04. Which new point of light is worth a student follow-up?
 
@@ -54,6 +62,8 @@ Two meteorology leads already have gap cards in `four-field-gaps/2026-10-06/gap-
 - Why 10,000 might be reachable: survey streams are large. A Philippine-sky filter is not confirmed. Not opened.
 - Ethics: no personal data. Weak local hook if the stream is global.
 
+
+
 ### A05. Variable-star observations that do not match the star's usual range
 
 - Hook: An amateur observer submits a brightness that is far from the star's recent values and cannot tell a real change from a bad estimate.
@@ -64,6 +74,8 @@ Two meteorology leads already have gap cards in `four-field-gaps/2026-10-06/gap-
 - Why 10,000 might be reachable: the global archive is a candidate. A Philippine-observer slice may be small. Not opened.
 - Ethics: observer codes can identify people. Drop observer names. A flag is not a claim that the observer cheated.
 
+
+
 ### A06. Airplane, meteor, or satellite in a night-sky clip
 
 - Hook: Someone yells "meteor," and the streak was a plane.
@@ -72,6 +84,8 @@ Two meteorology leads already have gap cards in `four-field-gaps/2026-10-06/gap-
 - Data lead: a labeled public night-sky video or detection set. Unverified.
 - Record unit: track or clip.
 - Why 10,000 might be reachable: unknown until a labeled set is opened. Not opened.
+
+
 
 ### A07. Moonlit nights and reported sleep
 
@@ -83,6 +97,8 @@ Two meteorology leads already have gap cards in `four-field-gaps/2026-10-06/gap-
 - Why 10,000 might be reachable: only if the sleep file is large. A lunar table alone is a few thousand days and fails. Not opened.
 - Ethics: sleep records can be personal. Use a public research dataset with a clear license. No diagnosis.
 
+
+
 ### A08. Campus light and the limiting magnitude a student can reach
 
 - Hook: The same binoculars show more stars in the province than beside the campus floodlights.
@@ -91,6 +107,8 @@ Two meteorology leads already have gap cards in `four-field-gaps/2026-10-06/gap-
 - Data lead: Globe at Night. Already opened in the 6 October astronomy screen.
 - Record unit: report. Already below 10,000 for the Philippines.
 - Why 10,000 might be reachable: it is not, for the Philippine ground sample. Pixel expansion does not create new ground reports.
+
+
 
 ## Psychology
 
@@ -106,6 +124,8 @@ No idea here diagnoses a person, labels a minor, or revives the stopped adolesce
 - Why 10,000 might be reachable: multi-country waves. Not opened.
 - Ethics: adults, public survey, no individual diagnosis. Not the stopped ages-13–17 loneliness analysis.
 
+
+
 ### P02. Which late-night reply is actually useful?
 
 - Hook: A student posts at 1 a.m. about not coping, and the first replies are jokes, lectures, or something practical.
@@ -115,6 +135,8 @@ No idea here diagnoses a person, labels a minor, or revives the stopped adolesce
 - Record unit: reply.
 - Why 10,000 might be reachable: large forums. Not opened.
 - Ethics: high. Mental-health text. De-identify. Do not build a crisis detector and do not claim a reply prevents harm.
+
+
 
 ### P03. Exam-month stress language, without a clinical label
 
@@ -126,6 +148,8 @@ No idea here diagnoses a person, labels a minor, or revives the stopped adolesce
 - Why 10,000 might be reachable: comment histories. Not opened. Overlaps S02, but the outcome is stress language rather than topic mix.
 - Ethics: public text, usernames removed. A rate is not a diagnosis of any poster.
 
+
+
 ### P04. Filipino cyberbullying text
 
 - Hook: A group chat or comment thread turns into insults, and the target is a classmate.
@@ -135,6 +159,8 @@ No idea here diagnoses a person, labels a minor, or revives the stopped adolesce
 - Record unit: message.
 - Why 10,000 might be reachable: uncertain. Many shared-task sets are smaller. Not opened.
 - Ethics: high. Texts may describe minors. Do not infer the age of an author. Do not identify targets. If the corpus is mostly about minors, stop.
+
+
 
 ### P05. Does an English wellbeing model fail on Taglish?
 
@@ -146,6 +172,8 @@ No idea here diagnoses a person, labels a minor, or revives the stopped adolesce
 - Why 10,000 might be reachable: unknown. Not opened.
 - Ethics: do not turn a sentiment error into a mental-health diagnosis.
 
+
+
 ### P06. Sleep timing against an academic calendar
 
 - Hook: Sleep slides later every long exam week and does not fully come back.
@@ -155,6 +183,8 @@ No idea here diagnoses a person, labels a minor, or revives the stopped adolesce
 - Record unit: person-night.
 - Why 10,000 might be reachable: only if a large public file exists. A 30-person class diary will fail. Not opened.
 - Ethics: use a research dataset with a license. No clinical claim.
+
+
 
 ### P07. Disaster worry in an adult survey
 
@@ -166,6 +196,8 @@ No idea here diagnoses a person, labels a minor, or revives the stopped adolesce
 - Why 10,000 might be reachable: uncertain. A single post-disaster sample is often small. Not opened.
 - Ethics: adults. No individual diagnosis. Association only, not "the typhoon caused the score."
 
+
+
 ### P08. Adolescent loneliness latent classes
 
 - Hook: Listed only to exclude it.
@@ -174,7 +206,11 @@ No idea here diagnoses a person, labels a minor, or revives the stopped adolesce
 - Record unit: respondent ages 13–17. The opened upper bound was 7,763.
 - Why 10,000 might be reachable: it is not, for that age band.
 
+
+
 ## Meteorology
+
+
 
 ### M01. Will it rain on the walk between buildings?
 
@@ -186,6 +222,8 @@ No idea here diagnoses a person, labels a minor, or revives the stopped adolesce
 - Why 10,000 might be reachable: hours accumulate. Not opened. This is rain, not a heat-index alert, and it is not an El Niño-regime study.
 - Ethics: no personal data.
 
+
+
 ### M02. The forecast said fine
 
 - Hook: Students leave the dorm because the posted forecast looked safe, and they are soaked by lunch.
@@ -194,6 +232,8 @@ No idea here diagnoses a person, labels a minor, or revives the stopped adolesce
 - Data lead: an archive of forecasts as issued, plus observations. Unverified. The heat-alert screen already found that iHeatMap and iRISE-UP issue-time archives were not opened.
 - Record unit: forecast-day or station-day.
 - Why 10,000 might be reachable: only if issued forecasts were archived. A handful of typhoon case studies will fail. Not opened.
+
+
 
 ### M03. Outdoor class and PE window
 
@@ -205,6 +245,8 @@ No idea here diagnoses a person, labels a minor, or revives the stopped adolesce
 - Why 10,000 might be reachable: stations times days. Not opened.
 - Note: this is the daily version of M01. Keep only one if the data lead is the same.
 
+
+
 ### M04. First monsoon week of classes
 
 - Hook: Classes start, and the first real monsoon week floods the usual route.
@@ -214,6 +256,8 @@ No idea here diagnoses a person, labels a minor, or revives the stopped adolesce
 - Record unit: station-day inside a defined window. A unit of "year" cannot reach 10,000.
 - Why 10,000 might be reachable: station-days can. Not opened.
 
+
+
 ### M05. Thunderstorm lead time for an open court
 
 - Hook: An intramural game is mid-set when the sky goes dark, and the warning is someone pointing up.
@@ -221,6 +265,8 @@ No idea here diagnoses a person, labels a minor, or revives the stopped adolesce
 - Draft technique: survival model or gradient boosting.
 - Data lead: a public lightning network or radar archive, plus a rain gauge. Unverified.
 - Record unit: storm-station event, or minute. Minute-rows can be large and highly dependent. The event count may be the honest unit and may fall short. Not opened.
+
+
 
 ### M06. Roadside air on the commute
 
@@ -232,6 +278,8 @@ No idea here diagnoses a person, labels a minor, or revives the stopped adolesce
 - Why 10,000 might be reachable: hours. Not counted in this pass.
 - Note: not a new gap. Included so the scorecard can prefer a lived question the gap file did not already write.
 
+
+
 ### M07. Humid heat on the unsheltered walk
 
 - Hook: Listed only to point at existing work.
@@ -239,6 +287,8 @@ No idea here diagnoses a person, labels a minor, or revives the stopped adolesce
 - Data lead: the conditional heat-alert title and C03 in the commute pool.
 - Record unit: station-hour. Not counted.
 - Why 10,000 might be reachable: not re-estimated here.
+
+
 
 ### M08. Gauge versus satellite rain at the campus
 
@@ -248,6 +298,8 @@ No idea here diagnoses a person, labels a minor, or revives the stopped adolesce
 - Data lead: a satellite rain product plus a gauge archive. Unverified. The earlier handoff noted that Philippine gauge truth for a precipitation product was not opened.
 - Record unit: gauge-hour.
 - Why 10,000 might be reachable: gauges times hours, if the gauge file exists. Not opened.
+
+
 
 ## Pool count
 
