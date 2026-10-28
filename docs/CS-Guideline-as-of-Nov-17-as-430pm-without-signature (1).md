@@ -5,36 +5,37 @@ systematic investigation of a problem that can be solved using Computing. It may
 include a solution, an approximate or partial solution, a scientific investigation, or
 the development of results leading to the solution of the problem.
 A computer science thesis must be anchored on Computer Science principles.
+
 1. Group Composition
-1.1. Each group must be composed of students under the same specialization (e.g.,
-Software Engineering, Data Science, or Artificial Intelligence).
-1.2. A group shall have a minimum of three (3) and a maximum of four (4)
-members as mentioned during course orientation and reflected in syllabus.
-1.3. The formation of groups must be finalized and approved by the Thesis Course
-Adviser before title proposal submission.
+   1.1. Each group must be composed of students under the same specialization (e.g.,
+   Software Engineering, Data Science, or Artificial Intelligence).
+   1.2. A group shall have a minimum of three (3) and a maximum of four (4)
+   members as mentioned during course orientation and reflected in syllabus.
+   1.3. The formation of groups must be finalized and approved by the Thesis Course
+   Adviser before title proposal submission.
 2. Thesis Title Requirements
-2.1. The thesis title must be concise and specific, consisting of no more than
-sixteen (16) words.
-2.2. The title must indicate the target algorithm, model, or technique to be used in
-the study (e.g., “using Random Forest,” “through Genetic Algorithm,” “based on
-Convolutional Neural Network”).
-2.3. Titles must reflect the main theme and application domain of the research.
+   2.1. The thesis title must be concise and specific, consisting of no more than
+   sixteen (16) words.
+   2.2. The title must indicate the target algorithm, model, or technique to be used in
+   the study (e.g., “using Random Forest,” “through Genetic Algorithm,” “based on
+   Convolutional Neural Network”).
+   2.3. Titles must reflect the main theme and application domain of the research.
 3. Research Areas Based on Specialization
-Thesis topics shall align with the students’ specialization track:
-Software Engineering (SE)
-Traditional Image Processing (Non-AI)
-These rely on mathematical algorithms, not machine learning.
-No. Technique Description
-1 Histogram Equalization Enhances image contrast by spreading out pixel
-intensity values.
-2 Canny Edge Detection Detects edges based on gradients and
-thresholds.
-3 Gaussian Blurring Reduces noise or smooths images using a
-Gaussian kernel.
-4 Thresholding (Otsu’s Convert grayscale to binary by finding an
-Method) optimal threshold value.
-5 Morphological Operations Removes noise or fills gaps in binary images.
-(Erosion/Dilation)
+   Thesis topics shall align with the students’ specialization track:
+   Software Engineering (SE)
+   Traditional Image Processing (Non-AI)
+   These rely on mathematical algorithms, not machine learning.
+   No. Technique Description
+   1 Histogram Equalization Enhances image contrast by spreading out pixel
+   intensity values.
+   2 Canny Edge Detection Detects edges based on gradients and
+   thresholds.
+   3 Gaussian Blurring Reduces noise or smooths images using a
+   Gaussian kernel.
+   4 Thresholding (Otsu’s Convert grayscale to binary by finding an
+   Method) optimal threshold value.
+   5 Morphological Operations Removes noise or fills gaps in binary images.
+   (Erosion/Dilation)
 
 6 Fourier Transform Filtering Analyzes image frequency components for
 filtering.
@@ -250,42 +251,42 @@ testing) and clearly document all preprocessing steps. See appendix B.
 (e.g., Data Privacy Act of 2012).
 
 5. Group Member Changes
-5.1. Changes in group membership shall only be permitted on a case-to-case
-basis and must be approved by both the Thesis Course Adviser.
-5.2. Valid reasons for member changes include health issues, academic
-withdrawal, or personal circumstances beyond control.
-5.3. All approved changes must be documented formally.
+   5.1. Changes in group membership shall only be permitted on a case-to-case
+   basis and must be approved by both the Thesis Course Adviser.
+   5.2. Valid reasons for member changes include health issues, academic
+   withdrawal, or personal circumstances beyond control.
+   5.3. All approved changes must be documented formally.
 6. Faculty Consent and Authorship Agreement
-6.1. A faculty member may present a thesis title on behalf of a mentee group only
-with the group’s written consent, accompanied by a signed agreement.
+   6.1. A faculty member may present a thesis title on behalf of a mentee group only
+   with the group’s written consent, accompanied by a signed agreement.
 7. Title Presentation Guidelines
-7.1. Each group shall be allotted 30 minutes for title presentation:
-10 minutes Introduction, Presentation of major of
-the project
-20 minutes Paper Presentation
-15-30 minutes Question and Answer
-7.2. Presentations must include:
-• Proposed Titles
-• Objectives of the Study
-• Scope and Limitations
-• Possible Algorithm/s
-• Target Beneficiary
+   7.1. Each group shall be allotted 30 minutes for title presentation:
+   10 minutes Introduction, Presentation of major of
+   the project
+   20 minutes Paper Presentation
+   15-30 minutes Question and Answer
+   7.2. Presentations must include:
+   • Proposed Titles
+   • Objectives of the Study
+   • Scope and Limitations
+   • Possible Algorithm/s
+   • Target Beneficiary
 8. Course Grade
-8.1. Course grade of the students will be computed as follows:
-Breakdown Percentage
-Panel Members 60% (total grade of oral defense)
-Course Adviser 30% (course requirements)
-Project Adviser 10% (mentoring requirements)
+   8.1. Course grade of the students will be computed as follows:
+   Breakdown Percentage
+   Panel Members 60% (total grade of oral defense)
+   Course Adviser 30% (course requirements)
+   Project Adviser 10% (mentoring requirements)
 9. Title Modification Policy
-9.1. A group may change their thesis title once after approval, provided it
-receives endorsement from both the thesis adviser and panel members.
-9.2. Title change requests must include a written justification and updated title
-documentation.
+   9.1. A group may change their thesis title once after approval, provided it
+   receives endorsement from both the thesis adviser and panel members.
+   9.2. Title change requests must include a written justification and updated title
+   documentation.
 10. Roles and Responsibilities
-Course Adviser
-• Guides students in selecting and refining thesis topics.
-• Ensures compliance with institutional thesis guidelines.
-• Coordinates scheduling of title presentations and progress checks.
+    Course Adviser
+    • Guides students in selecting and refining thesis topics.
+    • Ensures compliance with institutional thesis guidelines.
+    • Coordinates scheduling of title presentations and progress checks.
 
 Thesis Adviser (Mentor)
 • Provides technical and research guidance throughout the thesis
@@ -316,13 +317,14 @@ upholds ethical research conduct and academic integrity standards
 at all stages.
 APPENDIX A
 Machine Learning Algorithm (AI Major)
+
 1. Supervised Learning
-• Description: Models learn from labeled data to make
-predictions.
-• Algorithms / Techniques:
-o Linear Regression, Logistic Regression
-o Decision Trees, Random Forest
-o Support Vector Machines (SVM)
+   • Description: Models learn from labeled data to make
+   predictions.
+   • Algorithms / Techniques:
+   o Linear Regression, Logistic Regression
+   o Decision Trees, Random Forest
+   o Support Vector Machines (SVM)
 
 o k-Nearest Neighbors (k-NN)
 o Gradient Boosting (XGBoost, LightGBM)
@@ -375,89 +377,91 @@ o  Transformers – for language and multimodal tasks
 APPENDIX B
 Recommended
 Sample Public
-| AI Subfield  | Records (for  | Example Tasks  |     |
-| ------------ | ------------- | -------------- | --- |
-Datasets
-Students)
-UCI Machine
-|     |     | Classification,  | Learning  |
-| --- | --- | ---------------- | --------- |
-Machine Learning
-|     | 1,000 – 10,000  | regression,  | Repository,  |
-| --- | --------------- | ------------ | ------------ |
-(General)
-|     |     | prediction models  | Kaggle small  |
-| --- | --- | ------------------ | ------------- |
-datasets
-IMDB Reviews,
-Sentiment analysis,
-| Natural Language  | 2,000 – 50,000 text  |     | SMS Spam  |
-| ----------------- | -------------------- | --- | --------- |
-text classification,
-| Processing (NLP)  | samples  |     | Collection, Yelp  |
-| ----------------- | -------- | --- | ----------------- |
-spam detection
-Reviews
-Image
-MNIST (70,000),
-classification,
-|                  | 1,000 – 50,000  |                    | CIFAR-10   |
-| ---------------- | --------------- | ------------------ | ---------- |
-| Computer Vision  |                 | object detection,  |            |
-|                  | images          |                    | (60,000),  |
-handwriting
-Fashion-MNIST
-recognition
-|                 |                 | Speech command     | Google Speech  |
-| --------------- | --------------- | ------------------ | -------------- |
-| Speech / Audio  | 1,000 – 10,000  |                    |                |
-|                 |                 | recognition,       | Commands,      |
-| Processing      | audio clips     |                    |                |
-|                 |                 | emotion detection  | UrbanSound8K   |
-OpenAI Gym
-|                | ~1,000 – 10,000  | Game AI,  |             |
-| -------------- | ---------------- | --------- | ----------- |
-| Reinforcement  |                  |           | (CartPole,  |
-simulation steps or pathfinding,
-| Learning  |           |                  | MountainCar),  |
-| --------- | --------- | ---------------- | -------------- |
-|           | episodes  | decision-making  |                |
-FrozenLake
-|     | 1,000 – 20,000  | Movie, music, or  | MovieLens 100K,  |
-| --- | --------------- | ----------------- | ---------------- |
-Recommendation
-|     | user-item  | product  | Book-Crossing  |
-| --- | ---------- | -------- | -------------- |
-Systems
-|     | interactions  | recommendations  | Dataset  |
-| --- | ------------- | ---------------- | -------- |
-NASA Bearing
-Anomaly Detection
-|     | 1,000 – 10,000  | Detecting unusual  | Dataset, Credit  |
-| --- | --------------- | ------------------ | ---------------- |
-/ Predictive
-|     | records  | patterns or failures Card Fraud  |     |
-| --- | -------- | -------------------------------- | --- |
-Maintenance
-Dataset
-Small custom
-| Generative AI  | 1,000 – 5,000  | Simple image or  |     |
-| -------------- | -------------- | ---------------- | --- |
-datasets, Digit
-| (basic)  | samples  | text generation  |     |
-| -------- | -------- | ---------------- | --- |
-drawing datasets
+
+| AI Subfield                      | Records (for         | Example Tasks                    |                   |
+| -------------------------------- | -------------------- | -------------------------------- | ----------------- |
+| Datasets                         |                      |                                  |                   |
+| Students)                        |                      |                                  |                   |
+| UCI Machine                      |                      |                                  |                   |
+|                                  |                      | Classification,                  | Learning          |
+| ---                              | ---                  | ----------------                 | ---------         |
+| Machine Learning                 |                      |                                  |                   |
+|                                  | 1,000 – 10,000      | regression,                      | Repository,       |
+| ---                              | ---------------      | ------------                     | ------------      |
+| (General)                        |                      |                                  |                   |
+|                                  |                      | prediction models                | Kaggle small      |
+| ---                              | ---                  | ------------------               | -------------     |
+| datasets                         |                      |                                  |                   |
+| IMDB Reviews,                    |                      |                                  |                   |
+| Sentiment analysis,              |                      |                                  |                   |
+| Natural Language                 | 2,000 – 50,000 text |                                  | SMS Spam          |
+| -----------------                | -------------------- | ---                              | ---------         |
+| text classification,             |                      |                                  |                   |
+| Processing (NLP)                 | samples              |                                  | Collection, Yelp  |
+| -----------------                | --------             | ---                              | ----------------- |
+| spam detection                   |                      |                                  |                   |
+| Reviews                          |                      |                                  |                   |
+| Image                            |                      |                                  |                   |
+| MNIST (70,000),                  |                      |                                  |                   |
+| classification,                  |                      |                                  |                   |
+|                                  | 1,000 – 50,000      |                                  | CIFAR-10          |
+| ----------------                 | ---------------      | ------------------               | ----------        |
+| Computer Vision                  |                      | object detection,                |                   |
+|                                  | images               |                                  | (60,000),         |
+| handwriting                      |                      |                                  |                   |
+| Fashion-MNIST                    |                      |                                  |                   |
+| recognition                      |                      |                                  |                   |
+|                                  |                      | Speech command                   | Google Speech     |
+| ---------------                  | ---------------      | ------------------               | --------------    |
+| Speech / Audio                   | 1,000 – 10,000      |                                  |                   |
+|                                  |                      | recognition,                     | Commands,         |
+| Processing                       | audio clips          |                                  |                   |
+|                                  |                      | emotion detection                | UrbanSound8K      |
+| OpenAI Gym                       |                      |                                  |                   |
+|                                  | ~1,000 – 10,000     | Game AI,                         |                   |
+| --------------                   | ----------------     | ---------                        | -----------       |
+| Reinforcement                    |                      |                                  | (CartPole,        |
+| simulation steps or pathfinding, |                      |                                  |                   |
+| Learning                         |                      |                                  | MountainCar),     |
+| ---------                        | ---------            | ----------------                 | --------------    |
+|                                  | episodes             | decision-making                  |                   |
+| FrozenLake                       |                      |                                  |                   |
+|                                  | 1,000 – 20,000      | Movie, music, or                 | MovieLens 100K,   |
+| ---                              | ---------------      | -----------------                | ----------------  |
+| Recommendation                   |                      |                                  |                   |
+|                                  | user-item            | product                          | Book-Crossing     |
+| ---                              | ----------           | --------                         | --------------    |
+| Systems                          |                      |                                  |                   |
+|                                  | interactions         | recommendations                  | Dataset           |
+| ---                              | -------------        | ----------------                 | --------          |
+| NASA Bearing                     |                      |                                  |                   |
+| Anomaly Detection                |                      |                                  |                   |
+|                                  | 1,000 – 10,000      | Detecting unusual                | Dataset, Credit   |
+| ---                              | ---------------      | ------------------               | ----------------  |
+| / Predictive                     |                      |                                  |                   |
+|                                  | records              | patterns or failures Card Fraud  |                   |
+| ---                              | --------             | -------------------------------- | ---               |
+| Maintenance                      |                      |                                  |                   |
+| Dataset                          |                      |                                  |                   |
+| Small custom                     |                      |                                  |                   |
+| Generative AI                    | 1,000 – 5,000       | Simple image or                  |                   |
+| --------------                   | --------------       | ----------------                 | ---               |
+| datasets, Digit                  |                      |                                  |                   |
+| (basic)                          | samples              | text generation                  |                   |
+| --------                         | --------             | ----------------                 | ---               |
+| drawing datasets                 |                      |                                  |                   |
 
 Recommended
 Sample Public
-| AI Subfield  | Records (for  | Example Tasks  |
-| ------------ | ------------- | -------------- |
-Datasets
-Students)
-Any small ML
-| Explainable AI (XAI) 500 – 5,000  |     | Model explanation  |
-| --------------------------------- | --- | ------------------ |
-dataset (e.g., Iris,
-| experiments  | samples  | and interpretation  |
-| ------------ | -------- | ------------------- |
-Wine Quality)
+
+| AI Subfield                       | Records (for | Example Tasks       |
+| --------------------------------- | ------------ | ------------------- |
+| Datasets                          |              |                     |
+| Students)                         |              |                     |
+| Any small ML                      |              |                     |
+| Explainable AI (XAI) 500 – 5,000 |              | Model explanation   |
+| --------------------------------- | ---          | ------------------  |
+| dataset (e.g., Iris,              |              |                     |
+| experiments                       | samples      | and interpretation  |
+| ------------                      | --------     | ------------------- |
+| Wine Quality)                     |              |                     |
