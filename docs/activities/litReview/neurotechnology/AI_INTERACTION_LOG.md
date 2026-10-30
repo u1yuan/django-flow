@@ -1,0 +1,8 @@
+# AI interaction log — neurotechnology feasibility work
+
+This is the working record for this **separate** neurotechnology direction. If the group uses this work in a course submission, it must identify the group member, check the source passages itself, and transfer the applicable entries to the required course form. No title, data access, ethics determination, or model result is represented as approved.
+
+| Date (Asia/Manila) | Group member | AI tool and purpose | Output used | Verification and group action |
+| --- | --- | --- | --- | --- |
+| 2026-10-31 | To be identified by the group | Another Codex agent screened secondary-data feasibility for AI-use and neural-forecasting titles. | [Feasibility gate](feasibility-gate-2026-10-31.md) and source leads. | Group must independently inspect the selected dataset and protocol, verify citations and school rules, and decide scope. No raw signal was analyzed or client access secured. |
+| 2026-10-31 | To be identified by the group | Codex checked public `ds008496` metadata and one participant's event, EEG-sidecar, and channel files; converted the handoff into a source-intake and decision packet; ran independent research QA and a follow-up check. | [Secondary-data gate packet](secondary-data-gate-packet-2026-10-31.md). | QA passed with limitations after two minor corrections. The group must verify the linked source files, obtain any missing same-participant exposure and target fields, confirm school record and ethics rules, and set budget/deadline. No raw EEG was downloaded, no model was fit, and no neurotechnology proposal was submitted. |
