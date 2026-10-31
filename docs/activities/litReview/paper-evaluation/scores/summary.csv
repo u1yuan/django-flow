@@ -1,0 +1,3 @@
+section,paper_id,reviewer,rubric_version,criterion_id,points,max_points,n_scored,n_na,reviewer_pair,n_pairs,observed_agreement,expected_agreement,kappa,status
+total,A-effendy2025,ai-draft,1.0.0,,12,30,15,0,,,,,,ok
+total,B-remmel2014,ai-draft,1.0.0,,24,30,15,0,,,,,,ok
