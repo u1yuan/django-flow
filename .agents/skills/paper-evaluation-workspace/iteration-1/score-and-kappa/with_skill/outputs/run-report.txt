@@ -1,0 +1,55 @@
+paper-evaluation score-and-kappa run report
+iteration-1 / with_skill
+Reviewers used: syn-rev1, syn-rev2 (fixture pair only; no third reviewer invented)
+Packages installed: none
+Git commit: none
+Python bytecode: disabled (-B)
+
+================================================================================
+COMMAND 1: scorer
+================================================================================
+python -B C:\Users\yuanw\Documents\TECH\School\1T2627\thesis1\.agents\skills\paper-evaluation\scripts\score_papers.py --rubric C:\Users\yuanw\Documents\TECH\School\1T2627\thesis1\.agents\skills\paper-evaluation\scripts\tests\fixtures\SYNTHETIC_rubric.csv --scores C:\Users\yuanw\Documents\TECH\School\1T2627\thesis1\.agents\skills\paper-evaluation\scripts\tests\fixtures\SYNTHETIC_scores_two_reviewers.csv --summary C:\Users\yuanw\Documents\TECH\School\1T2627\thesis1\.agents\skills\paper-evaluation-workspace\iteration-1\score-and-kappa\with_skill\outputs\summary.csv
+
+exit code: 0
+
+--- stdout ---
+VALIDATION PASSED: 3 criteria, 24 score rows.
+Per-paper totals (NA criteria excluded from max_points):
+  SYN-P1 | syn-rev1 | vsynthetic-0 | 5/6 | scored=3 NA=0
+  SYN-P1 | syn-rev2 | vsynthetic-0 | 5/6 | scored=3 NA=0
+  SYN-P2 | syn-rev1 | vsynthetic-0 | 4/6 | scored=3 NA=0
+  SYN-P2 | syn-rev2 | vsynthetic-0 | 3/6 | scored=3 NA=0
+  SYN-P3 | syn-rev1 | vsynthetic-0 | 2/6 | scored=3 NA=0
+  SYN-P3 | syn-rev2 | vsynthetic-0 | 1/6 | scored=3 NA=0
+  SYN-P4 | syn-rev1 | vsynthetic-0 | 2/4 | scored=2 NA=1
+  SYN-P4 | syn-rev2 | vsynthetic-0 | 2/4 | scored=2 NA=1
+Cohen's kappa per criterion (unweighted; 0, 1, 2, NA as categories):
+  S01 | syn-rev1|syn-rev2 | n=4 | po=1.0000 pe=0.3750 kappa=1.0000 | ok
+  S02 | syn-rev1|syn-rev2 | n=4 | po=0.7500 pe=0.3125 kappa=0.6364 | ok
+  S03 | syn-rev1|syn-rev2 | n=4 | po=0.7500 pe=0.4375 kappa=0.5556 | ok
+Summary written: outputs/summary.csv
+
+================================================================================
+COMMAND 2: unittest
+================================================================================
+python -B -m unittest discover -s C:\Users\yuanw\Documents\TECH\School\1T2627\thesis1\.agents\skills\paper-evaluation\scripts\tests -v
+
+exit code: 0
+
+--- stdout ---
+test_fixtures_are_labelled_synthetic_in_name_and_header (test_score_papers.FixtureLabelling.test_fixtures_are_labelled_synthetic_in_name_and_header) ... ok
+test_bad_header_is_an_input_error (test_score_papers.InvalidScores.test_bad_header_is_an_input_error) ... ok
+test_each_error_class_is_reported (test_score_papers.InvalidScores.test_each_error_class_is_reported) ... ok
+test_run_returns_one_and_does_not_write_summary (test_score_papers.InvalidScores.test_run_returns_one_and_does_not_write_summary) ... ok
+test_kappa_matches_hand_computation (test_score_papers.ValidScores.test_kappa_matches_hand_computation) ... ok
+test_kappa_undefined_when_one_identical_category (test_score_papers.ValidScores.test_kappa_undefined_when_one_identical_category) ... ok
+test_no_kappa_with_single_reviewer (test_score_papers.ValidScores.test_no_kappa_with_single_reviewer) ... ok
+test_output_is_deterministic (test_score_papers.ValidScores.test_output_is_deterministic) ... ok
+test_run_returns_zero_and_prints_report (test_score_papers.ValidScores.test_run_returns_zero_and_prints_report) ... ok
+test_synthetic_inputs_validate (test_score_papers.ValidScores.test_synthetic_inputs_validate) ... ok
+test_totals_match_hand_computation (test_score_papers.ValidScores.test_totals_match_hand_computation) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.037s
+
+OK

@@ -1,0 +1,5 @@
+# SYNTHETIC paper. Invented text for skill evaluation only. Not a real publication.
+
+Title: A Case Study on Desk-Checking and Variability Coverage
+
+Abstract: This case study evaluates feasibility and acceptance as separate questions for two parts of a QA process: variability-model creation and desk-checking. Desk-checking is a checklist-guided self-review before check-in, not a structured inspection. Variability modeling was feasible, but a different modeling language was needed to represent all important variants. Developers accepted both parts. The study reports that limit.

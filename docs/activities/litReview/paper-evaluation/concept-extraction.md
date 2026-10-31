@@ -1,6 +1,6 @@
 # QA concept extraction
 
-Sources and access levels are in `source-trace.md`. Paper A locators are section numbers, because the HTML view has no page numbers. Paper B locators are printed journal pages. Quotes are 25 words or fewer. In Paper B quotes, ligatures were restored by hand after text extraction, so check them against the PDF.
+Sources and access levels are in `source-trace.md`. Paper A locators are section numbers, because the HTML view has no page numbers. Paper B locators are printed journal pages. Quotes are 25 words or fewer. Paper B quotes were rechecked in this session against a `pdftotext` extract of the author reprint (temp only). The page 58 body after the standfirst was read.
 
 Paper A is a research plan. Its concepts describe gaps it identifies and methods it intends to use. None of them is a validated finding.
 
@@ -15,10 +15,10 @@ Paper A is a research plan. Its concepts describe gaps it identifies and methods
 | A-5 | QA tasks are to be made concrete as guidelines or checklists | §3 RQ2; §5 para 2 | "This QA process will then be formulated in greater detail, such as guidelines or checklists." |
 | A-6 | Planned model-performance report format | §5 para 2 | "including guidelines, checklists, and model performance reports format" |
 | A-7 | Research variables defined for each research question (independent and dependent) | §4.1 | "research variables are defined for each of the RQs" |
-| A-8 | Validation methods: Likert survey with ANOVA and correlation analysis, expert validation, and experiments with teams | §4.2 paras 2–4; Abstract | "The formulated QA model is then presented to experts for validation and feedback." |
-| A-9 | Comparison of a typical framework with the proposed one | §4.2 para 4 | "In the first experiment, the teams will use the typical QA framework." |
-| A-10 | Planned bias controls: at least two teams, and a time gap between the experiments | §4.2 para 4 | "There will be a sufficient time gap between the experiments to reduce bias." |
-| A-11 | Planned outcome: whether the fault report format helps stakeholders compare models | §4.2 para 4, item (4) | "whether the fault report format can aid stakeholders in comparing different ML models" |
+| A-8 | Validation methods: Likert survey with ANOVA and correlation analysis, expert validation, and experiments with teams | §4.2 paras 1–3; Abstract | "The formulated QA model is then presented to experts for validation and feedback." |
+| A-9 | Comparison of a typical framework with the proposed one | §4.2 para 3 | "In the first experiment, the teams will use the typical QA framework." |
+| A-10 | Planned bias controls: at least two teams, and a time gap between the experiments | §4.2 para 3 | "There will be a sufficient time gap between the experiments to reduce bias." |
+| A-11 | Planned outcome: whether the fault report format helps stakeholders compare models | §4.2 para 3, item (4) | "whether the fault report format can aid stakeholders in comparing different ML models" |
 | A-12 | Model-building factors that may vary, such as algorithm selection and hyperparameters | §5 para 1 | "data quality, algorithm selection methods, hyperparameter settings, parameter optimization, evaluation tools" |
 | A-13 | Practice gap: developers focus on accuracy and functional testing | §1 para 4 | "developers generally focus more on ML model accuracy and end-product functionality testing" |
 

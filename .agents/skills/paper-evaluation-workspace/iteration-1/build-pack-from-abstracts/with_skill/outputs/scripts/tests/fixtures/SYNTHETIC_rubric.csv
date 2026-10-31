@@ -1,0 +1,5 @@
+# SYNTHETIC fixture: invented criteria for testing score_papers.py only. Not derived from any paper.
+criterion_id,rubric_version,criterion,guiding_question,score_0_anchor,score_1_anchor,score_2_anchor,source_paper,source_location,support_level
+S01,synthetic-0,SYNTHETIC criterion one,SYNTHETIC question one?,SYNTHETIC zero,SYNTHETIC one,SYNTHETIC two,SYNTHETIC,SYNTHETIC,adapted
+S02,synthetic-0,SYNTHETIC criterion two,SYNTHETIC question two?,SYNTHETIC zero,SYNTHETIC one,SYNTHETIC two,SYNTHETIC,SYNTHETIC,full-text
+S03,synthetic-0,SYNTHETIC criterion three,SYNTHETIC question three? NA allowed if SYNTHETIC condition.,SYNTHETIC zero,SYNTHETIC one,SYNTHETIC two,SYNTHETIC,SYNTHETIC,abstract-only

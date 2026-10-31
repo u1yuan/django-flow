@@ -42,19 +42,19 @@
 | criterion_id | score | evidence location | quote (25 words or fewer) | note |
 | --- | --- | --- | --- | --- |
 | C01 | 1 | Title; §4.2 para 1; §1 para 4 | "This research will be conducted in three stages to address the research questions." / "Based on initial interviews with developers at five different companies in Indonesia" | Plan status is explicit. The §1 interview finding is reported with no method |
-| C02 | 1 | §4.1; §4.2 para 4 | "(3) whether the resulting ML models exhibit higher quality" | Outcomes are named but not operationalized |
-| C03 | 1 | §4.2 para 4 | "In the first experiment, the teams will use the typical QA framework." | The baseline is not specified |
+| C02 | 1 | §4.1; §4.2 para 3 | "(3) whether the resulting ML models exhibit higher quality" | Outcomes are named but not operationalized |
+| C03 | 1 | §4.2 para 3 | "In the first experiment, the teams will use the typical QA framework." | The baseline is not specified |
 | C04 | 0 | §3 RQ2; §5 para 2 | "This QA process will then be formulated in greater detail, such as guidelines or checklists." | The tasks are the planned output, not yet defined |
-| C05 | 1 | Abstract; §4.2 paras 2–4 | "The formulated QA model is then presented to experts for validation and feedback." | No expert count, selection, or criteria |
-| C06 | 1 | §4.2 para 4 | "The involvement of at least two teams aims to avoid bias." / "There will be a sufficient time gap between the experiments to reduce bias." | Fixed order (typical, then proposed) and an unspecified gap |
+| C05 | 1 | Abstract; §4.2 paras 1–3 | "The formulated QA model is then presented to experts for validation and feedback." | No expert count, selection, or criteria |
+| C06 | 1 | §4.2 para 3 | "The involvement of at least two teams aims to avoid bias." / "There will be a sufficient time gap between the experiments to reduce bias." | Fixed order (typical, then proposed) and an unspecified gap |
 | C07 | 2 | §4.1; §4.2 | "research variables are defined for each of the RQs" | Each RQ maps to variables and a stage |
-| C08 | 1 | §4.1; §4.2 para 4 | "(2) whether the proposed QA framework can minimize repetition in model training" | Feasibility and effort are not separate questions |
-| C09 | 0 | §4.2 para 4; §2 para 4 | "each individual will be asked to complete a survey regarding the use of the framework" | No constructs are named for A's own survey |
-| C10 | 1 | §4.2 paras 2, 4 | "each comprising individuals with skills appropriate to real project conditions" | No counts or selection criteria |
-| C11 | 1 | §4.2 paras 2, 4 | "The survey results will be analyzed using ANOVA and correlation analysis" | Stage 3 analysis is unspecified |
-| C12 | 1 | Abstract | "The data collection results will then be combined with the results of the literature study, which will then be validated by experts." | Not framed as a validity safeguard |
+| C08 | 1 | §4.1; §4.2 para 3 | "(2) whether the proposed QA framework can minimize repetition in model training" | Feasibility and effort are not separate questions |
+| C09 | 0 | §4.2 para 3; §2 para 4 | "each individual will be asked to complete a survey regarding the use of the framework" | No constructs are named for A's own survey |
+| C10 | 1 | §4.2 para 3 | "each comprising individuals with skills appropriate to real project conditions" | No counts or selection criteria |
+| C11 | 1 | §4.2 para 1; §4.2 para 3 | "The survey results will be analyzed using ANOVA and correlation analysis" | Stage 3 analysis is unspecified |
+| C12 | 1 | Abstract; §4.2 paras 1–3 | "The data collection results will then be combined with the results of the literature study, which will then be validated by experts." | Not framed as a validity safeguard |
 | C13 | 0 | §§1–5 searched | (none: absence finding) | No limitations or threats section |
-| C14 | 1 | Abstract; §4.2 para 4 | "Each team will conduct two model-building experiments based on predefined model requirements and provided datasets." | Domain is stated; datasets and settings are not |
+| C14 | 1 | Abstract; §4.2 para 3 | "Each team will conduct two model-building experiments based on predefined model requirements and provided datasets." | Domain is stated; datasets and settings are not |
 | C15 | 0 | §§1–5 searched | (none: absence finding) | No pre-use review of instruments |
 
 ## Total and open items

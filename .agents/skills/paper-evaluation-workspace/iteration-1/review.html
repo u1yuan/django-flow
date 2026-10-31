@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eval Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js" integrity="sha384-EnyY0/GSHQGSxSgMwaIPzSESbqoOLSexfnSMN2AP+39Ckmn92stwABZynq1JyzdT" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #faf9f5;
+      --surface: #ffffff;
+      --border: #e8e6dc;
+      --text: #141413;
+      --text-muted: #b0aea5;
+      --accent: #d97757;
+      --accent-hover: #c4613f;
+      --green: #788c5d;
+      --green-bg: #eef2e8;
+      --red: #c44;
+      --red-bg: #fceaea;
+      --header-bg: #141413;
+      --header-text: #faf9f5;
+      --radius: 6px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---- Header ---- */
+    .header {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .header .instructions {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: 0.25rem;
+    }
+    .header .progress {
+      font-size: 0.875rem;
+      opacity: 0.8;
+      text-align: right;
+    }
+
+    /* ---- Main content ---- */
+    .main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    /* ---- Sections ---- */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      flex-shrink: 0;
+    }
+    .section-header {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.75rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .section-body {
+      padding: 1rem;
+    }
+
+    /* ---- Config badge ---- */
+    .config-badge {
+      display: inline-block;
+      padding: 0.2rem 0.625rem;
+      border-radius: 9999px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-left: 0.75rem;
+      vertical-align: middle;
+    }
+    .config-badge.config-primary {
+      background: rgba(33, 150, 243, 0.12);
+      color: #1976d2;
+    }
+    .config-badge.config-baseline {
+      background: rgba(255, 193, 7, 0.15);
+      color: #f57f17;
+    }
+
+    /* ---- Prompt ---- */
+    .prompt-text {
+      white-space: pre-wrap;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* ---- Outputs ---- */
+    .output-file {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .output-file + .output-file {
+      margin-top: 1rem;
+    }
+    .output-file-header {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .output-file-header .dl-btn {
+      font-size: 0.7rem;
+      color: var(--accent);
+      text-decoration: none;
+      cursor: pointer;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+    .output-file-header .dl-btn:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    .output-file-content {
+      padding: 0.75rem;
+      overflow-x: auto;
+    }
+    .output-file-content pre {
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+    .output-file-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .output-file-content iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+    .output-file-content table {
+      border-collapse: collapse;
+      font-size: 0.8125rem;
+      width: 100%;
+    }
+    .output-file-content table td,
+    .output-file-content table th {
+      border: 1px solid var(--border);
+      padding: 0.375rem 0.5rem;
+      text-align: left;
+    }
+    .output-file-content table th {
+      background: var(--bg);
+      font-weight: 600;
+    }
+    .output-file-content .download-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.875rem;
+      cursor: pointer;
+    }
+    .output-file-content .download-link:hover {
+      background: var(--border);
+    }
+    .empty-state {
+      color: var(--text-muted);
+      font-style: italic;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    /* ---- Feedback ---- */
+    .prev-feedback {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.625rem 0.75rem;
+      margin-top: 0.75rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .prev-feedback-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.25rem;
+      color: var(--text-muted);
+    }
+    .feedback-textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.9375rem;
+      line-height: 1.5;
+      resize: vertical;
+      color: var(--text);
+    }
+    .feedback-textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+    .feedback-status {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      min-height: 1.1em;
+    }
+
+    /* ---- Grades (collapsible) ---- */
+    .grades-toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .grades-toggle:hover {
+      color: var(--accent);
+    }
+    .grades-toggle .arrow {
+      margin-right: 0.5rem;
+      transition: transform 0.15s;
+      font-size: 0.75rem;
+    }
+    .grades-toggle .arrow.open {
+      transform: rotate(90deg);
+    }
+    .grades-content {
+      display: none;
+      margin-top: 0.75rem;
+    }
+    .grades-content.open {
+      display: block;
+    }
+    .grades-summary {
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .grade-badge {
+      display: inline-block;
+      padding: 0.125rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .grade-pass { background: var(--green-bg); color: var(--green); }
+    .grade-fail { background: var(--red-bg); color: var(--red); }
+    .assertion-list {
+      list-style: none;
+    }
+    .assertion-item {
+      padding: 0.625rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8125rem;
+    }
+    .assertion-item:last-child { border-bottom: none; }
+    .assertion-status {
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+    .assertion-status.pass { color: var(--green); }
+    .assertion-status.fail { color: var(--red); }
+    .assertion-evidence {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+      padding-left: 1.5rem;
+    }
+
+    /* ---- View tabs ---- */
+    .view-tabs {
+      display: flex;
+      gap: 0;
+      padding: 0 2rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .view-tab {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.625rem 1.25rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--text-muted);
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s;
+    }
+    .view-tab:hover { color: var(--text); }
+    .view-tab.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .view-panel { display: none; }
+    .view-panel.active { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+
+    /* ---- Benchmark view ---- */
+    .benchmark-view {
+      padding: 1.5rem 2rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .benchmark-table {
+      border-collapse: collapse;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.8125rem;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .benchmark-table th, .benchmark-table td {
+      padding: 0.625rem 0.75rem;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+    .benchmark-table th {
+      font-family: 'Poppins', sans-serif;
+      background: var(--header-bg);
+      color: var(--header-text);
+      font-weight: 500;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .benchmark-table tr:hover { background: var(--bg); }
+    .benchmark-table tr.benchmark-row-with { background: rgba(33, 150, 243, 0.06); }
+    .benchmark-table tr.benchmark-row-without { background: rgba(255, 193, 7, 0.06); }
+    .benchmark-table tr.benchmark-row-with:hover { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-without:hover { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-table tr.benchmark-row-avg { font-weight: 600; border-top: 2px solid var(--border); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-with { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-without { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-delta-positive { color: var(--green); font-weight: 600; }
+    .benchmark-delta-negative { color: var(--red); font-weight: 600; }
+    .benchmark-notes {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+    .benchmark-notes h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+    }
+    .benchmark-notes ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+    }
+    .benchmark-notes li {
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      margin-bottom: 0.375rem;
+    }
+    .benchmark-empty {
+      color: var(--text-muted);
+      font-style: italic;
+      text-align: center;
+      padding: 3rem;
+    }
+
+    /* ---- Navigation ---- */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      flex-shrink: 0;
+    }
+    .nav-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: all 0.15s;
+    }
+    .nav-btn:hover:not(:disabled) {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .nav-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .done-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    .done-btn:hover {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .done-btn.ready {
+      border: none;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+    }
+    .done-btn.ready:hover {
+      background: var(--accent-hover);
+    }
+    /* ---- Done overlay ---- */
+    .done-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+    .done-overlay.visible {
+      display: flex;
+    }
+    .done-card {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 2rem 3rem;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+    }
+    .done-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .done-card p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .done-card .btn-row {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .done-card button {
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+    }
+    .done-card button:hover {
+      background: var(--bg);
+    }
+    /* ---- Toast ---- */
+    .toast {
+      position: fixed;
+      bottom: 5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 0.625rem 1.25rem;
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      z-index: 200;
+    }
+    .toast.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" style="height:100vh; display:flex; flex-direction:column;">
+    <div class="header">
+      <div>
+        <h1>Eval Review: <span id="skill-name"></span></h1>
+        <div class="instructions">Review each output and leave feedback below. Navigate with arrow keys or buttons. When done, copy feedback and paste into Claude Code.</div>
+      </div>
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <!-- View tabs (only shown when benchmark data exists) -->
+    <div class="view-tabs" id="view-tabs" style="display:none;">
+      <button class="view-tab active" onclick="switchView('outputs')">Outputs</button>
+      <button class="view-tab" onclick="switchView('benchmark')">Benchmark</button>
+    </div>
+
+    <!-- Outputs panel (qualitative review) -->
+    <div class="view-panel active" id="panel-outputs">
+    <div class="main">
+      <!-- Prompt -->
+      <div class="section">
+        <div class="section-header">Prompt <span class="config-badge" id="config-badge" style="display:none;"></span></div>
+        <div class="section-body">
+          <div class="prompt-text" id="prompt-text"></div>
+        </div>
+      </div>
+
+      <!-- Outputs -->
+      <div class="section">
+        <div class="section-header">Output</div>
+        <div class="section-body" id="outputs-body">
+          <div class="empty-state">No output files found</div>
+        </div>
+      </div>
+
+      <!-- Previous Output (collapsible) -->
+      <div class="section" id="prev-outputs-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="togglePrevOutputs()">
+            <span class="arrow" id="prev-outputs-arrow">&#9654;</span>
+            Previous Output
+          </div>
+        </div>
+        <div class="grades-content" id="prev-outputs-content"></div>
+      </div>
+
+      <!-- Grades (collapsible) -->
+      <div class="section" id="grades-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="toggleGrades()">
+            <span class="arrow" id="grades-arrow">&#9654;</span>
+            Formal Grades
+          </div>
+        </div>
+        <div class="grades-content" id="grades-content"></div>
+      </div>
+
+      <!-- Feedback -->
+      <div class="section">
+        <div class="section-header">Your Feedback</div>
+        <div class="section-body">
+          <textarea
+            class="feedback-textarea"
+            id="feedback"
+            placeholder="What do you think of this output? Any issues, suggestions, or things that look great?"
+          ></textarea>
+          <div class="feedback-status" id="feedback-status"></div>
+          <div class="prev-feedback" id="prev-feedback" style="display:none;">
+            <div class="prev-feedback-label">Previous feedback</div>
+            <div id="prev-feedback-text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav" id="outputs-nav">
+      <button class="nav-btn" id="prev-btn" onclick="navigate(-1)">&#8592; Previous</button>
+      <button class="done-btn" id="done-btn" onclick="showDoneDialog()">Submit All Reviews</button>
+      <button class="nav-btn" id="next-btn" onclick="navigate(1)">Next &#8594;</button>
+    </div>
+    </div><!-- end panel-outputs -->
+
+    <!-- Benchmark panel (quantitative stats) -->
+    <div class="view-panel" id="panel-benchmark">
+      <div class="benchmark-view" id="benchmark-content">
+        <div class="benchmark-empty">No benchmark data available. Run a benchmark to see quantitative results here.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Done overlay -->
+  <div class="done-overlay" id="done-overlay">
+    <div class="done-card">
+      <h2>Review Complete</h2>
+      <p>Your feedback has been saved. Go back to your Claude Code session and tell Claude you're done reviewing.</p>
+      <div class="btn-row">
+        <button onclick="closeDoneDialog()">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ---- Embedded data (injected by generate_review.py) ----
+    const EMBEDDED_DATA = {"skill_name": "paper-evaluation", "runs": [{"id": "build-pack-from-abstracts-with_skill", "prompt": "Build a paper-evaluation pack from two SYNTHETIC abstracts. Criteria must trace to those texts. Do not invent a second reviewer or call a plan validated.", "eval_id": 1, "outputs": [{"name": ".gitignore", "type": "binary", "mime": "application/octet-stream", "data_uri": "data:application/octet-stream;base64,X19weWNhY2hlX18vCioucHljCioucGRmCg=="}, {"name": "AI_INTERACTION_LOG.md", "type": "text", "content": "# AI interaction log\n\nCourse use: Thesis 1 (CS0025). AI-assisted work. The group remains responsible for checking accuracy.\n\n| Field | Value |\n| --- | --- |\n| Date | 2026-10-31 |\n| Tool | Cursor agent, local file read, local Python |\n| Reviewer label used in scores | `ai-draft` |\n| Human reviewer | not assigned |\n| Web retrieval | not used (brief forbid it) |\n| Package installs | none |\n| Git commit or push | none |\n\n## Brief (six fields)\n\n```text\nResearch question or topic:\n  Build a paper-evaluation pack whose criteria come only from two SYNTHETIC\n  invented abstracts (PLAN and CASE).\nRequested output:\n  Full pack plus run-report.txt in the named output folder.\nInput locations:\n  .agents/skills/paper-evaluation/evals/files/SYNTHETIC_paper_plan.txt\n  .agents/skills/paper-evaluation/evals/files/SYNTHETIC_paper_casestudy.txt\nConstraints:\n  Do not retrieve the web. Do not save PDFs. Do not git commit or push.\n  Python standard library only. Write only in the named output folder.\n  Reviewer label ai-draft. Do not invent a second reviewer.\n  Never call the PLAN framework validated.\n  Tag each criterion full-text, abstract-only, or adapted.\nAcceptance criteria:\n  Required files present. Criteria trace to the two abstracts.\n  Support levels are the three allowed tags. PLAN not described as validated.\n  No PDF. scores.csv reviewers are only ai-draft. Scorer and tests pass.\n  At least one criterion on performance reporting or model comparison.\n  At least one criterion on feasibility and acceptance as separate questions.\nData handling restrictions:\n  SYNTHETIC invented text only. Quotes 25 words or fewer. No invented DOI.\n```\n\nUnavailable inputs: real bibliographic metadata, full-text body, a second reviewer, and any facility or empirical dataset.\n\n## Prompt used\n\nThe parent task, summarized:\n\n> Read `.agents/skills/paper-evaluation/SKILL.md` and `references/` in full. Build a pack whose criteria come only from the two SYNTHETIC papers. Do not retrieve the web, save PDFs, or git commit or push. Python standard library only. Reviewer `ai-draft`. Include README, source-trace.md, rubric.csv, desk-check-checklist.md, templates/evaluation-template.md, scores/scores.csv, scripts/score_papers.py, scripts/tests with a SYNTHETIC fixture, and AI_INTERACTION_LOG.md. Score both papers, run the scorer and tests, and save `run-report.txt`. Do not invent a second reviewer. Never call the PLAN framework validated.\n\n`$evidence-research` and `$citation-management` were not used for retrieval. The brief forbids the web, and the files invent no DOI.\n\n## What the AI did and produced\n\n| Step | Action | Output |\n| --- | --- | --- |\n| 1 | Read both local SYNTHETIC files. No web retrieval | `source-trace.md` |\n| 2 | Extracted 7 PLAN concepts and 8 CASE concepts. Confirmed brief seeds against those sentences. Discarded \"PLAN framework validated\" and \"desk-checking is a structured inspection\" | `concept-extraction.md` |\n| 3 | Wrote 8 criteria with observable 0/1/2 anchors | `rubric.csv` and the rest of the pack |\n| 3 | Copied `scripts/score_papers.py` and the skill's SYNTHETIC test fixtures | `scripts/` |\n| 4 | Desk-checked and pilot-scored both papers as `ai-draft` only | `evaluations/`, `scores/scores.csv` |\n| 5 | Ran the scorer and unittest discover from the pack folder | `scores/summary.csv`, `run-report.txt` |\n| 6 | `$research-quality-review` against the brief and the two abstracts; one revision pass if needed | See QA below |\n\n### Pilot run\n\nRecorded in `run-report.txt` after the scorer and tests. Expected totals if validation passes:\n\n```text\nSYN-PLAN | ai-draft | v1.0.0 | 3/8 | scored=4 NA=4\nSYN-CASE | ai-draft | v1.0.0 | 10/16 | scored=8 NA=0\nCohen's kappa: not computed (no paper has scores from two reviewers).\n```\n\nHand check of totals: SYN-PLAN scores 2, 0, 0, 1 plus four NA \u00e2\u2020\u2019 3 points, max 8. SYN-CASE scores 2, 0, 1, 1, 2, 2, 1, 1 \u00e2\u2020\u2019 10 points, max 16. QA lowered SYN-CASE C08 from 2 to 1 because acceptance is not qualified by the reported limit.\n\n## What a human must verify\n\n1. **Source files.** Confirm the two SYNTHETIC `.txt` files still match the quotes in `concept-extraction.md` and `evaluations/`.\n2. **Every `ai-draft` score.** All 16 rows are drafts. Open items: SYN-PLAN C03 (0 vs 1); SYN-CASE C08 (kept at 1 after QA).\n3. **A second reviewer.** No second reviewer exists. Kappa was not computed. Do not invent a second sheet. A human should score both papers without reading `evaluations/*_ai-draft.md` first. Meaningful kappa needs more than two papers.\n4. **Circularity.** The scored papers are the rubric sources. Totals test consistency only.\n5. **PLAN status.** Confirm no pack sentence calls the planned guidelines a validated framework.\n\n## QA\n\n`$research-quality-review` against the brief, the two SYNTHETIC abstracts, `rubric.csv`, `scores/scores.csv`, `scores/summary.csv`, and `run-report.txt`. Citation-management was not used: there is no real DOI or publisher record. Totals were recomputed by hand. Kappa was not computed (one reviewer).\n\n**Verdict after the first pass: needs revision.** One material score error.\n\n| Severity | Artifact | Evidence | Correction |\n| --- | --- | --- | --- |\n| Material | SYN-CASE C08 = 2 | Score-2 requires each finding to be qualified by the method limit. Abstract: feasibility is qualified (\"was feasible, but\u00e2\u20ac\u00a6\"); \"Developers accepted both parts\" is not | Changed to 1; reran scorer. New total 10/16 |\n| Minor | `run-report.txt` | First capture included PowerShell NativeCommandError lines from unittest stderr | Rewrote the report from a Python subprocess run |\n| Minor | `rubric.csv` C06 | First draft left commas unquoted in the 0/1/2 anchors | Quoted before the first passing scorer run |\n\nFollow-up QA after those edits: **pass with limitations.**\n\n| Finding | Status |\n| --- | --- |\n| SYN-CASE C08 overscore | Resolved. Sheet and summary now 1 and 10/16 |\n| run-report noise | Resolved. File shows VALIDATION PASSED, 3/8 and 10/16, kappa not computed, 11 tests OK |\n| PLAN described as validated | Resolved. Pack sentences deny that claim |\n| Second-reviewer sheet invented | Resolved. Reviewer column is only `ai-draft` |\n| PDF written | Resolved. None present |\n| Abstract-only sources; no body locators | Unresolved by design. Brief forbade web retrieval |\n| No second reviewer; kappa not computed | Unresolved. A human reviewer is required |\n| Circularity: scored papers are the rubric sources | Unresolved. Totals test consistency only |\n| SYN-PLAN C03 (0 vs 1) | Unresolved. Human judgment |\n\nAcceptance check: C02 traces to model-performance reporting for comparison (SYN-PLAN Abstract). C05 traces to feasibility and acceptance as separate questions (SYN-CASE Abstract). Support levels are `adapted` (C01) and `abstract-only` (C02\u00e2\u20ac\u201cC08). `full-text` is unused.\n"}, {"name": "concept-extraction.md", "type": "text", "content": "# QA concept extraction\n\nSources and access levels are in `source-trace.md`. Both papers are SYNTHETIC invented abstracts. Locators are Title or Abstract. Quotes are 25 words or fewer. SYN-PLAN is a research plan. None of its concepts is a completed finding, and its planned guidelines are not a validated framework.\n\n## SYN-PLAN: A Quality-Task Checklist for Model Comparison \u00e2\u20ac\u201d A Research Plan\n\n| ID | Concept | Location | Short quote |\n| --- | --- | --- | --- |\n| P-1 | The file labels the work a research plan and reports no results | Title; Abstract | \"This research PLAN will develop quality-assurance guidelines for the model-building phase.\" |\n| P-2 | Intended output is QA guidelines for the model-building phase | Abstract | \"quality-assurance guidelines for the model-building phase\" |\n| P-3 | Gap: no QA guidelines | Abstract | \"Three gaps remain: no QA guidelines\" |\n| P-4 | Gap: quality-task processes at each phase are unclear | Abstract | \"unclear quality-task processes at each phase\" |\n| P-5 | Gap: reporting standards for model performance are insufficient for model comparison | Abstract | \"insufficient reporting standards for model performance needed for model comparison\" |\n| P-6 | Planned methods: literature study, expert validation, and a two-team pilot | Abstract | \"a literature study, expert validation, and a pilot project with two development teams\" |\n| P-7 | No results are reported | Abstract | \"No results are reported.\" |\n\n## SYN-CASE: A Case Study on Desk-Checking and Variability Coverage\n\n| ID | Concept | Location | Short quote |\n| --- | --- | --- | --- |\n| C-1 | The file labels the work a completed case study | Title; Abstract | \"This case study evaluates feasibility and acceptance as separate questions\" |\n| C-2 | Feasibility and acceptance are separate questions | Abstract | \"evaluates feasibility and acceptance as separate questions\" |\n| C-3 | The QA process has two parts: variability-model creation and desk-checking | Abstract | \"two parts of a QA process: variability-model creation and desk-checking\" |\n| C-4 | Desk-checking is a checklist-guided self-review before check-in, not a structured inspection | Abstract | \"Desk-checking is a checklist-guided self-review before check-in, not a structured inspection.\" |\n| C-5 | Variability modeling was feasible | Abstract | \"Variability modeling was feasible\" |\n| C-6 | A different modeling language was needed to represent all important variants | Abstract | \"a different modeling language was needed to represent all important variants\" |\n| C-7 | Developers accepted both parts | Abstract | \"Developers accepted both parts.\" |\n| C-8 | The study reports that coverage limit | Abstract | \"The study reports that limit.\" |\n\n## Candidate seeds from the brief: confirmed or discarded\n\n| Seed | Decision | Basis |\n| --- | --- | --- |\n| PLAN: no QA guidelines | **Confirmed** as a stated gap, not as a result | P-3 |\n| PLAN: unclear quality-task processes at each phase | **Confirmed** as a stated gap | P-4 |\n| PLAN: insufficient performance-reporting standards for model comparison | **Confirmed** as a stated gap | P-5 |\n| PLAN: literature study, expert validation, two-team pilot | **Confirmed** as planned methods. Not treated as completed validation | P-6, P-7 |\n| PLAN framework is validated | **Discarded.** The abstract reports no results. The planned guidelines are not described as validated | P-1, P-7 |\n| CASE: feasibility and acceptance as separate questions | **Confirmed** | C-2, C-5, C-7 |\n| CASE: desk-checking is a structured inspection | **Discarded.** The abstract states the opposite | C-4 |\n| CASE: desk-checking is a checklist-guided self-review before check-in | **Confirmed** | C-4 |\n| CASE: variability modeling was feasible but needed another language for important variants | **Confirmed** | C-5, C-6 |\n| CASE: developers accepted both parts | **Confirmed** | C-7 |\n| CASE: the study reports that limit | **Confirmed** | C-8 |\n\n## Design principle taken from SYN-CASE\n\nC-4 defines desk-checking as a checklist-guided self-review. `desk-check-checklist.md` uses that idea as a pre-scoring self-review. That use is an adaptation: the source sentence describes a QA process part, not a paper-evaluation workflow.\n\nScore anchors (0/1/2) are operational wording written for this pack. They are not quoted from either abstract.\n"}, {"name": "desk-check-checklist.md", "type": "text", "content": "# Desk-check checklist (one reviewer, before scoring)\n\nComplete this pass for each paper before entering any score. Record the result in the Desk-check section of that paper's evaluation file.\n\n**Origin.** The pass adapts the SYN-CASE abstract: desk-checking is a checklist-guided self-review before check-in, not a structured inspection. Using that sentence as a paper-evaluation step is an adaptation. Each item states the minimum that counts as done.\n\n| # | Item | Minimum requirement to tick |\n| --- | --- | --- |\n| 1 | **Identity.** Title and any bibliographic fields match the copy used | The copy is named. Unavailable authors, venue, pages, or DOI are written as unavailable. None of those fields is invented |\n| 2 | **Copy used.** Local SYNTHETIC file, publisher, reprint, or preprint | Path or URL and access date recorded |\n| 3 | **Access level.** Full text or abstract only | Recorded. If abstract only, every criterion the abstract does not address is scored from that abstract or marked NA where the guiding question allows it |\n| 4 | **Locator scheme.** Pages, sections, Title, or Abstract | Chosen and stated. Page numbers that cannot be seen are `[unverified]`, never estimated |\n| 5 | **Full read without scoring** | Every heading in the copy is listed once |\n| 6 | **Study status.** Plan, protocol, or completed study | Decided from the title, abstract, and verb tense, with the location noted. A plan is not treated as validated work |\n| 7 | **Rubric version** | The `rubric_version` from `rubric.csv` is copied into the evaluation file and the score rows |\n| 8 | **Evidence search for each criterion** | For each criterion, either a location or the parts searched without finding evidence (for example, \"searched Abstract: none\") |\n| 9 | **Quotes** | Copied verbatim, 25 words or fewer, each with a locator |\n| 10 | **NA decisions** | NA only where the guiding question contains `NA allowed if`, with the condition restated in the note |\n| 11 | **Circularity.** Is this paper a source of the rubric? | If yes, the evaluation says the scores test rubric consistency only |\n| 12 | **Integrity** | No PDF or full text saved. No claim that a plan's framework was validated. No invented page numbers, scores, citations, or second reviewer |\n\nAfter the checklist is complete, score each criterion with `rubric.csv`, enter the rows in `scores/scores.csv`, and run the script (see `README.md`).\n"}, {"name": "README.md", "type": "text", "content": "# Paper-evaluation pack (SYNTHETIC sources)\n\nTrack: shared. This pack scores research papers with criteria taken only from two invented SYNTHETIC abstracts supplied in the brief:\n\n- **SYN-PLAN:** *A Quality-Task Checklist for Model Comparison \u00e2\u20ac\u201d A Research Plan.* Local file `evals/files/SYNTHETIC_paper_plan.txt`. A research plan with no results. Its planned quality-assurance guidelines are not a validated framework.\n- **SYN-CASE:** *A Case Study on Desk-Checking and Variability Coverage.* Local file `evals/files/SYNTHETIC_paper_casestudy.txt`. A completed case study abstract.\n\nNo PDF or full-text body is stored here. Quotes are 25 words or fewer. DOI, authors, venue, and pages are unavailable; none were invented.\n\nThe papers being scored are also the rubric's sources. Totals test consistency of the rubric against those abstracts. They are not independent evidence that the rubric is valid, and they are not a quality ranking of the two papers.\n\n## Files\n\n| File | Role |\n| --- | --- |\n| `source-trace.md` | Local paths, access date, abstract-only access, and locator limits |\n| `concept-extraction.md` | QA concepts from each abstract, with confirmed or discarded seeds |\n| `rubric.csv` | 8 criteria, scored 0\u00e2\u20ac\u201c2 (`rubric_version` 1.0.0) |\n| `desk-check-checklist.md` | Single-reviewer pass to complete before scoring |\n| `templates/evaluation-template.md` | Per-paper evaluation form |\n| `evaluations/` | Completed forms: `SYN-PLAN_ai-draft.md` and `SYN-CASE_ai-draft.md` |\n| `scores/scores.csv` | One row per paper, reviewer, and criterion |\n| `scores/summary.csv` | Written by the scorer. Do not edit by hand |\n| `scripts/score_papers.py` | Copied from the paper-evaluation skill. Standard library only |\n| `scripts/tests/` | Unit tests. Fixtures are named and headed `SYNTHETIC` |\n| `AI_INTERACTION_LOG.md` | Prompts, outputs, QA, and the human verification list |\n| `run-report.txt` | Scorer stdout and unittest output from this pack folder |\n\n## Run order\n\n1. **Retrieve.** For this pack the sources are the two local SYNTHETIC files. Record path, access date, and access level in the evaluation form. An abstract supports only what it states.\n2. **Desk-check.** Work through `desk-check-checklist.md` and record the results in the form.\n3. **Score.** Copy `templates/evaluation-template.md` to `evaluations/<paper_id>_<reviewer>.md`. Score every criterion using `rubric.csv`. Keep a location and a quote of 25 words or fewer.\n4. **Enter.** Add one row per criterion to `scores/scores.csv`. The script rejects incomplete sheets.\n5. **Run the script and tests** from this folder:\n\n   ```text\n   python -B scripts/score_papers.py\n   python -B -m unittest discover -s scripts/tests -v\n   ```\n\n   `-B` stops Python writing `__pycache__`. A failing run is a failed result. Do not edit `summary.csv` by hand.\n\n## Inputs and outputs\n\n- **Inputs:** `rubric.csv` and `scores/scores.csv`. The header must match the script exactly.\n- **Validation** (exit 1, summary not written) catches unknown IDs, out-of-range scores, missing `evidence_location`, NA without `NA allowed if` or without a note, a version mismatch, duplicates, conflicting DOIs, and a missing criterion on a sheet.\n- **Outputs:** stdout and `scores/summary.csv`.\n  - `total` rows: points, max points, and NA count per paper and reviewer. NA criteria are dropped from `max_points`.\n  - `kappa` rows: unweighted Cohen's kappa per criterion for each pair of reviewers who scored the same papers. Labels `0`, `1`, `2`, and `NA` are categories.\n- **Determinism:** sorted rows, four decimal places, no clock.\n- **Kappa status:** `undefined` when expected agreement is 1; `unstable` when reviewers share fewer than two papers.\n\nWith one reviewer, kappa is not computed. A second independent reviewer is required before kappa is meaningful. Kappa on a single shared paper is unstable.\n\n## How a new reviewer reproduces a score\n\n1. Use `rubric_version` 1.0.0. If anchors change, bump the version and rescore. Do not mix versions.\n2. Read the same local copies listed in `source-trace.md`. Use Title and Abstract as locators.\n3. Complete the desk-check, then score every criterion **without reading** `evaluations/*_ai-draft.md` or `scores/scores.csv`.\n4. Add rows under your own reviewer label. Run the script. Kappa rows for your pair with `ai-draft` appear only after that second sheet exists.\n5. To reproduce one score, open the recorded location, read the quote in context, and apply the anchor's minimum condition.\n\nDo not invent a second reviewer sheet to obtain kappa.\n\n## Support levels\n\n- **full-text:** a body passage was opened. **Not used** (0). Both sources are abstracts only.\n- **abstract-only:** the concept is a sentence in the supplied Abstract or Title.\n- **adapted:** the criterion extends a stated label to a scoring rule the source does not state.\n\nThe 0/1/2 anchors are operational wording in every case.\n\n| Support level | Criteria | Count |\n| --- | --- | --- |\n| full-text | none | 0 |\n| abstract-only | C02\u00e2\u20ac\u201cC08 | 7 |\n| adapted | C01 | 1 |\n\n## Pilot (reviewer `ai-draft`, 2026-10-31)\n\nSee `run-report.txt` and `scores/summary.csv` for the machine totals after the scorer run. Expected from the entered sheet:\n\n| Paper | Total | Note |\n| --- | --- | --- |\n| SYN-PLAN | 3/8 | Plan abstract. Four NA criteria. Planned guidelines are not treated as validated |\n| SYN-CASE | 10/16 | Completed case-study abstract. No NA |\n\n**Interpretation limit.** These totals test that the rubric can be applied to its own source abstracts. They do not validate the SYN-PLAN framework, and they do not rank the two papers. SYN-CASE scores higher in part because several criteria were taken from its abstract. SYN-PLAN scores lower in part because it is a plan and several criteria reward reported evidence a plan cannot yet have.\n\n## Open items for a human\n\nSee `AI_INTERACTION_LOG.md` \u00c2\u00a7 \"What a human must verify\".\n"}, {"name": "rubric.csv", "type": "text", "content": "criterion_id,rubric_version,criterion,guiding_question,score_0_anchor,score_1_anchor,score_2_anchor,source_paper,source_location,support_level\nC01,1.0.0,Study status is labelled and claims stay inside it,\"Does the paper state whether it reports a plan or completed empirical work, and do its claims stay inside that status?\",\"Status is not stated, or planned or untested work is presented as a completed result or as validated.\",\"Status is stated, but at least one claim goes beyond it (for example a future method described as shown).\",\"Status is stated in the title or abstract; every result claim is backed by reported work; and planned work is labelled as planned.\",SYN-PLAN; SYN-CASE,PLAN: Title; Abstract. CASE: Title; Abstract,adapted\nC02,1.0.0,Model-performance reporting is specified for comparison,\"Are model-performance outcomes named and specified (or, for a plan, specified for later reporting) in a form another study could use for model comparison?\",\"No model-performance metric, unit, or report format is named.\",\"A metric or report need is named, but the definition, unit, scale, or per-condition values (or planned format) are missing.\",\"Every named model-performance metric has a definition and unit or scale, and values or a planned comparable report format are given.\",SYN-PLAN,Abstract,abstract-only\nC03,1.0.0,Quality-task process is defined for each named phase,\"If the paper proposes or applies a QA or quality process, does it define the quality task at each named phase? NA allowed if no QA or quality process is proposed or applied.\",\"Phases or quality tasks are not defined, or are named only as goals.\",\"At least one phase or process part is named, but the task, timing, role, or output is missing for a named part.\",\"Every named phase or process part states its task, timing or trigger, responsible role, and output.\",SYN-PLAN,Abstract,abstract-only\nC04,1.0.0,Evaluation or validation method names who is involved,\"Is an evaluation or validation method named, and is the participant or sample group stated?\",No evaluation or validation method is named.,\"A method is named, but the procedure or the participant count or selection is missing.\",\"The method, procedure, and participant or sample group (role and count or selection) are all stated.\",SYN-PLAN; SYN-CASE,PLAN: Abstract. CASE: Abstract,abstract-only\nC05,1.0.0,Feasibility and acceptance are separate questions,\"When a method or process is evaluated, are feasibility and acceptance posed as separate questions with separate evidence? NA allowed if the paper does not evaluate a method or process intended for adoption.\",\"Neither question is assessed, or both are merged into one works-well judgment.\",\"One of the two is assessed separately, or both are named but share undifferentiated evidence.\",\"Both are posed as distinct questions, and each has its own evidence and conclusion.\",SYN-CASE,Abstract,abstract-only\nC06,1.0.0,Desk-checking is a checklist-guided self-review,\"If desk-checking or an author self-review is discussed, is it defined as a checklist-guided self-review rather than a structured inspection? NA allowed if the paper does not discuss desk-checking or a review process.\",\"A review process is discussed but not defined, or it is defined as a structured inspection.\",\"The process is called desk-checking or self-review, but the checklist or the before-check-in timing is missing.\",\"The text defines desk-checking as a checklist-guided self-review before check-in and states that it is not a structured inspection.\",SYN-CASE,Abstract,abstract-only\nC07,1.0.0,Important variants or configurations are covered or excluded,\"Does the paper state which variants or configurations its results cover, and that at least one important variant is not covered? NA allowed if the paper claims no results and names no variants or configurations.\",No statement of covered or excluded variants or configurations.,\"A coverage limit is named at a general level, but covered variants are not enumerated.\",\"Covered variants or configurations are enumerated, and at least one important uncovered variant is named.\",SYN-CASE,Abstract,abstract-only\nC08,1.0.0,A limit of the method is reported and used to qualify findings,Does the paper report a limit of its own method and qualify its conclusions by that limit? NA allowed if the paper reports no executed method.,No method limit is reported and conclusions are unqualified.,\"A limit is reported, but at least one finding is not qualified by it.\",\"A method limit is reported, and each finding is qualified by that limit.\",SYN-CASE,Abstract,abstract-only\n"}, {"name": "run-report.txt", "type": "text", "content": "V\u0000A\u0000L\u0000I\u0000D\u0000A\u0000T\u0000I\u0000O\u0000N\u0000 \u0000P\u0000A\u0000S\u0000S\u0000E\u0000D\u0000:\u0000 \u00008\u0000 \u0000c\u0000r\u0000i\u0000t\u0000e\u0000r\u0000i\u0000a\u0000,\u0000 \u00001\u00006\u0000 \u0000s\u0000c\u0000o\u0000r\u0000e\u0000 \u0000r\u0000o\u0000w\u0000s\u0000.\u0000\n\u0000P\u0000e\u0000r\u0000-\u0000p\u0000a\u0000p\u0000e\u0000r\u0000 \u0000t\u0000o\u0000t\u0000a\u0000l\u0000s\u0000 \u0000(\u0000N\u0000A\u0000 \u0000c\u0000r\u0000i\u0000t\u0000e\u0000r\u0000i\u0000a\u0000 \u0000e\u0000x\u0000c\u0000l\u0000u\u0000d\u0000e\u0000d\u0000 \u0000f\u0000r\u0000o\u0000m\u0000 \u0000m\u0000a\u0000x\u0000_\u0000p\u0000o\u0000i\u0000n\u0000t\u0000s\u0000)\u0000:\u0000\n\u0000 \u0000 \u0000S\u0000Y\u0000N\u0000-\u0000C\u0000A\u0000S\u0000E\u0000 \u0000|\u0000 \u0000a\u0000i\u0000-\u0000d\u0000r\u0000a\u0000f\u0000t\u0000 \u0000|\u0000 \u0000v\u00001\u0000.\u00000\u0000.\u00000\u0000 \u0000|\u0000 \u00001\u00000\u0000/\u00001\u00006\u0000 \u0000|\u0000 \u0000s\u0000c\u0000o\u0000r\u0000e\u0000d\u0000=\u00008\u0000 \u0000N\u0000A\u0000=\u00000\u0000\n\u0000 \u0000 \u0000S\u0000Y\u0000N\u0000-\u0000P\u0000L\u0000A\u0000N\u0000 \u0000|\u0000 \u0000a\u0000i\u0000-\u0000d\u0000r\u0000a\u0000f\u0000t\u0000 \u0000|\u0000 \u0000v\u00001\u0000.\u00000\u0000.\u00000\u0000 \u0000|\u0000 \u00003\u0000/\u00008\u0000 \u0000|\u0000 \u0000s\u0000c\u0000o\u0000r\u0000e\u0000d\u0000=\u00004\u0000 \u0000N\u0000A\u0000=\u00004\u0000\n\u0000C\u0000o\u0000h\u0000e\u0000n\u0000'\u0000s\u0000 \u0000k\u0000a\u0000p\u0000p\u0000a\u0000:\u0000 \u0000n\u0000o\u0000t\u0000 \u0000c\u0000o\u0000m\u0000p\u0000u\u0000t\u0000e\u0000d\u0000 \u0000(\u0000n\u0000o\u0000 \u0000p\u0000a\u0000p\u0000e\u0000r\u0000 \u0000h\u0000a\u0000s\u0000 \u0000s\u0000c\u0000o\u0000r\u0000e\u0000s\u0000 \u0000f\u0000r\u0000o\u0000m\u0000 \u0000t\u0000w\u0000o\u0000 \u0000r\u0000e\u0000v\u0000i\u0000e\u0000w\u0000e\u0000r\u0000s\u0000)\u0000.\u0000\n\u0000S\u0000u\u0000m\u0000m\u0000a\u0000r\u0000y\u0000 \u0000w\u0000r\u0000i\u0000t\u0000t\u0000e\u0000n\u0000:\u0000 \u0000s\u0000c\u0000o\u0000r\u0000e\u0000s\u0000/\u0000s\u0000u\u0000m\u0000m\u0000a\u0000r\u0000y\u0000.\u0000c\u0000s\u0000v\u0000\n\u0000S\u0000C\u0000O\u0000R\u0000E\u0000R\u0000_\u0000E\u0000X\u0000I\u0000T\u0000=\u00000\u0000\n\u0000\n\u0000=\u0000=\u0000=\u0000=\u0000=\u0000 \u0000U\u0000N\u0000I\u0000T\u0000 \u0000T\u0000E\u0000S\u0000T\u0000S\u0000 \u0000=\u0000=\u0000=\u0000=\u0000=\u0000\n\u0000t\u0000e\u0000s\u0000t\u0000_\u0000f\u0000i\u0000x\u0000t\u0000u\u0000r\u0000e\u0000s\u0000_\u0000a\u0000r\u0000e\u0000_\u0000l\u0000a\u0000b\u0000e\u0000l\u0000l\u0000e\u0000d\u0000_\u0000s\u0000y\u0000n\u0000t\u0000h\u0000e\u0000t\u0000i\u0000c\u0000_\u0000i\u0000n\u0000_\u0000n\u0000a\u0000m\u0000e\u0000_\u0000a\u0000n\u0000d\u0000_\u0000h\u0000e\u0000a\u0000d\u0000e\u0000r\u0000 \u0000(\u0000t\u0000e\u0000s\u0000t\u0000_\u0000s\u0000c\u0000o\u0000r\u0000e\u0000_\u0000p\u0000a\u0000p\u0000e\u0000r\u0000s\u0000.\u0000F\u0000i\u0000x\u0000t\u0000u\u0000r\u0000e\u0000L\u0000a\u0000b\u0000e\u0000l\u0000l\u0000i\u0000n\u0000g\u0000.\u0000t\u0000e\u0000s\u0000t\u0000_\u0000f\u0000i\u0000x\u0000t\u0000u\u0000r\u0000e\u0000s\u0000_\u0000a\u0000r\u0000e\u0000_\u0000l\u0000a\u0000b\u0000e\u0000l\u0000l\u0000e\u0000d\u0000_\u0000s\u0000y\u0000n\u0000t\u0000h\u0000e\u0000t\u0000i\u0000c\u0000_\u0000i\u0000n\u0000_\u0000n\u0000a\u0000m\u0000e\u0000_\u0000a\u0000n\u0000d\u0000_\u0000h\u0000e\u0000a\u0000d\u0000e\u0000r\u0000)\u0000 \u0000.\u0000.\u0000.\u0000 \u0000o\u0000k\u0000\n\u0000t\u0000e\u0000s\u0000t\u0000_\u0000b\u0000a\u0000d\u0000_\u0000h\u0000e\u0000a\u0000d\u0000e\u0000r\u0000_\u0000i\u0000s\u0000_\u0000a\u0000n\u0000_\u0000i\u0000n\u0000p\u0000u\u0000t\u0000_\u0000e\u0000r\u0000r\u0000o\u0000r\u0000 \u0000(\u0000t\u0000e\u0000s\u0000t\u0000_\u0000s\u0000c\u0000o\u0000r\u0000e\u0000_\u0000p\u0000a\u0000p\u0000e\u0000r\u0000s\u0000.\u0000I\u0000n\u0000v\u0000a\u0000l\u0000i\u0000d\u0000S\u0000c\u0000o\u0000r\u0000e\u0000s\u0000.\u0000t\u0000e\u0000s\u0000t\u0000_\u0000b\u0000a\u0000d\u0000_\u0000h\u0000e\u0000a\u0000d\u0000e\u0000r\u0000_\u0000i\u0000s\u0000_\u0000a\u0000n\u0000_\u0000i\u0000n\u0000p\u0000u\u0000t\u0000_\u0000e\u0000r\u0000r\u0000o\u0000r\u0000)\u0000 \u0000.\u0000.\u0000.\u0000 \u0000o\u0000k\u0000\n\u0000t\u0000e\u0000s\u0000t\u0000_\u0000e\u0000a\u0000c\u0000h\u0000_\u0000e\u0000r\u0000r\u0000o\u0000r\u0000_\u0000c\u0000l\u0000a\u0000s\u0000s\u0000_\u0000i\u0000s\u0000_\u0000r\u0000e\u0000p\u0000o\u0000r\u0000t\u0000e\u0000d\u0000 \u0000(\u0000t\u0000e\u0000s\u0000t\u0000_\u0000s\u0000c\u0000o\u0000r\u0000e\u0000_\u0000p\u0000a\u0000p\u0000e\u0000r\u0000s\u0000.\u0000I\u0000n\u0000v\u0000a\u0000l\u0000i\u0000d\u0000S\u0000c\u0000o\u0000r\u0000e\u0000s\u0000.\u0000t\u0000e\u0000s\u0000t\u0000_\u0000e\u0000a\u0000c\u0000h\u0000_\u0000e\u0000r\u0000r\u0000o\u0000r\u0000_\u0000c\u0000l\u0000a\u0000s\u0000s\u0000_\u0000i\u0000s\u0000_\u0000r\u0000e\u0000p\u0000o\u0000r\u0000t\u0000e\u0000d\u0000)\u0000 \u0000.\u0000.\u0000.\u0000 \u0000o\u0000k\u0000\n\u0000t\u0000e\u0000s\u0000t\u0000_\u0000r\u0000u\u0000n\u0000_\u0000r\u0000e\u0000t\u0000u\u0000r\u0000n\u0000s\u0000_\u0000o\u0000n\u0000e\u0000_\u0000a\u0000n\u0000d\u0000_\u0000d\u0000o\u0000e\u0000s\u0000_\u0000n\u0000o\u0000t\u0000_\u0000w\u0000r\u0000i\u0000t\u0000e\u0000_\u0000s\u0000u\u0000m\u0000m\u0000a\u0000r\u0000y\u0000 \u0000(\u0000t\u0000e\u0000s\u0000t\u0000_\u0000s\u0000c\u0000o\u0000r\u0000e\u0000_\u0000p\u0000a\u0000p\u0000e\u0000r\u0000s\u0000.\u0000I\u0000n\u0000v\u0000a\u0000l\u0000i\u0000d\u0000S\u0000c\u0000o\u0000r\u0000e\u0000s\u0000.\u0000t\u0000e\u0000s\u0000t\u0000_\u0000r\u0000u\u0000n\u0000_\u0000r\u0000e\u0000t\u0000u\u0000r\u0000n\u0000s\u0000_\u0000o\u0000n\u0000e\u0000_\u0000a\u0000n\u0000d\u0000_\u0000d\u0000o\u0000e\u0000s\u0000_\u0000n\u0000o\u0000t\u0000_\u0000w\u0000r\u0000i\u0000t\u0000e\u0000_\u0000s\u0000u\u0000m\u0000m\u0000a\u0000r\u0000y\u0000)\u0000 \u0000.\u0000.\u0000.\u0000 \u0000o\u0000k\u0000\n\u0000t\u0000e\u0000s\u0000t\u0000_\u0000k\u0000a\u0000p\u0000p\u0000a\u0000_\u0000m\u0000a\u0000t\u0000c\u0000h\u0000e\u0000s\u0000_\u0000h\u0000a\u0000n\u0000d\u0000_\u0000c\u0000o\u0000m\u0000p\u0000u\u0000t\u0000a\u0000t\u0000i\u0000o\u0000n\u0000 \u0000(\u0000t\u0000e\u0000s\u0000t\u0000_\u0000s\u0000c\u0000o\u0000r\u0000e\u0000_\u0000p\u0000a\u0000p\u0000e\u0000r\u0000s\u0000.\u0000V\u0000a\u0000l\u0000i\u0000d\u0000S\u0000c\u0000o\u0000r\u0000e\u0000s\u0000.\u0000t\u0000e\u0000s\u0000t\u0000_\u0000k\u0000a\u0000p\u0000p\u0000a\u0000_\u0000m\u0000a\u0000t\u0000c\u0000h\u0000e\u0000s\u0000_\u0000h\u0000a\u0000n\u0000d\u0000_\u0000c\u0000o\u0000m\u0000p\u0000u\u0000t\u0000a\u0000t\u0000i\u0000o\u0000n\u0000)\u0000 \u0000.\u0000.\u0000.\u0000 \u0000o\u0000k\u0000\n\u0000t\u0000e\u0000s\u0000t\u0000_\u0000k\u0000a\u0000p\u0000p\u0000a\u0000_\u0000u\u0000n\u0000d\u0000e\u0000f\u0000i\u0000n\u0000e\u0000d\u0000_\u0000w\u0000h\u0000e\u0000n\u0000_\u0000o\u0000n\u0000e\u0000_\u0000i\u0000d\u0000e\u0000n\u0000t\u0000i\u0000c\u0000a\u0000l\u0000_\u0000c\u0000a\u0000t\u0000e\u0000g\u0000o\u0000r\u0000y\u0000 \u0000(\u0000t\u0000e\u0000s\u0000t\u0000_\u0000s\u0000c\u0000o\u0000r\u0000e\u0000_\u0000p\u0000a\u0000p\u0000e\u0000r\u0000s\u0000.\u0000V\u0000a\u0000l\u0000i\u0000d\u0000S\u0000c\u0000o\u0000r\u0000e\u0000s\u0000.\u0000t\u0000e\u0000s\u0000t\u0000_\u0000k\u0000a\u0000p\u0000p\u0000a\u0000_\u0000u\u0000n\u0000d\u0000e\u0000f\u0000i\u0000n\u0000e\u0000d\u0000_\u0000w\u0000h\u0000e\u0000n\u0000_\u0000o\u0000n\u0000e\u0000_\u0000i\u0000d\u0000e\u0000n\u0000t\u0000i\u0000c\u0000a\u0000l\u0000_\u0000c\u0000a\u0000t\u0000e\u0000g\u0000o\u0000r\u0000y\u0000)\u0000 \u0000.\u0000.\u0000.\u0000 \u0000o\u0000k\u0000\n\u0000t\u0000e\u0000s\u0000t\u0000_\u0000n\u0000o\u0000_\u0000k\u0000a\u0000p\u0000p\u0000a\u0000_\u0000w\u0000i\u0000t\u0000h\u0000_\u0000s\u0000i\u0000n\u0000g\u0000l\u0000e\u0000_\u0000r\u0000e\u0000v\u0000i\u0000e\u0000w\u0000e\u0000r\u0000 \u0000(\u0000t\u0000e\u0000s\u0000t\u0000_\u0000s\u0000c\u0000o\u0000r\u0000e\u0000_\u0000p\u0000a\u0000p\u0000e\u0000r\u0000s\u0000.\u0000V\u0000a\u0000l\u0000i\u0000d\u0000S\u0000c\u0000o\u0000r\u0000e\u0000s\u0000.\u0000t\u0000e\u0000s\u0000t\u0000_\u0000n\u0000o\u0000_\u0000k\u0000a\u0000p\u0000p\u0000a\u0000_\u0000w\u0000i\u0000t\u0000h\u0000_\u0000s\u0000i\u0000n\u0000g\u0000l\u0000e\u0000_\u0000r\u0000e\u0000v\u0000i\u0000e\u0000w\u0000e\u0000r\u0000)\u0000 \u0000.\u0000.\u0000.\u0000 \u0000o\u0000k\u0000\n\u0000t\u0000e\u0000s\u0000t\u0000_\u0000o\u0000u\u0000t\u0000p\u0000u\u0000t\u0000_\u0000i\u0000s\u0000_\u0000d\u0000e\u0000t\u0000e\u0000r\u0000m\u0000i\u0000n\u0000i\u0000s\u0000t\u0000i\u0000c\u0000 \u0000(\u0000t\u0000e\u0000s\u0000t\u0000_\u0000s\u0000c\u0000o\u0000r\u0000e\u0000_\u0000p\u0000a\u0000p\u0000e\u0000r\u0000s\u0000.\u0000V\u0000a\u0000l\u0000i\u0000d\u0000S\u0000c\u0000o\u0000r\u0000e\u0000s\u0000.\u0000t\u0000e\u0000s\u0000t\u0000_\u0000o\u0000u\u0000t\u0000p\u0000u\u0000t\u0000_\u0000i\u0000s\u0000_\u0000d\u0000e\u0000t\u0000e\u0000r\u0000m\u0000i\u0000n\u0000i\u0000s\u0000t\u0000i\u0000c\u0000)\u0000 \u0000.\u0000.\u0000.\u0000 \u0000o\u0000k\u0000\n\u0000t\u0000e\u0000s\u0000t\u0000_\u0000r\u0000u\u0000n\u0000_\u0000r\u0000e\u0000t\u0000u\u0000r\u0000n\u0000s\u0000_\u0000z\u0000e\u0000r\u0000o\u0000_\u0000a\u0000n\u0000d\u0000_\u0000p\u0000r\u0000i\u0000n\u0000t\u0000s\u0000_\u0000r\u0000e\u0000p\u0000o\u0000r\u0000t\u0000 \u0000(\u0000t\u0000e\u0000s\u0000t\u0000_\u0000s\u0000c\u0000o\u0000r\u0000e\u0000_\u0000p\u0000a\u0000p\u0000e\u0000r\u0000s\u0000.\u0000V\u0000a\u0000l\u0000i\u0000d\u0000S\u0000c\u0000o\u0000r\u0000e\u0000s\u0000.\u0000t\u0000e\u0000s\u0000t\u0000_\u0000r\u0000u\u0000n\u0000_\u0000r\u0000e\u0000t\u0000u\u0000r\u0000n\u0000s\u0000_\u0000z\u0000e\u0000r\u0000o\u0000_\u0000a\u0000n\u0000d\u0000_\u0000p\u0000r\u0000i\u0000n\u0000t\u0000s\u0000_\u0000r\u0000e\u0000p\u0000o\u0000r\u0000t\u0000)\u0000 \u0000.\u0000.\u0000.\u0000 \u0000o\u0000k\u0000\n\u0000t\u0000e\u0000s\u0000t\u0000_\u0000s\u0000y\u0000n\u0000t\u0000h\u0000e\u0000t\u0000i\u0000c\u0000_\u0000i\u0000n\u0000p\u0000u\u0000t\u0000s\u0000_\u0000v\u0000a\u0000l\u0000i\u0000d\u0000a\u0000t\u0000e\u0000 \u0000(\u0000t\u0000e\u0000s\u0000t\u0000_\u0000s\u0000c\u0000o\u0000r\u0000e\u0000_\u0000p\u0000a\u0000p\u0000e\u0000r\u0000s\u0000.\u0000V\u0000a\u0000l\u0000i\u0000d\u0000S\u0000c\u0000o\u0000r\u0000e\u0000s\u0000.\u0000t\u0000e\u0000s\u0000t\u0000_\u0000s\u0000y\u0000n\u0000t\u0000h\u0000e\u0000t\u0000i\u0000c\u0000_\u0000i\u0000n\u0000p\u0000u\u0000t\u0000s\u0000_\u0000v\u0000a\u0000l\u0000i\u0000d\u0000a\u0000t\u0000e\u0000)\u0000 \u0000.\u0000.\u0000.\u0000 \u0000o\u0000k\u0000\n\u0000t\u0000e\u0000s\u0000t\u0000_\u0000t\u0000o\u0000t\u0000a\u0000l\u0000s\u0000_\u0000m\u0000a\u0000t\u0000c\u0000h\u0000_\u0000h\u0000a\u0000n\u0000d\u0000_\u0000c\u0000o\u0000m\u0000p\u0000u\u0000t\u0000a\u0000t\u0000i\u0000o\u0000n\u0000 \u0000(\u0000t\u0000e\u0000s\u0000t\u0000_\u0000s\u0000c\u0000o\u0000r\u0000e\u0000_\u0000p\u0000a\u0000p\u0000e\u0000r\u0000s\u0000.\u0000V\u0000a\u0000l\u0000i\u0000d\u0000S\u0000c\u0000o\u0000r\u0000e\u0000s\u0000.\u0000t\u0000e\u0000s\u0000t\u0000_\u0000t\u0000o\u0000t\u0000a\u0000l\u0000s\u0000_\u0000m\u0000a\u0000t\u0000c\u0000h\u0000_\u0000h\u0000a\u0000n\u0000d\u0000_\u0000c\u0000o\u0000m\u0000p\u0000u\u0000t\u0000a\u0000t\u0000i\u0000o\u0000n\u0000)\u0000 \u0000.\u0000.\u0000.\u0000 \u0000o\u0000k\u0000\n\u0000\n\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000-\u0000\n\u0000R\u0000a\u0000n\u0000 \u00001\u00001\u0000 \u0000t\u0000e\u0000s\u0000t\u0000s\u0000 \u0000i\u0000n\u0000 \u00000\u0000.\u00000\u00001\u00003\u0000s\u0000\n\u0000\n\u0000O\u0000K\u0000\n\u0000T\u0000E\u0000S\u0000T\u0000_\u0000E\u0000X\u0000I\u0000T\u0000=\u00000\u0000\n\u0000"}, {"name": "source-trace.md", "type": "text", "content": "# Source trace\n\nAccess date for every row: 2026-10-31 (UTC+8).\n\nThese two files are invented SYNTHETIC papers supplied in the task brief. They are not real publications. The brief forbids web retrieval, PDF storage, and invented DOIs. Each file contains a header, a title, and an abstract. No body sections exist.\n\nNo PDF or copyrighted full text is stored in this folder.\n\n## SYN-PLAN\n\n**Title (from the local file):** A Quality-Task Checklist for Model Comparison \u00e2\u20ac\u201d A Research Plan\n\n**Authors, venue, pages, DOI:** unavailable. The file invents no bibliographic metadata. No DOI was created.\n\n**Status:** research plan. The abstract states that no results are reported. The planned quality-assurance guidelines are not a completed or validated framework.\n\n| Path | Method | Result |\n| --- | --- | --- |\n| `.agents/skills/paper-evaluation/evals/files/SYNTHETIC_paper_plan.txt` | Local read | Entire file: SYNTHETIC header, title, and abstract. Future-tense methods. \"No results are reported.\" |\n\n**Access level obtained:** abstract only. The provided file is the complete available text, and that text is labelled Abstract.\n\n**Locator scheme:** Title; Abstract. No page numbers exist. Page locators are not estimated.\n\n**What abstract-only scoring loses:** body-level methods, sample details, instruments, analysis rules, threats sections, and any page or section locators beyond Title and Abstract. Those cannot be scored from this file.\n\n## SYN-CASE\n\n**Title (from the local file):** A Case Study on Desk-Checking and Variability Coverage\n\n**Authors, venue, pages, DOI:** unavailable. The file invents no bibliographic metadata. No DOI was created.\n\n**Status:** completed case study. The abstract reports feasibility, acceptance, and a coverage limit.\n\n| Path | Method | Result |\n| --- | --- | --- |\n| `.agents/skills/paper-evaluation/evals/files/SYNTHETIC_paper_casestudy.txt` | Local read | Entire file: SYNTHETIC header, title, and abstract. Past-tense findings. Feasibility and acceptance stated as separate questions. |\n\n**Access level obtained:** abstract only. The provided file is the complete available text, and that text is labelled Abstract.\n\n**Locator scheme:** Title; Abstract. No page numbers exist. Page locators are not estimated.\n\n**What abstract-only scoring loses:** the same body-level detail as SYN-PLAN. The abstract names developers but not a count, instrument, or analysis procedure.\n\n## Not retrieved\n\nNo Crossref, publisher, preprint, or other web copy was requested or opened. These titles are invented; a web search would not yield a real paper to verify.\n\n## Support-level rule used in this pack\n\n- `abstract-only`: the concept is a sentence in the supplied Abstract (or Title).\n- `adapted`: the criterion turns a stated label into a scoring rule the source text does not itself state.\n- `full-text`: not used. No body passage was opened for either paper.\n"}], "grading": {"expectations": [{"text": "Output folder contains rubric.csv with the required header columns including support_level", "passed": true, "evidence": "header=['criterion', 'criterion_id', 'guiding_question', 'rubric_version', 'score_0_anchor', 'score_1_anchor', 'score_2_anchor', 'source_location', 'source_paper', 'support_level']"}, {"text": "Every rubric support_level is full-text, abstract-only, or adapted", "passed": true, "evidence": "levels=['abstract-only', 'adapted'] n=8"}, {"text": "At least one criterion traces to performance reporting or model comparison", "passed": true, "evidence": "study status is labelled and claims stay inside it does the paper state whether it reports a plan or completed empirical work, and do its claims stay inside that status? model-performance reporting is"}, {"text": "At least one criterion traces to feasibility and acceptance as separate questions", "passed": true, "evidence": "study status is labelled and claims stay inside it does the paper state whether it reports a plan or completed empirical work, and do its claims stay inside that status? model-performance reporting is"}, {"text": "The pack does not describe the PLAN paper's framework as validated", "passed": false, "evidence": "scanned pack prose for a positive 'validated' claim"}, {"text": "No PDF file is written in the output folder", "passed": true, "evidence": "[]"}, {"text": "scores.csv reviewer values are only ai-draft", "passed": true, "evidence": "reviewers=['ai-draft']"}, {"text": "The scorer or its report is present (summary.csv or a VALIDATION PASSED log)", "passed": true, "evidence": "report=True summary=True"}], "summary": {"passed": 7, "failed": 1, "total": 8, "pass_rate": 0.875}}}, {"id": "build-pack-from-abstracts-without_skill", "prompt": "Build a paper-evaluation pack from two SYNTHETIC abstracts. Criteria must trace to those texts. Do not invent a second reviewer or call a plan validated.", "eval_id": 1, "outputs": [{"name": "AI_INTERACTION_LOG.md", "type": "text", "content": "# AI interaction log\n\nActivity label: AI-Assisted (thesis pack build). The group still has to verify accuracy.\n\n## Session\n\n- Date: 2026-10-31\n- Reviewer label used in scores: `ai-draft`\n- Task: build a paper-evaluation pack from two SYNTHETIC abstracts only; score both papers; run scorer and tests; save `run-report.txt`\n- Model / agent: Cursor Grok 4.6 (subagent of the parent coding agent)\n- Skill used: none. The paper-evaluation skill folder was not used as a method source. `docs/activities/litReview/paper-evaluation` was not read.\n\n## Inputs the model was allowed to read\n\n1. `SYNTHETIC_paper_plan.txt` \u00e2\u20ac\u201d invented research-plan abstract. No results.\n2. `SYNTHETIC_paper_casestudy.txt` \u00e2\u20ac\u201d invented case-study abstract.\n\nNo web retrieval. No PDFs saved. No git commit or push. Python standard library only.\n\n## Prompts (substance)\n\nBuild a pack whose criteria come only from the two SYNTHETIC papers. Write only under `paper-evaluation-workspace/iteration-1/build-pack-from-abstracts/without_skill/outputs`. Include README, source-trace.md, rubric.csv, desk-check-checklist.md, templates/evaluation-template.md, scores/scores.csv, scripts/score_papers.py, scripts/tests with a SYNTHETIC fixture, AI_INTERACTION_LOG.md. Tag each criterion `full-text`, `abstract-only`, or `adapted`. Score both papers as ai-draft. Run scorer and tests. Save `run-report.txt`. Do not invent a second reviewer. Never call the PLAN framework validated.\n\n## What the model produced\n\n- Rubric of 15 criteria: 13 `abstract-only`, 2 `adapted`, 0 `full-text` (no body text existed).\n- Desk-check checklist that treats desk-checking as pre-check-in self-review, not inspection.\n- ai-draft scores for `SYNTHETIC_PLAN` (sum 16 / 30) and `SYNTHETIC_CASE` (sum 19 / 30).\n- Stdlib scorer and unittest with `SYNTHETIC_rubric.csv` / `SYNTHETIC_scores.csv`.\n\n## Claims the model must not make\n\n- The SYNTHETIC papers are not real publications.\n- PLAN is a research plan with no results. Expert validation is a planned method only.\n- **Do not call the PLAN framework validated.**\n- CASE reports feasibility, a modeling-language limit, and developer acceptance. That is the reported limit of that study.\n\n## Human verification still required\n\n- Confirm excerpts in `source-trace.md` match the SYNTHETIC files.\n- Confirm scores in `scores/scores.csv` match the abstracts.\n- Confirm tests and `run-report.txt` were generated from this pack, not copied from another iteration.\n"}, {"name": "desk-check-checklist.md", "type": "text", "content": "# Desk-check checklist\n\nDesk-checking in this pack is a **checklist-guided self-review before check-in**. It is **not** a structured inspection (CASE abstract).\n\nUse this list on a paper or on this pack before scores are checked in. Tick each item. Separate **feasibility** from **acceptance** (CASE). Do not treat PLAN as a validated framework.\n\nPaper or artifact: ______________________\nReviewer: ai-draft\nDate: __________\n\n## Identity and sources\n\n- [ ] The text under review is identified (PLAN, CASE, or another paper).\n- [ ] Criteria used for scoring are traced to PLAN and/or CASE abstracts (`source-trace.md`).\n- [ ] No criterion is tagged `full-text` unless a body was actually read.\n- [ ] SYNTHETIC sources are not cited as real publications.\n\n## PLAN-derived checks (model comparison / QA guidelines)\n\n- [ ] QA guidelines for the **model-building phase** are present, planned, or explicitly marked absent.\n- [ ] Quality-task processes are considered **at each phase**, or the gap is stated.\n- [ ] Model-performance reporting is judged for **model comparison**, not only for a single-model write-up.\n- [ ] If a literature study is claimed, it is labeled planned vs completed.\n- [ ] If expert validation is named, it is labeled a **method item** only. Planned expert validation does not validate a framework.\n- [ ] If a pilot is named, the **two development teams** requirement is checked.\n- [ ] Results vs plan: \"No results are reported\" is respected for PLAN.\n\n## CASE-derived checks (desk-checking and variability)\n\n- [ ] Feasibility is answered as its own question.\n- [ ] Acceptance is answered as its own question.\n- [ ] Variability-model creation is recognized as a QA process part.\n- [ ] Desk-checking is described as checklist-guided self-review before check-in.\n- [ ] Desk-checking is **not** recoded as a structured inspection.\n- [ ] Variant coverage: can the modeling language represent all important variants? If not, the limit is written down.\n- [ ] Developer acceptance is recorded for **both** parts (variability-model creation and desk-checking) when both are in scope.\n- [ ] Study limits are reported.\n\n## Adapted checks\n\n- [ ] The QA process is split into identifiable parts.\n- [ ] Claim type matches evidence (plan vs case study).\n- [ ] The PLAN framework is **not** called validated.\n\n## Check-in gate\n\n- [ ] Reviewer label is `ai-draft` (unless a later human review replaces this draft).\n- [ ] Scores use 0 / 1 / 2 or `NA`.\n- [ ] Justifications quote or paraphrase the SYNTHETIC abstracts without inventing results.\n- [ ] Ready to check in.\n"}, {"name": "README.md", "type": "text", "content": "# Paper-evaluation pack (abstract-derived, SYNTHETIC sources)\n\nReviewer label for this build: **ai-draft**.\n\nThis pack scores papers against a rubric taken only from two invented SYNTHETIC texts (not real publications). No web retrieval, no PDFs, and no second reviewer were used.\n\n**Constraint:** Paper PLAN is a research plan with no results. Do not call the PLAN framework validated.\n\n## Sources (read-only; not copied here)\n\n| ID | File | Genre |\n| --- | --- | --- |\n| PLAN | `SYNTHETIC_paper_plan.txt` | Research plan. Three gaps, three planned methods, no results. |\n| CASE | `SYNTHETIC_paper_casestudy.txt` | Case study. Feasibility and acceptance as separate questions; desk-checking defined as pre-check-in self-review. |\n\n## Criterion tags\n\nEvery rubric row is tagged:\n\n- `abstract-only` \u00e2\u20ac\u201d wording taken from a SYNTHETIC abstract.\n- `adapted` \u00e2\u20ac\u201d combined or rephrased from both abstracts for pack use.\n- `full-text` \u00e2\u20ac\u201d reserved for body text. **None** in this pack: the SYNTHETIC files contain title plus abstract only.\n\nSee `source-trace.md` for the excerpt behind each row.\n\n## Pack layout\n\n| Path | Role |\n| --- | --- |\n| `source-trace.md` | Criterion-to-excerpt map |\n| `rubric.csv` | Scored criteria, tags, 0\u00e2\u20ac\u201c2 scale |\n| `desk-check-checklist.md` | Pre-check-in self-review checklist (not a structured inspection) |\n| `templates/evaluation-template.md` | Blank evaluation form |\n| `scores/scores.csv` | ai-draft scores for both SYNTHETIC papers |\n| `scripts/score_papers.py` | Stdlib scorer |\n| `scripts/tests/` | Unittest plus SYNTHETIC fixtures |\n| `AI_INTERACTION_LOG.md` | AI-assisted work log |\n| `run-report.txt` | Scorer output from this run |\n\n## How to score\n\n1. Desk-check the target paper with `desk-check-checklist.md` (self-review, not inspection).\n2. Fill `templates/evaluation-template.md` or add rows to `scores/scores.csv`.\n3. Use only the reviewer label **ai-draft** unless a human later replaces this draft.\n4. Run the scorer (Python 3, standard library only):\n\n```text\npython scripts/score_papers.py --out run-report.txt\n```\n\nOptional flags: `--rubric`, `--scores`, `--reviewer`, `--pack-root`.\n\n5. Run tests:\n\n```text\npython -m unittest discover -s scripts/tests -v\n```\n\n## Scoring rules\n\n- Scale: `0` absent, `1` partial, `2` fully addressed. `NA` is allowed and excluded from totals.\n- One reviewer in this pack: `ai-draft`.\n- A planned literature study, expert validation, or two-team pilot in PLAN is a **method plan**, not a completed result.\n- Desk-checking in this pack means checklist-guided self-review before check-in. It is not a structured inspection.\n- Feasibility and acceptance are separate questions (CASE).\n- Variability modeling that cannot represent all important variants must be recorded as a limit, not as full coverage.\n\n## What this pack does not claim\n\n- The SYNTHETIC papers are not real.\n- PLAN methods were not executed here.\n- Expert validation listed in PLAN does not validate a framework.\n- CASE reports feasibility, a modeling-language limit, and developer acceptance. That is the reported limit of that study.\n"}, {"name": "rubric.csv", "type": "text", "content": "criterion_id,name,description,source_paper,source_span,evidence_tag,scale_min,scale_max,na_allowed,notes\nC01,Model-building QA guidelines,The work identifies a gap in QA guidelines for the model-building phase and/or develops or applies such guidelines.,PLAN,\"quality-assurance guidelines for the model-building phase\",abstract-only,0,2,yes,Taken from the PLAN abstract. A stated gap plus a plan to develop guidelines can score 2 for a plan paper.\nC02,Quality-task processes at each phase,Quality-task processes are specified or planned for each development phase.,PLAN,\"unclear quality-task processes at each phase\",abstract-only,0,2,yes,PLAN names this as an open gap.\nC03,Model-performance reporting for comparison,Reporting standards for model performance are sufficient to support model comparison.,PLAN,\"insufficient reporting standards for model performance needed for model comparison\",abstract-only,0,2,yes,Comparison use is required; generic metrics without a comparison purpose score at most 1.\nC04,Literature study method,A literature study is used or planned as a method.,PLAN,\"Planned methods are a literature study\",abstract-only,0,2,yes,Planned counts for a plan; completed counts for a study.\nC05,Expert validation as a method item,Expert validation is listed as a planned or conducted method. This row does not mean a framework is validated.,PLAN,\"expert validation\",abstract-only,0,2,yes,NEVER treat PLAN expert validation as evidence that the PLAN framework is validated. No results are reported in PLAN.\nC06,Two-team pilot,A pilot project with two development teams is used or planned.,PLAN,\"a pilot project with two development teams\",abstract-only,0,2,yes,Both the pilot and the two-team size must be present for a 2.\nC07,Empirical results reported,The work reports empirical results rather than methods only.,PLAN,\"No results are reported.\",abstract-only,0,2,yes,PLAN abstract states no results; score 0 for PLAN.\nC08,Feasibility and acceptance separated,Feasibility and acceptance are evaluated as separate questions.,CASE,\"evaluates feasibility and acceptance as separate questions\",abstract-only,0,2,yes,A single mixed verdict scores at most 1.\nC09,Variability-model creation as QA part,Variability-model creation is treated as a distinct part of a QA process.,CASE,\"two parts of a QA process: variability-model creation and desk-checking\",abstract-only,0,2,yes,Must be named as a QA process part not only as modeling in general.\nC10,Desk-checking is pre-check-in self-review,Desk-checking is a checklist-guided self-review before check-in and is not a structured inspection.,CASE,\"Desk-checking is a checklist-guided self-review before check-in, not a structured inspection.\",abstract-only,0,2,yes,Score 0 if desk-checking is described as inspection.\nC11,Variant coverage of the modeling language,The modeling language can represent all important variants or the work reports that a different language is needed.,CASE,\"a different modeling language was needed to represent all important variants\",abstract-only,0,2,yes,Reporting the shortfall counts as addressing the criterion.\nC12,Developer acceptance of both QA parts,Developer acceptance is reported for both named QA parts.,CASE,\"Developers accepted both parts.\",abstract-only,0,2,yes,Acceptance of only one part scores 1.\nC13,Study limits reported,The study reports its limits.,CASE,\"The study reports that limit.\",abstract-only,0,2,yes,CASE's reported limit includes the modeling-language shortfall.\nC14,QA process has identifiable parts,The QA process is decomposed into identifiable parts (guidelines quality tasks variability modeling desk-checking or equivalent).,PLAN+CASE,PLAN guidelines/quality-task/reporting gaps plus CASE variability-model creation and desk-checking,adapted,0,2,yes,Adapted from both abstracts. Not a full-text item.\nC15,Claim type matches evidence,The work's claims match its evidence type: a plan with no results is not treated as a completed or validated framework; a case study reports results and limits.,PLAN+CASE,PLAN no results vs CASE results and reported limit,adapted,0,2,yes,Adapted. Do not call the PLAN framework validated.\n"}, {"name": "run-report.txt", "type": "text", "content": "Paper-evaluation scorer report\nSources: SYNTHETIC PLAN and SYNTHETIC CASE abstracts only.\nReviewer filter: ai-draft\nReviewers present: ai-draft\nCONSTRAINT: Paper PLAN is a research plan with no results. Do not call the PLAN framework validated. Expert validation in PLAN is a planned method only.\n\nCriterion evidence tags:\n  full-text: 0\n  abstract-only: 13\n  adapted: 2\n  other: 0\n\nPaper totals\npaper_id\tn_scored\tn_na\ttotal\tmax\tmean\tpct_of_max\ttitle\nSYNTHETIC_PLAN\t15\t0\t16.0\t30.0\t1.067\t53.3%\tA Quality-Task Checklist for Model Comparison \u00e2\u20ac\u201d A Research Plan\nSYNTHETIC_CASE\t15\t0\t19.0\t30.0\t1.267\t63.3%\tA Case Study on Desk-Checking and Variability Coverage\n\n## SYNTHETIC_PLAN\nTitle: A Quality-Task Checklist for Model Comparison \u00e2\u20ac\u201d A Research Plan\nReviewers: ai-draft\nNote: this paper is a research plan with no results. Do not call the PLAN framework validated.\ncriterion_id\ttag\tscore\tname\nC01\tabstract-only\t2\tModel-building QA guidelines\nC02\tabstract-only\t2\tQuality-task processes at each phase\nC03\tabstract-only\t2\tModel-performance reporting for comparison\nC04\tabstract-only\t2\tLiterature study method\nC05\tabstract-only\t2\tExpert validation as a method item\nC06\tabstract-only\t2\tTwo-team pilot\nC07\tabstract-only\t0\tEmpirical results reported\nC08\tabstract-only\t0\tFeasibility and acceptance separated\nC09\tabstract-only\t0\tVariability-model creation as QA part\nC10\tabstract-only\t0\tDesk-checking is pre-check-in self-review\nC11\tabstract-only\t0\tVariant coverage of the modeling language\nC12\tabstract-only\t0\tDeveloper acceptance of both QA parts\nC13\tabstract-only\t1\tStudy limits reported\nC14\tadapted\t1\tQA process has identifiable parts\nC15\tadapted\t2\tClaim type matches evidence\n\n## SYNTHETIC_CASE\nTitle: A Case Study on Desk-Checking and Variability Coverage\nReviewers: ai-draft\ncriterion_id\ttag\tscore\tname\nC01\tabstract-only\t1\tModel-building QA guidelines\nC02\tabstract-only\t0\tQuality-task processes at each phase\nC03\tabstract-only\t0\tModel-performance reporting for comparison\nC04\tabstract-only\t0\tLiterature study method\nC05\tabstract-only\t0\tExpert validation as a method item\nC06\tabstract-only\t0\tTwo-team pilot\nC07\tabstract-only\t2\tEmpirical results reported\nC08\tabstract-only\t2\tFeasibility and acceptance separated\nC09\tabstract-only\t2\tVariability-model creation as QA part\nC10\tabstract-only\t2\tDesk-checking is pre-check-in self-review\nC11\tabstract-only\t2\tVariant coverage of the modeling language\nC12\tabstract-only\t2\tDeveloper acceptance of both QA parts\nC13\tabstract-only\t2\tStudy limits reported\nC14\tadapted\t2\tQA process has identifiable parts\nC15\tadapted\t2\tClaim type matches evidence\n\nEnd of report. One reviewer (ai-draft) unless a later human review is added.\n"}, {"name": "source-trace.md", "type": "text", "content": "# Source trace\n\nCriteria come only from the two SYNTHETIC abstracts named in the task brief. No full-text body was present, so **no criterion is tagged `full-text`**.\n\n**Constraint:** PLAN is a research plan with no results. Do not call the PLAN framework validated.\n\n## Source inventory\n\n### PLAN \u00e2\u20ac\u201d *A Quality-Task Checklist for Model Comparison \u00e2\u20ac\u201d A Research Plan*\n\nAbstract (complete):\n\n> This research PLAN will develop quality-assurance guidelines for the model-building phase. Three gaps remain: no QA guidelines, unclear quality-task processes at each phase, and insufficient reporting standards for model performance needed for model comparison. Planned methods are a literature study, expert validation, and a pilot project with two development teams. No results are reported.\n\n### CASE \u00e2\u20ac\u201d *A Case Study on Desk-Checking and Variability Coverage*\n\nAbstract (complete):\n\n> This case study evaluates feasibility and acceptance as separate questions for two parts of a QA process: variability-model creation and desk-checking. Desk-checking is a checklist-guided self-review before check-in, not a structured inspection. Variability modeling was feasible, but a different modeling language was needed to represent all important variants. Developers accepted both parts. The study reports that limit.\n\n## Criterion map\n\n| ID | Tag | Source | Verbatim span used | Derivation |\n| --- | --- | --- | --- | --- |\n| C01 | abstract-only | PLAN | \"quality-assurance guidelines for the model-building phase\" / \"no QA guidelines\" | Direct. Presence of model-building QA guidelines, or a stated gap plus a plan to develop them. |\n| C02 | abstract-only | PLAN | \"unclear quality-task processes at each phase\" | Direct. Quality-task processes specified or planned per phase. |\n| C03 | abstract-only | PLAN | \"insufficient reporting standards for model performance needed for model comparison\" | Direct. Performance reporting adequate for comparison. |\n| C04 | abstract-only | PLAN | \"Planned methods are a literature study\" | Direct. Literature study used or planned. |\n| C05 | abstract-only | PLAN | \"expert validation\" | Direct as a **method item**. Planned expert validation is not framework validation. |\n| C06 | abstract-only | PLAN | \"a pilot project with two development teams\" | Direct. Two-team pilot used or planned. |\n| C07 | abstract-only | PLAN | \"No results are reported.\" | Direct. Whether empirical results appear. PLAN scores 0 on this row. |\n| C08 | abstract-only | CASE | \"evaluates feasibility and acceptance as separate questions\" | Direct. |\n| C09 | abstract-only | CASE | \"two parts of a QA process: variability-model creation and desk-checking\" | Direct. Variability-model creation treated as its own QA part. |\n| C10 | abstract-only | CASE | \"Desk-checking is a checklist-guided self-review before check-in, not a structured inspection.\" | Direct. Wrong if desk-checking is treated as inspection. |\n| C11 | abstract-only | CASE | \"a different modeling language was needed to represent all important variants\" | Direct. Language coverage of important variants, or an explicit shortfall. |\n| C12 | abstract-only | CASE | \"Developers accepted both parts.\" | Direct. Acceptance of both QA parts. |\n| C13 | abstract-only | CASE | \"The study reports that limit.\" | Direct. Limits disclosed. |\n| C14 | adapted | PLAN + CASE | PLAN: guidelines, quality-task processes, reporting standards. CASE: variability-model creation and desk-checking. | Combined: QA process decomposed into identifiable parts. |\n| C15 | adapted | PLAN + CASE | PLAN: \"This research PLAN\" / \"No results are reported.\" CASE: results plus \"The study reports that limit.\" | Combined: claim type matches evidence (plan vs completed study). A plan must not be scored as a validated framework. |\n\n## Tags not used\n\n| Tag | Count | Reason |\n| --- | --- | --- |\n| full-text | 0 | SYNTHETIC files stop after the abstract. No body text was read. |\n\n## What was not taken as evidence\n\n- Titles were used only to identify papers, not as extra criteria.\n- No DOI, venue, or citation chase.\n- No other repository files.\n- PLAN's phrase \"expert validation\" was **not** treated as a completed validation of a framework.\n"}], "grading": {"expectations": [{"text": "Output folder contains rubric.csv with the required header columns including support_level", "passed": false, "evidence": "header=['criterion_id', 'description', 'evidence_tag', 'na_allowed', 'name', 'notes', 'scale_max', 'scale_min', 'source_paper', 'source_span']"}, {"text": "Every rubric support_level is full-text, abstract-only, or adapted", "passed": false, "evidence": "levels=[''] n=15"}, {"text": "At least one criterion traces to performance reporting or model comparison", "passed": false, "evidence": "                             "}, {"text": "At least one criterion traces to feasibility and acceptance as separate questions", "passed": false, "evidence": "                             "}, {"text": "The pack does not describe the PLAN paper's framework as validated", "passed": false, "evidence": "scanned pack prose for a positive 'validated' claim"}, {"text": "No PDF file is written in the output folder", "passed": true, "evidence": "[]"}, {"text": "scores.csv reviewer values are only ai-draft", "passed": true, "evidence": "reviewers=['ai-draft']"}, {"text": "The scorer or its report is present (summary.csv or a VALIDATION PASSED log)", "passed": false, "evidence": "report=True summary=False"}], "summary": {"passed": 2, "failed": 6, "total": 8, "pass_rate": 0.25}}}, {"id": "score-and-kappa-with_skill", "prompt": "Run the bundled scorer on SYNTHETIC two-reviewer fixtures and report totals plus Cohen's kappa.", "eval_id": 2, "outputs": [{"name": "run-report.txt", "type": "text", "content": "paper-evaluation score-and-kappa run report\niteration-1 / with_skill\nReviewers used: syn-rev1, syn-rev2 (fixture pair only; no third reviewer invented)\nPackages installed: none\nGit commit: none\nPython bytecode: disabled (-B)\n\n================================================================================\nCOMMAND 1: scorer\n================================================================================\npython -B C:\\Users\\yuanw\\Documents\\TECH\\School\\1T2627\\thesis1\\.agents\\skills\\paper-evaluation\\scripts\\score_papers.py --rubric C:\\Users\\yuanw\\Documents\\TECH\\School\\1T2627\\thesis1\\.agents\\skills\\paper-evaluation\\scripts\\tests\\fixtures\\SYNTHETIC_rubric.csv --scores C:\\Users\\yuanw\\Documents\\TECH\\School\\1T2627\\thesis1\\.agents\\skills\\paper-evaluation\\scripts\\tests\\fixtures\\SYNTHETIC_scores_two_reviewers.csv --summary C:\\Users\\yuanw\\Documents\\TECH\\School\\1T2627\\thesis1\\.agents\\skills\\paper-evaluation-workspace\\iteration-1\\score-and-kappa\\with_skill\\outputs\\summary.csv\n\nexit code: 0\n\n--- stdout ---\nVALIDATION PASSED: 3 criteria, 24 score rows.\nPer-paper totals (NA criteria excluded from max_points):\n  SYN-P1 | syn-rev1 | vsynthetic-0 | 5/6 | scored=3 NA=0\n  SYN-P1 | syn-rev2 | vsynthetic-0 | 5/6 | scored=3 NA=0\n  SYN-P2 | syn-rev1 | vsynthetic-0 | 4/6 | scored=3 NA=0\n  SYN-P2 | syn-rev2 | vsynthetic-0 | 3/6 | scored=3 NA=0\n  SYN-P3 | syn-rev1 | vsynthetic-0 | 2/6 | scored=3 NA=0\n  SYN-P3 | syn-rev2 | vsynthetic-0 | 1/6 | scored=3 NA=0\n  SYN-P4 | syn-rev1 | vsynthetic-0 | 2/4 | scored=2 NA=1\n  SYN-P4 | syn-rev2 | vsynthetic-0 | 2/4 | scored=2 NA=1\nCohen's kappa per criterion (unweighted; 0, 1, 2, NA as categories):\n  S01 | syn-rev1|syn-rev2 | n=4 | po=1.0000 pe=0.3750 kappa=1.0000 | ok\n  S02 | syn-rev1|syn-rev2 | n=4 | po=0.7500 pe=0.3125 kappa=0.6364 | ok\n  S03 | syn-rev1|syn-rev2 | n=4 | po=0.7500 pe=0.4375 kappa=0.5556 | ok\nSummary written: outputs/summary.csv\n\n================================================================================\nCOMMAND 2: unittest\n================================================================================\npython -B -m unittest discover -s C:\\Users\\yuanw\\Documents\\TECH\\School\\1T2627\\thesis1\\.agents\\skills\\paper-evaluation\\scripts\\tests -v\n\nexit code: 0\n\n--- stdout ---\ntest_fixtures_are_labelled_synthetic_in_name_and_header (test_score_papers.FixtureLabelling.test_fixtures_are_labelled_synthetic_in_name_and_header) ... ok\ntest_bad_header_is_an_input_error (test_score_papers.InvalidScores.test_bad_header_is_an_input_error) ... ok\ntest_each_error_class_is_reported (test_score_papers.InvalidScores.test_each_error_class_is_reported) ... ok\ntest_run_returns_one_and_does_not_write_summary (test_score_papers.InvalidScores.test_run_returns_one_and_does_not_write_summary) ... ok\ntest_kappa_matches_hand_computation (test_score_papers.ValidScores.test_kappa_matches_hand_computation) ... ok\ntest_kappa_undefined_when_one_identical_category (test_score_papers.ValidScores.test_kappa_undefined_when_one_identical_category) ... ok\ntest_no_kappa_with_single_reviewer (test_score_papers.ValidScores.test_no_kappa_with_single_reviewer) ... ok\ntest_output_is_deterministic (test_score_papers.ValidScores.test_output_is_deterministic) ... ok\ntest_run_returns_zero_and_prints_report (test_score_papers.ValidScores.test_run_returns_zero_and_prints_report) ... ok\ntest_synthetic_inputs_validate (test_score_papers.ValidScores.test_synthetic_inputs_validate) ... ok\ntest_totals_match_hand_computation (test_score_papers.ValidScores.test_totals_match_hand_computation) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.037s\n\nOK\n"}, {"name": "summary.csv", "type": "text", "content": "section,paper_id,reviewer,rubric_version,criterion_id,points,max_points,n_scored,n_na,reviewer_pair,n_pairs,observed_agreement,expected_agreement,kappa,status\ntotal,SYN-P1,syn-rev1,synthetic-0,,5,6,3,0,,,,,,ok\ntotal,SYN-P1,syn-rev2,synthetic-0,,5,6,3,0,,,,,,ok\ntotal,SYN-P2,syn-rev1,synthetic-0,,4,6,3,0,,,,,,ok\ntotal,SYN-P2,syn-rev2,synthetic-0,,3,6,3,0,,,,,,ok\ntotal,SYN-P3,syn-rev1,synthetic-0,,2,6,3,0,,,,,,ok\ntotal,SYN-P3,syn-rev2,synthetic-0,,1,6,3,0,,,,,,ok\ntotal,SYN-P4,syn-rev1,synthetic-0,,2,4,2,1,,,,,,ok\ntotal,SYN-P4,syn-rev2,synthetic-0,,2,4,2,1,,,,,,ok\nkappa,,,synthetic-0,S01,,,,,syn-rev1|syn-rev2,4,1.0000,0.3750,1.0000,ok\nkappa,,,synthetic-0,S02,,,,,syn-rev1|syn-rev2,4,0.7500,0.3125,0.6364,ok\nkappa,,,synthetic-0,S03,,,,,syn-rev1|syn-rev2,4,0.7500,0.4375,0.5556,ok\n"}], "grading": {"expectations": [{"text": "Stdout or a saved report contains VALIDATION PASSED", "passed": true, "evidence": "paper-evaluation score-and-kappa run report\niteration-1 / with_skill\nReviewers used: syn-rev1, syn-rev2 (fixture pair only; no third reviewer invented)\nPackages installed: none\nGit commit: none\nPython bytecode: disabled (-B)\n\n=============="}, {"text": "The report includes Cohen's kappa for a reviewer pair", "passed": true, "evidence": "paper-evaluation score-and-kappa run report\niteration-1 / with_skill\nReviewers used: syn-rev1, syn-rev2 (fixture pair only; no third reviewer invented)\nPackages installed: none\nGit commit: none\nPython bytecode: disabled (-B)\n\n=============="}, {"text": "If the shipped two-reviewer fixture was used, S01 kappa is 1.0000 and S02 kappa is 0.6364", "passed": true, "evidence": "paper-evaluation score-and-kappa run report\niteration-1 / with_skill\nReviewers used: syn-rev1, syn-rev2 (fixture pair only; no third reviewer invented)\nPackages installed: none\nGit commit: none\nPython bytecode: disabled (-B)\n\n================================================================================\nCOMMAND 1: scorer\n==========================================================================="}, {"text": "No reviewer other than syn-rev1 and syn-rev2 is introduced", "passed": true, "evidence": "scanned report for extra reviewer labels"}, {"text": "summary.csv is written to the eval outputs folder", "passed": true, "evidence": "C:\\Users\\yuanw\\Documents\\TECH\\School\\1T2627\\thesis1\\.agents\\skills\\paper-evaluation-workspace\\iteration-1\\score-and-kappa\\with_skill\\outputs\\summary.csv"}], "summary": {"passed": 5, "failed": 0, "total": 5, "pass_rate": 1.0}}}, {"id": "score-and-kappa-without_skill", "prompt": "Run the bundled scorer on SYNTHETIC two-reviewer fixtures and report totals plus Cohen's kappa.", "eval_id": 2, "outputs": [{"name": "run-report.txt", "type": "text", "content": "\u00ff\u00feV\u0000A\u0000L\u0000I\u0000D\u0000A\u0000T\u0000I\u0000O\u0000N\u0000 \u0000P\u0000A\u0000S\u0000S\u0000E\u0000D\u0000:\u0000 \u00003\u0000 \u0000c\u0000r\u0000i\u0000t\u0000e\u0000r\u0000i\u0000a\u0000,\u0000 \u00002\u00004\u0000 \u0000s\u0000c\u0000o\u0000r\u0000e\u0000 \u0000r\u0000o\u0000w\u0000s\u0000.\u0000\n\u0000\n\u0000P\u0000e\u0000r\u0000-\u0000p\u0000a\u0000p\u0000e\u0000r\u0000 \u0000t\u0000o\u0000t\u0000a\u0000l\u0000s\u0000 \u0000(\u0000N\u0000A\u0000 \u0000c\u0000r\u0000i\u0000t\u0000e\u0000r\u0000i\u0000a\u0000 \u0000e\u0000x\u0000c\u0000l\u0000u\u0000d\u0000e\u0000d\u0000 \u0000f\u0000r\u0000o\u0000m\u0000 \u0000m\u0000a\u0000x\u0000_\u0000p\u0000o\u0000i\u0000n\u0000t\u0000s\u0000)\u0000:\u0000\n\u0000\n\u0000 \u0000 \u0000S\u0000Y\u0000N\u0000-\u0000P\u00001\u0000 \u0000|\u0000 \u0000s\u0000y\u0000n\u0000-\u0000r\u0000e\u0000v\u00001\u0000 \u0000|\u0000 \u0000v\u0000s\u0000y\u0000n\u0000t\u0000h\u0000e\u0000t\u0000i\u0000c\u0000-\u00000\u0000 \u0000|\u0000 \u00005\u0000/\u00006\u0000 \u0000|\u0000 \u0000s\u0000c\u0000o\u0000r\u0000e\u0000d\u0000=\u00003\u0000 \u0000N\u0000A\u0000=\u00000\u0000\n\u0000\n\u0000 \u0000 \u0000S\u0000Y\u0000N\u0000-\u0000P\u00001\u0000 \u0000|\u0000 \u0000s\u0000y\u0000n\u0000-\u0000r\u0000e\u0000v\u00002\u0000 \u0000|\u0000 \u0000v\u0000s\u0000y\u0000n\u0000t\u0000h\u0000e\u0000t\u0000i\u0000c\u0000-\u00000\u0000 \u0000|\u0000 \u00005\u0000/\u00006\u0000 \u0000|\u0000 \u0000s\u0000c\u0000o\u0000r\u0000e\u0000d\u0000=\u00003\u0000 \u0000N\u0000A\u0000=\u00000\u0000\n\u0000\n\u0000 \u0000 \u0000S\u0000Y\u0000N\u0000-\u0000P\u00002\u0000 \u0000|\u0000 \u0000s\u0000y\u0000n\u0000-\u0000r\u0000e\u0000v\u00001\u0000 \u0000|\u0000 \u0000v\u0000s\u0000y\u0000n\u0000t\u0000h\u0000e\u0000t\u0000i\u0000c\u0000-\u00000\u0000 \u0000|\u0000 \u00004\u0000/\u00006\u0000 \u0000|\u0000 \u0000s\u0000c\u0000o\u0000r\u0000e\u0000d\u0000=\u00003\u0000 \u0000N\u0000A\u0000=\u00000\u0000\n\u0000\n\u0000 \u0000 \u0000S\u0000Y\u0000N\u0000-\u0000P\u00002\u0000 \u0000|\u0000 \u0000s\u0000y\u0000n\u0000-\u0000r\u0000e\u0000v\u00002\u0000 \u0000|\u0000 \u0000v\u0000s\u0000y\u0000n\u0000t\u0000h\u0000e\u0000t\u0000i\u0000c\u0000-\u00000\u0000 \u0000|\u0000 \u00003\u0000/\u00006\u0000 \u0000|\u0000 \u0000s\u0000c\u0000o\u0000r\u0000e\u0000d\u0000=\u00003\u0000 \u0000N\u0000A\u0000=\u00000\u0000\n\u0000\n\u0000 \u0000 \u0000S\u0000Y\u0000N\u0000-\u0000P\u00003\u0000 \u0000|\u0000 \u0000s\u0000y\u0000n\u0000-\u0000r\u0000e\u0000v\u00001\u0000 \u0000|\u0000 \u0000v\u0000s\u0000y\u0000n\u0000t\u0000h\u0000e\u0000t\u0000i\u0000c\u0000-\u00000\u0000 \u0000|\u0000 \u00002\u0000/\u00006\u0000 \u0000|\u0000 \u0000s\u0000c\u0000o\u0000r\u0000e\u0000d\u0000=\u00003\u0000 \u0000N\u0000A\u0000=\u00000\u0000\n\u0000\n\u0000 \u0000 \u0000S\u0000Y\u0000N\u0000-\u0000P\u00003\u0000 \u0000|\u0000 \u0000s\u0000y\u0000n\u0000-\u0000r\u0000e\u0000v\u00002\u0000 \u0000|\u0000 \u0000v\u0000s\u0000y\u0000n\u0000t\u0000h\u0000e\u0000t\u0000i\u0000c\u0000-\u00000\u0000 \u0000|\u0000 \u00001\u0000/\u00006\u0000 \u0000|\u0000 \u0000s\u0000c\u0000o\u0000r\u0000e\u0000d\u0000=\u00003\u0000 \u0000N\u0000A\u0000=\u00000\u0000\n\u0000\n\u0000 \u0000 \u0000S\u0000Y\u0000N\u0000-\u0000P\u00004\u0000 \u0000|\u0000 \u0000s\u0000y\u0000n\u0000-\u0000r\u0000e\u0000v\u00001\u0000 \u0000|\u0000 \u0000v\u0000s\u0000y\u0000n\u0000t\u0000h\u0000e\u0000t\u0000i\u0000c\u0000-\u00000\u0000 \u0000|\u0000 \u00002\u0000/\u00004\u0000 \u0000|\u0000 \u0000s\u0000c\u0000o\u0000r\u0000e\u0000d\u0000=\u00002\u0000 \u0000N\u0000A\u0000=\u00001\u0000\n\u0000\n\u0000 \u0000 \u0000S\u0000Y\u0000N\u0000-\u0000P\u00004\u0000 \u0000|\u0000 \u0000s\u0000y\u0000n\u0000-\u0000r\u0000e\u0000v\u00002\u0000 \u0000|\u0000 \u0000v\u0000s\u0000y\u0000n\u0000t\u0000h\u0000e\u0000t\u0000i\u0000c\u0000-\u00000\u0000 \u0000|\u0000 \u00002\u0000/\u00004\u0000 \u0000|\u0000 \u0000s\u0000c\u0000o\u0000r\u0000e\u0000d\u0000=\u00002\u0000 \u0000N\u0000A\u0000=\u00001\u0000\n\u0000\n\u0000C\u0000o\u0000h\u0000e\u0000n\u0000'\u0000s\u0000 \u0000k\u0000a\u0000p\u0000p\u0000a\u0000 \u0000p\u0000e\u0000r\u0000 \u0000c\u0000r\u0000i\u0000t\u0000e\u0000r\u0000i\u0000o\u0000n\u0000 \u0000(\u0000u\u0000n\u0000w\u0000e\u0000i\u0000g\u0000h\u0000t\u0000e\u0000d\u0000;\u0000 \u00000\u0000,\u0000 \u00001\u0000,\u0000 \u00002\u0000,\u0000 \u0000N\u0000A\u0000 \u0000a\u0000s\u0000 \u0000c\u0000a\u0000t\u0000e\u0000g\u0000o\u0000r\u0000i\u0000e\u0000s\u0000)\u0000:\u0000\n\u0000\n\u0000 \u0000 \u0000S\u00000\u00001\u0000 \u0000|\u0000 \u0000s\u0000y\u0000n\u0000-\u0000r\u0000e\u0000v\u00001\u0000|\u0000s\u0000y\u0000n\u0000-\u0000r\u0000e\u0000v\u00002\u0000 \u0000|\u0000 \u0000n\u0000=\u00004\u0000 \u0000|\u0000 \u0000p\u0000o\u0000=\u00001\u0000.\u00000\u00000\u00000\u00000\u0000 \u0000p\u0000e\u0000=\u00000\u0000.\u00003\u00007\u00005\u00000\u0000 \u0000k\u0000a\u0000p\u0000p\u0000a\u0000=\u00001\u0000.\u00000\u00000\u00000\u00000\u0000 \u0000|\u0000 \u0000o\u0000k\u0000\n\u0000\n\u0000 \u0000 \u0000S\u00000\u00002\u0000 \u0000|\u0000 \u0000s\u0000y\u0000n\u0000-\u0000r\u0000e\u0000v\u00001\u0000|\u0000s\u0000y\u0000n\u0000-\u0000r\u0000e\u0000v\u00002\u0000 \u0000|\u0000 \u0000n\u0000=\u00004\u0000 \u0000|\u0000 \u0000p\u0000o\u0000=\u00000\u0000.\u00007\u00005\u00000\u00000\u0000 \u0000p\u0000e\u0000=\u00000\u0000.\u00003\u00001\u00002\u00005\u0000 \u0000k\u0000a\u0000p\u0000p\u0000a\u0000=\u00000\u0000.\u00006\u00003\u00006\u00004\u0000 \u0000|\u0000 \u0000o\u0000k\u0000\n\u0000\n\u0000 \u0000 \u0000S\u00000\u00003\u0000 \u0000|\u0000 \u0000s\u0000y\u0000n\u0000-\u0000r\u0000e\u0000v\u00001\u0000|\u0000s\u0000y\u0000n\u0000-\u0000r\u0000e\u0000v\u00002\u0000 \u0000|\u0000 \u0000n\u0000=\u00004\u0000 \u0000|\u0000 \u0000p\u0000o\u0000=\u00000\u0000.\u00007\u00005\u00000\u00000\u0000 \u0000p\u0000e\u0000=\u00000\u0000.\u00004\u00003\u00007\u00005\u0000 \u0000k\u0000a\u0000p\u0000p\u0000a\u0000=\u00000\u0000.\u00005\u00005\u00005\u00006\u0000 \u0000|\u0000 \u0000o\u0000k\u0000\n\u0000\n\u0000S\u0000u\u0000m\u0000m\u0000a\u0000r\u0000y\u0000 \u0000w\u0000r\u0000i\u0000t\u0000t\u0000e\u0000n\u0000:\u0000 \u0000o\u0000u\u0000t\u0000p\u0000u\u0000t\u0000s\u0000/\u0000s\u0000u\u0000m\u0000m\u0000a\u0000r\u0000y\u0000.\u0000c\u0000s\u0000v\u0000\n\u0000\n\u0000"}, {"name": "summary.csv", "type": "text", "content": "section,paper_id,reviewer,rubric_version,criterion_id,points,max_points,n_scored,n_na,reviewer_pair,n_pairs,observed_agreement,expected_agreement,kappa,status\ntotal,SYN-P1,syn-rev1,synthetic-0,,5,6,3,0,,,,,,ok\ntotal,SYN-P1,syn-rev2,synthetic-0,,5,6,3,0,,,,,,ok\ntotal,SYN-P2,syn-rev1,synthetic-0,,4,6,3,0,,,,,,ok\ntotal,SYN-P2,syn-rev2,synthetic-0,,3,6,3,0,,,,,,ok\ntotal,SYN-P3,syn-rev1,synthetic-0,,2,6,3,0,,,,,,ok\ntotal,SYN-P3,syn-rev2,synthetic-0,,1,6,3,0,,,,,,ok\ntotal,SYN-P4,syn-rev1,synthetic-0,,2,4,2,1,,,,,,ok\ntotal,SYN-P4,syn-rev2,synthetic-0,,2,4,2,1,,,,,,ok\nkappa,,,synthetic-0,S01,,,,,syn-rev1|syn-rev2,4,1.0000,0.3750,1.0000,ok\nkappa,,,synthetic-0,S02,,,,,syn-rev1|syn-rev2,4,0.7500,0.3125,0.6364,ok\nkappa,,,synthetic-0,S03,,,,,syn-rev1|syn-rev2,4,0.7500,0.4375,0.5556,ok\n"}], "grading": {"expectations": [{"text": "Stdout or a saved report contains VALIDATION PASSED", "passed": true, "evidence": "VALIDATION PASSED: 3 criteria, 24 score rows.\r\nPer-paper totals (NA criteria excluded from max_points):\r\n  SYN-P1 | syn-rev1 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P1 | syn-rev2 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P2 | syn-rev1"}, {"text": "The report includes Cohen's kappa for a reviewer pair", "passed": true, "evidence": "VALIDATION PASSED: 3 criteria, 24 score rows.\r\nPer-paper totals (NA criteria excluded from max_points):\r\n  SYN-P1 | syn-rev1 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P1 | syn-rev2 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P2 | syn-rev1"}, {"text": "If the shipped two-reviewer fixture was used, S01 kappa is 1.0000 and S02 kappa is 0.6364", "passed": true, "evidence": "VALIDATION PASSED: 3 criteria, 24 score rows.\r\nPer-paper totals (NA criteria excluded from max_points):\r\n  SYN-P1 | syn-rev1 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P1 | syn-rev2 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P2 | syn-rev1 | vsynthetic-0 | 4/6 | scored=3 NA=0\r\n  SYN-P2 | syn-rev2 | vsynthetic-0 | 3/6 | scored=3 NA=0\r\n  SYN-P3 | syn-rev1 | vsynthetic-0 | 2/6 | scored=3 NA=0\r\n  SYN"}, {"text": "No reviewer other than syn-rev1 and syn-rev2 is introduced", "passed": true, "evidence": "scanned report for extra reviewer labels"}, {"text": "summary.csv is written to the eval outputs folder", "passed": true, "evidence": "C:\\Users\\yuanw\\Documents\\TECH\\School\\1T2627\\thesis1\\.agents\\skills\\paper-evaluation-workspace\\iteration-1\\score-and-kappa\\without_skill\\outputs\\summary.csv"}], "summary": {"passed": 5, "failed": 0, "total": 5, "pass_rate": 1.0}}}], "previous_feedback": {}, "previous_outputs": {}, "benchmark": {"metadata": {"skill_name": "paper-evaluation", "skill_path": "C:\\Users\\yuanw\\Documents\\TECH\\School\\1T2627\\thesis1\\.agents\\skills\\paper-evaluation", "executor_model": "<model-name>", "analyzer_model": "<model-name>", "timestamp": "2026-10-31T12:13:22Z", "evals_run": [1, 2], "runs_per_configuration": 3}, "runs": [{"eval_id": 1, "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 0.875, "passed": 7, "failed": 1, "total": 8, "time_seconds": 0.0, "tokens": 0, "tool_calls": 0, "errors": 0}, "expectations": [{"text": "Output folder contains rubric.csv with the required header columns including support_level", "passed": true, "evidence": "header=['criterion', 'criterion_id', 'guiding_question', 'rubric_version', 'score_0_anchor', 'score_1_anchor', 'score_2_anchor', 'source_location', 'source_paper', 'support_level']"}, {"text": "Every rubric support_level is full-text, abstract-only, or adapted", "passed": true, "evidence": "levels=['abstract-only', 'adapted'] n=8"}, {"text": "At least one criterion traces to performance reporting or model comparison", "passed": true, "evidence": "study status is labelled and claims stay inside it does the paper state whether it reports a plan or completed empirical work, and do its claims stay inside that status? model-performance reporting is"}, {"text": "At least one criterion traces to feasibility and acceptance as separate questions", "passed": true, "evidence": "study status is labelled and claims stay inside it does the paper state whether it reports a plan or completed empirical work, and do its claims stay inside that status? model-performance reporting is"}, {"text": "The pack does not describe the PLAN paper's framework as validated", "passed": false, "evidence": "scanned pack prose for a positive 'validated' claim"}, {"text": "No PDF file is written in the output folder", "passed": true, "evidence": "[]"}, {"text": "scores.csv reviewer values are only ai-draft", "passed": true, "evidence": "reviewers=['ai-draft']"}, {"text": "The scorer or its report is present (summary.csv or a VALIDATION PASSED log)", "passed": true, "evidence": "report=True summary=True"}], "notes": []}, {"eval_id": 2, "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 5, "failed": 0, "total": 5, "time_seconds": 0.0, "tokens": 0, "tool_calls": 0, "errors": 0}, "expectations": [{"text": "Stdout or a saved report contains VALIDATION PASSED", "passed": true, "evidence": "paper-evaluation score-and-kappa run report\niteration-1 / with_skill\nReviewers used: syn-rev1, syn-rev2 (fixture pair only; no third reviewer invented)\nPackages installed: none\nGit commit: none\nPython bytecode: disabled (-B)\n\n=============="}, {"text": "The report includes Cohen's kappa for a reviewer pair", "passed": true, "evidence": "paper-evaluation score-and-kappa run report\niteration-1 / with_skill\nReviewers used: syn-rev1, syn-rev2 (fixture pair only; no third reviewer invented)\nPackages installed: none\nGit commit: none\nPython bytecode: disabled (-B)\n\n=============="}, {"text": "If the shipped two-reviewer fixture was used, S01 kappa is 1.0000 and S02 kappa is 0.6364", "passed": true, "evidence": "paper-evaluation score-and-kappa run report\niteration-1 / with_skill\nReviewers used: syn-rev1, syn-rev2 (fixture pair only; no third reviewer invented)\nPackages installed: none\nGit commit: none\nPython bytecode: disabled (-B)\n\n================================================================================\nCOMMAND 1: scorer\n==========================================================================="}, {"text": "No reviewer other than syn-rev1 and syn-rev2 is introduced", "passed": true, "evidence": "scanned report for extra reviewer labels"}, {"text": "summary.csv is written to the eval outputs folder", "passed": true, "evidence": "C:\\Users\\yuanw\\Documents\\TECH\\School\\1T2627\\thesis1\\.agents\\skills\\paper-evaluation-workspace\\iteration-1\\score-and-kappa\\with_skill\\outputs\\summary.csv"}], "notes": []}, {"eval_id": 1, "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 0.25, "passed": 2, "failed": 6, "total": 8, "time_seconds": 0.0, "tokens": 0, "tool_calls": 0, "errors": 0}, "expectations": [{"text": "Output folder contains rubric.csv with the required header columns including support_level", "passed": false, "evidence": "header=['criterion_id', 'description', 'evidence_tag', 'na_allowed', 'name', 'notes', 'scale_max', 'scale_min', 'source_paper', 'source_span']"}, {"text": "Every rubric support_level is full-text, abstract-only, or adapted", "passed": false, "evidence": "levels=[''] n=15"}, {"text": "At least one criterion traces to performance reporting or model comparison", "passed": false, "evidence": "                             "}, {"text": "At least one criterion traces to feasibility and acceptance as separate questions", "passed": false, "evidence": "                             "}, {"text": "The pack does not describe the PLAN paper's framework as validated", "passed": false, "evidence": "scanned pack prose for a positive 'validated' claim"}, {"text": "No PDF file is written in the output folder", "passed": true, "evidence": "[]"}, {"text": "scores.csv reviewer values are only ai-draft", "passed": true, "evidence": "reviewers=['ai-draft']"}, {"text": "The scorer or its report is present (summary.csv or a VALIDATION PASSED log)", "passed": false, "evidence": "report=True summary=False"}], "notes": []}, {"eval_id": 2, "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 5, "failed": 0, "total": 5, "time_seconds": 0.0, "tokens": 0, "tool_calls": 0, "errors": 0}, "expectations": [{"text": "Stdout or a saved report contains VALIDATION PASSED", "passed": true, "evidence": "VALIDATION PASSED: 3 criteria, 24 score rows.\r\nPer-paper totals (NA criteria excluded from max_points):\r\n  SYN-P1 | syn-rev1 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P1 | syn-rev2 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P2 | syn-rev1"}, {"text": "The report includes Cohen's kappa for a reviewer pair", "passed": true, "evidence": "VALIDATION PASSED: 3 criteria, 24 score rows.\r\nPer-paper totals (NA criteria excluded from max_points):\r\n  SYN-P1 | syn-rev1 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P1 | syn-rev2 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P2 | syn-rev1"}, {"text": "If the shipped two-reviewer fixture was used, S01 kappa is 1.0000 and S02 kappa is 0.6364", "passed": true, "evidence": "VALIDATION PASSED: 3 criteria, 24 score rows.\r\nPer-paper totals (NA criteria excluded from max_points):\r\n  SYN-P1 | syn-rev1 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P1 | syn-rev2 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P2 | syn-rev1 | vsynthetic-0 | 4/6 | scored=3 NA=0\r\n  SYN-P2 | syn-rev2 | vsynthetic-0 | 3/6 | scored=3 NA=0\r\n  SYN-P3 | syn-rev1 | vsynthetic-0 | 2/6 | scored=3 NA=0\r\n  SYN"}, {"text": "No reviewer other than syn-rev1 and syn-rev2 is introduced", "passed": true, "evidence": "scanned report for extra reviewer labels"}, {"text": "summary.csv is written to the eval outputs folder", "passed": true, "evidence": "C:\\Users\\yuanw\\Documents\\TECH\\School\\1T2627\\thesis1\\.agents\\skills\\paper-evaluation-workspace\\iteration-1\\score-and-kappa\\without_skill\\outputs\\summary.csv"}], "notes": []}], "run_summary": {"with_skill": {"pass_rate": {"mean": 0.9375, "stddev": 0.0884, "min": 0.875, "max": 1.0}, "time_seconds": {"mean": 0.0, "stddev": 0.0, "min": 0.0, "max": 0.0}, "tokens": {"mean": 0.0, "stddev": 0.0, "min": 0, "max": 0}}, "without_skill": {"pass_rate": {"mean": 0.625, "stddev": 0.5303, "min": 0.25, "max": 1.0}, "time_seconds": {"mean": 0.0, "stddev": 0.0, "min": 0.0, "max": 0.0}, "tokens": {"mean": 0.0, "stddev": 0.0, "min": 0, "max": 0}}, "delta": {"pass_rate": "+0.31", "time_seconds": "+0.0", "tokens": "+0"}}, "notes": ["The +0.31 pass-rate delta is almost entirely from eval 1 (build-pack-from-abstracts: 7/8 with skill vs 2/8 without). Eval 2 (score-and-kappa) is 5/5 in both configurations and does not discriminate skill value.", "The remaining with-skill fail on eval 1 is \"The pack does not describe the PLAN paper's framework as validated\". The pack names that phrase only as a discarded concept; the grader substring also matches denial sentences. The same assertion fails without skill for the same reason, so it does not currently separate the two runs.", "Without-skill pack rubric uses evidence_tag instead of support_level, and support levels are empty. That single schema miss knocks out the header check, the allowed-level check, and both concept-trace scans.", "No-PDF and ai-draft-only reviewer pass in both configurations. They are integrity checks that both runs already followed.", "Time and token fields are 0 because the eval-task notifications did not include total_tokens or duration_ms. Those deltas are not informative.", "The without-skill pass-rate stddev (0.53) is the split between eval 1 (25%) and eval 2 (100%), not run-to-run variance. Each configuration has one run per eval, not three."]}};
+
+    // ---- State ----
+    let feedbackMap = {};  // run_id -> feedback text
+    let currentIndex = 0;
+    let visitedRuns = new Set();
+
+    // ---- Init ----
+    async function init() {
+      // Load saved feedback from server — but only if this isn't a fresh
+      // iteration (indicated by previous_feedback being present). When
+      // previous feedback exists, the feedback.json on disk is stale from
+      // the prior iteration and should not pre-fill the textareas.
+      const hasPrevious = Object.keys(EMBEDDED_DATA.previous_feedback || {}).length > 0
+        || Object.keys(EMBEDDED_DATA.previous_outputs || {}).length > 0;
+      if (!hasPrevious) {
+        try {
+          const resp = await fetch("/api/feedback");
+          const data = await resp.json();
+          if (data.reviews) {
+            for (const r of data.reviews) feedbackMap[r.run_id] = r.feedback;
+          }
+        } catch { /* first run, no feedback yet */ }
+      }
+
+      document.getElementById("skill-name").textContent = EMBEDDED_DATA.skill_name;
+      showRun(0);
+
+      // Wire up feedback auto-save
+      const textarea = document.getElementById("feedback");
+      let saveTimeout = null;
+      textarea.addEventListener("input", () => {
+        clearTimeout(saveTimeout);
+        document.getElementById("feedback-status").textContent = "";
+        saveTimeout = setTimeout(() => saveCurrentFeedback(), 800);
+      });
+    }
+
+    // ---- Navigation ----
+    function navigate(delta) {
+      const newIndex = currentIndex + delta;
+      if (newIndex >= 0 && newIndex < EMBEDDED_DATA.runs.length) {
+        saveCurrentFeedback();
+        showRun(newIndex);
+      }
+    }
+
+    function updateNavButtons() {
+      document.getElementById("prev-btn").disabled = currentIndex === 0;
+      document.getElementById("next-btn").disabled =
+        currentIndex === EMBEDDED_DATA.runs.length - 1;
+    }
+
+    // ---- Show a run ----
+    function showRun(index) {
+      currentIndex = index;
+      const run = EMBEDDED_DATA.runs[index];
+
+      // Progress
+      document.getElementById("progress").textContent =
+        `${index + 1} of ${EMBEDDED_DATA.runs.length}`;
+
+      // Prompt
+      document.getElementById("prompt-text").textContent = run.prompt;
+
+      // Config badge
+      const badge = document.getElementById("config-badge");
+      const configMatch = run.id.match(/(with_skill|without_skill|new_skill|old_skill)/);
+      if (configMatch) {
+        const config = configMatch[1];
+        const isBaseline = config === "without_skill" || config === "old_skill";
+        badge.textContent = config.replace(/_/g, " ");
+        badge.className = "config-badge " + (isBaseline ? "config-baseline" : "config-primary");
+        badge.style.display = "inline-block";
+      } else {
+        badge.style.display = "none";
+      }
+
+      // Outputs
+      renderOutputs(run);
+
+      // Previous outputs
+      renderPrevOutputs(run);
+
+      // Grades
+      renderGrades(run);
+
+      // Previous feedback
+      const prevFb = (EMBEDDED_DATA.previous_feedback || {})[run.id];
+      const prevEl = document.getElementById("prev-feedback");
+      if (prevFb) {
+        document.getElementById("prev-feedback-text").textContent = prevFb;
+        prevEl.style.display = "block";
+      } else {
+        prevEl.style.display = "none";
+      }
+
+      // Feedback
+      document.getElementById("feedback").value = feedbackMap[run.id] || "";
+      document.getElementById("feedback-status").textContent = "";
+
+      updateNavButtons();
+
+      // Track visited runs and promote done button when all visited
+      visitedRuns.add(index);
+      const doneBtn = document.getElementById("done-btn");
+      if (visitedRuns.size >= EMBEDDED_DATA.runs.length) {
+        doneBtn.classList.add("ready");
+      }
+
+      // Scroll main content to top
+      document.querySelector(".main").scrollTop = 0;
+    }
+
+    // ---- Render outputs ----
+    function renderOutputs(run) {
+      const container = document.getElementById("outputs-body");
+      container.innerHTML = "";
+
+      const outputs = run.outputs || [];
+      if (outputs.length === 0) {
+        container.innerHTML = '<div class="empty-state">No output files</div>';
+        return;
+      }
+
+      for (const file of outputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        // Always show file header with download link
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const content = document.createElement("div");
+        content.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          content.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          content.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          content.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(content, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          content.appendChild(a);
+        } else if (file.type === "error") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          pre.style.color = "var(--red)";
+          content.appendChild(pre);
+        }
+
+        fileDiv.appendChild(content);
+        container.appendChild(fileDiv);
+      }
+    }
+
+    // ---- XLSX rendering via SheetJS ----
+    function renderXlsx(container, b64Data) {
+      try {
+        const raw = Uint8Array.from(atob(b64Data), c => c.charCodeAt(0));
+        const wb = XLSX.read(raw, { type: "array" });
+
+        for (let i = 0; i < wb.SheetNames.length; i++) {
+          const sheetName = wb.SheetNames[i];
+          const ws = wb.Sheets[sheetName];
+
+          if (wb.SheetNames.length > 1) {
+            const sheetLabel = document.createElement("div");
+            sheetLabel.style.cssText =
+              "font-weight:600; font-size:0.8rem; color:#b0aea5; margin-top:0.5rem; margin-bottom:0.25rem;";
+            sheetLabel.textContent = "Sheet: " + sheetName;
+            container.appendChild(sheetLabel);
+          }
+
+          const htmlStr = XLSX.utils.sheet_to_html(ws, { editable: false });
+          const wrapper = document.createElement("div");
+          wrapper.innerHTML = htmlStr;
+          container.appendChild(wrapper);
+        }
+      } catch (err) {
+        container.textContent = "Error rendering spreadsheet: " + err.message;
+      }
+    }
+
+    // ---- Grades ----
+    function renderGrades(run) {
+      const section = document.getElementById("grades-section");
+      const content = document.getElementById("grades-content");
+
+      if (!run.grading) {
+        section.style.display = "none";
+        return;
+      }
+
+      const grading = run.grading;
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("grades-arrow").classList.remove("open");
+
+      const summary = grading.summary || {};
+      const expectations = grading.expectations || [];
+
+      let html = '<div style="padding: 1rem;">';
+
+      // Summary line
+      const passRate = summary.pass_rate != null
+        ? Math.round(summary.pass_rate * 100) + "%"
+        : "?";
+      const badgeClass = summary.pass_rate >= 0.8 ? "grade-pass" : summary.pass_rate >= 0.5 ? "" : "grade-fail";
+      html += '<div class="grades-summary">';
+      html += '<span class="grade-badge ' + badgeClass + '">' + passRate + '</span>';
+      html += '<span>' + (summary.passed || 0) + ' passed, ' + (summary.failed || 0) + ' failed of ' + (summary.total || 0) + '</span>';
+      html += '</div>';
+
+      // Assertions list
+      html += '<ul class="assertion-list">';
+      for (const exp of expectations) {
+        const statusClass = exp.passed ? "pass" : "fail";
+        const statusIcon = exp.passed ? "\u2713" : "\u2717";
+        html += '<li class="assertion-item">';
+        html += '<span class="assertion-status ' + statusClass + '">' + statusIcon + '</span>';
+        html += '<span>' + escapeHtml(exp.text) + '</span>';
+        if (exp.evidence) {
+          html += '<div class="assertion-evidence">' + escapeHtml(exp.evidence) + '</div>';
+        }
+        html += '</li>';
+      }
+      html += '</ul>';
+
+      html += '</div>';
+      content.innerHTML = html;
+    }
+
+    function toggleGrades() {
+      const content = document.getElementById("grades-content");
+      const arrow = document.getElementById("grades-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Previous outputs (collapsible) ----
+    function renderPrevOutputs(run) {
+      const section = document.getElementById("prev-outputs-section");
+      const content = document.getElementById("prev-outputs-content");
+      const prevOutputs = (EMBEDDED_DATA.previous_outputs || {})[run.id];
+
+      if (!prevOutputs || prevOutputs.length === 0) {
+        section.style.display = "none";
+        return;
+      }
+
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("prev-outputs-arrow").classList.remove("open");
+
+      // Render the files into the content area
+      content.innerHTML = "";
+      const wrapper = document.createElement("div");
+      wrapper.style.padding = "1rem";
+
+      for (const file of prevOutputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const fc = document.createElement("div");
+        fc.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          fc.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          fc.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          fc.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(fc, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          fc.appendChild(a);
+        }
+
+        fileDiv.appendChild(fc);
+        wrapper.appendChild(fileDiv);
+      }
+
+      content.appendChild(wrapper);
+    }
+
+    function togglePrevOutputs() {
+      const content = document.getElementById("prev-outputs-content");
+      const arrow = document.getElementById("prev-outputs-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Feedback (saved to server -> feedback.json) ----
+    function saveCurrentFeedback() {
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // Build reviews array from map
+      const reviews = [];
+      for (const [run_id, feedback] of Object.entries(feedbackMap)) {
+        if (feedback.trim()) {
+          reviews.push({ run_id, feedback, timestamp: new Date().toISOString() });
+        }
+      }
+
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ reviews, status: "in_progress" }),
+      }).then(() => {
+        document.getElementById("feedback-status").textContent = "Saved";
+      }).catch(() => {
+        // Static mode or server unavailable — no-op on auto-save,
+        // feedback will be downloaded on final submit
+        document.getElementById("feedback-status").textContent = "Will download on submit";
+      });
+    }
+
+    // ---- Done ----
+    function showDoneDialog() {
+      // Save current textarea to feedbackMap (but don't POST yet)
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // POST once with status: complete — include ALL runs so the model
+      // can distinguish "no feedback" (looks good) from "not reviewed"
+      const reviews = [];
+      const ts = new Date().toISOString();
+      for (const r of EMBEDDED_DATA.runs) {
+        reviews.push({ run_id: r.id, feedback: feedbackMap[r.id] || "", timestamp: ts });
+      }
+      const payload = JSON.stringify({ reviews, status: "complete" }, null, 2);
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: payload,
+      }).then(() => {
+        document.getElementById("done-overlay").classList.add("visible");
+      }).catch(() => {
+        // Server not available (static mode) — download as file
+        const blob = new Blob([payload], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "feedback.json";
+        a.click();
+        URL.revokeObjectURL(url);
+        document.getElementById("done-overlay").classList.add("visible");
+      });
+    }
+
+    function closeDoneDialog() {
+      // Reset status back to in_progress
+      saveCurrentFeedback();
+      document.getElementById("done-overlay").classList.remove("visible");
+    }
+
+    // ---- Toast ----
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("visible");
+      setTimeout(() => toast.classList.remove("visible"), 2000);
+    }
+
+    // ---- Keyboard nav ----
+    document.addEventListener("keydown", (e) => {
+      // Don't capture when typing in textarea
+      if (e.target.tagName === "TEXTAREA") return;
+
+      if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        e.preventDefault();
+        navigate(-1);
+      } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        e.preventDefault();
+        navigate(1);
+      }
+    });
+
+    // ---- Util ----
+    function getDownloadUri(file) {
+      if (file.data_uri) return file.data_uri;
+      if (file.data_b64) return "data:application/octet-stream;base64," + file.data_b64;
+      if (file.type === "text") return "data:text/plain;charset=utf-8," + encodeURIComponent(file.content);
+      return "#";
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // ---- View switching ----
+    function switchView(view) {
+      document.querySelectorAll(".view-tab").forEach(t => t.classList.remove("active"));
+      document.querySelectorAll(".view-panel").forEach(p => p.classList.remove("active"));
+      document.querySelector(`[onclick="switchView('${view}')"]`).classList.add("active");
+      document.getElementById("panel-" + view).classList.add("active");
+    }
+
+    // ---- Benchmark rendering ----
+    function renderBenchmark() {
+      const data = EMBEDDED_DATA.benchmark;
+      if (!data) return;
+
+      // Show the tabs
+      document.getElementById("view-tabs").style.display = "flex";
+
+      const container = document.getElementById("benchmark-content");
+      const summary = data.run_summary || {};
+      const metadata = data.metadata || {};
+      const notes = data.notes || [];
+
+      let html = "";
+
+      // Header
+      html += "<h2 style='font-family: Poppins, sans-serif; margin-bottom: 0.5rem;'>Benchmark Results</h2>";
+      html += "<p style='color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;'>";
+      if (metadata.skill_name) html += "<strong>" + escapeHtml(metadata.skill_name) + "</strong> &mdash; ";
+      if (metadata.timestamp) html += metadata.timestamp + " &mdash; ";
+      if (metadata.evals_run) html += "Evals: " + metadata.evals_run.join(", ") + " &mdash; ";
+      html += (metadata.runs_per_configuration || "?") + " runs per configuration";
+      html += "</p>";
+
+      // Summary table
+      html += '<table class="benchmark-table">';
+
+      function fmtStat(stat, pct) {
+        if (!stat) return "—";
+        const suffix = pct ? "%" : "";
+        const m = pct ? (stat.mean * 100).toFixed(0) : stat.mean.toFixed(1);
+        const s = pct ? (stat.stddev * 100).toFixed(0) : stat.stddev.toFixed(1);
+        return m + suffix + " ± " + s + suffix;
+      }
+
+      function deltaClass(val) {
+        if (!val) return "";
+        const n = parseFloat(val);
+        if (n > 0) return "benchmark-delta-positive";
+        if (n < 0) return "benchmark-delta-negative";
+        return "";
+      }
+
+      // Discover config names dynamically (everything except "delta")
+      const configs = Object.keys(summary).filter(k => k !== "delta");
+      const configA = configs[0] || "config_a";
+      const configB = configs[1] || "config_b";
+      const labelA = configA.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const labelB = configB.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const a = summary[configA] || {};
+      const b = summary[configB] || {};
+      const delta = summary.delta || {};
+
+      html += "<thead><tr><th>Metric</th><th>" + escapeHtml(labelA) + "</th><th>" + escapeHtml(labelB) + "</th><th>Delta</th></tr></thead>";
+      html += "<tbody>";
+
+      html += "<tr><td><strong>Pass Rate</strong></td>";
+      html += "<td>" + fmtStat(a.pass_rate, true) + "</td>";
+      html += "<td>" + fmtStat(b.pass_rate, true) + "</td>";
+      html += '<td class="' + deltaClass(delta.pass_rate) + '">' + (delta.pass_rate || "—") + "</td></tr>";
+
+      // Time (only show row if data exists)
+      if (a.time_seconds || b.time_seconds) {
+        html += "<tr><td><strong>Time (s)</strong></td>";
+        html += "<td>" + fmtStat(a.time_seconds, false) + "</td>";
+        html += "<td>" + fmtStat(b.time_seconds, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.time_seconds) + '">' + (delta.time_seconds ? delta.time_seconds + "s" : "—") + "</td></tr>";
+      }
+
+      // Tokens (only show row if data exists)
+      if (a.tokens || b.tokens) {
+        html += "<tr><td><strong>Tokens</strong></td>";
+        html += "<td>" + fmtStat(a.tokens, false) + "</td>";
+        html += "<td>" + fmtStat(b.tokens, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.tokens) + '">' + (delta.tokens || "—") + "</td></tr>";
+      }
+
+      html += "</tbody></table>";
+
+      // Per-eval breakdown (if runs data available)
+      const runs = data.runs || [];
+      if (runs.length > 0) {
+        const evalIds = [...new Set(runs.map(r => r.eval_id))].sort((a, b) => a - b);
+
+        html += "<h3 style='font-family: Poppins, sans-serif; margin-bottom: 0.75rem;'>Per-Eval Breakdown</h3>";
+
+        const hasTime = runs.some(r => r.result && r.result.time_seconds != null);
+        const hasErrors = runs.some(r => r.result && r.result.errors > 0);
+
+        for (const evalId of evalIds) {
+          const evalRuns = runs.filter(r => r.eval_id === evalId);
+          const evalName = evalRuns[0] && evalRuns[0].eval_name ? evalRuns[0].eval_name : "Eval " + evalId;
+
+          html += "<h4 style='font-family: Poppins, sans-serif; margin: 1rem 0 0.5rem; color: var(--text);'>" + escapeHtml(evalName) + "</h4>";
+          html += '<table class="benchmark-table">';
+          html += "<thead><tr><th>Config</th><th>Run</th><th>Pass Rate</th>";
+          if (hasTime) html += "<th>Time (s)</th>";
+          if (hasErrors) html += "<th>Crashes During Execution</th>";
+          html += "</tr></thead>";
+          html += "<tbody>";
+
+          // Group by config and render with average rows
+          const configGroups = [...new Set(evalRuns.map(r => r.configuration))];
+          for (let ci = 0; ci < configGroups.length; ci++) {
+            const config = configGroups[ci];
+            const configRuns = evalRuns.filter(r => r.configuration === config);
+            if (configRuns.length === 0) continue;
+
+            const rowClass = ci === 0 ? "benchmark-row-with" : "benchmark-row-without";
+            const configLabel = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+
+            for (const run of configRuns) {
+              const r = run.result || {};
+              const prClass = r.pass_rate >= 0.8 ? "benchmark-delta-positive" : r.pass_rate < 0.5 ? "benchmark-delta-negative" : "";
+              html += '<tr class="' + rowClass + '">';
+              html += "<td>" + configLabel + "</td>";
+              html += "<td>" + run.run_number + "</td>";
+              html += '<td class="' + prClass + '">' + ((r.pass_rate || 0) * 100).toFixed(0) + "% (" + (r.passed || 0) + "/" + (r.total || 0) + ")</td>";
+              if (hasTime) html += "<td>" + (r.time_seconds != null ? r.time_seconds.toFixed(1) : "—") + "</td>";
+              if (hasErrors) html += "<td>" + (r.errors || 0) + "</td>";
+              html += "</tr>";
+            }
+
+            // Average row
+            const rates = configRuns.map(r => (r.result || {}).pass_rate || 0);
+            const avgRate = rates.reduce((a, b) => a + b, 0) / rates.length;
+            const avgPrClass = avgRate >= 0.8 ? "benchmark-delta-positive" : avgRate < 0.5 ? "benchmark-delta-negative" : "";
+            html += '<tr class="benchmark-row-avg ' + rowClass + '">';
+            html += "<td>" + configLabel + "</td>";
+            html += "<td>Avg</td>";
+            html += '<td class="' + avgPrClass + '">' + (avgRate * 100).toFixed(0) + "%</td>";
+            if (hasTime) {
+              const times = configRuns.map(r => (r.result || {}).time_seconds).filter(t => t != null);
+              html += "<td>" + (times.length ? (times.reduce((a, b) => a + b, 0) / times.length).toFixed(1) : "—") + "</td>";
+            }
+            if (hasErrors) html += "<td></td>";
+            html += "</tr>";
+          }
+          html += "</tbody></table>";
+
+          // Per-assertion detail for this eval
+          const runsWithExpectations = {};
+          for (const config of configGroups) {
+            runsWithExpectations[config] = evalRuns.filter(r => r.configuration === config && r.expectations && r.expectations.length > 0);
+          }
+          const hasAnyExpectations = Object.values(runsWithExpectations).some(runs => runs.length > 0);
+          if (hasAnyExpectations) {
+            // Collect all unique assertion texts across all configs
+            const allAssertions = [];
+            const seen = new Set();
+            for (const config of configGroups) {
+              for (const run of runsWithExpectations[config]) {
+                for (const exp of (run.expectations || [])) {
+                  if (!seen.has(exp.text)) {
+                    seen.add(exp.text);
+                    allAssertions.push(exp.text);
+                  }
+                }
+              }
+            }
+
+            html += '<table class="benchmark-table" style="margin-top: 0.5rem;">';
+            html += "<thead><tr><th>Assertion</th>";
+            for (const config of configGroups) {
+              const label = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+              html += "<th>" + escapeHtml(label) + "</th>";
+            }
+            html += "</tr></thead><tbody>";
+
+            for (const assertionText of allAssertions) {
+              html += "<tr><td>" + escapeHtml(assertionText) + "</td>";
+
+              for (const config of configGroups) {
+                html += "<td>";
+                for (const run of runsWithExpectations[config]) {
+                  const exp = (run.expectations || []).find(e => e.text === assertionText);
+                  if (exp) {
+                    const cls = exp.passed ? "benchmark-delta-positive" : "benchmark-delta-negative";
+                    const icon = exp.passed ? "\u2713" : "\u2717";
+                    html += '<span class="' + cls + '" title="Run ' + run.run_number + ': ' + escapeHtml(exp.evidence || "") + '">' + icon + "</span> ";
+                  } else {
+                    html += "— ";
+                  }
+                }
+                html += "</td>";
+              }
+              html += "</tr>";
+            }
+            html += "</tbody></table>";
+          }
+        }
+      }
+
+      // Notes
+      if (notes.length > 0) {
+        html += '<div class="benchmark-notes">';
+        html += "<h3>Analysis Notes</h3>";
+        html += "<ul>";
+        for (const note of notes) {
+          html += "<li>" + escapeHtml(note) + "</li>";
+        }
+        html += "</ul></div>";
+      }
+
+      container.innerHTML = html;
+    }
+
+    // ---- Start ----
+    init();
+    renderBenchmark();
+  </script>
+</body>
+</html>

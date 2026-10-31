@@ -51,7 +51,7 @@ Read the coordinator profile and only the role profiles the request needs.
 
 Three layers. Use the layer that matches the task.
 
-- Local team skills under `.agents/skills/`: `research-coordination`, `evidence-research`, `quantitative-analysis`, `research-writing`, and `research-quality-review`. These coordinate the five roles and point at the upstream skills for search, citation, analysis, and writing methods.
+- Local team skills under `.agents/skills/`: `research-coordination`, `evidence-research`, `quantitative-analysis`, `research-writing`, and `research-quality-review`. These coordinate the five roles and point at the upstream skills for search, citation, analysis, and writing methods. An additional method skill, `$paper-evaluation`, builds a sourced paper-scoring pack; source paper names and output paths belong in the task brief.
 - Locked upstream skills in `skills-lock.json`: `literature-review`, `citation-management`, `exploratory-data-analysis`, `statistical-analysis`, `scientific-writing`, `scientific-visualization`, and `experimental-design`. Use them. Do not edit them unless the lock hash is updated on purpose.
 - Activity-only skills under `docs/activities/litReview/.agents/skills/`: `literature-search-arxiv`, `literature-search-openalex`, `agent-browser`, `find-skills`, and `grill-me`. Use those only while working in that literature-review activity. They are pinned by `docs/activities/litReview/skills-lock.json`.
 

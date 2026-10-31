@@ -1,0 +1,17 @@
+paper_id,doi,reviewer,rubric_version,criterion_id,score,evidence_location,note
+SYN-PLAN,unavailable,ai-draft,1.0.0,C01,2,Title; Abstract,Plan labelled; no results reported; claims stay in future tense
+SYN-PLAN,unavailable,ai-draft,1.0.0,C02,0,Abstract,Gap named; no metric unit or planned report format
+SYN-PLAN,unavailable,ai-draft,1.0.0,C03,0,Abstract,Quality tasks named only as a planned goal
+SYN-PLAN,unavailable,ai-draft,1.0.0,C04,1,Abstract,Methods and two-team pilot named; procedure and selection missing
+SYN-PLAN,unavailable,ai-draft,1.0.0,C05,NA,Abstract,NA allowed if no method or process is evaluated for adoption; this is a plan with no results
+SYN-PLAN,unavailable,ai-draft,1.0.0,C06,NA,Abstract,NA allowed if the paper does not discuss desk-checking or a review process
+SYN-PLAN,unavailable,ai-draft,1.0.0,C07,NA,Abstract,NA allowed if the paper claims no results and names no variants or configurations
+SYN-PLAN,unavailable,ai-draft,1.0.0,C08,NA,Abstract,NA allowed if the paper reports no executed method
+SYN-CASE,unavailable,ai-draft,1.0.0,C01,2,Title; Abstract,Completed case study; findings match that status
+SYN-CASE,unavailable,ai-draft,1.0.0,C02,0,Abstract,searched Abstract: no model-performance metric or comparison report
+SYN-CASE,unavailable,ai-draft,1.0.0,C03,1,Abstract,Two QA parts named; task timing role and output incomplete
+SYN-CASE,unavailable,ai-draft,1.0.0,C04,1,Abstract,Developers named; count selection and procedure missing
+SYN-CASE,unavailable,ai-draft,1.0.0,C05,2,Abstract,Feasibility and acceptance posed and evidenced separately
+SYN-CASE,unavailable,ai-draft,1.0.0,C06,2,Abstract,Defined as checklist-guided self-review not structured inspection
+SYN-CASE,unavailable,ai-draft,1.0.0,C07,1,Abstract,Coverage limit named; covered variants not enumerated
+SYN-CASE,unavailable,ai-draft,1.0.0,C08,1,Abstract,Limit reported; acceptance finding is not qualified by it

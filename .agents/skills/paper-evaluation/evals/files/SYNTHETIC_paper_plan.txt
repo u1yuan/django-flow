@@ -1,0 +1,5 @@
+# SYNTHETIC paper. Invented text for skill evaluation only. Not a real publication.
+
+Title: A Quality-Task Checklist for Model Comparison — A Research Plan
+
+Abstract: This research PLAN will develop quality-assurance guidelines for the model-building phase. Three gaps remain: no QA guidelines, unclear quality-task processes at each phase, and insufficient reporting standards for model performance needed for model comparison. Planned methods are a literature study, expert validation, and a pilot project with two development teams. No results are reported.

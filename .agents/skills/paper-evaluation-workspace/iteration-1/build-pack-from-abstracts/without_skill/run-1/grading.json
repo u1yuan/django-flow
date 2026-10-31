@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Output folder contains rubric.csv with the required header columns including support_level",
+      "passed": false,
+      "evidence": "header=['criterion_id', 'description', 'evidence_tag', 'na_allowed', 'name', 'notes', 'scale_max', 'scale_min', 'source_paper', 'source_span']"
+    },
+    {
+      "text": "Every rubric support_level is full-text, abstract-only, or adapted",
+      "passed": false,
+      "evidence": "levels=[''] n=15"
+    },
+    {
+      "text": "At least one criterion traces to performance reporting or model comparison",
+      "passed": false,
+      "evidence": "                             "
+    },
+    {
+      "text": "At least one criterion traces to feasibility and acceptance as separate questions",
+      "passed": false,
+      "evidence": "                             "
+    },
+    {
+      "text": "The pack does not describe the PLAN paper's framework as validated",
+      "passed": false,
+      "evidence": "scanned pack prose for a positive 'validated' claim"
+    },
+    {
+      "text": "No PDF file is written in the output folder",
+      "passed": true,
+      "evidence": "[]"
+    },
+    {
+      "text": "scores.csv reviewer values are only ai-draft",
+      "passed": true,
+      "evidence": "reviewers=['ai-draft']"
+    },
+    {
+      "text": "The scorer or its report is present (summary.csv or a VALIDATION PASSED log)",
+      "passed": false,
+      "evidence": "report=True summary=False"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 6,
+    "total": 8,
+    "pass_rate": 0.25
+  }
+}

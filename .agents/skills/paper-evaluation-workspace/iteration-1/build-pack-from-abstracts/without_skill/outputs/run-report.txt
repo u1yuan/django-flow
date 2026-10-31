@@ -1,0 +1,59 @@
+Paper-evaluation scorer report
+Sources: SYNTHETIC PLAN and SYNTHETIC CASE abstracts only.
+Reviewer filter: ai-draft
+Reviewers present: ai-draft
+CONSTRAINT: Paper PLAN is a research plan with no results. Do not call the PLAN framework validated. Expert validation in PLAN is a planned method only.
+
+Criterion evidence tags:
+  full-text: 0
+  abstract-only: 13
+  adapted: 2
+  other: 0
+
+Paper totals
+paper_id	n_scored	n_na	total	max	mean	pct_of_max	title
+SYNTHETIC_PLAN	15	0	16.0	30.0	1.067	53.3%	A Quality-Task Checklist for Model Comparison — A Research Plan
+SYNTHETIC_CASE	15	0	19.0	30.0	1.267	63.3%	A Case Study on Desk-Checking and Variability Coverage
+
+## SYNTHETIC_PLAN
+Title: A Quality-Task Checklist for Model Comparison — A Research Plan
+Reviewers: ai-draft
+Note: this paper is a research plan with no results. Do not call the PLAN framework validated.
+criterion_id	tag	score	name
+C01	abstract-only	2	Model-building QA guidelines
+C02	abstract-only	2	Quality-task processes at each phase
+C03	abstract-only	2	Model-performance reporting for comparison
+C04	abstract-only	2	Literature study method
+C05	abstract-only	2	Expert validation as a method item
+C06	abstract-only	2	Two-team pilot
+C07	abstract-only	0	Empirical results reported
+C08	abstract-only	0	Feasibility and acceptance separated
+C09	abstract-only	0	Variability-model creation as QA part
+C10	abstract-only	0	Desk-checking is pre-check-in self-review
+C11	abstract-only	0	Variant coverage of the modeling language
+C12	abstract-only	0	Developer acceptance of both QA parts
+C13	abstract-only	1	Study limits reported
+C14	adapted	1	QA process has identifiable parts
+C15	adapted	2	Claim type matches evidence
+
+## SYNTHETIC_CASE
+Title: A Case Study on Desk-Checking and Variability Coverage
+Reviewers: ai-draft
+criterion_id	tag	score	name
+C01	abstract-only	1	Model-building QA guidelines
+C02	abstract-only	0	Quality-task processes at each phase
+C03	abstract-only	0	Model-performance reporting for comparison
+C04	abstract-only	0	Literature study method
+C05	abstract-only	0	Expert validation as a method item
+C06	abstract-only	0	Two-team pilot
+C07	abstract-only	2	Empirical results reported
+C08	abstract-only	2	Feasibility and acceptance separated
+C09	abstract-only	2	Variability-model creation as QA part
+C10	abstract-only	2	Desk-checking is pre-check-in self-review
+C11	abstract-only	2	Variant coverage of the modeling language
+C12	abstract-only	2	Developer acceptance of both QA parts
+C13	abstract-only	2	Study limits reported
+C14	adapted	2	QA process has identifiable parts
+C15	adapted	2	Claim type matches evidence
+
+End of report. One reviewer (ai-draft) unless a later human review is added.

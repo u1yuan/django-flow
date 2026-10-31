@@ -1,0 +1,7 @@
+paper_id,paper_title,reviewer,criterion_id,score,na,justification
+SYNTHETIC_A,SYNTHETIC fixture paper A,ai-draft,S1,2,no,SYNTHETIC fixture: A meets S1.
+SYNTHETIC_A,SYNTHETIC fixture paper A,ai-draft,S2,1,no,SYNTHETIC fixture: A partial on S2.
+SYNTHETIC_A,SYNTHETIC fixture paper A,ai-draft,S3,,yes,SYNTHETIC fixture: S3 not applicable to A.
+SYNTHETIC_B,SYNTHETIC fixture paper B,ai-draft,S1,0,no,SYNTHETIC fixture: B absent on S1.
+SYNTHETIC_B,SYNTHETIC fixture paper B,ai-draft,S2,2,no,SYNTHETIC fixture: B meets S2.
+SYNTHETIC_B,SYNTHETIC fixture paper B,ai-draft,S3,2,no,SYNTHETIC fixture: B meets S3.

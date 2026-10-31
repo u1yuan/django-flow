@@ -79,8 +79,8 @@ The score anchors (0/1/2) are my own operational wording in every case, whatever
 
 | Support level | Criteria |
 | --- | --- |
-| full-text | C02–C13 (12) |
-| adapted | C01, C14, C15 (3) |
+| full-text | C02, C04–C13 (11) |
+| adapted | C01, C03, C14, C15 (4) |
 | abstract-only | none (0) |
 
 ## Pilot (reviewer `ai-draft`, 2026-10-31)

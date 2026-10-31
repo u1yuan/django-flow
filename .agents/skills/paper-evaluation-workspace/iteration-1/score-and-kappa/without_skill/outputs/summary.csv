@@ -1,0 +1,12 @@
+section,paper_id,reviewer,rubric_version,criterion_id,points,max_points,n_scored,n_na,reviewer_pair,n_pairs,observed_agreement,expected_agreement,kappa,status
+total,SYN-P1,syn-rev1,synthetic-0,,5,6,3,0,,,,,,ok
+total,SYN-P1,syn-rev2,synthetic-0,,5,6,3,0,,,,,,ok
+total,SYN-P2,syn-rev1,synthetic-0,,4,6,3,0,,,,,,ok
+total,SYN-P2,syn-rev2,synthetic-0,,3,6,3,0,,,,,,ok
+total,SYN-P3,syn-rev1,synthetic-0,,2,6,3,0,,,,,,ok
+total,SYN-P3,syn-rev2,synthetic-0,,1,6,3,0,,,,,,ok
+total,SYN-P4,syn-rev1,synthetic-0,,2,4,2,1,,,,,,ok
+total,SYN-P4,syn-rev2,synthetic-0,,2,4,2,1,,,,,,ok
+kappa,,,synthetic-0,S01,,,,,syn-rev1|syn-rev2,4,1.0000,0.3750,1.0000,ok
+kappa,,,synthetic-0,S02,,,,,syn-rev1|syn-rev2,4,0.7500,0.3125,0.6364,ok
+kappa,,,synthetic-0,S03,,,,,syn-rev1|syn-rev2,4,0.7500,0.4375,0.5556,ok

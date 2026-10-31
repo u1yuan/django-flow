@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "eval_name": "score-and-kappa",
+  "prompt": "Run the bundled scorer on SYNTHETIC two-reviewer fixtures and report totals plus Cohen's kappa.",
+  "assertions": [
+    "Stdout or a saved report contains VALIDATION PASSED",
+    "The report includes Cohen's kappa for a reviewer pair",
+    "If the shipped two-reviewer fixture was used, S01 kappa is 1.0000 and S02 kappa is 0.6364",
+    "No reviewer other than syn-rev1 and syn-rev2 is introduced",
+    "summary.csv is written to the eval outputs folder"
+  ]
+}

@@ -1,0 +1,31 @@
+paper_id,paper_title,reviewer,criterion_id,score,na,justification
+SYNTHETIC_PLAN,A Quality-Task Checklist for Model Comparison — A Research Plan,ai-draft,C01,2,no,PLAN abstract: will develop quality-assurance guidelines for the model-building phase and names no QA guidelines as a gap.
+SYNTHETIC_PLAN,A Quality-Task Checklist for Model Comparison — A Research Plan,ai-draft,C02,2,no,PLAN abstract: unclear quality-task processes at each phase is a named gap the plan will address.
+SYNTHETIC_PLAN,A Quality-Task Checklist for Model Comparison — A Research Plan,ai-draft,C03,2,no,PLAN abstract: insufficient reporting standards for model performance needed for model comparison is a named gap.
+SYNTHETIC_PLAN,A Quality-Task Checklist for Model Comparison — A Research Plan,ai-draft,C04,2,no,PLAN abstract: planned methods include a literature study. Planned only; not executed here.
+SYNTHETIC_PLAN,A Quality-Task Checklist for Model Comparison — A Research Plan,ai-draft,C05,2,no,PLAN abstract lists expert validation as a planned method. This is not evidence that any framework is validated; no results are reported.
+SYNTHETIC_PLAN,A Quality-Task Checklist for Model Comparison — A Research Plan,ai-draft,C06,2,no,PLAN abstract: planned methods include a pilot project with two development teams. Planned only.
+SYNTHETIC_PLAN,A Quality-Task Checklist for Model Comparison — A Research Plan,ai-draft,C07,0,no,PLAN abstract: No results are reported.
+SYNTHETIC_PLAN,A Quality-Task Checklist for Model Comparison — A Research Plan,ai-draft,C08,0,no,PLAN abstract does not evaluate feasibility and acceptance as separate questions.
+SYNTHETIC_PLAN,A Quality-Task Checklist for Model Comparison — A Research Plan,ai-draft,C09,0,no,PLAN abstract does not treat variability-model creation as a QA process part.
+SYNTHETIC_PLAN,A Quality-Task Checklist for Model Comparison — A Research Plan,ai-draft,C10,0,no,PLAN abstract does not define desk-checking as pre-check-in self-review.
+SYNTHETIC_PLAN,A Quality-Task Checklist for Model Comparison — A Research Plan,ai-draft,C11,0,no,PLAN abstract does not discuss modeling-language coverage of variants.
+SYNTHETIC_PLAN,A Quality-Task Checklist for Model Comparison — A Research Plan,ai-draft,C12,0,no,PLAN abstract does not report developer acceptance.
+SYNTHETIC_PLAN,A Quality-Task Checklist for Model Comparison — A Research Plan,ai-draft,C13,1,no,PLAN discloses that no results are reported (plan status) but does not report empirical study limits in the CASE sense.
+SYNTHETIC_PLAN,A Quality-Task Checklist for Model Comparison — A Research Plan,ai-draft,C14,1,no,PLAN decomposes work into QA guidelines quality-task processes and reporting standards; it does not include CASE parts (variability-model creation desk-checking).
+SYNTHETIC_PLAN,A Quality-Task Checklist for Model Comparison — A Research Plan,ai-draft,C15,2,no,PLAN presents itself as a research plan with planned methods and no results. It is not a completed validation. Do not call the PLAN framework validated.
+SYNTHETIC_CASE,A Case Study on Desk-Checking and Variability Coverage,ai-draft,C01,1,no,CASE discusses two parts of a QA process but not QA guidelines for the model-building phase specifically.
+SYNTHETIC_CASE,A Case Study on Desk-Checking and Variability Coverage,ai-draft,C02,0,no,CASE does not specify quality-task processes at each phase.
+SYNTHETIC_CASE,A Case Study on Desk-Checking and Variability Coverage,ai-draft,C03,0,no,CASE does not address reporting standards for model performance or model comparison.
+SYNTHETIC_CASE,A Case Study on Desk-Checking and Variability Coverage,ai-draft,C04,0,no,CASE does not use or plan a literature study.
+SYNTHETIC_CASE,A Case Study on Desk-Checking and Variability Coverage,ai-draft,C05,0,no,CASE does not list expert validation as a method. No basis to treat any PLAN framework as validated.
+SYNTHETIC_CASE,A Case Study on Desk-Checking and Variability Coverage,ai-draft,C06,0,no,CASE is not a pilot with two development teams.
+SYNTHETIC_CASE,A Case Study on Desk-Checking and Variability Coverage,ai-draft,C07,2,no,CASE reports results: variability modeling was feasible a different language was needed and developers accepted both parts.
+SYNTHETIC_CASE,A Case Study on Desk-Checking and Variability Coverage,ai-draft,C08,2,no,CASE abstract: evaluates feasibility and acceptance as separate questions.
+SYNTHETIC_CASE,A Case Study on Desk-Checking and Variability Coverage,ai-draft,C09,2,no,CASE names variability-model creation as one of two QA process parts.
+SYNTHETIC_CASE,A Case Study on Desk-Checking and Variability Coverage,ai-draft,C10,2,no,CASE: desk-checking is a checklist-guided self-review before check-in not a structured inspection.
+SYNTHETIC_CASE,A Case Study on Desk-Checking and Variability Coverage,ai-draft,C11,2,no,CASE: a different modeling language was needed to represent all important variants. The shortfall is reported.
+SYNTHETIC_CASE,A Case Study on Desk-Checking and Variability Coverage,ai-draft,C12,2,no,CASE: Developers accepted both parts.
+SYNTHETIC_CASE,A Case Study on Desk-Checking and Variability Coverage,ai-draft,C13,2,no,CASE: The study reports that limit (language coverage shortfall plus the stated study limit).
+SYNTHETIC_CASE,A Case Study on Desk-Checking and Variability Coverage,ai-draft,C14,2,no,CASE decomposes the QA process into variability-model creation and desk-checking.
+SYNTHETIC_CASE,A Case Study on Desk-Checking and Variability Coverage,ai-draft,C15,2,no,CASE is a completed case study with results and a reported limit. It does not present a no-results plan as a validated framework.

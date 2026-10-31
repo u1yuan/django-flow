@@ -1,0 +1,8 @@
+# SYNTHETIC fixture: deliberately invalid invented scores for testing validation errors. Not real reviewer data.
+paper_id,doi,reviewer,rubric_version,criterion_id,score,evidence_location,note
+SYN-BAD,10.0000/synthetic.bad,syn-rev1,synthetic-0,S01,3,SYNTHETIC p. 1,out of range
+SYN-BAD,10.0000/synthetic.bad,syn-rev1,synthetic-0,S02,1,,missing evidence location
+SYN-BAD,10.0000/synthetic.bad,syn-rev1,synthetic-0,S99,1,SYNTHETIC p. 1,unknown criterion
+SYN-BAD,10.0000/synthetic.bad,syn-rev1,synthetic-0,S02,NA,SYNTHETIC p. 1,NA where not allowed and duplicate
+SYN-BAD,10.0000/synthetic.bad,syn-rev1,synthetic-9,S03,NA,SYNTHETIC p. 1,
+SYN-BAD,10.0000/synthetic.other,syn-rev2,synthetic-0,S01,1,SYNTHETIC p. 1,conflicting doi

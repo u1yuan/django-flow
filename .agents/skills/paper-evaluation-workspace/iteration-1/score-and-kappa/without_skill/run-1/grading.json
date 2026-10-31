@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "Stdout or a saved report contains VALIDATION PASSED",
+      "passed": true,
+      "evidence": "VALIDATION PASSED: 3 criteria, 24 score rows.\r\nPer-paper totals (NA criteria excluded from max_points):\r\n  SYN-P1 | syn-rev1 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P1 | syn-rev2 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P2 | syn-rev1"
+    },
+    {
+      "text": "The report includes Cohen's kappa for a reviewer pair",
+      "passed": true,
+      "evidence": "VALIDATION PASSED: 3 criteria, 24 score rows.\r\nPer-paper totals (NA criteria excluded from max_points):\r\n  SYN-P1 | syn-rev1 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P1 | syn-rev2 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P2 | syn-rev1"
+    },
+    {
+      "text": "If the shipped two-reviewer fixture was used, S01 kappa is 1.0000 and S02 kappa is 0.6364",
+      "passed": true,
+      "evidence": "VALIDATION PASSED: 3 criteria, 24 score rows.\r\nPer-paper totals (NA criteria excluded from max_points):\r\n  SYN-P1 | syn-rev1 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P1 | syn-rev2 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P2 | syn-rev1 | vsynthetic-0 | 4/6 | scored=3 NA=0\r\n  SYN-P2 | syn-rev2 | vsynthetic-0 | 3/6 | scored=3 NA=0\r\n  SYN-P3 | syn-rev1 | vsynthetic-0 | 2/6 | scored=3 NA=0\r\n  SYN"
+    },
+    {
+      "text": "No reviewer other than syn-rev1 and syn-rev2 is introduced",
+      "passed": true,
+      "evidence": "scanned report for extra reviewer labels"
+    },
+    {
+      "text": "summary.csv is written to the eval outputs folder",
+      "passed": true,
+      "evidence": "C:\\Users\\yuanw\\Documents\\TECH\\School\\1T2627\\thesis1\\.agents\\skills\\paper-evaluation-workspace\\iteration-1\\score-and-kappa\\without_skill\\outputs\\summary.csv"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

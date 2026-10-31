@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Output folder contains rubric.csv with the required header columns including support_level",
+      "passed": true,
+      "evidence": "header=['criterion', 'criterion_id', 'guiding_question', 'rubric_version', 'score_0_anchor', 'score_1_anchor', 'score_2_anchor', 'source_location', 'source_paper', 'support_level']"
+    },
+    {
+      "text": "Every rubric support_level is full-text, abstract-only, or adapted",
+      "passed": true,
+      "evidence": "levels=['abstract-only', 'adapted'] n=8"
+    },
+    {
+      "text": "At least one criterion traces to performance reporting or model comparison",
+      "passed": true,
+      "evidence": "study status is labelled and claims stay inside it does the paper state whether it reports a plan or completed empirical work, and do its claims stay inside that status? model-performance reporting is"
+    },
+    {
+      "text": "At least one criterion traces to feasibility and acceptance as separate questions",
+      "passed": true,
+      "evidence": "study status is labelled and claims stay inside it does the paper state whether it reports a plan or completed empirical work, and do its claims stay inside that status? model-performance reporting is"
+    },
+    {
+      "text": "The pack does not describe the PLAN paper's framework as validated",
+      "passed": false,
+      "evidence": "scanned pack prose for a positive 'validated' claim"
+    },
+    {
+      "text": "No PDF file is written in the output folder",
+      "passed": true,
+      "evidence": "[]"
+    },
+    {
+      "text": "scores.csv reviewer values are only ai-draft",
+      "passed": true,
+      "evidence": "reviewers=['ai-draft']"
+    },
+    {
+      "text": "The scorer or its report is present (summary.csv or a VALIDATION PASSED log)",
+      "passed": true,
+      "evidence": "report=True summary=True"
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 1,
+    "total": 8,
+    "pass_rate": 0.875
+  }
+}

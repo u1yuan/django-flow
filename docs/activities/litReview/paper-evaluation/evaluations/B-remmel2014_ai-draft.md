@@ -9,13 +9,13 @@
 | paper_id | B-remmel2014 |
 | DOI | 10.1109/MCSE.2014.57 |
 | Citation | Remmel, H., Paech, B., Engwer, C., & Bastian, P. (2014). A Case Study on a Quality Assurance Process for a Scientific Framework. *Computing in Science & Engineering, 16*(3), 58–66 |
-| Metadata source used to verify citation | Crossref, OpenAlex, Semantic Scholar, and the reprint's title page (see `source-trace.md`) |
+| Metadata source used to verify citation | Crossref, DBLP, and the reprint's title page (see `source-trace.md`) |
 | Reviewer | ai-draft |
 | rubric_version | 1.0.0 |
 | Evaluation date | 2026-10-31 |
 | Copy used and URL | Author-posted IEEE reprint, https://se-paech.ifi.uni-heidelberg.de/fileadmin/pdf/2014_Remmel__Paech__Engwer__Bastian_A_Case.pdf |
 | Access date | 2026-10-31 |
-| Access level | Full text, except the page 58 body after the first sentence, which was not extracted |
+| Access level | Full text (author reprint). Page 58 body after the standfirst was read in this session |
 | Locator scheme | Printed journal pages (58–66) plus section headings. Not checked against IEEE Xplore |
 | Study status | Completed case study (pp. 60–66) |
 | Is this paper a source of the rubric? | **Yes** (C05, C06, C07, C08–C15). These scores test rubric consistency. They are not independent evidence about the rubric |
@@ -26,7 +26,7 @@
 | --- | --- | --- |
 | 1 Identity | Yes | The reprint's title page matches Crossref on title, four authors, 16(3), and pp. 58–66 |
 | 2 Copy used | Yes | Author reprint with journal pagination. The server's TLS certificate had expired, so it was fetched with verification off (SHA-256 in `source-trace.md`) |
-| 3 Access level | Yes | Full text, with the p. 58 gap noted |
+| 3 Access level | Yes | Full text of the reprint, including the p. 58 body |
 | 4 Locator scheme | Yes | Printed pages |
 | 5 Full read | Yes | Standfirst; Case Study Background (Planning, Review); Related Work sidebar; Case Study Design; Research Questions; Research Methods; Results; Proposed Desk-Checking Checklist sidebar; Support for Stated Goals; Threats to Validity; future work; References |
 | 6 Study status | Yes | Completed (p. 61 "Results") |
@@ -62,7 +62,7 @@
 - Total from `scripts/score_papers.py`: see `scores/summary.csv` (expected 24/30).
 - Items a human must verify:
   - Page numbers and quotes, against the IEEE Xplore version.
-  - The unread p. 58 body.
+  - The p. 58 body was re-read in this session; confirm against IEEE Xplore.
   - Whether C03 should be NA.
   - Whether the overlap between C05 and C13 (both penalize the desk-checking feasibility conclusion) counts the same issue twice.
   - A second reviewer's independent scores, needed for kappa.

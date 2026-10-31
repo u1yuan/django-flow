@@ -1,0 +1,4 @@
+criterion_id,name,description,source_paper,source_span,evidence_tag,scale_min,scale_max,na_allowed,notes
+S1,SYNTHETIC fixture gap one,Invented fixture criterion one.,SYNTHETIC_FIXTURE,fixture span one,abstract-only,0,2,yes,SYNTHETIC test fixture only.
+S2,SYNTHETIC fixture gap two,Invented fixture criterion two.,SYNTHETIC_FIXTURE,fixture span two,adapted,0,2,yes,SYNTHETIC test fixture only.
+S3,SYNTHETIC fixture unused,Invented fixture criterion three.,SYNTHETIC_FIXTURE,fixture span three,abstract-only,0,2,yes,SYNTHETIC test fixture only.

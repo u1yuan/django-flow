@@ -1,0 +1,273 @@
+{
+  "metadata": {
+    "skill_name": "paper-evaluation",
+    "skill_path": "C:\\Users\\yuanw\\Documents\\TECH\\School\\1T2627\\thesis1\\.agents\\skills\\paper-evaluation",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-10-31T12:13:22Z",
+    "evals_run": [
+      1,
+      2
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.875,
+        "passed": 7,
+        "failed": 1,
+        "total": 8,
+        "time_seconds": 0.0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output folder contains rubric.csv with the required header columns including support_level",
+          "passed": true,
+          "evidence": "header=['criterion', 'criterion_id', 'guiding_question', 'rubric_version', 'score_0_anchor', 'score_1_anchor', 'score_2_anchor', 'source_location', 'source_paper', 'support_level']"
+        },
+        {
+          "text": "Every rubric support_level is full-text, abstract-only, or adapted",
+          "passed": true,
+          "evidence": "levels=['abstract-only', 'adapted'] n=8"
+        },
+        {
+          "text": "At least one criterion traces to performance reporting or model comparison",
+          "passed": true,
+          "evidence": "study status is labelled and claims stay inside it does the paper state whether it reports a plan or completed empirical work, and do its claims stay inside that status? model-performance reporting is"
+        },
+        {
+          "text": "At least one criterion traces to feasibility and acceptance as separate questions",
+          "passed": true,
+          "evidence": "study status is labelled and claims stay inside it does the paper state whether it reports a plan or completed empirical work, and do its claims stay inside that status? model-performance reporting is"
+        },
+        {
+          "text": "The pack does not describe the PLAN paper's framework as validated",
+          "passed": false,
+          "evidence": "scanned pack prose for a positive 'validated' claim"
+        },
+        {
+          "text": "No PDF file is written in the output folder",
+          "passed": true,
+          "evidence": "[]"
+        },
+        {
+          "text": "scores.csv reviewer values are only ai-draft",
+          "passed": true,
+          "evidence": "reviewers=['ai-draft']"
+        },
+        {
+          "text": "The scorer or its report is present (summary.csv or a VALIDATION PASSED log)",
+          "passed": true,
+          "evidence": "report=True summary=True"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 0.0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Stdout or a saved report contains VALIDATION PASSED",
+          "passed": true,
+          "evidence": "paper-evaluation score-and-kappa run report\niteration-1 / with_skill\nReviewers used: syn-rev1, syn-rev2 (fixture pair only; no third reviewer invented)\nPackages installed: none\nGit commit: none\nPython bytecode: disabled (-B)\n\n=============="
+        },
+        {
+          "text": "The report includes Cohen's kappa for a reviewer pair",
+          "passed": true,
+          "evidence": "paper-evaluation score-and-kappa run report\niteration-1 / with_skill\nReviewers used: syn-rev1, syn-rev2 (fixture pair only; no third reviewer invented)\nPackages installed: none\nGit commit: none\nPython bytecode: disabled (-B)\n\n=============="
+        },
+        {
+          "text": "If the shipped two-reviewer fixture was used, S01 kappa is 1.0000 and S02 kappa is 0.6364",
+          "passed": true,
+          "evidence": "paper-evaluation score-and-kappa run report\niteration-1 / with_skill\nReviewers used: syn-rev1, syn-rev2 (fixture pair only; no third reviewer invented)\nPackages installed: none\nGit commit: none\nPython bytecode: disabled (-B)\n\n================================================================================\nCOMMAND 1: scorer\n==========================================================================="
+        },
+        {
+          "text": "No reviewer other than syn-rev1 and syn-rev2 is introduced",
+          "passed": true,
+          "evidence": "scanned report for extra reviewer labels"
+        },
+        {
+          "text": "summary.csv is written to the eval outputs folder",
+          "passed": true,
+          "evidence": "C:\\Users\\yuanw\\Documents\\TECH\\School\\1T2627\\thesis1\\.agents\\skills\\paper-evaluation-workspace\\iteration-1\\score-and-kappa\\with_skill\\outputs\\summary.csv"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.25,
+        "passed": 2,
+        "failed": 6,
+        "total": 8,
+        "time_seconds": 0.0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output folder contains rubric.csv with the required header columns including support_level",
+          "passed": false,
+          "evidence": "header=['criterion_id', 'description', 'evidence_tag', 'na_allowed', 'name', 'notes', 'scale_max', 'scale_min', 'source_paper', 'source_span']"
+        },
+        {
+          "text": "Every rubric support_level is full-text, abstract-only, or adapted",
+          "passed": false,
+          "evidence": "levels=[''] n=15"
+        },
+        {
+          "text": "At least one criterion traces to performance reporting or model comparison",
+          "passed": false,
+          "evidence": "                             "
+        },
+        {
+          "text": "At least one criterion traces to feasibility and acceptance as separate questions",
+          "passed": false,
+          "evidence": "                             "
+        },
+        {
+          "text": "The pack does not describe the PLAN paper's framework as validated",
+          "passed": false,
+          "evidence": "scanned pack prose for a positive 'validated' claim"
+        },
+        {
+          "text": "No PDF file is written in the output folder",
+          "passed": true,
+          "evidence": "[]"
+        },
+        {
+          "text": "scores.csv reviewer values are only ai-draft",
+          "passed": true,
+          "evidence": "reviewers=['ai-draft']"
+        },
+        {
+          "text": "The scorer or its report is present (summary.csv or a VALIDATION PASSED log)",
+          "passed": false,
+          "evidence": "report=True summary=False"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 0.0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Stdout or a saved report contains VALIDATION PASSED",
+          "passed": true,
+          "evidence": "VALIDATION PASSED: 3 criteria, 24 score rows.\r\nPer-paper totals (NA criteria excluded from max_points):\r\n  SYN-P1 | syn-rev1 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P1 | syn-rev2 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P2 | syn-rev1"
+        },
+        {
+          "text": "The report includes Cohen's kappa for a reviewer pair",
+          "passed": true,
+          "evidence": "VALIDATION PASSED: 3 criteria, 24 score rows.\r\nPer-paper totals (NA criteria excluded from max_points):\r\n  SYN-P1 | syn-rev1 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P1 | syn-rev2 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P2 | syn-rev1"
+        },
+        {
+          "text": "If the shipped two-reviewer fixture was used, S01 kappa is 1.0000 and S02 kappa is 0.6364",
+          "passed": true,
+          "evidence": "VALIDATION PASSED: 3 criteria, 24 score rows.\r\nPer-paper totals (NA criteria excluded from max_points):\r\n  SYN-P1 | syn-rev1 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P1 | syn-rev2 | vsynthetic-0 | 5/6 | scored=3 NA=0\r\n  SYN-P2 | syn-rev1 | vsynthetic-0 | 4/6 | scored=3 NA=0\r\n  SYN-P2 | syn-rev2 | vsynthetic-0 | 3/6 | scored=3 NA=0\r\n  SYN-P3 | syn-rev1 | vsynthetic-0 | 2/6 | scored=3 NA=0\r\n  SYN"
+        },
+        {
+          "text": "No reviewer other than syn-rev1 and syn-rev2 is introduced",
+          "passed": true,
+          "evidence": "scanned report for extra reviewer labels"
+        },
+        {
+          "text": "summary.csv is written to the eval outputs folder",
+          "passed": true,
+          "evidence": "C:\\Users\\yuanw\\Documents\\TECH\\School\\1T2627\\thesis1\\.agents\\skills\\paper-evaluation-workspace\\iteration-1\\score-and-kappa\\without_skill\\outputs\\summary.csv"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.9375,
+        "stddev": 0.0884,
+        "min": 0.875,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "tokens": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0,
+        "max": 0
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.625,
+        "stddev": 0.5303,
+        "min": 0.25,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "tokens": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0,
+        "max": 0
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.31",
+      "time_seconds": "+0.0",
+      "tokens": "+0"
+    }
+  },
+  "notes": [
+    "The +0.31 pass-rate delta is almost entirely from eval 1 (build-pack-from-abstracts: 7/8 with skill vs 2/8 without). Eval 2 (score-and-kappa) is 5/5 in both configurations and does not discriminate skill value.",
+    "The remaining with-skill fail on eval 1 is \"The pack does not describe the PLAN paper's framework as validated\". The pack names that phrase only as a discarded concept; the grader substring also matches denial sentences. The same assertion fails without skill for the same reason, so it does not currently separate the two runs.",
+    "Without-skill pack rubric uses evidence_tag instead of support_level, and support levels are empty. That single schema miss knocks out the header check, the allowed-level check, and both concept-trace scans.",
+    "No-PDF and ai-draft-only reviewer pass in both configurations. They are integrity checks that both runs already followed.",
+    "Time and token fields are 0 because the eval-task notifications did not include total_tokens or duration_ms. Those deltas are not informative.",
+    "The without-skill pass-rate stddev (0.53) is the split between eval 1 (25%) and eval 2 (100%), not run-to-run variance. Each configuration has one run per eval, not three."
+  ]
+}

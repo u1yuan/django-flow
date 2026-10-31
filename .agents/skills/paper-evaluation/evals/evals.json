@@ -1,0 +1,37 @@
+{
+  "skill_name": "paper-evaluation",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build a paper-evaluation pack in the folder I name. Derive every criterion only from these two SYNTHETIC papers (invented for this test; not real publications). Do not retrieve the web. Do not save PDFs. Do not git commit. Python standard library only.\n\nPaper PLAN: evals/files/SYNTHETIC_paper_plan.txt — a research PLAN with no results. Gaps: no QA guidelines, unclear quality-task processes, insufficient performance-reporting standards for model comparison. Planned methods: literature study, expert validation, pilot with two teams. Treat it as a proposal. Never call its framework validated.\n\nPaper CASE: evals/files/SYNTHETIC_paper_casestudy.txt — a completed case study. Feasibility and acceptance are separate questions. Desk-checking is a checklist-guided self-review, not a structured inspection. Variability modeling was feasible but needed a different language to cover important variants. Developers accepted both parts. The study reports that limit.\n\nOutput folder: the eval outputs directory you were given. Reviewer label: ai-draft. Include README, source-trace.md, rubric.csv, desk-check-checklist.md, templates/evaluation-template.md, scores/scores.csv, scripts/score_papers.py (standard library), scripts/tests with a SYNTHETIC fixture, and AI_INTERACTION_LOG.md. Tag each criterion full-text, abstract-only, or adapted. Score both SYNTHETIC papers as ai-draft, run the scorer and tests, and report totals. Do not invent a second reviewer.",
+      "expected_output": "A pack whose criteria trace to the two SYNTHETIC abstracts, with support levels, a plan not described as validated, a passing scorer run, and no second-reviewer scores.",
+      "files": [
+        "evals/files/SYNTHETIC_paper_plan.txt",
+        "evals/files/SYNTHETIC_paper_casestudy.txt"
+      ],
+      "assertions": [
+        "Output folder contains rubric.csv with the required header columns including support_level",
+        "Every rubric support_level is full-text, abstract-only, or adapted",
+        "The pack does not describe the PLAN paper's framework as validated",
+        "No PDF file is written in the output folder",
+        "scores.csv reviewer values are only ai-draft",
+        "The scorer or its report is present (summary.csv or a VALIDATION PASSED log)",
+        "At least one criterion traces to performance reporting or model comparison",
+        "At least one criterion traces to feasibility and acceptance as separate questions"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I already have a SYNTHETIC paper-evaluation pack (invented data, not real papers). Run the bundled scorer and report per-paper totals and Cohen's kappa. Do not invent a third reviewer. Do not install packages. Do not git commit.\n\nUse the skill's scripts/score_papers.py. Rubric and two-reviewer scores are the SYNTHETIC fixtures that the skill's tests use, or recreate the same columns: criterion_id, rubric_version, criterion, guiding_question, score_0_anchor, score_1_anchor, score_2_anchor, source_paper, source_location, support_level for the rubric; paper_id, doi, reviewer, rubric_version, criterion_id, score, evidence_location, note for scores.\n\nIf the skill ships scripts/tests/fixtures/SYNTHETIC_*.csv, run those. Otherwise create a tiny two-reviewer fixture, run python -B scripts/score_papers.py with explicit --rubric --scores --summary paths in the eval outputs folder, and print the report. A failing script is a failed result.",
+      "expected_output": "VALIDATION PASSED, per-paper totals, and kappa rows for the reviewer pair. No fabricated extra reviewer.",
+      "files": [],
+      "assertions": [
+        "Stdout or a saved report contains VALIDATION PASSED",
+        "The report includes Cohen's kappa for a reviewer pair",
+        "If the shipped two-reviewer fixture was used, S01 kappa is 1.0000 and S02 kappa is 0.6364",
+        "No reviewer other than syn-rev1 and syn-rev2 is introduced",
+        "summary.csv is written to the eval outputs folder"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+section,paper_id,reviewer,rubric_version,criterion_id,points,max_points,n_scored,n_na,reviewer_pair,n_pairs,observed_agreement,expected_agreement,kappa,status
+total,SYN-CASE,ai-draft,1.0.0,,10,16,8,0,,,,,,ok
+total,SYN-PLAN,ai-draft,1.0.0,,3,8,4,4,,,,,,ok

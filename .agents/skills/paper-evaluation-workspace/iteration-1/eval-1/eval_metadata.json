@@ -1,0 +1,15 @@
+{
+  "eval_id": 1,
+  "eval_name": "build-pack-from-abstracts",
+  "prompt": "Build a paper-evaluation pack from two SYNTHETIC abstracts. Criteria must trace to those texts. Do not invent a second reviewer or call a plan validated.",
+  "assertions": [
+    "Output folder contains rubric.csv with the required header columns including support_level",
+    "Every rubric support_level is full-text, abstract-only, or adapted",
+    "The pack does not describe the PLAN paper's framework as validated",
+    "No PDF file is written in the output folder",
+    "scores.csv reviewer values are only ai-draft",
+    "The scorer or its report is present (summary.csv or a VALIDATION PASSED log)",
+    "At least one criterion traces to performance reporting or model comparison",
+    "At least one criterion traces to feasibility and acceptance as separate questions"
+  ]
+}

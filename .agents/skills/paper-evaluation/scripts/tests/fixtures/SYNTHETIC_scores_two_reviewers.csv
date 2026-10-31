@@ -1,0 +1,26 @@
+# SYNTHETIC fixture: invented scores from two invented reviewers on four invented papers. Not real reviewer data.
+paper_id,doi,reviewer,rubric_version,criterion_id,score,evidence_location,note
+SYN-P1,10.0000/synthetic.1,syn-rev1,synthetic-0,S01,2,SYNTHETIC p. 1,
+SYN-P1,10.0000/synthetic.1,syn-rev1,synthetic-0,S02,2,SYNTHETIC p. 1,
+SYN-P1,10.0000/synthetic.1,syn-rev1,synthetic-0,S03,1,SYNTHETIC p. 1,
+SYN-P1,10.0000/synthetic.1,syn-rev2,synthetic-0,S01,2,SYNTHETIC p. 1,
+SYN-P1,10.0000/synthetic.1,syn-rev2,synthetic-0,S02,2,SYNTHETIC p. 1,
+SYN-P1,10.0000/synthetic.1,syn-rev2,synthetic-0,S03,1,SYNTHETIC p. 1,
+SYN-P2,10.0000/synthetic.2,syn-rev1,synthetic-0,S01,1,SYNTHETIC p. 2,
+SYN-P2,10.0000/synthetic.2,syn-rev1,synthetic-0,S02,2,SYNTHETIC p. 2,
+SYN-P2,10.0000/synthetic.2,syn-rev1,synthetic-0,S03,1,SYNTHETIC p. 2,
+SYN-P2,10.0000/synthetic.2,syn-rev2,synthetic-0,S01,1,SYNTHETIC p. 2,
+SYN-P2,10.0000/synthetic.2,syn-rev2,synthetic-0,S02,1,SYNTHETIC p. 2,
+SYN-P2,10.0000/synthetic.2,syn-rev2,synthetic-0,S03,1,SYNTHETIC p. 2,
+SYN-P3,10.0000/synthetic.3,syn-rev1,synthetic-0,S01,0,SYNTHETIC p. 3,
+SYN-P3,10.0000/synthetic.3,syn-rev1,synthetic-0,S02,1,SYNTHETIC p. 3,
+SYN-P3,10.0000/synthetic.3,syn-rev1,synthetic-0,S03,1,SYNTHETIC p. 3,
+SYN-P3,10.0000/synthetic.3,syn-rev2,synthetic-0,S01,0,SYNTHETIC p. 3,
+SYN-P3,10.0000/synthetic.3,syn-rev2,synthetic-0,S02,1,SYNTHETIC p. 3,
+SYN-P3,10.0000/synthetic.3,syn-rev2,synthetic-0,S03,0,SYNTHETIC p. 3,
+SYN-P4,10.0000/synthetic.4,syn-rev1,synthetic-0,S01,2,SYNTHETIC p. 4,
+SYN-P4,10.0000/synthetic.4,syn-rev1,synthetic-0,S02,0,SYNTHETIC p. 4,
+SYN-P4,10.0000/synthetic.4,syn-rev1,synthetic-0,S03,NA,SYNTHETIC whole paper,SYNTHETIC condition met
+SYN-P4,10.0000/synthetic.4,syn-rev2,synthetic-0,S01,2,SYNTHETIC p. 4,
+SYN-P4,10.0000/synthetic.4,syn-rev2,synthetic-0,S02,0,SYNTHETIC p. 4,
+SYN-P4,10.0000/synthetic.4,syn-rev2,synthetic-0,S03,NA,SYNTHETIC whole paper,SYNTHETIC condition met

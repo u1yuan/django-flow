@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "Stdout or a saved report contains VALIDATION PASSED",
+      "passed": true,
+      "evidence": "paper-evaluation score-and-kappa run report\niteration-1 / with_skill\nReviewers used: syn-rev1, syn-rev2 (fixture pair only; no third reviewer invented)\nPackages installed: none\nGit commit: none\nPython bytecode: disabled (-B)\n\n=============="
+    },
+    {
+      "text": "The report includes Cohen's kappa for a reviewer pair",
+      "passed": true,
+      "evidence": "paper-evaluation score-and-kappa run report\niteration-1 / with_skill\nReviewers used: syn-rev1, syn-rev2 (fixture pair only; no third reviewer invented)\nPackages installed: none\nGit commit: none\nPython bytecode: disabled (-B)\n\n=============="
+    },
+    {
+      "text": "If the shipped two-reviewer fixture was used, S01 kappa is 1.0000 and S02 kappa is 0.6364",
+      "passed": true,
+      "evidence": "paper-evaluation score-and-kappa run report\niteration-1 / with_skill\nReviewers used: syn-rev1, syn-rev2 (fixture pair only; no third reviewer invented)\nPackages installed: none\nGit commit: none\nPython bytecode: disabled (-B)\n\n================================================================================\nCOMMAND 1: scorer\n==========================================================================="
+    },
+    {
+      "text": "No reviewer other than syn-rev1 and syn-rev2 is introduced",
+      "passed": true,
+      "evidence": "scanned report for extra reviewer labels"
+    },
+    {
+      "text": "summary.csv is written to the eval outputs folder",
+      "passed": true,
+      "evidence": "C:\\Users\\yuanw\\Documents\\TECH\\School\\1T2627\\thesis1\\.agents\\skills\\paper-evaluation-workspace\\iteration-1\\score-and-kappa\\with_skill\\outputs\\summary.csv"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}
